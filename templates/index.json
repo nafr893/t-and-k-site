@@ -32,7 +32,7 @@
             "overlay_style": "solid",
             "gradient_direction": "to top",
             "padding-block-start": 48,
-            "padding-block-end": 48,
+            "padding-block-end": 60,
             "padding-inline-start": 16,
             "padding-inline-end": 16
           },
@@ -57,7 +57,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>SUPPRESSOR<br/>COVERS</h2>",
+                "text": "<h2>XTREME TEMP SUPPRESSOR<br/>COVERS</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
