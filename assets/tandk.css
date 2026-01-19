@@ -25,9 +25,10 @@ padding-left: 24px;
 /* Mobile homepage height */
 div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
     height: 80dvh; 
-.slideshow-slides {
+}
+.slideshow-slides, div.slideshow-section.spacing-style.section.section--full-width.color-scheme-2.disable-section-top-offset, slideshow-component.slideshow--content-on-media, .slideshow-container {
     height: 100%; 
-    
+
 }
 
 }
