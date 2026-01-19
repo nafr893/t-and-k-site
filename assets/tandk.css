@@ -31,10 +31,6 @@ div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
  }
 /* Mobile homepage height */
   @media (max-width: 480px) {
-/* Hide Desktop Banner on mobile */ 
-    div#shopify-section-template--20919893328118__slideshow_VMx8dk {
-        display: none; 
-    }
     
 div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
     height: 80dvh; 
