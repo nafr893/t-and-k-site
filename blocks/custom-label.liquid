@@ -38,11 +38,21 @@
     <span
       class="tk-custom-label"
       style="
-        --tk-label-text: {{ block.settings.text_color }};
-        --tk-label-bg: {{ block.settings.bg_color }};
-        --tk-label-bg-hover: {{ block.settings.hover_bg_color }};
-        --tk-label-border: {{ block.settings.border_color }};
-      "
+      --tk-label-text: {{ block.settings.text_color }};
+  --tk-label-border: {{ block.settings.border_color }};
+  --tk-label-bg: rgba(
+    {{ block.settings.bg_color.red }},
+    {{ block.settings.bg_color.green }},
+    {{ block.settings.bg_color.blue }},
+    {{ block.settings.bg_opacity | divided_by: 100.0 }}
+  );
+  --tk-label-bg-hover: rgba(
+    {{ block.settings.hover_bg_color.red }},
+    {{ block.settings.hover_bg_color.green }},
+    {{ block.settings.hover_bg_color.blue }},
+    1
+  );
+"
       {{ block.shopify_attributes }}
     >
       {{ text }}
