@@ -26,8 +26,11 @@ padding-left: 24px;
 div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
     height: 80dvh; 
 }
+
 .slideshow-slides, div.slideshow-section.spacing-style.section.section--full-width.color-scheme-2.disable-section-top-offset, slideshow-component.slideshow--content-on-media, .slideshow-container {
-    height: 100%; 
+    height: 100% !important; 
 
 }
-
+.slideshow-slides, .slideshow-container {
+    height: 100%;
+}
