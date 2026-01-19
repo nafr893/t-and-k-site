@@ -467,7 +467,7 @@
           "name": "Bino Harness",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05557-2.webp",
+            "image_1": "shopify://shop_images/DSC02802-2.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -572,7 +572,7 @@
                       "type": "custom-label",
                       "name": "Custom label",
                       "settings": {
-                        "text": "X TANGO™",
+                        "text": "HELLRIDGE™",
                         "link": "",
                         "text_color": "#ffffff",
                         "bg_color": "#bbbbbb",
@@ -588,7 +588,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h2>XTREME TEMP SUPPRESSOR COVERS</h2>",
+                        "text": "<h2>CUSTOM BINO HARNESS</h2>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -945,7 +945,7 @@
           "name": "Leg Gaiters",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05557-2.webp",
+            "image_1": "shopify://shop_images/DSC04888-2-2.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -1050,7 +1050,7 @@
                       "type": "custom-label",
                       "name": "Custom label",
                       "settings": {
-                        "text": "X TANGO™",
+                        "text": "HARDTRAK™",
                         "link": "",
                         "text_color": "#ffffff",
                         "bg_color": "#bbbbbb",
@@ -1066,7 +1066,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h2>XTREME TEMP SUPPRESSOR COVERS</h2>",
+                        "text": "<h2>HEAVY DUTY LEG GAITERS</h2>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1170,7 +1170,7 @@
           "name": "Bino Harness",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05557-2.webp",
+            "image_1": "shopify://shop_images/DSC04959-2.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -1275,7 +1275,7 @@
                       "type": "custom-label",
                       "name": "Custom label",
                       "settings": {
-                        "text": "X TANGO™",
+                        "text": "HELLRIDGE™",
                         "link": "",
                         "text_color": "#ffffff",
                         "bg_color": "#bbbbbb",
@@ -1291,7 +1291,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h2>XTREME TEMP SUPPRESSOR COVERS</h2>",
+                        "text": "<h2>CUSTOM BINO HARNESS</h2>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
