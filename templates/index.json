@@ -73,9 +73,9 @@
                 "open_in_new_tab": false,
                 "placeholder": "",
                 "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-end": 60,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16
               },
               "blocks": {
                 "custom_label_q7PQhM": {
@@ -119,31 +119,32 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "button_DwjQDi": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "Shop now",
+                    "link": "shopify://collections/all",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "custom_label_q7PQhM",
-                "text_pKBYap"
+                "text_pKBYap",
+                "button_DwjQDi"
               ]
-            },
-            "button_C4FnAQ": {
-              "type": "button",
-              "settings": {
-                "label": "Shop now",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "group_WtDJpp",
-            "button_C4FnAQ"
+            "group_WtDJpp"
           ]
         },
         "slide_cQtnLV": {
@@ -730,10 +731,10 @@
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
-            "padding-block-start": 48,
-            "padding-block-end": 100,
-            "padding-inline-start": 60,
-            "padding-inline-end": 60
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "group_eKTP47": {
