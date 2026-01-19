@@ -54,5 +54,6 @@ div.collection-card__content.layout-panel-flex--column {
     p {
         color: white; 
         text-transform: uppercase; 
+        font-family: erbuam, sans-serif;
     }
 }
