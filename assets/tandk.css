@@ -1,7 +1,16 @@
 
+/* New Heading CSS */ 
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "erbaum", sans-serif !important;
     font-weight: 600;
     font-style: normal;
+}
+
+/* new button CSS */ 
+.button {
+  font-family: erbaum, sans-serif;
+  text-transform: var(--button-text-case-primary);
+  border-radius: var(--style-border-radius-buttons-primary);
+  font-weight: 500;
 }
