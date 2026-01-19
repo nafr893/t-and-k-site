@@ -366,7 +366,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2><strong>GEN 3.1 BINOCULAR HARNESS</strong></h2>",
+                    "text": "<h2>GEN 3.1 BINOCULAR HARNESS</h2>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
