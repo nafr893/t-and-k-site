@@ -24,7 +24,7 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "flex-end",
-            "gap": 12,
+            "gap": 20,
             "inherit_color_scheme": false,
             "color_scheme": "scheme-2",
             "toggle_overlay": false,
@@ -48,7 +48,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
+                "gap": 14,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -92,53 +92,38 @@
                     "border_opacity": 100
                   },
                   "blocks": {}
+                },
+                "text_pKBYap": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<h2>XTREME TEMP SUPPRESSOR COVERS</h2>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
-                "custom_label_q7PQhM"
+                "custom_label_q7PQhM",
+                "text_pKBYap"
               ]
-            },
-            "custom_label_3Y9U3h": {
-              "type": "custom-label",
-              "name": "Custom label",
-              "settings": {
-                "text": "X TANGO™",
-                "link": "shopify://collections/suppressor-covers",
-                "text_color": "#ffffff",
-                "bg_color": "#bbbbbb",
-                "bg_opacity": 15,
-                "hover_bg_color": "#bbbbbb",
-                "hover_bg_opacity": 10,
-                "border_color": "#f9f9f9",
-                "border_opacity": 100
-              },
-              "blocks": {}
-            },
-            "text_YCiPHA": {
-              "type": "text",
-              "name": "t:names.heading",
-              "settings": {
-                "text": "<h2>XTREME TEMP SUPPRESSOR<br/>COVERS</h2>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "var(--color-foreground)",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
             },
             "button_C4FnAQ": {
               "type": "button",
@@ -157,8 +142,6 @@
           },
           "block_order": [
             "group_WtDJpp",
-            "custom_label_3Y9U3h",
-            "text_YCiPHA",
             "button_C4FnAQ"
           ]
         },
