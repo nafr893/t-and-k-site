@@ -21,3 +21,8 @@ padding-left: 24px;
   padding-right: 24px; 
   height: 44px; 
 }
+
+/* Mobile homepage height */
+div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
+    height: 80dvh; 
+}
