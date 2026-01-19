@@ -22,10 +22,20 @@ padding-left: 24px;
   height: 44px; 
 }
 
+/* Hide Mobile Banner on Desktop */
+ @media (min-width: 480px) {
+div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
+    display: none; 
+
+}
+ }
 /* Mobile homepage height */
   @media (max-width: 480px) {
+
+    
 div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
     height: 80dvh; 
+    display: inline; 
 }
 
 .slideshow-slides, div.slideshow-section.spacing-style.section.section--full-width.color-scheme-2.disable-section-top-offset, slideshow-component.slideshow--content-on-media, .slideshow-container {
