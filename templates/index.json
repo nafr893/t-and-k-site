@@ -48,7 +48,8 @@
                 "bg_opacity": 15,
                 "hover_bg_color": "#bbbbbb",
                 "hover_bg_opacity": 10,
-                "border_color": "#f9f9f9"
+                "border_color": "#f9f9f9",
+                "border_opacity": 100
               },
               "blocks": {}
             },
@@ -307,7 +308,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>SUPPRESSOR COVERS</h2>",
+                    "text": "<h2>XTREME TEMP SUPPRESSOR COVERS</h2>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
