@@ -504,9 +504,9 @@
                 "open_in_new_tab": false,
                 "placeholder": "",
                 "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-end": 80,
+                "padding-inline-start": 16,
+                "padding-inline-end": 60
               },
               "blocks": {
                 "custom_label_PPkxWT": {
@@ -550,31 +550,32 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "button_6PkyRE": {
+                  "type": "button",
+                  "name": "t:names.button",
+                  "settings": {
+                    "label": "Shop now",
+                    "link": "shopify://collections/all",
+                    "open_in_new_tab": false,
+                    "style_class": "button",
+                    "width": "fit-content",
+                    "custom_width": 100,
+                    "width_mobile": "fit-content",
+                    "custom_width_mobile": 100
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "custom_label_PPkxWT",
-                "text_tiNgkB"
+                "text_tiNgkB",
+                "button_6PkyRE"
               ]
-            },
-            "button_643dV8": {
-              "type": "button",
-              "settings": {
-                "label": "Shop now",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "group_9DHTNt",
-            "button_643dV8"
+            "group_9DHTNt"
           ]
         },
         "slide_WqXD6Y": {
