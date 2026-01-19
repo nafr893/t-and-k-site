@@ -826,7 +826,7 @@
                       "name": "Custom label",
                       "settings": {
                         "text": "X TANGO™",
-                        "link": "",
+                        "link": "shopify://products/x-tango-suppressor-cover",
                         "text_color": "#ffffff",
                         "bg_color": "#bbbbbb",
                         "bg_opacity": 15,
@@ -914,7 +914,7 @@
                       "name": "t:names.button",
                       "settings": {
                         "label": "Shop now",
-                        "link": "shopify://collections/all",
+                        "link": "shopify://collections/suppressor-covers",
                         "open_in_new_tab": false,
                         "style_class": "button",
                         "width": "fit-content",
@@ -1051,7 +1051,7 @@
                       "name": "Custom label",
                       "settings": {
                         "text": "HARDTRAK™",
-                        "link": "",
+                        "link": "shopify://products/leg-gaiters",
                         "text_color": "#ffffff",
                         "bg_color": "#bbbbbb",
                         "bg_opacity": 15,
@@ -1139,7 +1139,7 @@
                       "name": "t:names.button",
                       "settings": {
                         "label": "Shop now",
-                        "link": "shopify://collections/all",
+                        "link": "shopify://collections/leg-gaiters",
                         "open_in_new_tab": false,
                         "style_class": "button",
                         "width": "fit-content",
