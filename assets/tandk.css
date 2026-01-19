@@ -59,6 +59,16 @@ div.collection-card__content.layout-panel-flex--column {
 }
 
 
+/* Mobile Homepage Settings Padding */ 
+div.spacing-style.slide__content.color-scheme-2.background-transparent {
+
+div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column {
+        padding-left: 16px; 
+        padding-right: 16px; 
+        padding-bottom: 60px; 
+      }
+
+}
 
 
 
@@ -77,4 +87,11 @@ div.collection-card__content.layout-panel-flex--column {
 
 div.spacing-style.slide__content.color-scheme-2.background-transparent {
     display: inline;
+
+div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-column {
+        padding-left: 16px; 
+        padding-right: 16px; 
+        padding-bottom: 60px; 
+      }
+
 }
