@@ -433,7 +433,7 @@
         "icons_style": "none",
         "icons_shape": "none",
         "slideshow_controls_style": "none",
-        "autoplay": true,
+        "autoplay": false,
         "autoplay_speed": 4,
         "padding-block-start": 0,
         "padding-block-end": 0
@@ -863,7 +863,7 @@
         "icons_style": "none",
         "icons_shape": "none",
         "slideshow_controls_style": "none",
-        "autoplay": true,
+        "autoplay": false,
         "autoplay_speed": 4,
         "padding-block-start": 0,
         "padding-block-end": 0
