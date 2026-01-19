@@ -7,10 +7,7 @@
 >
   <head>
 
-<!-- Fonts --> 
-<link rel="stylesheet" href="https://use.typekit.net/uga6fws.css">
 
-<!-- End Fonts -->
 
 
     {%- if settings.favicon != blank -%}
@@ -19,6 +16,10 @@
         type="image/png"
         href="{{ settings.favicon | image_url: width: 32, height: 32 }}"
       >
+
+
+
+
     {%- endif -%}
 
     {% comment %} This a way to wait for main content to load when navigating to a new page so that the view transitions can work consistently {% endcomment %}
@@ -43,6 +44,10 @@
     {% endif %}
 
     {{ content_for_header }}
+
+<link rel="stylesheet" href="https://use.typekit.net/uga6fws.css">
+
+
   </head>
 
   <body class="page-width-{{ settings.page_width }} card-hover-effect-{{ settings.card_hover_effect }}">
