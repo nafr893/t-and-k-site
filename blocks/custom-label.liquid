@@ -15,11 +15,21 @@
       class="tk-custom-label"
       href="{{ link }}"
       style="
-        --tk-label-text: {{ block.settings.text_color }};
-        --tk-label-bg: {{ block.settings.bg_color }};
-        --tk-label-bg-hover: {{ block.settings.hover_bg_color }};
-        --tk-label-border: {{ block.settings.border_color }};
-      "
+  --tk-label-text: {{ block.settings.text_color }};
+  --tk-label-border: {{ block.settings.border_color }};
+  --tk-label-bg: rgba(
+    {{ block.settings.bg_color.red }},
+    {{ block.settings.bg_color.green }},
+    {{ block.settings.bg_color.blue }},
+    {{ block.settings.bg_opacity | divided_by: 100.0 }}
+  );
+  --tk-label-bg-hover: rgba(
+    {{ block.settings.hover_bg_color.red }},
+    {{ block.settings.hover_bg_color.green }},
+    {{ block.settings.hover_bg_color.blue }},
+    1
+  );
+"
       {{ block.shopify_attributes }}
     >
       {{ text }}
@@ -61,18 +71,39 @@
       "label": "Text color",
       "default": "#000000"
     },
-    {
-      "type": "color",
-      "id": "bg_color",
-      "label": "Background color",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "hover_bg_color",
-      "label": "Hover background color",
-      "default": "#f2f2f2"
-    },
+   {
+  "type": "color",
+  "id": "bg_color",
+  "label": "Background color",
+  "default": "#ffffff"
+},
+{
+  "type": "range",
+  "id": "bg_opacity",
+  "label": "Background opacity",
+  "min": 0,
+  "max": 100,
+  "step": 5,
+  "unit": "%",
+  "default": 100
+},
+   {
+  "type": "color",
+  "id": "hover_bg_color",
+  "label": "Hover background color",
+  "default": "#ffffff"
+},
+{
+  "type": "range",
+  "id": "hover_bg_opacity",
+  "label": "Hover background opacity",
+  "min": 0,
+  "max": 100,
+  "step": 5,
+  "unit": "%",
+  "default": 100
+},
+
     {
       "type": "color",
       "id": "border_color",
@@ -87,3 +118,5 @@
   ]
 }
 {% endschema %}
+
+
