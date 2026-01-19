@@ -123,7 +123,7 @@
                       "name": "Custom label",
                       "settings": {
                         "text": "X TANGO™",
-                        "link": "",
+                        "link": "shopify://products/x-tango-suppressor-cover",
                         "text_color": "#ffffff",
                         "bg_color": "#bbbbbb",
                         "bg_opacity": 15,
