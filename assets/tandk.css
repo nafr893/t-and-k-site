@@ -49,3 +49,7 @@ slideshow-slides, slideshow-container {
     height: 100% !important;
 }
   }
+
+  div.spacing-style.slide__content.color-scheme-2.background-transparent {
+    display: inline;
+  }
