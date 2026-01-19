@@ -23,6 +23,7 @@ padding-left: 24px;
 }
 
 /* Mobile homepage height */
+  @media (max-width: 480px) {
 div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
     height: 80dvh; 
 }
@@ -34,3 +35,4 @@ div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
 slideshow-slides, slideshow-container {
     height: 100% !important;
 }
+  }
