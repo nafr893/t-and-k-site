@@ -6,7 +6,7 @@
   line-height: 1;
   letter-spacing: 0.02em;
   text-decoration: none;
-
+  font-family: var(--font-subheading--family);
   color: var(--tk-label-text);
   background: var(--tk-label-bg);
   border: 1px solid var(--tk-label-border);
