@@ -48,6 +48,22 @@ div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
 slideshow-slides, slideshow-container {
     height: 100% !important;
 }
+
+
+/* Collection Card Mobile Settings. */ 
+div.collection-card__content.layout-panel-flex--column {
+    p {
+        font-family: erbaum, sans-serif ;
+        font-size: 18px; 
+    }
+}
+
+
+
+
+
+
+
   }
 
 div.collection-card__content.layout-panel-flex--column {
@@ -55,6 +71,6 @@ div.collection-card__content.layout-panel-flex--column {
         color: white; 
         text-transform: uppercase; 
         font-family: erbaum, sans-serif ;
-        font-size: 18px; 
+     
     }
 }
