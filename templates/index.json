@@ -1015,9 +1015,11 @@
       "settings": {
         "collection_list": [
           "archery-equipment",
-          "bags",
           "bags-packs",
-          "best-sellers"
+          "range-gear",
+          "binocular-harness-and-accessory-pouches",
+          "leg-gaiters",
+          "upland-gear"
         ],
         "layout_type": "carousel",
         "carousel_on_mobile": false,
