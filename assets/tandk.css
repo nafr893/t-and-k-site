@@ -13,7 +13,11 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: var(--button-text-case-primary);
   border-radius: var(--style-border-radius-buttons-primary);
   font-weight: 500;
-  padding-left: 24px; 
+}
+
+/* mobile button padding */ 
+.button {
+padding-left: 24px; 
   padding-right: 24px; 
   height: 44px; 
 }
