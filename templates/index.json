@@ -257,7 +257,7 @@
                 "bg_color": "#bbbbbb",
                 "bg_opacity": 15,
                 "hover_bg_color": "#bbbbbb",
-                "hover_bg_opacity": 10,
+                "hover_bg_opacity": 25,
                 "border_color": "#f9f9f9"
               },
               "blocks": {}
