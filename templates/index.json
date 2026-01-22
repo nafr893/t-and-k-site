@@ -1560,11 +1560,11 @@
       "name": "Shop By Category",
       "settings": {
         "collection_list": [
-          "archery-equipment",
           "bags-packs",
           "range-gear",
           "leg-gaiters",
-          "upland-gear"
+          "upland-gear",
+          "suppressor-covers"
         ],
         "layout_type": "carousel",
         "carousel_on_mobile": false,
