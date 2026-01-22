@@ -99,3 +99,7 @@ div.card-product-title {
         
     }
 }
+
+span.variant-swatch-label {
+    font-size: 12px; 
+}

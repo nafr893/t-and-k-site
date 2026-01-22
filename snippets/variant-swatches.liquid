@@ -48,7 +48,7 @@
         assign swatch_option_position = product_option.position
         assign swatch_option_key = 'option' | append: swatch_option_position
       -%}
-  <span class="variant-option__swatch-value">{{ product_option.selected_value }}</span>
+  <span class="variant-option__swatch-value" id="color-swatch-label"> Color: {{ product_option.selected_value }}</span>
       <fieldset class="variant-option variant-option--buttons variant-option--swatches">
         {% capture children %}
           {%- for product_option_value in product_option.values -%}
