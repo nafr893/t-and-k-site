@@ -1,0 +1,114 @@
+
+
+{% if product == blank %}
+  <div class="hpc hpc--empty">
+    <div class="hpc__thumb hpc__thumb--placeholder" aria-hidden="true"></div>
+    <div class="hpc__main">
+      <p class="hpc__title">Select a product</p>
+      <p class="hpc__meta">Color: —</p>
+    </div>
+    <div class="hpc__price">—</div>
+  </div>
+  {% break %}
+{% endif %}
+
+{% liquid
+  assign v = product.selected_or_first_available_variant
+
+  assign thumb_img = v.featured_media.preview_image
+  if thumb_img == blank
+    assign thumb_img = product.featured_image
+  endif
+
+  assign color_option_index = nil
+  assign color_option_name = nil
+
+  for opt in product.options_with_values
+    assign dn = opt.name | downcase
+    if dn == 'color' or dn == 'colour'
+      assign color_option_name = opt.name
+      assign color_option_index = forloop.index
+      break
+    endif
+  endfor
+
+  assign current_color = nil
+  if color_option_index != nil
+    assign current_color = v.options[color_option_index | minus: 1]
+  endif
+
+  assign variants_json = product.variants | json
+%}
+
+<div
+  class="hpc"
+  data-hpc
+  data-variants='{{ variants_json | escape }}'
+  data-initial-variant-id="{{ v.id }}"
+  data-product-handle="{{ product.handle }}"
+>
+  <a class="hpc__link" data-hpc-link href="{{ v.url }}">
+    <div class="hpc__thumb">
+      {% if thumb_img != blank %}
+        {{
+          thumb_img
+          | image_url: width: 220
+          | image_tag:
+            loading: 'lazy',
+            class: 'hpc__thumb-img',
+            alt: product.title
+        }}
+      {% else %}
+        <div class="hpc__thumb--placeholder" aria-hidden="true"></div>
+      {% endif %}
+    </div>
+
+    <div class="hpc__main">
+      <p class="hpc__title">{{ product.title }}</p>
+
+      {% if current_color != blank %}
+        <p class="hpc__meta">
+          <span class="hpc__meta-label">Color:</span>
+          <span data-hpc-color>{{ current_color }}</span>
+        </p>
+      {% else %}
+        <p class="hpc__meta">
+          <span class="hpc__meta-label">Color:</span>
+          <span data-hpc-color>—</span>
+        </p>
+      {% endif %}
+
+      {% if color_option_index != nil %}
+        {% assign color_values = product.options_with_values[color_option_index | minus: 1].values %}
+        {% if color_values.size > 0 %}
+          <div class="hpc__swatches" aria-label="Choose color">
+            {% for val in color_values %}
+              {% liquid
+                assign active = false
+                if current_color == val
+                  assign active = true
+                endif
+              %}
+              <button
+                type="button"
+                class="hpc__swatch{% if active %} is-active{% endif %}"
+                data-hpc-swatch
+                data-swatch-value="{{ val | escape }}"
+                aria-label="{{ val }}"
+              ></button>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+
+    <div class="hpc__price" data-hpc-price>
+      {% if v.compare_at_price > v.price %}
+        <span class="hpc__price-sale">{{ v.price | money }}</span>
+        <span class="hpc__price-compare">{{ v.compare_at_price | money }}</span>
+      {% else %}
+        <span class="hpc__price-regular">{{ v.price | money }}</span>
+      {% endif %}
+    </div>
+  </a>
+</div>
