@@ -180,7 +180,7 @@
         href="{{ product.selected_or_first_available_variant.url }}"
         aria-hidden="true"
       >
-        <span class="title-text">{{- product.title -}}</span>
+        <span id="card-product-title" class="title-text">{{- product.title -}}</span>
       </a>
     </product-title>
   {% elsif product == blank %}
