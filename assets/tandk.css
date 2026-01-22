@@ -104,3 +104,8 @@ span#color-swatch-label{
     font-size: 12px; 
     padding-left: 2px;
 }
+
+fieldset.variant-option.variant-option--buttons.variant-option--swatches {
+    outline: 1px solid #999;
+  outline-offset: 2px;  
+}
