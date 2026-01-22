@@ -1,0 +1,176 @@
+
+
+{{ 'hero-product-slideshow.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'hero-product-slideshow.js' | asset_url }}" defer></script>
+
+<section
+  class="hps"
+  data-hps
+  data-section-id="{{ section.id }}"
+  style="
+    --hps-max-width: {{ section.settings.max_width }}px;
+    --hps-radius: {{ section.settings.radius }}px;
+    --hps-gap: {{ section.settings.gap }}px;
+    --hps-card-radius: {{ section.settings.card_radius }}px;
+    --hps-card-pad: {{ section.settings.card_padding }}px;
+  "
+>
+  <div class="hps__inner">
+    {% if section.blocks.size == 0 %}
+      <div class="hps__empty">
+        <p>Add slides in the theme editor (each slide needs an image and product).</p>
+      </div>
+    {% else %}
+      <div class="hps__viewport" data-hps-viewport>
+        <div class="hps__track" data-hps-track>
+          {% for block in section.blocks %}
+            {% liquid
+              assign slide_image = block.settings.image
+              assign slide_product = block.settings.product
+              assign slide_alt = block.settings.image_alt
+              if slide_alt == blank and slide_product != blank
+                assign slide_alt = slide_product.title
+              endif
+            %}
+
+            <article class="hps__slide" data-hps-slide data-slide-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+              <div class="hps__media">
+                {% if slide_image != blank %}
+                  {{
+                    slide_image
+                    | image_url: width: 2400
+                    | image_tag:
+                      loading: 'lazy',
+                      class: 'hps__image',
+                      alt: slide_alt
+                  }}
+                {% else %}
+                  <div class="hps__image hps__image--placeholder" aria-label="Slide image placeholder"></div>
+                {% endif %}
+              </div>
+
+              <div class="hps__card">
+                {% render 'hero-mini-product-card',
+                  product: slide_product,
+                  block_id: block.id,
+                  section_id: section.id
+                %}
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+
+      {% if section.blocks.size > 1 and section.settings.show_controls %}
+        <div class="hps__controls" aria-label="Slideshow controls">
+          <div class="hps__progress" aria-hidden="true">
+            <span class="hps__progress-bar" data-hps-progress></span>
+          </div>
+
+          <div class="hps__nav">
+            <button class="hps__nav-btn" type="button" data-hps-prev aria-label="Previous">
+              {% comment %} simple chevron {% endcomment %}
+              <span aria-hidden="true">‹</span>
+            </button>
+
+            <div class="hps__fraction" aria-live="polite">
+              <span data-hps-current>1</span>/<span data-hps-total>{{ section.blocks.size }}</span>
+            </div>
+
+            <button class="hps__nav-btn" type="button" data-hps-next aria-label="Next">
+              <span aria-hidden="true">›</span>
+            </button>
+          </div>
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero + Product Slideshow",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_controls",
+      "label": "Show controls",
+      "default": true
+    },
+    {
+  "type": "range",
+  "id": "max_width",
+  "label": "Max width",
+  "min": 320,
+  "max": 1600,
+  "step": 20,
+  "unit": "px",
+  "default": 1200
+},
+
+    {
+      "type": "range",
+      "id": "radius",
+      "label": "Image corner radius",
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap (image to card)",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "card_radius",
+      "label": "Card corner radius",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "label": "Card padding",
+      "min": 10,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Slide image" },
+        { "type": "text", "id": "image_alt", "label": "Image alt (optional)" },
+        { "type": "product", "id": "product", "label": "Product" }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Hero + Product Slideshow",
+      "category": "Media",
+      "blocks": [
+        { "type": "slide" },
+        { "type": "slide" },
+        { "type": "slide" }
+      ]
+    }
+  ]
+}
+{% endschema %}
