@@ -106,6 +106,9 @@ span#color-swatch-label{
 }
 
 fieldset.variant-option.variant-option--buttons.variant-option--swatches {
-    outline: 1px solid #999;
-  outline-offset: 2px;  
+    input {
+outline: .5px solid #999;
+  outline-offset: 1px;  
+    }
+    
 }
