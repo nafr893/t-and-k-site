@@ -49,7 +49,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 14,
+                "gap": 35,
                 "width": "custom",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -73,85 +73,176 @@
                 "open_in_new_tab": false,
                 "placeholder": "",
                 "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-end": 60,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16
               },
               "blocks": {
-                "custom_label_q7PQhM": {
-                  "type": "custom-label",
-                  "name": "Custom label",
+                "group_N4hWaL": {
+                  "type": "group",
+                  "name": "t:names.group",
                   "settings": {
-                    "text": "X TANGO™",
-                    "link": "shopify://products/x-tango-suppressor-cover",
-                    "text_color": "#ffffff",
-                    "bg_color": "#bbbbbb",
-                    "bg_opacity": 15,
-                    "hover_bg_color": "#bbbbbb",
-                    "hover_bg_opacity": 25,
-                    "border_color": "#f9f9f9",
-                    "border_opacity": 100
-                  },
-                  "blocks": {}
-                },
-                "text_pKBYap": {
-                  "type": "text",
-                  "name": "t:names.heading",
-                  "settings": {
-                    "text": "<h2>XTREME TEMP SUPPRESSOR COVERS</h2>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
-                  "blocks": {}
+                  "blocks": {
+                    "custom_label_ci4FXA": {
+                      "type": "custom-label",
+                      "name": "Custom label",
+                      "settings": {
+                        "text": "X TANGO™",
+                        "link": "shopify://products/x-tango-suppressor-cover",
+                        "text_color": "#ffffff",
+                        "bg_color": "#bbbbbb",
+                        "bg_opacity": 15,
+                        "hover_bg_color": "#bbbbbb",
+                        "hover_bg_opacity": 25,
+                        "border_color": "#f9f9f9",
+                        "border_opacity": 100
+                      },
+                      "blocks": {}
+                    },
+                    "text_D46Xi4": {
+                      "type": "text",
+                      "name": "t:names.heading",
+                      "settings": {
+                        "text": "<h2>XTREME TEMP SUPPRESSOR COVERS</h2>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "custom_label_ci4FXA",
+                    "text_D46Xi4"
+                  ]
+                },
+                "group_XQir48": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "button_ytHCMg": {
+                      "type": "button",
+                      "name": "t:names.button",
+                      "settings": {
+                        "label": "Shop now",
+                        "link": "shopify://collections/suppressor-covers",
+                        "open_in_new_tab": false,
+                        "style_class": "button",
+                        "width": "fit-content",
+                        "custom_width": 100,
+                        "width_mobile": "fit-content",
+                        "custom_width_mobile": 100
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "button_ytHCMg"
+                  ]
                 }
               },
               "block_order": [
-                "custom_label_q7PQhM",
-                "text_pKBYap"
+                "group_N4hWaL",
+                "group_XQir48"
               ]
-            },
-            "button_C4FnAQ": {
-              "type": "button",
-              "settings": {
-                "label": "Shop now",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "group_WtDJpp",
-            "button_C4FnAQ"
+            "group_WtDJpp"
           ]
         },
-        "slide_cQtnLV": {
+        "slide_biGjMt": {
           "type": "_slide",
           "name": "Leg Gaiters",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC04885-2-2.webp",
+            "image_1": "shopify://shop_images/DSC04885-2-2-2.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -172,7 +263,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "group_UC3zbr": {
+            "group_qeNEB8": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
@@ -183,11 +274,11 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 14,
-                "width": "fill",
+                "gap": 35,
+                "width": "custom",
                 "custom_width": 100,
-                "width_mobile": "custom",
-                "custom_width_mobile": 90,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
                 "height": "fit",
                 "custom_height": 100,
                 "inherit_color_scheme": true,
@@ -207,80 +298,171 @@
                 "open_in_new_tab": false,
                 "placeholder": "",
                 "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-end": 60,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16
               },
               "blocks": {
-                "custom_label_Jw9iCy": {
-                  "type": "custom-label",
-                  "name": "Custom label",
+                "group_Ey4hYL": {
+                  "type": "group",
+                  "name": "t:names.group",
                   "settings": {
-                    "text": "HARDTRAK™",
-                    "link": "shopify://products/x-tango-suppressor-cover",
-                    "text_color": "#ffffff",
-                    "bg_color": "#bbbbbb",
-                    "bg_opacity": 15,
-                    "hover_bg_color": "#bbbbbb",
-                    "hover_bg_opacity": 25,
-                    "border_color": "#f9f9f9",
-                    "border_opacity": 100
-                  },
-                  "blocks": {}
-                },
-                "text_daegie": {
-                  "type": "text",
-                  "name": "t:names.heading",
-                  "settings": {
-                    "text": "<h2>HEAVY DUTY LEG GAITERS</h2>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "custom",
+                    "custom_width_mobile": 90,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
-                  "blocks": {}
+                  "blocks": {
+                    "custom_label_RFPTe6": {
+                      "type": "custom-label",
+                      "name": "Custom label",
+                      "settings": {
+                        "text": "HARDTRAK™",
+                        "link": "shopify://products/leg-gaiters",
+                        "text_color": "#ffffff",
+                        "bg_color": "#bbbbbb",
+                        "bg_opacity": 15,
+                        "hover_bg_color": "#bbbbbb",
+                        "hover_bg_opacity": 25,
+                        "border_color": "#f9f9f9",
+                        "border_opacity": 100
+                      },
+                      "blocks": {}
+                    },
+                    "text_qYgbmT": {
+                      "type": "text",
+                      "name": "t:names.heading",
+                      "settings": {
+                        "text": "<h2>HEAVY DUTY LEG GAITERS</h2>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "custom_label_RFPTe6",
+                    "text_qYgbmT"
+                  ]
+                },
+                "group_T4bwHh": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "button_a8jg9a": {
+                      "type": "button",
+                      "name": "t:names.button",
+                      "settings": {
+                        "label": "Shop now",
+                        "link": "shopify://collections/leg-gaiters",
+                        "open_in_new_tab": false,
+                        "style_class": "button",
+                        "width": "fit-content",
+                        "custom_width": 100,
+                        "width_mobile": "fit-content",
+                        "custom_width_mobile": 100
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "button_a8jg9a"
+                  ]
                 }
               },
               "block_order": [
-                "custom_label_Jw9iCy",
-                "text_daegie"
+                "group_Ey4hYL",
+                "group_T4bwHh"
               ]
-            },
-            "button_FNrJYh": {
-              "type": "button",
-              "settings": {
-                "label": "Shop now",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "group_UC3zbr",
-            "button_FNrJYh"
+            "group_qeNEB8"
           ]
         },
-        "slide_iGADFp": {
+        "slide_DgUkfN": {
           "type": "_slide",
           "name": "Bino Harness",
           "settings": {
@@ -306,7 +488,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "group_A7LPmE": {
+            "group_xyNy4q": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
@@ -317,10 +499,10 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 14,
+                "gap": 35,
                 "width": "custom",
                 "custom_width": 100,
-                "width_mobile": "custom",
+                "width_mobile": "fill",
                 "custom_width_mobile": 100,
                 "height": "fit",
                 "custom_height": 100,
@@ -341,84 +523,175 @@
                 "open_in_new_tab": false,
                 "placeholder": "",
                 "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-end": 60,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16
               },
               "blocks": {
-                "custom_label_RK7LJT": {
-                  "type": "custom-label",
-                  "name": "Custom label",
+                "group_89Air3": {
+                  "type": "group",
+                  "name": "t:names.group",
                   "settings": {
-                    "text": "HELLRIDGE™",
-                    "link": "shopify://products/x-tango-suppressor-cover",
-                    "text_color": "#ffffff",
-                    "bg_color": "#bbbbbb",
-                    "bg_opacity": 15,
-                    "hover_bg_color": "#bbbbbb",
-                    "hover_bg_opacity": 25,
-                    "border_color": "#f9f9f9",
-                    "border_opacity": 100
-                  },
-                  "blocks": {}
-                },
-                "text_JVkEb8": {
-                  "type": "text",
-                  "name": "t:names.heading",
-                  "settings": {
-                    "text": "<h2>GEN 3.1 BINOCULAR HARNESS</h2>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
-                  "blocks": {}
+                  "blocks": {
+                    "custom_label_pTqgKH": {
+                      "type": "custom-label",
+                      "name": "Custom label",
+                      "settings": {
+                        "text": "HELLRIDGE™",
+                        "link": "shopify://products/binocular-harness",
+                        "text_color": "#ffffff",
+                        "bg_color": "#bbbbbb",
+                        "bg_opacity": 15,
+                        "hover_bg_color": "#bbbbbb",
+                        "hover_bg_opacity": 25,
+                        "border_color": "#f9f9f9",
+                        "border_opacity": 100
+                      },
+                      "blocks": {}
+                    },
+                    "text_UqD9xx": {
+                      "type": "text",
+                      "name": "t:names.heading",
+                      "settings": {
+                        "text": "<h2>CUSTOM BINO HARNESS</h2>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "custom_label_pTqgKH",
+                    "text_UqD9xx"
+                  ]
+                },
+                "group_kwEhyR": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "button_reBC8C": {
+                      "type": "button",
+                      "name": "t:names.button",
+                      "settings": {
+                        "label": "Shop now",
+                        "link": "shopify://collections/binocular-harness-and-accessory-pouches",
+                        "open_in_new_tab": false,
+                        "style_class": "button",
+                        "width": "fit-content",
+                        "custom_width": 100,
+                        "width_mobile": "fit-content",
+                        "custom_width_mobile": 100
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "button_reBC8C"
+                  ]
                 }
               },
               "block_order": [
-                "custom_label_RK7LJT",
-                "text_JVkEb8"
+                "group_89Air3",
+                "group_kwEhyR"
               ]
-            },
-            "button_iNQB6D": {
-              "type": "button",
-              "settings": {
-                "label": "Shop now",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "group_A7LPmE",
-            "button_iNQB6D"
+            "group_xyNy4q"
           ]
         }
       },
       "block_order": [
         "slide_eQxMmY",
-        "slide_cQtnLV",
-        "slide_iGADFp"
+        "slide_biGjMt",
+        "slide_DgUkfN"
       ],
       "name": "Slideshow Mobile",
       "settings": {
@@ -433,7 +706,7 @@
         "icons_style": "none",
         "icons_shape": "none",
         "slideshow_controls_style": "none",
-        "autoplay": false,
+        "autoplay": true,
         "autoplay_speed": 4,
         "padding-block-start": 0,
         "padding-block-end": 0
@@ -479,7 +752,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 15,
+                "gap": 35,
                 "width": "custom",
                 "custom_width": 50,
                 "width_mobile": "fill",
@@ -503,80 +776,171 @@
                 "open_in_new_tab": false,
                 "placeholder": "",
                 "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-end": 80,
+                "padding-inline-start": 60,
+                "padding-inline-end": 60
               },
               "blocks": {
-                "custom_label_PPkxWT": {
-                  "type": "custom-label",
-                  "name": "Custom label",
+                "group_wFiKXR": {
+                  "type": "group",
+                  "name": "t:names.group",
                   "settings": {
-                    "text": "X TANGO™",
-                    "link": "shopify://products/x-tango-suppressor-cover",
-                    "text_color": "#ffffff",
-                    "bg_color": "#bbbbbb",
-                    "bg_opacity": 15,
-                    "hover_bg_color": "#bbbbbb",
-                    "hover_bg_opacity": 25,
-                    "border_color": "#f9f9f9",
-                    "border_opacity": 100
-                  },
-                  "blocks": {}
-                },
-                "text_tiNgkB": {
-                  "type": "text",
-                  "name": "t:names.heading",
-                  "settings": {
-                    "text": "<h2>XTREME TEMP SUPPRESSOR COVERS</h2>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
-                  "blocks": {}
+                  "blocks": {
+                    "custom_label_dm4eEz": {
+                      "type": "custom-label",
+                      "name": "Custom label",
+                      "settings": {
+                        "text": "X TANGO™",
+                        "link": "shopify://products/x-tango-suppressor-cover",
+                        "text_color": "#ffffff",
+                        "bg_color": "#bbbbbb",
+                        "bg_opacity": 15,
+                        "hover_bg_color": "#bbbbbb",
+                        "hover_bg_opacity": 25,
+                        "border_color": "#f9f9f9",
+                        "border_opacity": 100
+                      },
+                      "blocks": {}
+                    },
+                    "text_Xdkf4k": {
+                      "type": "text",
+                      "name": "t:names.heading",
+                      "settings": {
+                        "text": "<h2>XTREME TEMP SUPPRESSOR COVERS</h2>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "custom_label_dm4eEz",
+                    "text_Xdkf4k"
+                  ]
+                },
+                "group_D8YAmU": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "button_L4wg8h": {
+                      "type": "button",
+                      "name": "t:names.button",
+                      "settings": {
+                        "label": "Shop now",
+                        "link": "shopify://collections/suppressor-covers",
+                        "open_in_new_tab": false,
+                        "style_class": "button",
+                        "width": "fit-content",
+                        "custom_width": 100,
+                        "width_mobile": "fit-content",
+                        "custom_width_mobile": 100
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "button_L4wg8h"
+                  ]
                 }
               },
               "block_order": [
-                "custom_label_PPkxWT",
-                "text_tiNgkB"
+                "group_wFiKXR",
+                "group_D8YAmU"
               ]
-            },
-            "button_643dV8": {
-              "type": "button",
-              "settings": {
-                "label": "Shop now",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "group_9DHTNt",
-            "button_643dV8"
+            "group_9DHTNt"
           ]
         },
-        "slide_WqXD6Y": {
+        "slide_wfgbgz": {
           "type": "_slide",
           "name": "Leg Gaiters",
           "settings": {
@@ -602,7 +966,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "group_mMzWQh": {
+            "group_wKEkap": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
@@ -613,141 +977,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 15,
-                "width": "custom",
-                "custom_width": 40,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "inherit_color_scheme": true,
-                "color_scheme": "",
-                "background_media": "none",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "custom_label_tNDnGi": {
-                  "type": "custom-label",
-                  "name": "Custom label",
-                  "settings": {
-                    "text": "X TANGO™",
-                    "link": "shopify://products/x-tango-suppressor-cover",
-                    "text_color": "#ffffff",
-                    "bg_color": "#bbbbbb",
-                    "bg_opacity": 15,
-                    "hover_bg_color": "#bbbbbb",
-                    "hover_bg_opacity": 25,
-                    "border_color": "#f9f9f9",
-                    "border_opacity": 100
-                  },
-                  "blocks": {}
-                },
-                "text_E3yRhz": {
-                  "type": "text",
-                  "name": "t:names.heading",
-                  "settings": {
-                    "text": "<h2>HEAVY DUTY LEG GAITERS</h2>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "custom_label_tNDnGi",
-                "text_E3yRhz"
-              ]
-            },
-            "button_9ALdqM": {
-              "type": "button",
-              "settings": {
-                "label": "Shop now",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "group_mMzWQh",
-            "button_9ALdqM"
-          ]
-        },
-        "slide_Dzp9K4": {
-          "type": "_slide",
-          "name": "Bino Harness",
-          "settings": {
-            "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC04959-2.webp",
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "flex-end",
-            "gap": 25,
-            "inherit_color_scheme": false,
-            "color_scheme": "scheme-2",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "padding-block-start": 48,
-            "padding-block-end": 100,
-            "padding-inline-start": 60,
-            "padding-inline-end": 60
-          },
-          "blocks": {
-            "group_eKTP47": {
-              "type": "group",
-              "name": "t:names.group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "center",
-                "gap": 15,
+                "gap": 35,
                 "width": "custom",
                 "custom_width": 50,
                 "width_mobile": "fill",
@@ -771,84 +1001,400 @@
                 "open_in_new_tab": false,
                 "placeholder": "",
                 "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-end": 80,
+                "padding-inline-start": 60,
+                "padding-inline-end": 60
               },
               "blocks": {
-                "custom_label_AXiMAA": {
-                  "type": "custom-label",
-                  "name": "Custom label",
+                "group_zGtTWi": {
+                  "type": "group",
+                  "name": "t:names.group",
                   "settings": {
-                    "text": "HELLRIDGE™",
-                    "link": "shopify://products/x-tango-suppressor-cover",
-                    "text_color": "#ffffff",
-                    "bg_color": "#bbbbbb",
-                    "bg_opacity": 15,
-                    "hover_bg_color": "#bbbbbb",
-                    "hover_bg_opacity": 25,
-                    "border_color": "#f9f9f9",
-                    "border_opacity": 100
-                  },
-                  "blocks": {}
-                },
-                "text_CFA7pe": {
-                  "type": "text",
-                  "name": "t:names.heading",
-                  "settings": {
-                    "text": "<h2>GEN 3.1 BINOCULAR HARNESS</h2>",
-                    "width": "fit-content",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
-                  "blocks": {}
+                  "blocks": {
+                    "custom_label_k9Jn3U": {
+                      "type": "custom-label",
+                      "name": "Custom label",
+                      "settings": {
+                        "text": "HARDTRAK™",
+                        "link": "shopify://products/leg-gaiters",
+                        "text_color": "#ffffff",
+                        "bg_color": "#bbbbbb",
+                        "bg_opacity": 15,
+                        "hover_bg_color": "#bbbbbb",
+                        "hover_bg_opacity": 25,
+                        "border_color": "#f9f9f9",
+                        "border_opacity": 100
+                      },
+                      "blocks": {}
+                    },
+                    "text_CJa98a": {
+                      "type": "text",
+                      "name": "t:names.heading",
+                      "settings": {
+                        "text": "<h2>HEAVY DUTY LEG GAITERS</h2>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "custom_label_k9Jn3U",
+                    "text_CJa98a"
+                  ]
+                },
+                "group_dRWNci": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "button_dGmm3i": {
+                      "type": "button",
+                      "name": "t:names.button",
+                      "settings": {
+                        "label": "Shop now",
+                        "link": "shopify://collections/leg-gaiters",
+                        "open_in_new_tab": false,
+                        "style_class": "button",
+                        "width": "fit-content",
+                        "custom_width": 100,
+                        "width_mobile": "fit-content",
+                        "custom_width_mobile": 100
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "button_dGmm3i"
+                  ]
                 }
               },
               "block_order": [
-                "custom_label_AXiMAA",
-                "text_CFA7pe"
+                "group_zGtTWi",
+                "group_dRWNci"
               ]
-            },
-            "button_KzbBQH": {
-              "type": "button",
-              "settings": {
-                "label": "Shop now",
-                "link": "shopify://collections/all",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "group_eKTP47",
-            "button_KzbBQH"
+            "group_wKEkap"
+          ]
+        },
+        "slide_p7DVeM": {
+          "type": "_slide",
+          "name": "Bino Harness",
+          "settings": {
+            "media_type_1": "image",
+            "image_1": "shopify://shop_images/DSC04959-2.webp",
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-end",
+            "gap": 25,
+            "inherit_color_scheme": false,
+            "color_scheme": "scheme-2",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "group_wYdTFT": {
+              "type": "group",
+              "name": "t:names.group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 35,
+                "width": "custom",
+                "custom_width": 60,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "inherit_color_scheme": true,
+                "color_scheme": "",
+                "background_media": "none",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 0,
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 80,
+                "padding-inline-start": 60,
+                "padding-inline-end": 60
+              },
+              "blocks": {
+                "group_XG7kcP": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "custom_label_6TUVnX": {
+                      "type": "custom-label",
+                      "name": "Custom label",
+                      "settings": {
+                        "text": "HELLRIDGE™",
+                        "link": "shopify://products/binocular-harness",
+                        "text_color": "#ffffff",
+                        "bg_color": "#bbbbbb",
+                        "bg_opacity": 15,
+                        "hover_bg_color": "#bbbbbb",
+                        "hover_bg_opacity": 25,
+                        "border_color": "#f9f9f9",
+                        "border_opacity": 100
+                      },
+                      "blocks": {}
+                    },
+                    "text_nKkX69": {
+                      "type": "text",
+                      "name": "t:names.heading",
+                      "settings": {
+                        "text": "<h2>CUSTOM BINOCULAR HARNESS</h2>",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "custom_label_6TUVnX",
+                    "text_nKkX69"
+                  ]
+                },
+                "group_AFMnyw": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "button_YDUbFf": {
+                      "type": "button",
+                      "name": "t:names.button",
+                      "settings": {
+                        "label": "Shop now",
+                        "link": "shopify://collections/binocular-harness-and-accessory-pouches",
+                        "open_in_new_tab": false,
+                        "style_class": "button",
+                        "width": "fit-content",
+                        "custom_width": 100,
+                        "width_mobile": "fit-content",
+                        "custom_width_mobile": 100
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "button_YDUbFf"
+                  ]
+                }
+              },
+              "block_order": [
+                "group_XG7kcP",
+                "group_AFMnyw"
+              ]
+            }
+          },
+          "block_order": [
+            "group_wYdTFT"
           ]
         }
       },
       "block_order": [
         "slide_eAyifg",
-        "slide_WqXD6Y",
-        "slide_Dzp9K4"
+        "slide_wfgbgz",
+        "slide_p7DVeM"
       ],
       "name": "Slideshow Desktop",
       "settings": {
@@ -863,7 +1409,7 @@
         "icons_style": "none",
         "icons_shape": "none",
         "slideshow_controls_style": "none",
-        "autoplay": false,
+        "autoplay": true,
         "autoplay_speed": 4,
         "padding-block-start": 0,
         "padding-block-end": 0
@@ -1236,6 +1782,20 @@
               },
               "blocks": {}
             },
+            "swatches_NJADCJ": {
+              "type": "swatches",
+              "name": "t:names.swatches",
+              "settings": {
+                "product_swatches_alignment": "flex-start",
+                "product_swatches_alignment_mobile": "flex-start",
+                "hide_padding": false,
+                "product_swatches_padding_top": 4,
+                "product_swatches_padding_bottom": 0,
+                "product_swatches_padding_left": 0,
+                "product_swatches_padding_right": 0
+              },
+              "blocks": {}
+            },
             "product_title_YXxMTj": {
               "type": "product-title",
               "name": "t:names.product_title",
@@ -1243,9 +1803,35 @@
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "rte",
+                "type_preset": "custom",
+                "font": "var(--font-heading--family)",
+                "font_size": "1.125rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground-heading)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_j3gfFG": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>{{ closest.product.metafields.custom.product_card_description.value }}</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "custom",
                 "font": "var(--font-body--family)",
-                "font_size": "1rem",
+                "font_size": "0.75rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -1254,10 +1840,23 @@
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
-                "padding-block-start": 4,
+                "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "review_4c6HHr": {
+              "type": "review",
+              "name": "t:names.product_review_stars",
+              "settings": {
+                "stars_style": "shaded",
+                "show_number": true,
+                "rating_color": "primary",
+                "type_preset": "paragraph",
+                "width": "100%",
+                "alignment": "left"
               },
               "blocks": {}
             },
@@ -1287,19 +1886,22 @@
           },
           "block_order": [
             "product_card_gallery_677WP3",
+            "swatches_NJADCJ",
             "product_title_YXxMTj",
+            "text_j3gfFG",
+            "review_4c6HHr",
             "price_JQzVV4"
           ]
         }
       },
       "name": "Featured collection",
       "settings": {
-        "collection": "all",
+        "collection": "suppressor-covers",
         "layout_type": "grid",
-        "carousel_on_mobile": false,
+        "carousel_on_mobile": true,
         "max_products": 8,
         "columns": 4,
-        "mobile_columns": "2",
+        "mobile_columns": "1",
         "mobile_card_size": "60cqw",
         "columns_gap": 8,
         "rows_gap": 24,
