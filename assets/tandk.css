@@ -92,6 +92,9 @@ div.group-block-content.layout-panel-flex.layout-panel-flex--column.mobile-colum
 
 }
 
-.product-title {
+a.card-product-title {
+    p {
+
     font-family: erbaum, sans-serif ;
+    }
 }
