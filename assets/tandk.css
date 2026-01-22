@@ -105,10 +105,9 @@ span#color-swatch-label{
     padding-left: 2px;
 }
 
-fieldset.variant-option.variant-option--buttons.variant-option--swatches {
+
     li.variant-option__swatch {
 outline: 1px solid #999;
   outline-offset: 2px;  
     }
     
-}
