@@ -16,10 +16,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* mobile button padding */ 
-.button {
-padding-left: px; 
-  padding-right: px; 
-  height: px; 
+a#main-button {
+padding-left: 40px; 
+  padding-right: 40px; 
+  height: 44px; 
 }
 
 /* Hide Mobile Banner on Desktop */
