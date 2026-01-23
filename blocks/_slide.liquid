@@ -160,6 +160,37 @@
   .slide__image-container > .slide__video-poster {
     position: absolute;
   }
+
+
+
+/* Ensure the slide is the positioning context */
+slideshow-slide {
+  position: relative;
+}
+
+/* Pin the media container so it doesn't shift */
+slideshow-slide > .slide__image-container {
+  inset: 0; /* top/right/bottom/left: 0 */
+}
+
+/* iOS/Safari "zoom on scroll" fix: use stable viewport height */
+@media (max-width: 749px) {
+  slideshow-slide > .slide__image-container {
+    height: 85svh; /* stable viewport height */
+  }
+}
+
+/* Optional: keep your dvh behavior for desktop/tablet if you want */
+@media (min-width: 750px) {
+  slideshow-slide > .slide__image-container {
+    height: 85dvh;
+  }
+}
+
+
+
+
+
 {% endstylesheet %}
 
 {% schema %}
