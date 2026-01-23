@@ -203,10 +203,12 @@
   letter-spacing: 0.02em;
 }
 
-/* MOBILE TUNING (match your screenshot proportions) */
+/* MOBILE TUNING (match your screenshot proportions) 
+
+    grid-template-columns: 88px 1fr auto;
+*/
 @media (max-width: 749px) {
   .hpc__link {
-    grid-template-columns: 88px 1fr auto;
     gap: 14px;
   }
 
