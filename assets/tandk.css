@@ -15,12 +15,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-/* mobile button padding */ 
-a#main-button {
-padding-left: 40px; 
-  padding-right: 40px; 
-  height: 44px; 
-}
+
 
 /* Hide Mobile Banner on Desktop */
  @media (min-width: 480px) {
@@ -50,6 +45,13 @@ grid-area: leftA;
     padding-left: 10px; 
  }
 
+
+ /* mobile button padding */ 
+a#main-button {
+padding-left: 40px; 
+  padding-right: 40px; 
+  height: 44px; 
+}
 
 
 /* Hide Desktop Banner on mobile */ 
