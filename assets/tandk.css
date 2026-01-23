@@ -17,9 +17,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* mobile button padding */ 
 .button {
-padding-left: 24px; 
-  padding-right: 24px; 
-  height: 44px; 
+padding-left: px; 
+  padding-right: px; 
+  height: px; 
 }
 
 /* Hide Mobile Banner on Desktop */
@@ -36,6 +36,10 @@ div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
 
  a.size-style.spacing-style.header-logo {
 grid-area: leftA;
+ }
+ .header__drawer
+ {
+    grid-area: rightA; 
  }
 
 
