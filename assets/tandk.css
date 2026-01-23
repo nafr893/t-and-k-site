@@ -31,6 +31,16 @@ div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
  }
 /* Mobile homepage height */
   @media (max-width: 480px) {
+
+ /* Mobile Header Placement */ 
+
+ a.size-style.spacing-style.header-logo {
+grid-area: leftA;
+ }
+
+
+
+
 /* Hide Desktop Banner on mobile */ 
     div#shopify-section-template--20919893328118__slideshow_VMx8dk {
         display: none; 
@@ -147,3 +157,5 @@ div.slide__image-container.slide__image-container--rounded {
  .account-button__icon {
     width: 18px; 
  }
+
+
