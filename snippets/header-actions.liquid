@@ -16,7 +16,7 @@
       class="svg-wrapper"
       aria-hidden="true"
     >
-      {{ 'icon-cart.svg' | inline_asset_content }}
+      {{ 'icon-cart.svg' | asset_url }}
     </span>
 
     {% render 'cart-bubble', limit: 100, live_region: true, test_id: test_id %}
