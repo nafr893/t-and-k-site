@@ -1,5 +1,3 @@
-
-
 {% if product == blank %}
   <div class="hpc hpc--empty">
     <div class="hpc__thumb hpc__thumb--placeholder" aria-hidden="true"></div>
@@ -33,8 +31,15 @@
   endfor
 
   assign current_color = nil
+  assign color_idx = nil
   if color_option_index != nil
-    assign current_color = v.options[color_option_index | minus: 1]
+    assign color_idx = color_option_index | minus: 1
+    assign current_color = v.options[color_idx]
+  endif
+
+  assign color_values = nil
+  if color_idx != nil
+    assign color_values = product.options_with_values[color_idx].values
   endif
 
   assign variants_json = product.variants | json
@@ -78,27 +83,24 @@
         </p>
       {% endif %}
 
-      {% if color_option_index != nil %}
-        {% assign color_values = product.options_with_values[color_option_index | minus: 1].values %}
-        {% if color_values.size > 0 %}
-          <div class="hpc__swatches" aria-label="Choose color">
-            {% for val in color_values %}
-              {% liquid
-                assign active = false
-                if current_color == val
-                  assign active = true
-                endif
-              %}
-              <button
-                type="button"
-                class="hpc__swatch{% if active %} is-active{% endif %}"
-                data-hpc-swatch
-                data-swatch-value="{{ val | escape }}"
-                aria-label="{{ val }}"
-              ></button>
-            {% endfor %}
-          </div>
-        {% endif %}
+      {% if color_values != nil and color_values.size > 0 %}
+        <div class="hpc__swatches" aria-label="Choose color">
+          {% for val in color_values %}
+            {% liquid
+              assign active = false
+              if current_color == val
+                assign active = true
+              endif
+            %}
+            <button
+              type="button"
+              class="hpc__swatch{% if active %} is-active{% endif %}"
+              data-hpc-swatch
+              data-swatch-value="{{ val | escape }}"
+              aria-label="{{ val }}"
+            ></button>
+          {% endfor %}
+        </div>
       {% endif %}
     </div>
 
