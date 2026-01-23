@@ -54,6 +54,14 @@
             "padding-inline-end": 0
           },
           "blocks": {
+            "localization_kcjrpT": {
+              "type": "localization",
+              "name": "Localization",
+              "settings": {
+                "popover_color_scheme": "scheme-1"
+              },
+              "blocks": {}
+            },
             "logo_MPmC4U": {
               "type": "logo",
               "name": "t:names.logo",
@@ -73,19 +81,11 @@
                 "padding-inline-end": 0
               },
               "blocks": {}
-            },
-            "localization_kcjrpT": {
-              "type": "localization",
-              "name": "Localization",
-              "settings": {
-                "popover_color_scheme": "scheme-1"
-              },
-              "blocks": {}
             }
           },
           "block_order": [
-            "logo_MPmC4U",
-            "localization_kcjrpT"
+            "localization_kcjrpT",
+            "logo_MPmC4U"
           ]
         },
         "group_H6VpwJ": {
