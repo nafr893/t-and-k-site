@@ -114,3 +114,9 @@ outline: 1px solid #999;
 div.slide__image-container.slide__image-container--rounded {
     aspect-ratio: 16 / 9;
 }
+
+/* slideshow performance not needed 
+  slideshow-component slideshow-slide:not([aria-hidden='false']) {
+    content-visibility: hidden;
+  }
+  */
