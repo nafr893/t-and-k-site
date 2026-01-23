@@ -84,12 +84,16 @@
   height: 100%;
   object-fit: contain;
   display: block;
+  margin: 10px;
 }
 
 .hpc__main {
   min-width: 0;
   padding-top: 12px;
   padding-bottom: 12px; 
+  border-left: 1px solid #d5d5d5;
+  padding-left: 15px;
+  height: 100%; 
 }
 
 .hpc__title {
