@@ -125,67 +125,86 @@
 %}
 
 {% stylesheet %}
-  .slide__content {
-    height: 100%;
-    position: relative;
-    z-index: var(--layer-flat);
-  }
+.slide__content {
+  height: 100%;
+  position: relative;
+  z-index: var(--layer-flat);
+}
 
-  .slide__content > * {
-    margin: auto;
-  }
+.slide__content > * {
+  margin: auto;
+}
 
-  .slide__content.background-transparent {
-    background-color: transparent;
-  }
+.slide__content.background-transparent {
+  background-color: transparent;
+}
 
-  slideshow-slide > .slide__image-container {
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-    position: absolute;
-  }
-
-  .slide__image-container > .slide__image,
-  .slide__image-container > .slide__video,
-  .slide__image-container > .slide__video-poster {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-  }
-
-  .slide__image-container > .slide__video-poster {
-    position: absolute;
-  }
-
-
-
-/* Ensure the slide is the positioning context */
+/* 1) Make the slide a positioning context + lock its height */
 slideshow-slide {
   position: relative;
+  overflow: hidden;
 }
 
-/* Pin the media container so it doesn't shift */
-slideshow-slide > .slide__image-container {
-  inset: 0; /* top/right/bottom/left: 0 */
-}
-
-/* iOS/Safari "zoom on scroll" fix: use stable viewport height */
+/* 2) LOCK height using stable viewport units to avoid iOS "zoom" + blank gap */
 @media (max-width: 749px) {
-  slideshow-slide > .slide__image-container {
-    height: 85svh; /* stable viewport height */
+  /* Prefer lvh (largest viewport) so when bars collapse you don't get blank space */
+  @supports (height: 1lvh) {
+    slideshow-slide {
+      height: 85lvh;
+      min-height: 85lvh;
+    }
+  }
+
+  /* Fallback if lvh isn't supported */
+  @supports not (height: 1lvh) {
+    slideshow-slide {
+      height: 85vh;
+      min-height: 85vh;
+    }
   }
 }
 
-/* Optional: keep your dvh behavior for desktop/tablet if you want */
+/* Desktop/tablet can keep dvh if you want */
 @media (min-width: 750px) {
-  slideshow-slide > .slide__image-container {
-    height: 85dvh;
+  @supports (height: 1dvh) {
+    slideshow-slide {
+      height: 85dvh;
+      min-height: 85dvh;
+    }
+  }
+  @supports not (height: 1dvh) {
+    slideshow-slide {
+      height: 85vh;
+      min-height: 85vh;
+    }
   }
 }
 
+/* 3) Pin the image container to the slide bounds */
+slideshow-slide > .slide__image-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;          /* <-- this is key */
+  overflow: hidden;
+}
+
+/* 4) Ensure media fills container consistently */
+.slide__image-container > .slide__image,
+.slide__image-container > .slide__video,
+.slide__image-container > .slide__video-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
+.slide__image-container > .slide__video-poster {
+  position: absolute;
+  inset: 0;
+}
 
 
 
