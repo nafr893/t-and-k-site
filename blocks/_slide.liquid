@@ -161,33 +161,6 @@
   }
 
 
-/* Make slide the containing block for the absolute image layer */
-slideshow-slide {
-  position: relative;
-}
-
-/* Always pin the media layer */
-slideshow-slide > .slide__image-container {
-  position: absolute;
-  inset: 0;
-  height: 100%;
-}
-
-/* Set the slide height using stable viewport units */
-@supports (height: 1lvh) {
-  slideshow-slide {
-    height: 85lvh;      /* locked to the "largest" mobile viewport */
-    min-height: 85lvh;
-  }
-}
-
-/* Fallback for browsers without lvh */
-@supports not (height: 1lvh) {
-  slideshow-slide {
-    height: 85vh;
-    min-height: 85vh;
-  }
-}
 
 
 
