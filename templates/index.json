@@ -210,7 +210,7 @@
                       "type": "button",
                       "name": "t:names.button",
                       "settings": {
-                        "label": "Shop now",
+                        "label": "SHOP NOW",
                         "link": "shopify://collections/suppressor-covers",
                         "open_in_new_tab": false,
                         "style_class": "button",
