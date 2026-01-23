@@ -23,6 +23,11 @@
     {% if show_country %}
       {% if localization.country %}
         {% if section == nil %}{% comment %}no section in block context—just show currency code{% endcomment %}{% endif %}
+        <span
+          class="icon-flag"
+          aria-hidden="true"
+          style="background-image: url({{- localization.country | image_url: width: 32 }});"
+        ></span>
         <span class="currency-code">{{ localization.country.currency.iso_code }}</span>
       {% endif %}
     {% endif %}
