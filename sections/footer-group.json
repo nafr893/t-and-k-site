@@ -200,7 +200,7 @@
                 "heading": "",
                 "heading_preset": "h3",
                 "border_style": "all",
-                "border_width": 1,
+                "border_width": 0,
                 "border_radius": 0,
                 "input_type_preset": "paragraph",
                 "style_class": "button",
