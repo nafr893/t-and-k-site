@@ -1953,10 +1953,10 @@
       "settings": {
         "show_controls": true,
         "max_width": 1200,
-        "radius": 20,
+        "radius": 0,
         "gap": 0,
         "card_radius": 0,
-        "card_padding": 18
+        "card_padding": 10
       }
     }
   },
