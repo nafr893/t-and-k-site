@@ -135,3 +135,8 @@ div.slide__image-container.slide__image-container--rounded {
     font-weight: bold; 
     text-transform: uppercase; 
  }
+
+ /* Star Fill Color */ 
+ svg.stars.filled-star {
+    fill: #C2A970 !important; 
+ }
