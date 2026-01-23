@@ -72,15 +72,9 @@
       <p class="hpc__title">{{ product.title }}</p>
 
       {% if current_color != blank %}
-        <p class="hpc__meta">
-          <span class="hpc__meta-label">Color:</span>
-          <span data-hpc-color>{{ current_color }}</span>
-        </p>
+    
       {% else %}
-        <p class="hpc__meta">
-          <span class="hpc__meta-label">Color:</span>
-          <span data-hpc-color>—</span>
-        </p>
+      
       {% endif %}
 
       {% if color_values != nil and color_values.size > 0 %}
