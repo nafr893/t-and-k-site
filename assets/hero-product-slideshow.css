@@ -208,11 +208,17 @@
   letter-spacing: 0.02em;
 }
 
+
+
+
 /* MOBILE TUNING (match your screenshot proportions) 
 
     grid-template-columns: 88px 1fr auto;
 */
 @media (max-width: 749px) {
+
+
+
   .hpc__link {
     gap: 14px;
   }
@@ -230,4 +236,11 @@
     font-size: 14px;
     display: none;
   }
+}
+
+/* Hide Product Showcase on Desktop */ 
+@media (min-width: 480px) {
+div#shopify-section-template--20919893328118__slide_product_showcase_kEEcQg {
+  display: none; 
+}
 }
