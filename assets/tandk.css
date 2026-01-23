@@ -15,10 +15,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 
-/* destkop button padding */ 
+/* desktop button padding */ 
 a#main-button {
-padding-left: 40px; 
-  padding-right: 40px; 
+padding-left: 140px; 
+  padding-right: 140px; 
   
 }
 
