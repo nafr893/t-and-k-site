@@ -120,3 +120,8 @@ div.slide__image-container.slide__image-container--rounded {
     content-visibility: hidden;
   }
   */
+
+ div.email-signup__input-group.email-signup__input-group--arrow.color-scheme-2 {
+    gap: 0px; 
+
+ }
