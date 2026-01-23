@@ -225,7 +225,7 @@
         },
         "group_KfkJcz": {
           "type": "group",
-          "name": "t:names.group",
+          "name": "Menus",
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -267,7 +267,7 @@
               "type": "menu",
               "name": "t:names.menu",
               "settings": {
-                "menu": "main-menu",
+                "menu": "shop",
                 "heading": "",
                 "menu_spacing": 12,
                 "show_as_accordion": true,
@@ -288,7 +288,7 @@
               "type": "menu",
               "name": "t:names.menu",
               "settings": {
-                "menu": "main-menu",
+                "menu": "the-brand",
                 "heading": "",
                 "menu_spacing": 12,
                 "show_as_accordion": true,
@@ -309,7 +309,7 @@
               "type": "menu",
               "name": "t:names.menu",
               "settings": {
-                "menu": "main-menu",
+                "menu": "resources",
                 "heading": "",
                 "menu_spacing": 12,
                 "show_as_accordion": true,
@@ -352,6 +352,25 @@
     "footer_utilities_jLGE8U": {
       "type": "footer-utilities",
       "blocks": {
+        "social_links_Ew63Kq": {
+          "type": "social-links",
+          "settings": {
+            "facebook_url": "https://www.facebook.com/tandkhunting/",
+            "instagram_url": "https://www.instagram.com/tandkhunting/?hl=en",
+            "youtube_url": "https://www.youtube.com/channel/UCvqFB385J6ZjkyyaMmrjlAw",
+            "tiktok_url": "",
+            "twitter_url": "",
+            "threads_url": "",
+            "linkedin_url": "",
+            "bluesky_url": "",
+            "snapchat_url": "",
+            "pinterest_url": "",
+            "tumblr_url": "",
+            "vimeo_url": "",
+            "custom_url": ""
+          },
+          "blocks": {}
+        },
         "footer_copyright_jweRK8": {
           "type": "footer-copyright",
           "settings": {
@@ -368,45 +387,76 @@
             "case": "none"
           },
           "blocks": {}
-        },
-        "social_links_Ew63Kq": {
-          "type": "social-links",
-          "settings": {
-            "facebook_url": "https://www.facebook.com/",
-            "instagram_url": "https://www.instagram.com/",
-            "youtube_url": "https://www.youtube.com/",
-            "tiktok_url": "https://www.tiktok.com/",
-            "twitter_url": "https://x.com/",
-            "threads_url": "",
-            "linkedin_url": "",
-            "bluesky_url": "",
-            "snapchat_url": "",
-            "pinterest_url": "",
-            "tumblr_url": "",
-            "vimeo_url": "",
-            "custom_url": ""
-          },
-          "blocks": {}
         }
       },
       "block_order": [
+        "social_links_Ew63Kq",
         "footer_copyright_jweRK8",
-        "footer_policy_list_VCdnpa",
-        "social_links_Ew63Kq"
+        "footer_policy_list_VCdnpa"
       ],
       "name": "t:names.utilities",
       "settings": {
         "section_width": "page-width",
         "gap": 24,
         "divider_thickness": 0,
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "padding-block-start": 20,
         "padding-block-end": 48
+      }
+    },
+    "section_6Kb9kh": {
+      "type": "section",
+      "blocks": {
+        "payment_icons_ikGKJ8": {
+          "type": "payment-icons",
+          "name": "t:names.payment_icons",
+          "settings": {
+            "horizontal_alignment": "center",
+            "gap": 10,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "payment_icons_ikGKJ8"
+      ],
+      "name": "t:names.custom_section",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "custom",
+        "section_height_custom": 10,
+        "color_scheme": "scheme-2",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 20
       }
     }
   },
   "order": [
     "footer_m9NzUG",
-    "footer_utilities_jLGE8U"
+    "footer_utilities_jLGE8U",
+    "section_6Kb9kh"
   ]
 }
