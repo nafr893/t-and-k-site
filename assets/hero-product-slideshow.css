@@ -218,5 +218,6 @@
 
   .hpc__price {
     font-size: 14px;
+    display: none;
   }
 }
