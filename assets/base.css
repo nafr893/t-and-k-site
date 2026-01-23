@@ -3329,10 +3329,11 @@ slideshow-slide {
   &[aria-hidden='false'] {
     content-visibility: visible;
   }
-
+/*
   slideshow-component slideshow-slide:not([aria-hidden='false']) {
     content-visibility: hidden;
   }
+  /*
 
   &[hidden]:not([reveal]) {
     display: none;
