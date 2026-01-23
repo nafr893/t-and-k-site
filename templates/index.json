@@ -1915,6 +1915,49 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "slide_product_showcase_kEEcQg": {
+      "type": "slide-product-showcase",
+      "blocks": {
+        "slide_D7FmFk": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/DSC05576.webp",
+            "image_alt": "",
+            "product": "suppressor-cover"
+          }
+        },
+        "slide_RpJR4B": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/DSC04609-2-2.webp",
+            "image_alt": "",
+            "product": "soft-rifle-case"
+          }
+        },
+        "slide_RPfMrY": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/DSC04959-2.webp",
+            "image_alt": "",
+            "product": "binocular-harness"
+          }
+        }
+      },
+      "block_order": [
+        "slide_D7FmFk",
+        "slide_RpJR4B",
+        "slide_RPfMrY"
+      ],
+      "name": "Hero + Product Slideshow",
+      "settings": {
+        "show_controls": true,
+        "max_width": 1200,
+        "radius": 20,
+        "gap": 0,
+        "card_radius": 0,
+        "card_padding": 18
+      }
     }
   },
   "order": [
@@ -1922,6 +1965,7 @@
     "slideshow_VMx8dk",
     "collection_list_dPtVGx",
     "hero_jVaWmY",
-    "product_list_fa6P9H"
+    "product_list_fa6P9H",
+    "slide_product_showcase_kEEcQg"
   ]
 }
