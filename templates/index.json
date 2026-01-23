@@ -807,7 +807,7 @@
         "full_frame_on_mobile": false,
         "slideshow_gap": 12,
         "corner_radius": 0,
-        "slide_height": "auto",
+        "slide_height": "large",
         "content_position": "on-media",
         "color_scheme": "scheme-2",
         "icons_style": "none",
