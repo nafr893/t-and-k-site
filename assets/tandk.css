@@ -129,3 +129,9 @@ div.slide__image-container.slide__image-container--rounded {
  input#EmailInput-ATzhSaEhoaWtiZDZwe__email_signup_RxMJTQ {
     font-family: Ibm Plex Mono;
  }
+
+ summary.menu__heading menu__heading--empty h5 {
+    font-size: 16px; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+ }
