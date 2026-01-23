@@ -602,7 +602,7 @@
       --header-template-columns: var(--header-mobile-bookend) var(--header-mobile-bookend) 1fr
         var(--header-mobile-bookend) var(--header-mobile-bookend);
 
-      grid-template-areas: 'leftA leftB center rightA rightB';
+      grid-template-areas: 'leftA leftB leftC center rightA rightB rightC';
       grid-column: span 3;
       column-gap: 0;
       align-items: center;
@@ -626,7 +626,7 @@
       }
 
       header-actions {
-        grid-area: rightB;
+        grid-area: right;
       }
     }
   }
