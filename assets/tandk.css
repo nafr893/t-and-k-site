@@ -39,7 +39,7 @@ div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
 div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
     height: 85dvh; 
     
-}
+
 
 .slideshow-slides, div.slideshow-section.spacing-style.section.section--full-width.color-scheme-2.disable-section-top-offset, slideshow-component.slideshow--content-on-media, .slideshow-container {
     height: 85svh !important; 
@@ -48,7 +48,7 @@ div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
 slideshow-slides, slideshow-container {
     height: 85svh !important;
 }
-
+}
 
 /* Collection Card Mobile Settings. */ 
 div.collection-card__content.layout-panel-flex--column {
