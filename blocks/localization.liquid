@@ -1,0 +1,45 @@
+{% liquid
+  assign show_language = true
+  assign show_country = true
+
+  if localization.available_languages.size <= 1
+    assign show_language = false
+  endif
+
+  if localization.available_countries.size <= 1
+    assign show_country = false
+  endif
+-%}
+
+<dropdown-localization-component class="dropdown-localization">
+  <button
+    type="button"
+    class="button dropdown-localization__button localization-selector link link--text"
+    aria-expanded="false"
+    aria-controls="dropdown-localization-results"
+    on:click="/toggleSelector"
+    {{ block.shopify_attributes }}
+  >
+    {% if show_country %}
+      {% if localization.country %}
+        {% if section == nil %}{% comment %}no section in block context—just show currency code{% endcomment %}{% endif %}
+        <span class="currency-code">{{ localization.country.currency.iso_code }}</span>
+      {% endif %}
+    {% endif %}
+    <span class="visually-hidden">
+      {{- 'accessibility.localization_region_and_language' | t -}}
+    </span>
+    <span class="svg-wrapper icon-caret">
+      {{- 'icon-caret.svg' | inline_asset_content -}}
+    </span>
+  </button>
+
+  <div class="localization-wrapper color-{{ settings.popover_color_scheme | default: 'scheme-1' }}" hidden ref="panel">
+    {% render 'localization-form',
+      show_country: show_country,
+      show_language: show_language,
+      localization_style: 'dropdown',
+      block_id: block.id
+    %}
+  </div>
+</dropdown-localization-component>
