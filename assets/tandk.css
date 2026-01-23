@@ -110,4 +110,7 @@ span#color-swatch-label{
 outline: 1px solid #999;
   outline-offset: 2px;  
     }
-    
+
+div.slide__image-container.slide__image-container--rounded {
+    aspect-ratio: 16 / 9;
+}
