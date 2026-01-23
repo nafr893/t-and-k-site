@@ -85,21 +85,7 @@
 
       {% if color_values != nil and color_values.size > 0 %}
         <div class="hpc__swatches" aria-label="Choose color">
-          {% for val in color_values %}
-            {% liquid
-              assign active = false
-              if current_color == val
-                assign active = true
-              endif
-            %}
-            <button
-              type="button"
-              class="hpc__swatch{% if active %} is-active{% endif %}"
-              data-hpc-swatch
-              data-swatch-value="{{ val | escape }}"
-              aria-label="{{ val }}"
-            ></button>
-          {% endfor %}
+          {% render 'variant-swatches', product_resource: product %}
         </div>
       {% endif %}
     </div>
