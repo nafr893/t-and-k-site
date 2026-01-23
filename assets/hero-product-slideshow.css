@@ -211,8 +211,8 @@
   }
 
   .hpc__thumb {
-    width: 88px;
-    height: 88px;
+    width: auto;
+    height: 100%;
   }
 
   .hpc__title {
