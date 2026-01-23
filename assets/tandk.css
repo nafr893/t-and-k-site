@@ -46,6 +46,10 @@ grid-area: leftA;
     grid-area: right; 
  }
 
+ div.header__columns.spacing-style {
+    padding-left: 10px; 
+ }
+
 
 
 /* Hide Desktop Banner on mobile */ 
