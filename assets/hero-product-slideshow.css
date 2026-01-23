@@ -47,7 +47,7 @@
   background: rgba(0,0,0,0.06);
 }
 
-/* CARD UNDER IMAGE (like screenshot) */
+/* CARD UNDER IMAGE */
 .hps__card {
   margin-top: var(--hps-gap);
   background: #fff;
@@ -56,7 +56,7 @@
 
 /* MINI PRODUCT CARD */
 .hpc {
-  background: #fff;
+  background: #f9f9f9;
 }
 
 .hpc__link {
@@ -75,7 +75,6 @@
 .hpc__thumb {
   width: 96px;
   height: 96px;
-  background: rgba(0,0,0,0.04);
   display: grid;
   place-items: center;
 }
