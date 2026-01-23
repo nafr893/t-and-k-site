@@ -119,7 +119,7 @@
     },
     "email_signup": {
       "label": "Email",
-      "placeholder": "YOUR EMAIL ADDRESS",
+      "placeholder": "Your Email Address",
       "success": "Thanks for subscribing!"
     },
     "filter": "Filter",
