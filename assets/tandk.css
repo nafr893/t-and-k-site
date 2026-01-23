@@ -42,6 +42,9 @@ grid-area: leftA;
     grid-area: rightA; 
  }
 
+ .header__columns.header-actions {
+    grid-area: right; 
+ }
 
 
 
