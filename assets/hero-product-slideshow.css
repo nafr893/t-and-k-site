@@ -36,8 +36,8 @@
 }
 
 .hps__image {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
   display: block;
 }
 
@@ -67,6 +67,9 @@
   padding: var(--hps-card-pad);
   text-decoration: none;
   color: inherit;
+  padding-left: 0px;
+  padding-top: 0px;
+
 }
 
 .hpc__thumb {
@@ -86,8 +89,8 @@
 
 .hpc__main {
   min-width: 0;
-  padding-top: 8px;
-  padding-bottom: 8px; 
+  padding-top: 12px;
+  padding-bottom: 12px; 
 }
 
 .hpc__title {
@@ -111,7 +114,7 @@
 }
 
 .hpc__swatches {
-  margin-top: 10px;
+  margin-top: 5px;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
