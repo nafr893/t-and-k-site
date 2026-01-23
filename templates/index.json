@@ -216,7 +216,7 @@
                         "style_class": "button",
                         "width": "fit-content",
                         "custom_width": 100,
-                        "width_mobile": "custom",
+                        "width_mobile": "fit-content",
                         "custom_width_mobile": 50
                       },
                       "blocks": {}
