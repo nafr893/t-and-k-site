@@ -161,28 +161,31 @@
   }
 
 
-
-/* Ensure the slide is the positioning context */
+/* Make slide the containing block for the absolute image layer */
 slideshow-slide {
   position: relative;
 }
 
-/* Pin the media container so it doesn't shift */
+/* Always pin the media layer */
 slideshow-slide > .slide__image-container {
-  inset: 0; /* top/right/bottom/left: 0 */
+  position: absolute;
+  inset: 0;
+  height: 100%;
 }
 
-/* iOS/Safari "zoom on scroll" fix: use stable viewport height */
-@media (max-width: 749px) {
-  slideshow-slide > .slide__image-container {
-    height: 85svh; /* stable viewport height */
+/* Set the slide height using stable viewport units */
+@supports (height: 1lvh) {
+  slideshow-slide {
+    height: 85lvh;      /* locked to the "largest" mobile viewport */
+    min-height: 85lvh;
   }
 }
 
-/* Optional: keep your dvh behavior for desktop/tablet if you want */
-@media (min-width: 750px) {
-  slideshow-slide > .slide__image-container {
-    height: 85dvh;
+/* Fallback for browsers without lvh */
+@supports not (height: 1lvh) {
+  slideshow-slide {
+    height: 85vh;
+    min-height: 85vh;
   }
 }
 
