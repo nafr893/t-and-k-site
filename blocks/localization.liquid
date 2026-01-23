@@ -43,3 +43,26 @@
     %}
   </div>
 </dropdown-localization-component>
+
+{% schema %}
+{
+  "name": "Localization",
+  "settings": [
+    {
+      "type": "select",
+      "id": "popover_color_scheme",
+      "label": "Popover color scheme",
+      "options": [
+        { "value": "scheme-1", "label": "Default" },
+        { "value": "scheme-2", "label": "Dark" }
+      ],
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Localization"
+    }
+  ]
+}
+{% endschema %}
