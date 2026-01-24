@@ -33,9 +33,9 @@
   style="--tab-count: {{ tabs.size }}; --menu-image-border-radius: {{ image_border_radius }}px;"
 >
   <details
-    id="Details-tabbed-drawer"
+    id="Details-menu-drawer-container"
     data-skip-node-update="true"
-    class="tabbed-drawer-container"
+    class="menu-drawer-container menu-open"
     ref="details"
     scroll-lock
   >
@@ -124,7 +124,7 @@
   }
 
   /* Header Icon Styles */
-  .tabbed-drawer-container .header__icon--summary {
+  .menu-drawer-container.menu-open .header__icon--summary {
     color: var(--color-foreground);
     display: flex;
     justify-content: center;
