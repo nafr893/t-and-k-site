@@ -167,7 +167,7 @@ class TabbedHeaderDrawer extends Component {
   #resetDrawer(element) {
     element.classList.remove('menu-open');
     element.removeAttribute('open');
-    element.querySelector('summary')?.setAttribute('aria-expanded', 'false');
+    element.querySelector('summary')?.setAttribute('aria-expanded', 'true');
   }
 
   #setupAnimatedElementListeners() {
