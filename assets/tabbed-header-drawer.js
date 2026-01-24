@@ -167,7 +167,7 @@ class TabbedHeaderDrawer extends Component {
   #resetDrawer(element) {
     element.classList.remove('menu-open');
     element.removeAttribute('open');
-    element.querySelector('summary')?.setAttribute('aria-expanded', 'true');
+    element.querySelector('summary')?.setAttribute('aria-expanded', 'false');
   }
 
   #setupAnimatedElementListeners() {
@@ -284,28 +284,40 @@ if (!customElements.get('tabbed-header-drawer')) {
     const panels = el.querySelectorAll('.tabbed-drawer__panels > *');
     const tabButtons = el.querySelectorAll('[data-tab] , .tabbed-drawer__tabs [role="tab"] , [ref="tabButtons[]"]');
 
-    // Helpers
-    const isOpen = () => details.hasAttribute('open');
-    const open = () => details.setAttribute('open', '');
-    const close = () => details.removeAttribute('open');
+    // Helpers (replace previous isOpen/open/close + summary click handler)
+    const isOpen = () => details.open === true;
 
-    // Toggle summary -> behave same as header drawer summary
-    if (summary) {
-      summary.addEventListener('click', (evt) => {
-        // allow native <details> toggle to work but keep consistent behavior
-        evt.preventDefault();
-        if (isOpen()) {
-          close();
-        } else {
-          open();
-          // focus first tabbable inside panels if present
-          setTimeout(() => {
-            const firstFocusable = el.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-            if (firstFocusable) firstFocusable.focus();
-          }, 50);
-        }
-      });
-    }
+    const whenOpened = () => {
+      details.classList.add('menu-open');
+      details.querySelector('summary')?.setAttribute('aria-expanded', 'true');
+      // focus first tabbable inside panels when opening
+      setTimeout(() => {
+        const firstFocusable = el.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (firstFocusable) firstFocusable.focus();
+      }, 50);
+    };
+
+    const whenClosed = () => {
+      details.classList.remove('menu-open');
+      details.querySelector('summary')?.setAttribute('aria-expanded', 'false');
+    };
+
+    // Listen to native toggle event — fired for summary click or programmatic changes to details.open
+    details.addEventListener('toggle', () => {
+      if (details.open) {
+        whenOpened();
+      } else {
+        whenClosed();
+      }
+    });
+
+    // small helpers used by external triggers
+    const open = () => {
+      if (!details.open) details.open = true; // triggers 'toggle' event
+    };
+    const close = () => {
+      if (details.open) details.open = false; // triggers 'toggle' event
+    };
 
     // close buttons
     closeButtons.forEach((btn) => {
