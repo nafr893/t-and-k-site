@@ -18,11 +18,20 @@
       ref="headerDrawerContainer"
       {{ block.shopify_attributes }}
     >
-      {% render 'header-drawer',
-        class: 'header__drawer--mobile',
-        linklist: block_settings.menu,
-        data_header_drawer_type: 'mobile-drawer'
-      %}
+      {% if block_settings.mobile_drawer_style == 'tabbed' %}
+        {% render 'tabbed-header-drawer',
+          class: 'header__drawer--mobile-tabbed',
+          linklist: block_settings.menu,
+          block: block,
+          section: section
+        %}
+      {% else %}
+        {% render 'header-drawer',
+          class: 'header__drawer--mobile',
+          linklist: block_settings.menu,
+          data_header_drawer_type: 'mobile-drawer'
+        %}
+      {% endif %}
     </div>
 
   {% when 'mobile-tabbed' %}
@@ -906,6 +915,23 @@
     {
       "type": "header",
       "content": "t:content.mobile_layout"
+    },
+    {
+      "type": "select",
+      "id": "mobile_drawer_style",
+      "label": "Mobile menu style",
+      "options": [
+        {
+          "value": "standard",
+          "label": "Standard drawer"
+        },
+        {
+          "value": "tabbed",
+          "label": "Tabbed drawer (SHOP/NEW/EXPLORE)"
+        }
+      ],
+      "default": "standard",
+      "info": "Choose between standard accordion menu or tabbed navigation"
     },
     {
       "type": "checkbox",
