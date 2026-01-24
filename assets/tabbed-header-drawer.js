@@ -300,6 +300,7 @@ if (!customElements.get('tabbed-header-drawer')) {
       }, 50);
     };
 
+    
     const whenClosed = () => {
       details.classList.remove('menu-open');
       details.querySelector('summary')?.setAttribute('aria-expanded', 'false');
