@@ -279,13 +279,6 @@ if (!customElements.get('tabbed-header-drawer')) {
       return;
     }
 
-    // Make sure drawer starts closed on load so CSS transition runs when opened.
-    // This also ensures the summary shows the "open" icon (not the X) initially.
-    details.classList.remove('menu-open');
-    details.removeAttribute('open');
-    const summary = details.querySelector('summary');
-    if (summary) summary.setAttribute('aria-expanded', 'false');
-
     const summary = details.querySelector('summary') || el.querySelector('summary');
     const closeButtons = Array.from(el.querySelectorAll('[on\\:click="/close"], .tabbed-drawer__close-button, .tabbed-drawer__close'));
     const panels = el.querySelectorAll('.tabbed-drawer__panels > *');
