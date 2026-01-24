@@ -251,3 +251,164 @@ class TabbedHeaderDrawer extends Component {
 if (!customElements.get('tabbed-header-drawer')) {
   customElements.define('tabbed-header-drawer', TabbedHeaderDrawer);
 }
+
+/*
+  Robust initializer for <tabbed-header-drawer> that mirrors header-drawer behavior:
+  - waits for required DOM nodes
+  - toggles details open/close on summary click
+  - closes on close buttons, Escape, or outside click
+  - listens to [data-custom-drawer-trigger] to open the drawer
+*/
+
+(function () {
+  function initOne(el) {
+    if (!el || el.dataset.__tabbedInit) return;
+    el.dataset.__tabbedInit = '1';
+
+    const details = el.querySelector('details');
+    if (!details) {
+      // if details not present yet, observe until it appears
+      const mo = new MutationObserver(() => {
+        const d = el.querySelector('details');
+        if (d) {
+          mo.disconnect();
+          initOne(el); // re-init now that details exists
+        }
+      });
+      mo.observe(el, { childList: true, subtree: true });
+      return;
+    }
+
+    const summary = details.querySelector('summary') || el.querySelector('summary');
+    const closeButtons = Array.from(el.querySelectorAll('[on\\:click="/close"], .tabbed-drawer__close-button, .tabbed-drawer__close'));
+    const panels = el.querySelectorAll('.tabbed-drawer__panels > *');
+    const tabButtons = el.querySelectorAll('[data-tab] , .tabbed-drawer__tabs [role="tab"] , [ref="tabButtons[]"]');
+
+    // Helpers
+    const isOpen = () => details.hasAttribute('open');
+    const open = () => details.setAttribute('open', '');
+    const close = () => details.removeAttribute('open');
+
+    // Toggle summary -> behave same as header drawer summary
+    if (summary) {
+      summary.addEventListener('click', (evt) => {
+        // allow native <details> toggle to work but keep consistent behavior
+        evt.preventDefault();
+        if (isOpen()) {
+          close();
+        } else {
+          open();
+          // focus first tabbable inside panels if present
+          setTimeout(() => {
+            const firstFocusable = el.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            if (firstFocusable) firstFocusable.focus();
+          }, 50);
+        }
+      });
+    }
+
+    // close buttons
+    closeButtons.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        close();
+        // return focus to the summary/menu toggle if present
+        if (summary) summary.focus();
+      });
+    });
+
+    // Escape key closes
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen()) {
+        close();
+        if (summary) summary.focus();
+      }
+    });
+
+    // clicking outside closes
+    document.addEventListener('click', (e) => {
+      if (!isOpen()) return;
+      const clickInside = e.target instanceof Element && (el.contains(e.target) || details.contains(e.target));
+      if (!clickInside) close();
+    }, { capture: true });
+
+    // Support external triggers (header button) with data-custom-drawer-trigger
+    const attachTrigger = (btn) => {
+      if (!btn || btn.__tabbedAttached) return;
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        open();
+        // focus first tab button if present
+        setTimeout(() => {
+          const firstTab = el.querySelector('[role="tab"], [data-tab]:not([hidden])');
+          if (firstTab) firstTab.focus();
+        }, 30);
+      });
+      btn.__tabbedAttached = true;
+    };
+
+    document.querySelectorAll('[data-custom-drawer-trigger]').forEach(attachTrigger);
+
+    // delegated listener for triggers added later
+    const delegated = (e) => {
+      const t = e.target instanceof Element ? e.target.closest('[data-custom-drawer-trigger]') : null;
+      if (t) {
+        e.preventDefault();
+        open();
+      }
+    };
+    document.addEventListener('click', delegated, { passive: false });
+
+    // store cleanup references (if you later need to remove)
+    el.__tabbed_cleanup = () => {
+      document.removeEventListener('click', delegated, { passive: false });
+    };
+
+    // optional: make tabs/panels accessible if present (simple aria setup)
+    if (tabButtons && tabButtons.length && panels && panels.length) {
+      tabButtons.forEach((b, i) => {
+        b.setAttribute('role', 'tab');
+        b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+        b.setAttribute('tabindex', i === 0 ? '0' : '-1');
+        b.addEventListener('click', () => {
+          tabButtons.forEach((tb, idx) => {
+            tb.setAttribute('aria-selected', idx === i ? 'true' : 'false');
+            tb.setAttribute('tabindex', idx === i ? '0' : '-1');
+          });
+          panels.forEach((p, idx) => {
+            p.hidden = idx !== i;
+          });
+        });
+      });
+      // ensure initial panel visibility
+      panels.forEach((p, idx) => { p.hidden = idx !== 0; });
+    }
+  }
+
+  // initialize existing tabbed drawers
+  function initAll() {
+    document.querySelectorAll('tabbed-header-drawer').forEach(initOne);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAll);
+  } else {
+    initAll();
+  }
+
+  // observe for dynamically added drawers (theme editor)
+  const observer = new MutationObserver((mutations) => {
+    for (const m of mutations) {
+      if (m.addedNodes) {
+        m.addedNodes.forEach((node) => {
+          if (node instanceof Element && node.matches && node.matches('tabbed-header-drawer')) {
+            initOne(node);
+          } else if (node instanceof Element) {
+            node.querySelectorAll && node.querySelectorAll('tabbed-header-drawer').forEach(initOne);
+          }
+        });
+      }
+    }
+  });
+  observer.observe(document.documentElement || document.body, { childList: true, subtree: true });
+})();
