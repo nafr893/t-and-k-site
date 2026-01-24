@@ -284,6 +284,9 @@ if (!customElements.get('tabbed-header-drawer')) {
     const panels = el.querySelectorAll('.tabbed-drawer__panels > *');
     const tabButtons = el.querySelectorAll('[data-tab] , .tabbed-drawer__tabs [role="tab"] , [ref="tabButtons[]"]');
 
+    // Detect touch devices — avoid programmatic focus on summary for touch to prevent "double-tap" open behavior
+    const isTouchDevice = typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+
     // Helpers (replace previous isOpen/open/close + summary click handler)
     const isOpen = () => details.open === true;
 
@@ -324,8 +327,8 @@ if (!customElements.get('tabbed-header-drawer')) {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
         close();
-        // return focus to the summary/menu toggle if present
-        if (summary) summary.focus();
+        // return focus to the summary/menu toggle if present; skip on touch devices to avoid double-tap requirement
+        if (summary && !isTouchDevice) summary.focus();
       });
     });
 
@@ -333,7 +336,8 @@ if (!customElements.get('tabbed-header-drawer')) {
     el.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && isOpen()) {
         close();
-        if (summary) summary.focus();
+        // Escape is a keyboard interaction — focus is appropriate unless on a touch-only device
+        if (summary && !isTouchDevice) summary.focus();
       }
     });
 
@@ -353,74 +357,4 @@ if (!customElements.get('tabbed-header-drawer')) {
         // focus first tab button if present
         setTimeout(() => {
           const firstTab = el.querySelector('[role="tab"], [data-tab]:not([hidden])');
-          if (firstTab) firstTab.focus();
-        }, 30);
-      });
-      btn.__tabbedAttached = true;
-    };
-
-    document.querySelectorAll('[data-custom-drawer-trigger]').forEach(attachTrigger);
-
-    // delegated listener for triggers added later
-    const delegated = (e) => {
-      const t = e.target instanceof Element ? e.target.closest('[data-custom-drawer-trigger]') : null;
-      if (t) {
-        e.preventDefault();
-        open();
-      }
-    };
-    document.addEventListener('click', delegated, { passive: false });
-
-    // store cleanup references (if you later need to remove)
-    el.__tabbed_cleanup = () => {
-      document.removeEventListener('click', delegated, { passive: false });
-    };
-
-    // optional: make tabs/panels accessible if present (simple aria setup)
-    if (tabButtons && tabButtons.length && panels && panels.length) {
-      tabButtons.forEach((b, i) => {
-        b.setAttribute('role', 'tab');
-        b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
-        b.setAttribute('tabindex', i === 0 ? '0' : '-1');
-        b.addEventListener('click', () => {
-          tabButtons.forEach((tb, idx) => {
-            tb.setAttribute('aria-selected', idx === i ? 'true' : 'false');
-            tb.setAttribute('tabindex', idx === i ? '0' : '-1');
-          });
-          panels.forEach((p, idx) => {
-            p.hidden = idx !== i;
-          });
-        });
-      });
-      // ensure initial panel visibility
-      panels.forEach((p, idx) => { p.hidden = idx !== 0; });
-    }
-  }
-
-  // initialize existing tabbed drawers
-  function initAll() {
-    document.querySelectorAll('tabbed-header-drawer').forEach(initOne);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initAll);
-  } else {
-    initAll();
-  }
-
-  // observe for dynamically added drawers (theme editor)
-  const observer = new MutationObserver((mutations) => {
-    for (const m of mutations) {
-      if (m.addedNodes) {
-        m.addedNodes.forEach((node) => {
-          if (node instanceof Element && node.matches && node.matches('tabbed-header-drawer')) {
-            initOne(node);
-          } else if (node instanceof Element) {
-            node.querySelectorAll && node.querySelectorAll('tabbed-header-drawer').forEach(initOne);
-          }
-        });
-      }
-    }
-  });
-  observer.observe(document.documentElement || document.body, { childList: true, subtree: true });
-})();
+          if
