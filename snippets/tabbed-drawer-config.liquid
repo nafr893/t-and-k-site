@@ -1,0 +1,49 @@
+{%- doc -%}
+  Configuration for tabbed drawer - defines which menu items belong to which tabs.
+
+  @param {object} linklist - The menu linklist to filter and organize
+  @returns {object} Configuration object with tab assignments
+
+  @example
+  {% render 'tabbed-drawer-config', linklist: linklist %}
+{%- enddoc -%}
+
+{% liquid
+  # Define tab IDs
+  assign all_tabs = 'shop,new,explore' | split: ','
+  assign default_tab = 'shop'
+
+  # Define which menu handles go into which tab
+  # Customize these based on your actual menu structure
+  assign shop_handles = 'range-gear,hunting-gear,upland-gear,accessories,shop-by-category,shop-by-purpose' | split: ','
+  assign new_handles = 'new-arrivals,best-sellers,featured' | split: ','
+  assign explore_handles = 'about,field-notes,manufacturing,pricing,contact,about-tk,manufacturing-process,pricing-transparency,military-discount' | split: ','
+
+  # Build content arrays by filtering linklist
+  # This allows dynamic menu content based on Shopify menu configuration
+  assign shop_items = ''
+  assign new_items = ''
+  assign explore_items = ''
+
+  if linklist.links
+    for link in linklist.links
+      if shop_handles contains link.handle
+        assign shop_items = shop_items | append: link.handle | append: ','
+      elsif new_handles contains link.handle
+        assign new_items = new_items | append: link.handle | append: ','
+      elsif explore_handles contains link.handle
+        assign explore_items = explore_items | append: link.handle | append: ','
+      endif
+    endfor
+  endif
+
+  # Convert to arrays
+  assign shop_items_array = shop_items | split: ','
+  assign new_items_array = new_items | split: ','
+  assign explore_items_array = explore_items | split: ','
+%}
+
+{%- comment -%}
+  Export configuration variables for use in parent template
+  These are now available in the scope where this snippet is rendered
+{%- endcomment -%}

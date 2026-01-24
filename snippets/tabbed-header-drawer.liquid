@@ -1,0 +1,573 @@
+{%- doc -%}
+  Renders a tabbed header drawer menu with SHOP, NEW, and EXPLORE tabs.
+
+  @param {object} linklist - The linklist to render
+  @param {string} [class] - Additional classes to add to the drawer
+  @param {object} [block] - The block that can be used to provide settings
+  @param {object} [section] - The section that can be used to provide settings
+
+  @example
+  {% render 'tabbed-header-drawer', linklist: section.settings.menu, class: 'header__drawer--mobile-tabbed' %}
+{%- enddoc -%}
+
+{% liquid
+  assign block_settings = block.settings
+  assign image_border_radius = block_settings.image_border_radius | default: 0
+
+  # Load configuration
+  render 'tabbed-drawer-config', linklist: linklist
+
+  # Define tabs
+  assign tabs = 'shop,new,explore' | split: ','
+  assign active_tab = 'shop'
+%}
+
+<script
+  src="{{ 'tabbed-header-drawer.js' | asset_url }}"
+  type="module"
+  fetchpriority="low"
+></script>
+
+<tabbed-header-drawer
+  class="tabbed-header-drawer {{ class }}"
+  style="--tab-count: {{ tabs.size }}; --menu-image-border-radius: {{ image_border_radius }}px;"
+>
+  <details
+    id="Details-tabbed-drawer"
+    data-skip-node-update="true"
+    class="tabbed-drawer-container"
+    ref="details"
+    scroll-lock
+  >
+    <summary
+      class="header__icon header__icon--menu header__icon--summary"
+      aria-label="{{ 'accessibility.menu' | t }}"
+      on:click="/toggle"
+    >
+      <span class="svg-wrapper header-drawer-icon header-drawer-icon--open">
+        {{- 'icon-menu.svg' | inline_asset_content -}}
+      </span>
+      <span class="svg-wrapper header-drawer-icon header-drawer-icon--close">
+        {{- 'icon-close.svg' | inline_asset_content -}}
+      </span>
+    </summary>
+
+    <div
+      data-tabbed-drawer
+      class="tabbed-drawer motion-reduce color-{{ block_settings.color_scheme }}"
+    >
+      {%- comment -%} Close Button {%- endcomment -%}
+      <button
+        class="button button-unstyled close-button tabbed-drawer__close-button"
+        type="button"
+        aria-label="{{ 'actions.close' | t }}"
+        on:click="/close"
+      >
+        <span class="svg-wrapper header-drawer-icon header-drawer-icon--close">
+          {{- 'icon-close.svg' | inline_asset_content -}}
+        </span>
+      </button>
+
+      {%- comment -%} Tab Navigation {%- endcomment -%}
+      {% render 'tabbed-drawer-tabs',
+        tabs: tabs,
+        active_tab: active_tab
+      %}
+
+      {%- comment -%} Tab Panels {%- endcomment -%}
+      <div class="tabbed-drawer__panels">
+        {% for tab in tabs %}
+          {% render 'tabbed-drawer-panel',
+            tab: tab,
+            linklist: linklist,
+            active_tab: active_tab,
+            block: block,
+            section: section
+          %}
+        {% endfor %}
+      </div>
+
+      {%- comment -%} Account Section (appears on all tabs) {%- endcomment -%}
+      <div class="tabbed-drawer__account-section">
+        <div class="tabbed-drawer__account-title">ACCOUNT</div>
+        <a href="/account" class="tabbed-drawer__account-link">
+          Log In / Sign Up
+        </a>
+      </div>
+
+      {%- comment -%} Featured Banner (appears on all tabs) {%- endcomment -%}
+      <div class="tabbed-drawer__featured-banner">
+        <div class="tabbed-drawer__banner-content">
+          <h3 class="tabbed-drawer__banner-title">LIFETIME<br>WARRANTY</h3>
+          <a href="/pages/warranty" class="button button--secondary tabbed-drawer__banner-cta">
+            LEARN MORE
+          </a>
+        </div>
+      </div>
+
+      {%- comment -%} Backdrop {%- endcomment -%}
+      <div class="tabbed-drawer__backdrop" on:click="/close"></div>
+    </div>
+  </details>
+</tabbed-header-drawer>
+
+{% stylesheet %}
+  /* ============================================
+     Tabbed Header Drawer Styles
+     ============================================ */
+
+  /* Hide on desktop */
+  @media screen and (min-width: 750px) {
+    .header--desktop header-menu + .header__drawer tabbed-header-drawer {
+      display: none;
+    }
+  }
+
+  /* Header Icon Styles */
+  .tabbed-drawer-container .header__icon--summary {
+    color: var(--color-foreground);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padding-lg);
+  }
+
+  .header__icon--summary .header-drawer-icon {
+    margin: auto;
+    width: var(--icon-size-xs);
+    height: var(--icon-size-xs);
+  }
+
+  /* Icon visibility states */
+  details:not(.menu-open) .header__icon--menu .header-drawer-icon--close {
+    display: none;
+  }
+
+  details.menu-open .header__icon--menu .header-drawer-icon--close {
+    @media screen and (min-width: 750px) {
+      display: none;
+    }
+  }
+
+  details.menu-open .header__icon--menu .header-drawer-icon--open {
+    display: none;
+
+    @media screen and (min-width: 750px) {
+      display: flex;
+    }
+  }
+
+  /* Main Drawer Container */
+  .tabbed-drawer {
+    position: fixed;
+    transform: translateX(-100%);
+    visibility: hidden;
+    opacity: 0;
+    height: 100dvh;
+    width: 95vw;
+    max-width: 400px;
+    z-index: var(--layer-menu-drawer, 100);
+    left: 0;
+    top: 0;
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--color-border);
+    box-shadow: var(--shadow-drawer);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+
+    @media screen and (min-width: 750px) {
+      width: 400px;
+    }
+  }
+
+  /* Drawer open state */
+  .menu-open > .tabbed-drawer {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* Close Button */
+  .tabbed-drawer__close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .tabbed-drawer__close-button .header-drawer-icon {
+    width: var(--icon-size-xs, 1.5rem);
+    height: var(--icon-size-xs, 1.5rem);
+  }
+
+  /* Tab Navigation */
+  .tabbed-drawer__tabs {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background: var(--color-background);
+    border-bottom: 2px solid var(--color-foreground);
+    z-index: 5;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tabbed-drawer__tab {
+    flex: 1;
+    padding: 1rem 0.5rem;
+    font-family: var(--font-heading-family);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    border: none;
+    background: transparent;
+    color: var(--color-foreground);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+  }
+
+  .tabbed-drawer__tab:hover {
+    opacity: 0.7;
+  }
+
+  .tabbed-drawer__tab--active {
+    font-weight: 700;
+  }
+
+  .tabbed-drawer__tab--active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-foreground);
+  }
+
+  /* Tab Panels Container */
+  .tabbed-drawer__panels {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Individual Panel */
+  .tabbed-drawer__panel {
+    padding: 1.5rem 1rem;
+    animation: tabPanelFadeIn 300ms ease;
+  }
+
+  .tabbed-drawer__panel[hidden] {
+    display: none;
+  }
+
+  @keyframes tabPanelFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Panel Content Styles */
+  .tabbed-drawer__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .tabbed-drawer__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tabbed-drawer__heading {
+    font-family: var(--font-heading-family);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+  }
+
+  .tabbed-drawer__section-title {
+    font-family: var(--font-heading-family);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+  }
+
+  /* Accordion Styles */
+  .tabbed-drawer__accordion {
+    border: none;
+  }
+
+  .tabbed-drawer__accordion-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    font-family: var(--font-heading-family);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    list-style: none;
+    text-transform: uppercase;
+  }
+
+  .tabbed-drawer__accordion-trigger::-webkit-details-marker {
+    display: none;
+  }
+
+  .tabbed-drawer__accordion-trigger .icon-caret {
+    width: 1rem;
+    height: 1rem;
+    transition: transform 0.2s ease;
+  }
+
+  .tabbed-drawer__accordion[open] .icon-caret {
+    transform: rotate(180deg);
+  }
+
+  .tabbed-drawer__accordion-content {
+    padding: 0.5rem 0 1rem 0;
+  }
+
+  /* Link Item */
+  .tabbed-drawer__link-item {
+    display: block;
+    padding: 0.75rem 0;
+    font-family: var(--font-heading-family);
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--color-foreground);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity 0.2s ease;
+  }
+
+  .tabbed-drawer__link-item:hover {
+    opacity: 0.7;
+  }
+
+  /* Promo Section */
+  .tabbed-drawer__promo {
+    background: var(--color-background-secondary, #f5f5f5);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 4px;
+  }
+
+  .tabbed-drawer__promo-title {
+    font-family: var(--font-heading-family);
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    text-transform: uppercase;
+  }
+
+  .tabbed-drawer__promo-cta {
+    width: 100%;
+  }
+
+  /* Image Cards Grid (NEW Tab) */
+  .tabbed-drawer__cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .tabbed-drawer__card {
+    display: block;
+    text-decoration: none;
+    color: var(--color-foreground);
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--menu-image-border-radius, 0);
+  }
+
+  .tabbed-drawer__card-image {
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  .tabbed-drawer__card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: white;
+  }
+
+  .tabbed-drawer__card-title {
+    font-family: var(--font-heading-family);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .tabbed-drawer__card-cta {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: underline;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* Text Menu (EXPLORE Tab) */
+  .tabbed-drawer__text-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tabbed-drawer__text-menu-item {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .tabbed-drawer__text-menu-item:last-child {
+    border-bottom: none;
+  }
+
+  .tabbed-drawer__text-link {
+    display: block;
+    padding: 1rem 0;
+    font-family: var(--font-heading-family);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--color-foreground);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity 0.2s ease;
+  }
+
+  .tabbed-drawer__text-link:hover {
+    opacity: 0.7;
+  }
+
+  /* Account Section */
+  .tabbed-drawer__account-section {
+    padding: 1.5rem 1rem;
+    border-top: 2px solid var(--color-foreground);
+    background: var(--color-background);
+  }
+
+  .tabbed-drawer__account-title {
+    font-family: var(--font-heading-family);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+  }
+
+  .tabbed-drawer__account-link {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: var(--color-foreground);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .tabbed-drawer__account-link:hover {
+    opacity: 0.7;
+  }
+
+  /* Featured Banner */
+  .tabbed-drawer__featured-banner {
+    background-color: #2c3e50;
+    background-image: url('{{ 'placeholder.svg' | asset_url }}');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: white;
+  }
+
+  .tabbed-drawer__banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .tabbed-drawer__banner-title {
+    font-family: var(--font-heading-family);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .tabbed-drawer__banner-cta {
+    background: white;
+    color: #2c3e50;
+    border-color: white;
+  }
+
+  .tabbed-drawer__banner-cta:hover {
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  /* Backdrop */
+  .tabbed-drawer__backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: calc(var(--layer-menu-drawer, 100) - 1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .menu-open .tabbed-drawer__backdrop {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Scrollbar Styling */
+  .tabbed-drawer__panels::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .tabbed-drawer__panels::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .tabbed-drawer__panels::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+  }
+
+  .tabbed-drawer__panels::-webkit-scrollbar-thumb:hover {
+    background: var(--color-foreground);
+  }
+{% endstylesheet %}

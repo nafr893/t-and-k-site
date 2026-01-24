@@ -25,6 +25,20 @@
       %}
     </div>
 
+  {% when 'mobile-tabbed' %}
+    <div
+      class="header__drawer desktop:hidden"
+      ref="headerDrawerContainer"
+      {{ block.shopify_attributes }}
+    >
+      {% render 'tabbed-header-drawer',
+        class: 'header__drawer--mobile-tabbed',
+        linklist: block_settings.menu,
+        block: block,
+        section: section
+      %}
+    </div>
+
   {% when 'navigation_bar' %}
     {% if block_settings.navigation_bar == true %}
       <div

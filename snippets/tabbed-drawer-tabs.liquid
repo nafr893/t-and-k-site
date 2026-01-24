@@ -1,0 +1,26 @@
+{%- doc -%}
+  Renders the tab navigation for the tabbed header drawer.
+
+  @param {array} tabs - Array of tab IDs (e.g., ['shop', 'new', 'explore'])
+  @param {string} active_tab - The initially active tab ID
+
+  @example
+  {% render 'tabbed-drawer-tabs', tabs: tabs, active_tab: 'shop' %}
+{%- enddoc -%}
+
+<div class="tabbed-drawer__tabs" role="tablist">
+  {% for tab in tabs %}
+    <button
+      role="tab"
+      type="button"
+      class="tabbed-drawer__tab{% if tab == active_tab %} tabbed-drawer__tab--active{% endif %}"
+      data-tab="{{ tab }}"
+      aria-selected="{% if tab == active_tab %}true{% else %}false{% endif %}"
+      aria-controls="panel-{{ tab }}"
+      on:click="tabbed-header-drawer/switchTab?tabId={{ tab }}"
+      ref="tabButtons[]"
+    >
+      {{ tab | upcase }}
+    </button>
+  {% endfor %}
+</div>
