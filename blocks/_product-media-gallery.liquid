@@ -29,6 +29,12 @@
   endif
 
   assign render_mobile_slideshow_controls = false
+  
+  assign slideshow_controls_style = block.settings.slideshow_controls_style
+  # Use a counter instead of dots when there are many images to avoid cropping/overflow.
+  if slideshow_controls_style == 'dots' and selected_product.media.size > 15
+    assign slideshow_controls_style = 'counter'
+  endif
 
   if block.settings.slideshow_controls_style != block.settings.slideshow_mobile_controls_style
     assign slideshow_controls_class = 'mobile:hidden'
@@ -36,12 +42,10 @@
     if block.settings.slideshow_mobile_controls_style != 'hint'
       assign render_mobile_slideshow_controls = true
     endif
-  endif
-
-  assign slideshow_controls_style = block.settings.slideshow_controls_style
-  # Use a counter instead of dots when there are many images to avoid cropping/overflow.
-  if slideshow_controls_style == 'dots' and selected_product.media.size > 15
-    assign slideshow_controls_style = 'counter'
+  elsif slideshow_controls_style == 'thumbnails' and block.settings.thumbnail_position_mobile == 'vertical'
+    # Render separate mobile controls when thumbnails have different mobile positioning
+    assign render_mobile_slideshow_controls = true
+    assign slideshow_controls_class = 'mobile:hidden'
   endif
 
   assign render_slideshow_arrows = false
@@ -58,13 +62,19 @@
 
   if slideshow_controls_style == 'thumbnails'
     assign pagination_position = block.settings.thumbnail_position
+    assign mobile_pagination_position = block.settings.thumbnail_position_mobile | default: 'bottom'
   else
     assign pagination_position = 'center'
+    assign mobile_pagination_position = 'center'
   endif
 
   # correct discrepancy between position settings for thumbnails and other controls
   if pagination_position == 'bottom'
     assign pagination_position = 'center'
+  endif
+  
+  if mobile_pagination_position == 'bottom'
+    assign mobile_pagination_position = 'center'
   endif
 
   assign icons_position = 'center'
@@ -206,10 +216,11 @@
         {%- render 'slideshow-controls',
           style: slideshow_controls_style,
           item_count: item_count,
-          thumbnails: sorted_media,
+          thumbnails: combined_media,
           controls_on_media: controls_on_media,
           pagination_position: pagination_position,
-          aspect_ratio: block.settings.aspect_ratio
+          aspect_ratio: block.settings.aspect_ratio,
+          class: slideshow_controls_class | default: 'desktop-controls'
         -%}
       {% endif %}
 
@@ -218,8 +229,19 @@
           class: 'desktop:hidden media-gallery__mobile-controls',
           style: block.settings.slideshow_mobile_controls_style,
           item_count: item_count,
+          thumbnails: combined_media,
           controls_on_media: true,
           pagination_position: 'center',
+        -%}
+      {% elsif slideshow_controls_style == 'thumbnails' and mobile_pagination_position == 'vertical' %}
+        {%- render 'slideshow-controls',
+          class: 'desktop:hidden media-gallery__mobile-controls media-gallery__mobile-controls--vertical',
+          style: 'thumbnails',
+          item_count: item_count,
+          thumbnails: combined_media,
+          controls_on_media: false,
+          pagination_position: 'right',
+          aspect_ratio: block.settings.aspect_ratio
         -%}
       {% endif %}
     {% endcapture %}
@@ -604,6 +626,46 @@
     /* Make the height match the height of the model-viewer */
     height: 100vh;
   }
+
+  /* Mobile vertical thumbnails */
+  @media screen and (max-width: 749px) {
+    .media-gallery__mobile-controls--vertical {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+    
+    .media-gallery__mobile-controls--vertical .slideshow-controls {
+      flex-direction: row;
+    }
+    
+    .media-gallery__mobile-controls--vertical .slideshow-controls__pagination {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      max-height: 60vh;
+      overflow-y: auto;
+      padding: 0.5rem;
+    }
+    
+    .media-gallery__mobile-controls--vertical .slideshow-control {
+      min-width: 60px;
+      height: 60px;
+      border-radius: 4px;
+    }
+    
+    /* Hide desktop controls on mobile when vertical thumbnails are enabled */
+    .desktop-controls {
+      display: none;
+    }
+  }
+  
+  /* Desktop: Show desktop controls, hide mobile vertical controls */
+  @media screen and (min-width: 750px) {
+    .media-gallery__mobile-controls--vertical {
+      display: none;
+    }
+  }
 {% endstylesheet %}
 
 {% schema %}
@@ -731,9 +793,10 @@
           "label": "t:options.counter"
         },
         {
-          "value": "hint",
-          "label": "t:options.hint"
-        }
+          "value": "thumbnails",
+          "label": "t:options.thumbnails"
+        },
+
       ]
     },
     {
@@ -757,6 +820,23 @@
         {
           "value": "right",
           "label": "t:options.right"
+        }
+      ],
+      "default": "bottom",
+      "visible_if": "{{ block.settings.media_presentation == 'carousel' and block.settings.slideshow_controls_style == 'thumbnails' }}"
+    },
+    {
+      "type": "select",
+      "id": "thumbnail_position_mobile",
+      "label": "Mobile thumbnail position",
+      "options": [
+        {
+          "value": "bottom",
+          "label": "Bottom (horizontal)"
+        },
+        {
+          "value": "vertical",
+          "label": "Vertical (right side)"
         }
       ],
       "default": "bottom",

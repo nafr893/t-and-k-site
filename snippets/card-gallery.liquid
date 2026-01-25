@@ -6,9 +6,11 @@
   @param [children] - Additional content rendered below the card gallery
   @param [section] - The section object the snippet is rendered in
   @param [block] - The block object the snippet is rendered in
+  @param [has_applied_colour_filter] - Whether there's an applied colour filter
 {%- enddoc -%}
 
 {% liquid
+  assign block_settings = block.settings
   assign image_sizes = '(min-width: 750px) 50vw, 100vw'
   # if the card-gallery has a section.settings.product_card_size:
   # assume grid-template autofill(card-size, 1fr) and calculate the sizes attribute based on the minimum card size
@@ -39,7 +41,7 @@
 
   assign lazy_image_sizes = 'auto, ' | append: image_sizes
 
-  assign image_ratio_setting = block.settings.image_ratio
+  assign image_ratio_setting = block_settings.image_ratio
   assign temp_ratio = 1
 
   if image_ratio_setting == 'landscape'
@@ -69,42 +71,23 @@
 
   assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
   assign selected_variant_image = product.selected_or_first_available_variant.image.src
-  assign selected_variant_image_index = 0
-  for image in product.images
-    if image.src == selected_variant_image
-      assign selected_variant_image_index = forloop.index0
-    endif
-  endfor
 
   assign hover_behavior = 'carousel'
 
-  if block.settings.image_ratio == 'adapt' and block.settings.constrain_to_viewport
-    if block.settings.constrain_to_viewport != ''
+  if block_settings.image_ratio == 'adapt' and block_settings.constrain_to_viewport
+    if block_settings.constrain_to_viewport != ''
       assign constrain_to_viewport = true
-      assign media_fit = block.settings.constrain_to_viewport
+      assign media_fit = block_settings.constrain_to_viewport
     endif
   endif
 %}
 
-{% capture placeholder_image %}
-  <placeholder-image data-block-id="{{ section.id }}-{{ block.id }}" data-type="product"></placeholder-image>
-{% endcapture %}
-{% capture placeholder_slide %}
-  {% render 'slideshow-slide', index: 1, children: placeholder_image, class: 'product-media-container card-gallery__placeholder' %}
-{% endcapture %}
-{% capture slideshow_placeholder %}
-  {% render 'slideshow', ref: 'slideshow', slides: placeholder_slide, slide_count: 1, attributes: 'disabled="true"' %}
-{% endcapture %}
-
 <div
   ref="cardGallery"
-  class="
-    card-gallery card-gallery-{{ block.id }} spacing-style border-style
-    {% if closest.product == blank and request.design_mode == false %}hidden{% endif %}
-  "
+  class="card-gallery card-gallery-{{ block.id }} spacing-style border-style"
   style="
-    {% render 'border-override', settings: block.settings %}
-    {% render 'spacing-style', settings: block.settings %}
+    {% render 'border-override', settings: block_settings %}
+    {% render 'spacing-style', settings: block_settings %}
     --gallery-aspect-ratio: {{ ratio }};
   "
   data-product-id="{{ product.id }}"
@@ -115,40 +98,35 @@
   {% if settings.transition_to_main_product %}
     data-view-transition-to-main-product
   {% endif %}
-  data-image-ratio="{{ block.settings.image_ratio }}"
+  data-image-ratio="{{ block_settings.image_ratio }}"
   {{ block.shopify_attributes }}
 >
-  {% assign all_media = product.media %}
-
-  {% comment %}
-    For combined listings, also make sure to include the featured media of the color variants so that the swatch picker
-    works as expected.
-  {% endcomment %}
-  {% for product_option in product.options_with_values %}
-    {% for product_option_value in product_option.values %}
-      {% if product_option_value.swatch %}
-        {% assign featured_media = product_option_value.variant.featured_media %}
-
-        {% comment %}
-          If the variant has no featured media, and we have a combined listing product, then fall back to using the
-          featured media of the child product that is linked to this option value.
-        {% endcomment %}
-        {% if featured_media == blank and product_option_value.product_url %}
-          {% assign featured_media = product_option_value.variant.product.featured_media %}
-        {% endif %}
-
-        {% assign existing_media = all_media | has: 'id', featured_media.id %}
-        {% unless existing_media %}
-          {% assign variant_featured_media = product_option_value.variant.product.media
-            | where: 'id', featured_media.id
-          %}
-          {% assign all_media = all_media | concat: variant_featured_media %}
-        {% endunless %}
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-
   {% liquid
+    assign all_media = product.media
+
+    # For combined listings: make sure to include the featured media of the color variants so that the swatch picker
+    # works as expected.
+    for product_option in product.options_with_values
+      for product_option_value in product_option.values
+        if product_option_value.swatch
+          assign featured_media = product_option_value.variant.featured_media
+
+          # If the variant has no featured media, and we have a combined listing product, then fall back to using the
+          # featured media of the child product that is linked to this option value.
+
+          if featured_media == blank and product_option_value.product_url
+            assign featured_media = product_option_value.variant.product.featured_media
+          endif
+
+          assign existing_media = all_media | has: 'id', featured_media.id
+          unless existing_media
+            assign variant_featured_media = product_option_value.variant.product.media | where: 'id', featured_media.id
+            assign all_media = all_media | concat: variant_featured_media
+          endunless
+        endif
+      endfor
+    endfor
+
     # Sort media so selected variant image comes first
     assign selected_media = all_media | where: 'src', selected_variant_image
     assign other_media = all_media | reject: 'src', selected_variant_image
@@ -158,15 +136,23 @@
     if all_media_sorted.size > variant_images.size
       assign has_generic_media = true
     endif
+    assign generic_media_size = all_media.size | minus: variant_images.size
+
+    assign combined_listing_count = product.options_with_values | map: 'values' | map: 'product_url' | compact | size
+    if combined_listing_count == 0
+      assign media_list_to_show = all_media
+    else
+      assign media_list_to_show = all_media_sorted
+    endif
   %}
 
   {%- if all_media.size > 0 -%}
-    {% if all_media.size > 2 and hover_behavior == 'carousel' %}
+    {% if all_media.size > 2 and hover_behavior == 'carousel' and has_generic_media %}
       {% assign show_arrows = true %}
     {% endif %}
 
     {% capture slides %}
-      {% for media in all_media_sorted %}
+      {% for media in media_list_to_show %}
         {% assign loading = 'lazy' %}
         {% assign sizes = lazy_image_sizes %}
 
@@ -182,34 +168,76 @@
         {% capture class %}
           product-media-container media-fit product-media-container--{{ media.media_type }}{% if constrain_to_viewport %} constrain-height{% endif %}
         {% endcapture %}
+
         {% assign hidden = false %}
+
         {% if variant_images contains media.src %}
           {% assign attributes = 'variant-image' %}
-          {% unless forloop.first and media.src == selected_variant_image or has_generic_media == false %}
+          {% if combined_listing_count > 0 %}
+            {% unless forloop.first and media.src == selected_variant_image or has_generic_media == false %}
+              {% assign hidden = true %}
+            {% endunless %}
+          {% elsif has_applied_colour_filter %}
+            {% unless media.src == selected_variant_image %}
+              {% assign hidden = true %}
+            {% endunless %}
+          {% elsif forloop.first == false %}
             {% assign hidden = true %}
-          {% endunless %}
+          {% endif %}
         {% endif %}
         {% render 'slideshow-slide', slide_id: media.id, index: forloop.index, children: slideshow_children, class: class, attributes: attributes, hidden: hidden, media_fit: media_fit %}
       {% endfor %}
     {% endcapture %}
 
-    {% assign slideshow_attributes = '' %}
-    {% if hover_behavior == 'none' or settings.product_card_carousel == false %}
-      {% assign slideshow_attributes = 'disabled="true"' %}
-    {% endif %}
-    {% render 'slideshow',
-      ref: 'slideshow',
-      initial_slide: selected_variant_image_index,
-      slides: slides,
-      slide_count: all_media.size,
-      show_arrows: show_arrows,
-      attributes: slideshow_attributes
+    {% assign slideshow_attributes = 'data-generic-media-size="[generic_media_size]"'
+      | replace: '[generic_media_size]', generic_media_size
     %}
+    {% if hover_behavior == 'none' or settings.product_card_carousel == false %}
+      {% assign slideshow_attributes = slideshow_attributes | append: ' disabled="true"' %}
+    {% endif %}
+    <a
+      class="contents"
+      ref="cardGalleryLink"
+      href="{% render 'product-card-variant-url', product: product %}"
+      aria-label="{{- product.title -}}"
+    >
+      {% render 'slideshow',
+        ref: 'slideshow',
+        initial_slide: 0,
+        slides: slides,
+        slide_count: all_media.size,
+        show_arrows: show_arrows,
+        attributes: slideshow_attributes
+      %}
+    </a>
   {% elsif product != blank and product.media.size == 0 %}
     <product-title class="product-card-gallery__title-placeholder">
-      <span class="title-text">{{- product.title -}}</span>
+      <a
+        class="contents"
+        ref="productTitleLink"
+        href="{% render 'product-card-variant-url', product: product %}"
+        aria-hidden="true"
+      >
+        <span class="title-text">{{- product.title -}}</span>
+      </a>
     </product-title>
   {% elsif product == blank %}
+    {% capture placeholder_image %}
+      {% liquid
+        # Extract index from block ID (e.g., "product-card-3" -> "3")
+        assign block_parts = block.id | split: '-'
+        assign placeholder_index = block_parts.last | default: 0
+        assign variant = placeholder_index | modulo: 3 | plus: 1
+        assign placeholder_name = 'product-apparel-' | append: variant
+      %}
+      {{ placeholder_name | placeholder_svg_tag: 'placeholder-image' }}
+    {% endcapture %}
+    {% capture placeholder_slide %}
+      {% render 'slideshow-slide', index: 1, children: placeholder_image, class: 'product-media-container card-gallery__placeholder' %}
+    {% endcapture %}
+    {% capture slideshow_placeholder %}
+      {% render 'slideshow', ref: 'slideshow', slides: placeholder_slide, slide_count: 1, attributes: 'disabled="true"' %}
+    {% endcapture %}
     {{ slideshow_placeholder }}
   {%- endif -%}
   {{ children }}
@@ -227,7 +255,7 @@
     width: 100%;
   }
 
-  .card-gallery placeholder-image {
+  .card-gallery svg {
     aspect-ratio: var(--gallery-aspect-ratio, var(--ratio));
   }
 
@@ -237,13 +265,17 @@
     line-height: var(--line-height--display-loose);
     word-break: break-word;
     color: var(--color-foreground);
-    background-color: rgb(from var(--color-foreground) r g b / 5%);
+    background-color: rgb(var(--color-foreground-rgb) / var(--opacity-5));
     aspect-ratio: var(--gallery-aspect-ratio);
     border-radius: var(--product-corner-radius);
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .product-card-gallery__title-placeholder a {
+    color: var(--color-foreground);
   }
 
   @media screen and (min-width: 750px) {
