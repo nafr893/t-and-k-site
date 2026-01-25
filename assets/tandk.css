@@ -263,3 +263,7 @@ li::marker {
   display: none !important ; 
 }
 }
+
+div.slideshow-controls__thumbnails {
+    display: flex; 
+}
