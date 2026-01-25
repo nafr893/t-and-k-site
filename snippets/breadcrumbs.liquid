@@ -1,0 +1,38 @@
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol class="breadcrumbs__list" id="breadcrumbs_list">
+    <li style="list-style: none !important;">
+      <a href="{{ routes.root_url }}" id="breadcrumb-text" style="list-style: none !important;">Home / </a>
+    </li>
+    {%- assign show_collection = false -%}
+    {%- assign collection_title = '' -%}
+    {%- assign collection_url = '' -%}
+
+    {%- if collection -%}
+      {%- assign show_collection = true -%}
+      {%- assign collection_title = collection.title -%}
+      {%- assign collection_url = collection.url -%}
+    {%- elsif product.collections.size > 0 -%}
+      {%- assign fallback_collection = blank -%}
+      {%- for c in product.collections -%}
+        {%- if c.handle != 'all' and c.handle != 'all-products' and fallback_collection == blank -%}
+          {%- assign fallback_collection = c -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if fallback_collection -%}
+        {%- assign show_collection = true -%}
+        {%- assign collection_title = fallback_collection.title -%}
+        {%- assign collection_url = fallback_collection.url -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    {%- if show_collection -%}
+      <li style="list-style: none;" >
+        <a href="{{ collection_url }}" id="breadcrumb-text" style="list-style: none;" >{{ collection_title }} / </a>
+      </li>
+    {%- endif -%}
+
+    {%- if template.name == 'product' -%}
+      <li aria-current="page" id="breadcrumb-text" style="list-style: none; font-weight: 500;">{{ product.title }} </li>
+    {%- endif -%}
+  </ol>
+</nav>
