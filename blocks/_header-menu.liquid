@@ -978,6 +978,13 @@
       "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
     },
     {
+      "type": "checkbox",
+      "id": "tabbed_shop_accordion_1_open",
+      "label": "Accordion 1 Open by Default",
+      "default": false,
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
       "type": "text",
       "id": "tabbed_shop_accordion_2",
       "label": "Accordion 2 Title",
@@ -988,6 +995,13 @@
       "type": "link_list",
       "id": "tabbed_shop_accordion_2_menu",
       "label": "Accordion 2 Menu",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "tabbed_shop_accordion_2_open",
+      "label": "Accordion 2 Open by Default",
+      "default": false,
       "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
     },
     {

@@ -39,7 +39,7 @@
 
         {% if block_settings.tabbed_shop_accordion_1_menu != blank %}
           <div class="tabbed-drawer__section">
-            <details class="tabbed-drawer__accordion">
+            <details class="tabbed-drawer__accordion"{% if block_settings.tabbed_shop_accordion_1_open %} open{% endif %}>
               <summary class="tabbed-drawer__accordion-trigger">
                 <span>{{ block_settings.tabbed_shop_accordion_1 | default: 'SHOP BY CATEGORY' }}</span>
                 <span class="svg-wrapper icon-caret">
@@ -59,7 +59,7 @@
 
         {% if block_settings.tabbed_shop_accordion_2_menu != blank %}
           <div class="tabbed-drawer__section">
-            <details class="tabbed-drawer__accordion">
+            <details class="tabbed-drawer__accordion"{% if block_settings.tabbed_shop_accordion_2_open %} open{% endif %}>
               <summary class="tabbed-drawer__accordion-trigger">
                 <span>{{ block_settings.tabbed_shop_accordion_2 | default: 'SHOP BY PURPOSE' }}</span>
                 <span class="svg-wrapper icon-caret">
