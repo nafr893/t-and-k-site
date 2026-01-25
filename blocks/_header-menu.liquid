@@ -934,6 +934,281 @@
       "info": "Choose between standard accordion menu or tabbed navigation"
     },
     {
+      "type": "header",
+      "content": "Tabbed Drawer - SHOP Tab",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_shop_heading_1",
+      "label": "Heading 1",
+      "default": "BEST SELLERS",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_shop_heading_1_url",
+      "label": "Heading 1 Link",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_shop_heading_2",
+      "label": "Heading 2",
+      "default": "HUNTING GEAR",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_shop_heading_2_url",
+      "label": "Heading 2 Link",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_shop_accordion_1",
+      "label": "Accordion 1 Title",
+      "default": "SHOP BY CATEGORY",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_shop_accordion_2",
+      "label": "Accordion 2 Title",
+      "default": "SHOP BY PURPOSE",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_shop_link_text",
+      "label": "Shop All Link Text",
+      "default": "SHOP ALL",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_shop_link_url",
+      "label": "Shop All Link URL",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_shop_promo_title",
+      "label": "Promo Title",
+      "default": "Planning a Hunt?",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_shop_promo_cta",
+      "label": "Promo Button Text",
+      "default": "BUILD YOUR SYSTEM",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_shop_promo_url",
+      "label": "Promo Button Link",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "header",
+      "content": "Tabbed Drawer - NEW Tab",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "tabbed_new_card_1_image",
+      "label": "Card 1 Image",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_new_card_1_title",
+      "label": "Card 1 Title",
+      "default": "RANGE GEAR",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_new_card_1_url",
+      "label": "Card 1 Link",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "tabbed_new_card_2_image",
+      "label": "Card 2 Image",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_new_card_2_title",
+      "label": "Card 2 Title",
+      "default": "HUNTING GEAR",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_new_card_2_url",
+      "label": "Card 2 Link",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "tabbed_new_card_3_image",
+      "label": "Card 3 Image",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_new_card_3_title",
+      "label": "Card 3 Title",
+      "default": "UPLAND GEAR",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_new_card_3_url",
+      "label": "Card 3 Link",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_new_card_cta",
+      "label": "Card CTA Text",
+      "default": "SHOP NOW",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "header",
+      "content": "Tabbed Drawer - EXPLORE Tab",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_explore_link_1_text",
+      "label": "Link 1 Text",
+      "default": "ABOUT T&K",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_explore_link_1_url",
+      "label": "Link 1 URL",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_explore_link_2_text",
+      "label": "Link 2 Text",
+      "default": "FIELD NOTES",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_explore_link_2_url",
+      "label": "Link 2 URL",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_explore_link_3_text",
+      "label": "Link 3 Text",
+      "default": "MANUFACTURING PROCESS",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_explore_link_3_url",
+      "label": "Link 3 URL",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_explore_link_4_text",
+      "label": "Link 4 Text",
+      "default": "PRICING TRANSPARENCY",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_explore_link_4_url",
+      "label": "Link 4 URL",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_explore_link_5_text",
+      "label": "Link 5 Text",
+      "default": "GOVX ID MILITARY DISCOUNT",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_explore_link_5_url",
+      "label": "Link 5 URL",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_explore_link_6_text",
+      "label": "Link 6 Text",
+      "default": "CONTACT US",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_explore_link_6_url",
+      "label": "Link 6 URL",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "header",
+      "content": "Tabbed Drawer - Bottom Sections",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_account_title",
+      "label": "Account Section Title",
+      "default": "ACCOUNT",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_account_link_text",
+      "label": "Account Link Text",
+      "default": "Log In / Sign Up",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "tabbed_banner_image",
+      "label": "Banner Background Image",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_banner_title",
+      "label": "Banner Title",
+      "default": "LIFETIME WARRANTY",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
+      "id": "tabbed_banner_cta",
+      "label": "Banner Button Text",
+      "default": "LEARN MORE",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_banner_url",
+      "label": "Banner Button Link",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
       "type": "checkbox",
       "id": "navigation_bar",
       "label": "t:settings.navigation_bar"

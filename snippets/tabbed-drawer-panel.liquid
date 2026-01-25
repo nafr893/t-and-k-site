@@ -6,9 +6,10 @@
   @param {string} active_tab - The initially active tab ID
   @param {object} block - The block object for settings
   @param {object} section - The section object for settings
+  @param {object} block_settings - The block settings object
 
   @example
-  {% render 'tabbed-drawer-panel', tab: 'shop', linklist: linklist, active_tab: 'shop' %}
+  {% render 'tabbed-drawer-panel', tab: 'shop', linklist: linklist, active_tab: 'shop', block_settings: block_settings %}
 {%- enddoc -%}
 
 <div
@@ -25,27 +26,33 @@
       {%- comment -%} SHOP Tab Content {%- endcomment -%}
       <div class="tabbed-drawer__content tabbed-drawer__content--shop">
         <div class="tabbed-drawer__section">
-          <h3 class="tabbed-drawer__heading">BEST SELLERS</h3>
+          <a href="{{ block_settings.tabbed_shop_heading_1_url | default: '#' }}" class="tabbed-drawer__heading-link">
+            <h3 class="tabbed-drawer__heading">{{ block_settings.tabbed_shop_heading_1 | default: 'BEST SELLERS' }}</h3>
+          </a>
         </div>
 
         <div class="tabbed-drawer__section">
-          <h3 class="tabbed-drawer__heading">HUNTING GEAR</h3>
+          <a href="{{ block_settings.tabbed_shop_heading_2_url | default: '#' }}" class="tabbed-drawer__heading-link">
+            <h3 class="tabbed-drawer__heading">{{ block_settings.tabbed_shop_heading_2 | default: 'HUNTING GEAR' }}</h3>
+          </a>
         </div>
 
         <div class="tabbed-drawer__section">
           <details class="tabbed-drawer__accordion">
             <summary class="tabbed-drawer__accordion-trigger">
-              <span>SHOP BY CATEGORY</span>
+              <span>{{ block_settings.tabbed_shop_accordion_1 | default: 'SHOP BY CATEGORY' }}</span>
               <span class="svg-wrapper icon-caret">
                 {{ 'icon-caret.svg' | inline_asset_content }}
               </span>
             </summary>
             <div class="tabbed-drawer__accordion-content">
-              {%- comment -%} TODO: Add category links {%- endcomment -%}
               <ul class="menu-drawer__menu" role="list">
-                <li><a href="#">Category 1</a></li>
-                <li><a href="#">Category 2</a></li>
-                <li><a href="#">Category 3</a></li>
+                {%- comment -%} Pull from linklist if available {%- endcomment -%}
+                {% for link in linklist.links %}
+                  {% if link.title contains 'Category' or link.handle contains 'category' %}
+                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                  {% endif %}
+                {% endfor %}
               </ul>
             </div>
           </details>
@@ -54,30 +61,34 @@
         <div class="tabbed-drawer__section">
           <details class="tabbed-drawer__accordion">
             <summary class="tabbed-drawer__accordion-trigger">
-              <span>SHOP BY PURPOSE</span>
+              <span>{{ block_settings.tabbed_shop_accordion_2 | default: 'SHOP BY PURPOSE' }}</span>
               <span class="svg-wrapper icon-caret">
                 {{ 'icon-caret.svg' | inline_asset_content }}
               </span>
             </summary>
             <div class="tabbed-drawer__accordion-content">
-              {%- comment -%} TODO: Add purpose links {%- endcomment -%}
               <ul class="menu-drawer__menu" role="list">
-                <li><a href="#">Purpose 1</a></li>
-                <li><a href="#">Purpose 2</a></li>
-                <li><a href="#">Purpose 3</a></li>
+                {%- comment -%} Pull from linklist if available {%- endcomment -%}
+                {% for link in linklist.links %}
+                  {% if link.title contains 'Purpose' or link.handle contains 'purpose' %}
+                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                  {% endif %}
+                {% endfor %}
               </ul>
             </div>
           </details>
         </div>
 
         <div class="tabbed-drawer__section">
-          <a href="/collections/all" class="tabbed-drawer__link-item">SHOP ALL</a>
+          <a href="{{ block_settings.tabbed_shop_link_url | default: '/collections/all' }}" class="tabbed-drawer__link-item">
+            {{ block_settings.tabbed_shop_link_text | default: 'SHOP ALL' }}
+          </a>
         </div>
 
         <div class="tabbed-drawer__promo">
-          <h4 class="tabbed-drawer__promo-title">Planning a Hunt?</h4>
-          <a href="/pages/system-builder" class="button button--secondary tabbed-drawer__promo-cta">
-            BUILD YOUR SYSTEM
+          <h4 class="tabbed-drawer__promo-title">{{ block_settings.tabbed_shop_promo_title | default: 'Planning a Hunt?' }}</h4>
+          <a href="{{ block_settings.tabbed_shop_promo_url | default: '/pages/system-builder' }}" class="button button--secondary tabbed-drawer__promo-cta">
+            {{ block_settings.tabbed_shop_promo_cta | default: 'BUILD YOUR SYSTEM' }}
           </a>
         </div>
       </div>
@@ -86,29 +97,50 @@
       {%- comment -%} NEW Tab Content - Image Cards {%- endcomment -%}
       <div class="tabbed-drawer__content tabbed-drawer__content--new">
         <div class="tabbed-drawer__cards-grid">
-          <a href="/collections/range-gear" class="tabbed-drawer__card">
-            <div class="tabbed-drawer__card-image" style="background-image: url('{{ 'placeholder.svg' | asset_url }}')">
+          {%- comment -%} Card 1 {%- endcomment -%}
+          <a href="{{ block_settings.tabbed_new_card_1_url | default: '/collections/range-gear' }}" class="tabbed-drawer__card">
+            <div class="tabbed-drawer__card-image"
+              {% if block_settings.tabbed_new_card_1_image %}
+                style="background-image: url('{{ block_settings.tabbed_new_card_1_image | image_url: width: 800 }}')"
+              {% else %}
+                style="background-image: url('{{ 'placeholder.svg' | asset_url }}')"
+              {% endif %}
+            >
               <div class="tabbed-drawer__card-overlay">
-                <h3 class="tabbed-drawer__card-title">RANGE GEAR</h3>
-                <span class="tabbed-drawer__card-cta">SHOP NOW</span>
+                <h3 class="tabbed-drawer__card-title">{{ block_settings.tabbed_new_card_1_title | default: 'RANGE GEAR' }}</h3>
+                <span class="tabbed-drawer__card-cta">{{ block_settings.tabbed_new_card_cta | default: 'SHOP NOW' }}</span>
               </div>
             </div>
           </a>
 
-          <a href="/collections/hunting-gear" class="tabbed-drawer__card">
-            <div class="tabbed-drawer__card-image" style="background-image: url('{{ 'placeholder.svg' | asset_url }}')">
+          {%- comment -%} Card 2 {%- endcomment -%}
+          <a href="{{ block_settings.tabbed_new_card_2_url | default: '/collections/hunting-gear' }}" class="tabbed-drawer__card">
+            <div class="tabbed-drawer__card-image"
+              {% if block_settings.tabbed_new_card_2_image %}
+                style="background-image: url('{{ block_settings.tabbed_new_card_2_image | image_url: width: 800 }}')"
+              {% else %}
+                style="background-image: url('{{ 'placeholder.svg' | asset_url }}')"
+              {% endif %}
+            >
               <div class="tabbed-drawer__card-overlay">
-                <h3 class="tabbed-drawer__card-title">HUNTING GEAR</h3>
-                <span class="tabbed-drawer__card-cta">SHOP NOW</span>
+                <h3 class="tabbed-drawer__card-title">{{ block_settings.tabbed_new_card_2_title | default: 'HUNTING GEAR' }}</h3>
+                <span class="tabbed-drawer__card-cta">{{ block_settings.tabbed_new_card_cta | default: 'SHOP NOW' }}</span>
               </div>
             </div>
           </a>
 
-          <a href="/collections/upland-gear" class="tabbed-drawer__card">
-            <div class="tabbed-drawer__card-image" style="background-image: url('{{ 'placeholder.svg' | asset_url }}')">
+          {%- comment -%} Card 3 {%- endcomment -%}
+          <a href="{{ block_settings.tabbed_new_card_3_url | default: '/collections/upland-gear' }}" class="tabbed-drawer__card">
+            <div class="tabbed-drawer__card-image"
+              {% if block_settings.tabbed_new_card_3_image %}
+                style="background-image: url('{{ block_settings.tabbed_new_card_3_image | image_url: width: 800 }}')"
+              {% else %}
+                style="background-image: url('{{ 'placeholder.svg' | asset_url }}')"
+              {% endif %}
+            >
               <div class="tabbed-drawer__card-overlay">
-                <h3 class="tabbed-drawer__card-title">UPLAND GEAR</h3>
-                <span class="tabbed-drawer__card-cta">SHOP NOW</span>
+                <h3 class="tabbed-drawer__card-title">{{ block_settings.tabbed_new_card_3_title | default: 'UPLAND GEAR' }}</h3>
+                <span class="tabbed-drawer__card-cta">{{ block_settings.tabbed_new_card_cta | default: 'SHOP NOW' }}</span>
               </div>
             </div>
           </a>
@@ -120,24 +152,48 @@
       <div class="tabbed-drawer__content tabbed-drawer__content--explore">
         <h3 class="tabbed-drawer__section-title">EXPLORE</h3>
         <ul class="tabbed-drawer__text-menu" role="list">
-          <li class="tabbed-drawer__text-menu-item">
-            <a href="/pages/about" class="tabbed-drawer__text-link">ABOUT T&K</a>
-          </li>
-          <li class="tabbed-drawer__text-menu-item">
-            <a href="/pages/field-notes" class="tabbed-drawer__text-link">FIELD NOTES</a>
-          </li>
-          <li class="tabbed-drawer__text-menu-item">
-            <a href="/pages/manufacturing" class="tabbed-drawer__text-link">MANUFACTURING PROCESS</a>
-          </li>
-          <li class="tabbed-drawer__text-menu-item">
-            <a href="/pages/pricing" class="tabbed-drawer__text-link">PRICING TRANSPARENCY</a>
-          </li>
-          <li class="tabbed-drawer__text-menu-item">
-            <a href="/pages/military-discount" class="tabbed-drawer__text-link">GOVX ID MILITARY DISCOUNT</a>
-          </li>
-          <li class="tabbed-drawer__text-menu-item">
-            <a href="/pages/contact" class="tabbed-drawer__text-link">CONTACT US</a>
-          </li>
+          {% if block_settings.tabbed_explore_link_1_text != blank %}
+            <li class="tabbed-drawer__text-menu-item">
+              <a href="{{ block_settings.tabbed_explore_link_1_url | default: '/pages/about' }}" class="tabbed-drawer__text-link">
+                {{ block_settings.tabbed_explore_link_1_text }}
+              </a>
+            </li>
+          {% endif %}
+          {% if block_settings.tabbed_explore_link_2_text != blank %}
+            <li class="tabbed-drawer__text-menu-item">
+              <a href="{{ block_settings.tabbed_explore_link_2_url | default: '/pages/field-notes' }}" class="tabbed-drawer__text-link">
+                {{ block_settings.tabbed_explore_link_2_text }}
+              </a>
+            </li>
+          {% endif %}
+          {% if block_settings.tabbed_explore_link_3_text != blank %}
+            <li class="tabbed-drawer__text-menu-item">
+              <a href="{{ block_settings.tabbed_explore_link_3_url | default: '/pages/manufacturing' }}" class="tabbed-drawer__text-link">
+                {{ block_settings.tabbed_explore_link_3_text }}
+              </a>
+            </li>
+          {% endif %}
+          {% if block_settings.tabbed_explore_link_4_text != blank %}
+            <li class="tabbed-drawer__text-menu-item">
+              <a href="{{ block_settings.tabbed_explore_link_4_url | default: '/pages/pricing' }}" class="tabbed-drawer__text-link">
+                {{ block_settings.tabbed_explore_link_4_text }}
+              </a>
+            </li>
+          {% endif %}
+          {% if block_settings.tabbed_explore_link_5_text != blank %}
+            <li class="tabbed-drawer__text-menu-item">
+              <a href="{{ block_settings.tabbed_explore_link_5_url | default: '/pages/military-discount' }}" class="tabbed-drawer__text-link">
+                {{ block_settings.tabbed_explore_link_5_text }}
+              </a>
+            </li>
+          {% endif %}
+          {% if block_settings.tabbed_explore_link_6_text != blank %}
+            <li class="tabbed-drawer__text-menu-item">
+              <a href="{{ block_settings.tabbed_explore_link_6_url | default: '/pages/contact' }}" class="tabbed-drawer__text-link">
+                {{ block_settings.tabbed_explore_link_6_text }}
+              </a>
+            </li>
+          {% endif %}
         </ul>
       </div>
   {% endcase %}

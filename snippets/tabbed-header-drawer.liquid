@@ -80,25 +80,30 @@
             linklist: linklist,
             active_tab: active_tab,
             block: block,
-            section: section
+            section: section,
+            block_settings: block_settings
           %}
         {% endfor %}
       </div>
 
       {%- comment -%} Account Section (appears on all tabs) {%- endcomment -%}
       <div class="tabbed-drawer__account-section">
-        <div class="tabbed-drawer__account-title">ACCOUNT</div>
+        <div class="tabbed-drawer__account-title">{{ block_settings.tabbed_account_title | default: 'ACCOUNT' }}</div>
         <a href="/account" class="tabbed-drawer__account-link">
-          Log In / Sign Up
+          {{ block_settings.tabbed_account_link_text | default: 'Log In / Sign Up' }}
         </a>
       </div>
 
       {%- comment -%} Featured Banner (appears on all tabs) {%- endcomment -%}
-      <div class="tabbed-drawer__featured-banner">
+      <div class="tabbed-drawer__featured-banner"
+        {% if block_settings.tabbed_banner_image %}
+          style="background-image: url('{{ block_settings.tabbed_banner_image | image_url: width: 800 }}'); background-size: cover; background-position: center;"
+        {% endif %}
+      >
         <div class="tabbed-drawer__banner-content">
-          <h3 class="tabbed-drawer__banner-title">LIFETIME<br>WARRANTY</h3>
-          <a href="/pages/warranty" class="button button--secondary tabbed-drawer__banner-cta">
-            LEARN MORE
+          <h3 class="tabbed-drawer__banner-title">{{ block_settings.tabbed_banner_title | default: 'LIFETIME WARRANTY' | newline_to_br }}</h3>
+          <a href="{{ block_settings.tabbed_banner_url | default: '/pages/warranty' }}" class="button button--secondary tabbed-drawer__banner-cta">
+            {{ block_settings.tabbed_banner_cta | default: 'LEARN MORE' }}
           </a>
         </div>
       </div>
