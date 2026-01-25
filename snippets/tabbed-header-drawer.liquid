@@ -506,7 +506,7 @@
   .tabbed-drawer__banner-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap: 1rem;
   }
 
@@ -521,13 +521,19 @@
   }
 
   .tabbed-drawer__banner-cta {
-    background: white;
-    color: #2c3e50;
-    border-color: white;
+    background: rgba(187,187,187,17);
+    color: #f9f9f9;
+    border-color: #f9f9f9;
+    width: fit-content; 
+    height: 30px; 
+    padding-left: 8px, 14px; 
+    font-size: 12px; 
+    font-family: Ibm Plex Mono; 
+    font-weight: 600;
   }
 
   .tabbed-drawer__banner-cta:hover {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(187, 187, 187, 25);
   }
 
   /* Backdrop */
