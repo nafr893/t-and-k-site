@@ -37,47 +37,45 @@
           </a>
         </div>
 
-        <div class="tabbed-drawer__section">
-          <details class="tabbed-drawer__accordion">
-            <summary class="tabbed-drawer__accordion-trigger">
-              <span>{{ block_settings.tabbed_shop_accordion_1 | default: 'SHOP BY CATEGORY' }}</span>
-              <span class="svg-wrapper icon-caret">
-                {{ 'icon-caret.svg' | inline_asset_content }}
-              </span>
-            </summary>
-            <div class="tabbed-drawer__accordion-content">
-              <ul class="menu-drawer__menu" role="list">
-                {%- comment -%} Pull from linklist if available {%- endcomment -%}
-                {% for link in linklist.links %}
-                  {% if link.title contains 'Category' or link.handle contains 'category' %}
-                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-          </details>
-        </div>
+        {% if block_settings.tabbed_shop_accordion_1_menu != blank %}
+          <div class="tabbed-drawer__section">
+            <details class="tabbed-drawer__accordion">
+              <summary class="tabbed-drawer__accordion-trigger">
+                <span>{{ block_settings.tabbed_shop_accordion_1 | default: 'SHOP BY CATEGORY' }}</span>
+                <span class="svg-wrapper icon-caret">
+                  {{ 'icon-caret.svg' | inline_asset_content }}
+                </span>
+              </summary>
+              <div class="tabbed-drawer__accordion-content">
+                <ul class="menu-drawer__menu" role="list">
+                  {% for link in linklists[block_settings.tabbed_shop_accordion_1_menu].links %}
+                    <li><a href="{{ link.url }}" class="tabbed-drawer__accordion-link">{{ link.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </details>
+          </div>
+        {% endif %}
 
-        <div class="tabbed-drawer__section">
-          <details class="tabbed-drawer__accordion">
-            <summary class="tabbed-drawer__accordion-trigger">
-              <span>{{ block_settings.tabbed_shop_accordion_2 | default: 'SHOP BY PURPOSE' }}</span>
-              <span class="svg-wrapper icon-caret">
-                {{ 'icon-caret.svg' | inline_asset_content }}
-              </span>
-            </summary>
-            <div class="tabbed-drawer__accordion-content">
-              <ul class="menu-drawer__menu" role="list">
-                {%- comment -%} Pull from linklist if available {%- endcomment -%}
-                {% for link in linklist.links %}
-                  {% if link.title contains 'Purpose' or link.handle contains 'purpose' %}
-                    <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-          </details>
-        </div>
+        {% if block_settings.tabbed_shop_accordion_2_menu != blank %}
+          <div class="tabbed-drawer__section">
+            <details class="tabbed-drawer__accordion">
+              <summary class="tabbed-drawer__accordion-trigger">
+                <span>{{ block_settings.tabbed_shop_accordion_2 | default: 'SHOP BY PURPOSE' }}</span>
+                <span class="svg-wrapper icon-caret">
+                  {{ 'icon-caret.svg' | inline_asset_content }}
+                </span>
+              </summary>
+              <div class="tabbed-drawer__accordion-content">
+                <ul class="menu-drawer__menu" role="list">
+                  {% for link in linklists[block_settings.tabbed_shop_accordion_2_menu].links %}
+                    <li><a href="{{ link.url }}" class="tabbed-drawer__accordion-link">{{ link.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </details>
+          </div>
+        {% endif %}
 
         <div class="tabbed-drawer__section">
           <a href="{{ block_settings.tabbed_shop_link_url | default: '/collections/all' }}" class="tabbed-drawer__link-item">
