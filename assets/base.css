@@ -437,7 +437,7 @@ p:empty {
   );
 
   /* Offset for full-width sections to account for the page margin,
-  used for Marquee — note that --util-page-margin-offset doesn't work here */
+  used for Marquee â€” note that --util-page-margin-offset doesn't work here */
   --full-page-margin-inline-offset: calc(((100vw - var(--full-page-grid-central-column-width)) / 2) * -1);
 
   width: 100%;
@@ -1773,8 +1773,6 @@ zoom-dialog dialog {
   border-radius: 50%;
 }
 
-/* This triggers iOS < 16.4. The outline bug is not recognized as a lack of @supports */
-
 @supports not (background-color: rgb(from red 150 g b / alpha)) {
   /**
     There is a bug in safari < 16.4 that causes the outline to not follow the elements border radius. This is a workaround.
@@ -1923,7 +1921,7 @@ slideshow-slide .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui_
 
 .dialog-zoomed-gallery .shopify-model-viewer-ui__controls-area.shopify-model-viewer-ui__controls-area {
   /* Move the controls above the thumbnails. Need to calculate the height of the thumbnails list */
-  bottom: calc(var(--thumbnail-width) / var(--media-preview-ratio) + var(--padding-lg) * 2);
+  bottom: calc(var(--thumbnail-width) / calc(var(--media-preview-ratio)) + var(--padding-lg) * 2);
   right: var(--padding-lg);
 }
 
@@ -2046,6 +2044,7 @@ deferred-media[class] :is(.deferred-media__poster-button img, .deferred-media__p
 .button-shopify-xr > svg {
   width: var(--icon-size-sm);
   height: var(--icon-size-sm);
+  fill: currentcolor;
   margin-inline-end: var(--margin-md);
 }
 
@@ -2293,7 +2292,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
     --spacing-scale: var(--spacing-scale-default);
   }
 
-  /* Must disable this, when you use these with calc and another unit type, things break — see logo.liquid */
+  /* Must disable this, when you use these with calc and another unit type, things break â€” see logo.liquid */
   /* stylelint-disable length-zero-no-unit */
   --padding-block: 0px;
   --padding-block-start: var(--padding-block, 0px);
