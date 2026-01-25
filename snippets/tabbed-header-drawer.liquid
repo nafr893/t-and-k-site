@@ -54,23 +54,26 @@
       data-tabbed-drawer
       class="tabbed-drawer motion-reduce color-{{ block_settings.color_scheme }}"
     >
-      {%- comment -%} Close Button {%- endcomment -%}
-      <button
-        class="button button-unstyled close-button tabbed-drawer__close-button"
-        type="button"
-        aria-label="{{ 'actions.close' | t }}"
-        on:click="/close"
-      >
-        <span class="svg-wrapper header-drawer-icon header-drawer-icon--close">
-          {{- 'icon-close.svg' | inline_asset_content -}}
-        </span>
-      </button>
+      {%- comment -%} Header Row: Tabs + Close Button {%- endcomment -%}
+      <div class="tabbed-drawer__header">
+        {%- comment -%} Tab Navigation {%- endcomment -%}
+        {% render 'tabbed-drawer-tabs',
+          tabs: tabs,
+          active_tab: active_tab
+        %}
 
-      {%- comment -%} Tab Navigation {%- endcomment -%}
-      {% render 'tabbed-drawer-tabs',
-        tabs: tabs,
-        active_tab: active_tab
-      %}
+        {%- comment -%} Close Button {%- endcomment -%}
+        <button
+          class="button button-unstyled close-button tabbed-drawer__close-button"
+          type="button"
+          aria-label="{{ 'actions.close' | t }}"
+          on:click="/close"
+        >
+          <span class="svg-wrapper header-drawer-icon header-drawer-icon--close">
+            {{- 'icon-close.svg' | inline_asset_content -}}
+          </span>
+        </button>
+      </div>
 
       {%- comment -%} Tab Panels {%- endcomment -%}
       <div class="tabbed-drawer__panels">
@@ -190,33 +193,45 @@
     opacity: 1;
   }
 
-  /* Close Button */
-  .tabbed-drawer__close-button {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    z-index: 10;
-    width: 2.5rem;
-    height: 2.5rem;
+  /* Header Row: Tabs + Close Button */
+  .tabbed-drawer__header {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-  }
-
-  .tabbed-drawer__close-button .header-drawer-icon {
-    width: var(--icon-size-xs, 1.5rem);
-    height: var(--icon-size-xs, 1.5rem);
-  }
-
-  /* Tab Navigation */
-  .tabbed-drawer__tabs {
-    display: flex;
+    align-items: stretch;
     position: sticky;
     top: 0;
     background: var(--color-background);
     border-bottom: 2px solid var(--color-foreground);
     z-index: 5;
+  }
+
+  /* Close Button */
+  .tabbed-drawer__close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    min-width: 3rem;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-left: 1px solid var(--color-border);
+    cursor: pointer;
+  }
+
+  .tabbed-drawer__close-button:hover {
+    opacity: 0.7;
+  }
+
+  .tabbed-drawer__close-button .header-drawer-icon {
+    width: var(--icon-size-xs, 1.25rem);
+    height: var(--icon-size-xs, 1.25rem);
+  }
+
+  /* Tab Navigation */
+  .tabbed-drawer__tabs {
+    display: flex;
+    flex: 1;
+    background: var(--color-background);
     padding: 0;
     margin: 0;
   }
