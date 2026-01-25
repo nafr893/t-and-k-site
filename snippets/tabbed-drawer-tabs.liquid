@@ -3,9 +3,10 @@
 
   @param {array} tabs - Array of tab IDs (e.g., ['shop', 'new', 'explore'])
   @param {string} active_tab - The initially active tab ID
+  @param {boolean} include_close - Whether to include the close button
 
   @example
-  {% render 'tabbed-drawer-tabs', tabs: tabs, active_tab: 'shop' %}
+  {% render 'tabbed-drawer-tabs', tabs: tabs, active_tab: 'shop', include_close: true %}
 {%- enddoc -%}
 
 <div class="tabbed-drawer__tabs" role="tablist">
@@ -23,4 +24,18 @@
       {{ tab | upcase }}
     </button>
   {% endfor %}
+
+  {%- comment -%} Close Button (4th column) {%- endcomment -%}
+  {% if include_close %}
+    <button
+      class="tabbed-drawer__close-button"
+      type="button"
+      aria-label="{{ 'actions.close' | t }}"
+      on:click="/close"
+    >
+      <span class="svg-wrapper header-drawer-icon header-drawer-icon--close">
+        {{- 'icon-close.svg' | inline_asset_content -}}
+      </span>
+    </button>
+  {% endif %}
 </div>
