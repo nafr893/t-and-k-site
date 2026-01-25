@@ -282,7 +282,8 @@ if (!customElements.get('tabbed-header-drawer')) {
     const summary = details.querySelector('summary') || el.querySelector('summary');
     const closeButtons = Array.from(el.querySelectorAll('[on\\:click="/close"], .tabbed-drawer__close-button, .tabbed-drawer__close'));
     const panels = el.querySelectorAll('.tabbed-drawer__panels > *');
-    const tabButtons = el.querySelectorAll('[data-tab] , .tabbed-drawer__tabs [role="tab"] , [ref="tabButtons[]"]');
+    // Only select actual tab buttons, not panels (panels also have data-tab but shouldn't trigger tab switching)
+    const tabButtons = el.querySelectorAll('.tabbed-drawer__tabs .tabbed-drawer__tab[data-tab], .tabbed-drawer__tabs [role="tab"]');
 
     // Helpers (replace previous isOpen/open/close + summary click handler)
     const isOpen = () => details.open === true;
