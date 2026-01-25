@@ -82,7 +82,7 @@
             "tabbed_shop_accordion_2_menu": "",
             "tabbed_shop_accordion_2_open": false,
             "tabbed_shop_link_text": "SHOP ALL",
-            "tabbed_shop_link_url": "",
+            "tabbed_shop_link_url": "shopify://collections",
             "tabbed_shop_promo_title": "Planning a Hunt?",
             "tabbed_shop_promo_cta": "BUILD YOUR SYSTEM",
             "tabbed_shop_promo_url": "shopify://products/binocular-harness",
