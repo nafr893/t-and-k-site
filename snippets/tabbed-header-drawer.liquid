@@ -195,47 +195,13 @@
 
   /* Header Row: Tabs + Close Button */
   .tabbed-drawer__header {
-    /* 3 equal tab columns + final column for the close button */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr) auto;
-    align-items: center; /* center tab text vertically */
-    column-gap: 0;
+    display: flex;
+    align-items: stretch;
     position: sticky;
     top: 0;
     background: var(--color-background);
     border-bottom: 2px solid var(--color-foreground);
     z-index: 5;
-    padding-inline: 0.5rem;
-  }
-
-  /* Keep tab list as a flex row inside the first three grid columns */
-  .tabbed-drawer__tabs {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0;
-    width: 100%;
-    grid-column: 1 / span 3;
-  }
-
-  .tabbed-drawer__tab {
-    flex: 1;
-    text-align: center;
-    padding: 1rem 0.5rem;
-    box-sizing: border-box;
-  }
-
-  /* Close button sits in the last grid column aligned to the end */
-  .tabbed-drawer__close-button {
-    width: 3rem;
-    min-width: 3rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-self: end;
-    background: transparent;
-    border: none;
   }
 
   /* Close Button */
