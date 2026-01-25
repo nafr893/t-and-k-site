@@ -311,3 +311,41 @@ li::marker {
     opacity: 1 !important;
   }
 }
+
+/* Force product thumbnails visible and sized on mobile */
+@media screen and (max-width: 749px) {
+  .product-media .slideshow-controls__thumbnails-container,
+  .product-media .slideshow-controls__thumbnails {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    gap: 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    box-sizing: border-box;
+  }
+
+  .product-media .slideshow-controls__thumbnail {
+    flex: 0 0 auto;
+    width: 64px !important;
+    height: 64px !important;
+    min-width: 64px !important;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgb(var(--color-foreground-rgb) / 0.08);
+    background: var(--color-background);
+  }
+
+  .product-media .slideshow-controls__thumbnail img,
+  .product-media .slideshow-controls__thumbnail picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
