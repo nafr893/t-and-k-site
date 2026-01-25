@@ -1,7 +1,7 @@
 {%- doc -%}
   Renders a single tab panel with content routing based on tab ID.
 
-  @param {string} tab - The tab ID ('shop', 'new', or 'explore')
+  @param {string} tab - The tab ID ('shop', 'pursuit', or 'explore')
   @param {object} linklist - The menu linklist for navigation items
   @param {string} active_tab - The initially active tab ID
   @param {object} block - The block object for settings
@@ -94,8 +94,8 @@
       </div>
 
     {% when 'pursuit' %}
-      {%- comment -%} NEW Tab Content - Image Cards {%- endcomment -%}
-      <div class="tabbed-drawer__content tabbed-drawer__content--new">
+      {%- comment -%} PURSUIT Tab Content - Image Cards {%- endcomment -%}
+      <div class="tabbed-drawer__content tabbed-drawer__content--pursuit">
         <div class="tabbed-drawer__cards-grid">
           {%- comment -%} Card 1 {%- endcomment -%}
           <a href="{{ block_settings.tabbed_new_card_1_url | default: '/collections/range-gear' }}" class="tabbed-drawer__card">
