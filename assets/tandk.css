@@ -268,7 +268,7 @@ div.slideshow-controls__thumbnails {
     display: flex; 
 }
 
-div.product-information__grid.product-information--media-left {
+div.price-container {
     span.price {
         font-weight: bold; 
 
