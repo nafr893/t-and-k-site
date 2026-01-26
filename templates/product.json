@@ -398,7 +398,7 @@
                   "name": "t:names.product_price",
                   "settings": {
                     "show_sale_price_first": true,
-                    "show_installments": true,
+                    "show_installments": false,
                     "show_tax_info": false,
                     "type_preset": "custom",
                     "width": "100%",
@@ -415,10 +415,25 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "variant_picker_WKHWRj": {
+                  "type": "variant-picker",
+                  "name": "t:names.product_variant_picker",
+                  "settings": {
+                    "variant_style": "buttons",
+                    "show_swatches": true,
+                    "alignment": "left",
+                    "padding-block-start": 0,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
-                "price_HdjYtn"
+                "price_HdjYtn",
+                "variant_picker_WKHWRj"
               ]
             },
             "divider_VJhene": {
@@ -430,19 +445,6 @@
                 "width_percent": 100,
                 "padding-block-start": 0,
                 "padding-block-end": 0
-              },
-              "blocks": {}
-            },
-            "variant_picker_R3rGDr": {
-              "type": "variant-picker",
-              "settings": {
-                "variant_style": "buttons",
-                "show_swatches": true,
-                "alignment": "left",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
               },
               "blocks": {}
             },
@@ -513,7 +515,6 @@
             "group_icgrde",
             "group_dNgrTr",
             "divider_VJhene",
-            "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
             "text_aEtTtq"
           ]
