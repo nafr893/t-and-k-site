@@ -267,3 +267,10 @@ li::marker {
 div.slideshow-controls__thumbnails {
     display: flex; 
 }
+
+div.product-information__grid {
+    span.price {
+        font-weight: bold; 
+
+    }
+}
