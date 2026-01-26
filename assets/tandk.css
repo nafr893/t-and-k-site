@@ -270,7 +270,7 @@ div.slideshow-controls__thumbnails {
 
 div.price-container {
     span.price {
-        font-weight: bold; 
+        font-weight: bold !important; 
 
     }
 }
