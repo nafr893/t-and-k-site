@@ -221,7 +221,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p><strong>MADE IN USA</strong></p>",
+                        "text": "<p><a href=\"/pages/pricing-transparency\" title=\"Pricing Transparency\"><strong>MADE IN USA</strong></a></p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
