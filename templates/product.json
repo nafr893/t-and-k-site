@@ -1394,7 +1394,7 @@
                                   "name": "t:names.icon",
                                   "settings": {
                                     "icon": "price_tag",
-                                    "image_upload": "shopify://shop_images/1000D_ICON_1b4b2f0d-db78-4996-9641-00f1fa9c2ed8.png",
+                                    "image_upload": "shopify://shop_images/Zipper_Icon_4.png",
                                     "width": 30,
                                     "link": "",
                                     "open_in_new_tab": false,
@@ -1555,7 +1555,7 @@
         "equal_columns": false,
         "limit_details_width": false,
         "gap": 0,
-        "enable_sticky_add_to_cart": true,
+        "enable_sticky_add_to_cart": false,
         "color_scheme": "",
         "padding-block-start": 0,
         "padding-block-end": 0
