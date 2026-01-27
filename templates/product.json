@@ -894,7 +894,7 @@
                     "type_preset": "h5",
                     "inherit_color_scheme": true,
                     "color_scheme": "",
-                    "border": "none",
+                    "border": "solid",
                     "border_width": 1,
                     "border_opacity": 100,
                     "border_radius": 0,
@@ -1093,7 +1093,7 @@
                     "accordion_row_MyCUGW": {
                       "type": "_accordion-row",
                       "settings": {
-                        "heading": "MATERIALS",
+                        "heading": "MANUFACTURING",
                         "open_by_default": true,
                         "icon": "none",
                         "width": 20
@@ -1313,53 +1313,11 @@
                       "block_order": [
                         "group_Jp8y3X"
                       ]
-                    },
-                    "accordion_row_n7GhKA": {
-                      "type": "_accordion-row",
-                      "settings": {
-                        "heading": "Manufacturing",
-                        "open_by_default": false,
-                        "icon": "none",
-                        "width": 20
-                      },
-                      "blocks": {
-                        "text_JxWLUy": {
-                          "type": "text",
-                          "settings": {
-                            "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
-                            "width": "100%",
-                            "max_width": "normal",
-                            "alignment": "left",
-                            "type_preset": "rte",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "wrap": "pretty",
-                            "color": "var(--color-foreground)",
-                            "background": false,
-                            "background_color": "#00000026",
-                            "border_color": "#000000",
-                            "border_weight": 1,
-                            "corner_radius": 0,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        }
-                      },
-                      "block_order": [
-                        "text_JxWLUy"
-                      ]
                     }
                   },
                   "block_order": [
                     "accordion_row_GcM8te",
-                    "accordion_row_MyCUGW",
-                    "accordion_row_n7GhKA"
+                    "accordion_row_MyCUGW"
                   ]
                 }
               },
