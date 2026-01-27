@@ -1309,13 +1309,13 @@
                             "group_yrTD6k"
                           ]
                         },
-                        "group_xUTMTm": {
+                        "group_GBbPcE": {
                           "type": "group",
                           "name": "Feature",
                           "settings": {
                             "content_direction": "row",
                             "vertical_on_mobile": false,
-                            "horizontal_alignment": "flex-start",
+                            "horizontal_alignment": "space-between",
                             "vertical_alignment": "center",
                             "align_baseline": false,
                             "horizontal_alignment_flex_direction_column": "flex-start",
@@ -1349,7 +1349,7 @@
                             "padding-inline-end": 0
                           },
                           "blocks": {
-                            "group_6EEFpU": {
+                            "group_cm6i6M": {
                               "type": "group",
                               "name": "t:names.group",
                               "settings": {
@@ -1389,7 +1389,7 @@
                                 "padding-inline-end": 0
                               },
                               "blocks": {
-                                "icon_Xhdckj": {
+                                "icon_M4QVVt": {
                                   "type": "icon",
                                   "name": "t:names.icon",
                                   "settings": {
@@ -1408,10 +1408,10 @@
                                 }
                               },
                               "block_order": [
-                                "icon_Xhdckj"
+                                "icon_M4QVVt"
                               ]
                             },
-                            "group_w3xwQx": {
+                            "group_MPJtyA": {
                               "type": "group",
                               "name": "t:names.group",
                               "settings": {
@@ -1423,10 +1423,10 @@
                                 "horizontal_alignment_flex_direction_column": "flex-start",
                                 "vertical_alignment_flex_direction_column": "center",
                                 "gap": 2,
-                                "width": "fit-content",
+                                "width": "fill",
                                 "custom_width": 100,
-                                "width_mobile": "custom",
-                                "custom_width_mobile": 75,
+                                "width_mobile": "fill",
+                                "custom_width_mobile": 80,
                                 "height": "fit",
                                 "custom_height": 100,
                                 "inherit_color_scheme": true,
@@ -1451,7 +1451,7 @@
                                 "padding-inline-end": 0
                               },
                               "blocks": {
-                                "text_X8eGhd": {
+                                "text_fRQMq4": {
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
@@ -1479,12 +1479,12 @@
                                   },
                                   "blocks": {}
                                 },
-                                "text_gDgmFG": {
+                                "text_kaAh8V": {
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
                                     "text": "<p>Made with 1000D nylon and 400D pack cloth layering.</p>",
-                                    "width": "fit-content",
+                                    "width": "100%",
                                     "max_width": "normal",
                                     "alignment": "left",
                                     "type_preset": "rte",
@@ -1509,20 +1509,20 @@
                                 }
                               },
                               "block_order": [
-                                "text_X8eGhd",
-                                "text_gDgmFG"
+                                "text_fRQMq4",
+                                "text_kaAh8V"
                               ]
                             }
                           },
                           "block_order": [
-                            "group_6EEFpU",
-                            "group_w3xwQx"
+                            "group_cm6i6M",
+                            "group_MPJtyA"
                           ]
                         }
                       },
                       "block_order": [
                         "group_Jp8y3X",
-                        "group_xUTMTm"
+                        "group_GBbPcE"
                       ]
                     }
                   },
