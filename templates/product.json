@@ -978,7 +978,7 @@
                                 "wrap": "pretty",
                                 "color": "var(--color-foreground)",
                                 "background": true,
-                                "background_color": "#f5f5f5",
+                                "background_color": "#ededed",
                                 "border_color": "#525252",
                                 "border_weight": 5,
                                 "corner_radius": 0,
