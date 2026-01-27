@@ -279,3 +279,11 @@ div.variant-option__select-wrapper {
     border: 1px solid black; 
 border-radius: 0px; 
 }
+/*accordion settings. */
+summary.details__header {
+font-weight: bold; 
+}
+
+div.details-content {
+    
+}
