@@ -289,3 +289,7 @@ border: 1px solid #767676 !important;
 }
 
 /*test comment*/
+slideshow-controls#slideshow-controls {
+    display: grid; 
+    justify-content: end; 
+}
