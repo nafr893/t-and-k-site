@@ -293,3 +293,16 @@ slideshow-controls#slideshow-controls {
     display: grid; 
     justify-content: end; 
 }
+
+/* DEBUG: force slideshow visible while fixing CSS */
+.shop-the-look-slideshow,
+#shopify-section-template--20919893328118__slideshow_qRMpCJ,
+#shopify-section-template--20919893328118__slideshow_VMx8dk,
+.slideshow-container,
+.slideshow-slides {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: auto !important;
+  max-height: none !important;
+}
