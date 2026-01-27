@@ -2323,7 +2323,7 @@
                 "gap": 12,
                 "width": "custom",
                 "custom_width": 100,
-                "width_mobile": "custom",
+                "width_mobile": "fill",
                 "custom_width_mobile": 57,
                 "height": "fit",
                 "custom_height": 100,
