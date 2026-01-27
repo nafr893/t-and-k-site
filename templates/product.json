@@ -879,7 +879,7 @@
                         "width": 20
                       },
                       "blocks": {
-                        "group_pBVFMm": {
+                        "group_6bhmDU": {
                           "type": "group",
                           "name": "t:names.group",
                           "settings": {
@@ -893,8 +893,8 @@
                             "gap": 12,
                             "width": "fill",
                             "custom_width": 100,
-                            "width_mobile": "fill",
-                            "custom_width_mobile": 100,
+                            "width_mobile": "custom",
+                            "custom_width_mobile": 60,
                             "height": "fit",
                             "custom_height": 100,
                             "inherit_color_scheme": true,
@@ -919,11 +919,11 @@
                             "padding-inline-end": 0
                           },
                           "blocks": {
-                            "text_wm3N6a": {
+                            "text_fNwXtp": {
                               "type": "text",
                               "name": "t:names.text",
                               "settings": {
-                                "text": "<p><strong>Best Used For:</strong></p>",
+                                "text": "<p><strong>Best Used For: </strong></p>",
                                 "width": "fit-content",
                                 "max_width": "normal",
                                 "alignment": "left",
@@ -945,17 +945,17 @@
                               },
                               "blocks": {}
                             },
-                            "text_PwzTDi": {
+                            "text_BHB6F8": {
                               "type": "text",
                               "name": "t:names.text",
                               "settings": {
-                                "text": "<p>{{ closest.product.metafields.custom.product_used_case.value }}</p>",
-                                "width": "fit-content",
-                                "max_width": "normal",
-                                "alignment": "left",
+                                "text": "<p><strong>{{ closest.product.metafields.custom.product_used_case.value }}</strong></p>",
+                                "width": "100%",
+                                "max_width": "none",
+                                "alignment": "center",
                                 "type_preset": "custom",
                                 "font": "var(--font-body--family)",
-                                "font_size": "0.625rem",
+                                "font_size": "0.75rem",
                                 "line_height": "normal",
                                 "letter_spacing": "normal",
                                 "case": "uppercase",
@@ -973,8 +973,8 @@
                             }
                           },
                           "block_order": [
-                            "text_wm3N6a",
-                            "text_PwzTDi"
+                            "text_fNwXtp",
+                            "text_BHB6F8"
                           ]
                         },
                         "text_ppVFfL": {
@@ -1004,7 +1004,7 @@
                         }
                       },
                       "block_order": [
-                        "group_pBVFMm",
+                        "group_6bhmDU",
                         "text_ppVFfL"
                       ]
                     },
