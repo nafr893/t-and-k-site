@@ -738,7 +738,7 @@
                       "name": "t:names.icon",
                       "settings": {
                         "icon": "price_tag",
-                        "image_upload": "shopify://shop_images/Star_Icon_57ed3123-ee66-48f5-a534-71f7762161c4.png",
+                        "image_upload": "shopify://shop_images/Star_Icon_4.png",
                         "width": 24,
                         "link": "",
                         "open_in_new_tab": false
