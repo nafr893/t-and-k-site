@@ -1868,7 +1868,7 @@
         "corner_radius": 0,
         "slide_height": "medium",
         "content_position": "below-media",
-        "color_scheme": "",
+        "color_scheme": "scheme-58084d4c-a86e-4d0a-855e-a0966e5043f7",
         "icons_style": "none",
         "icons_shape": "none",
         "slideshow_controls_style": "counter",
@@ -1913,7 +1913,8 @@
           "type": "video",
           "name": "t:names.video",
           "settings": {
-            "source": "uploaded",
+            "source": "url",
+            "video_url": "https://www.youtube.com/watch?v=Vd2MAnHD-48&list=TLGGuwmX2VAxPcEyNzAxMjAyNg",
             "video_autoplay": false,
             "video_loop": true,
             "alt": "",
