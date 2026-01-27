@@ -1,6 +1,93 @@
+{% assign block_settings = block.settings %}
+{%- assign block_index = section.blocks | find_index: 'id', block.id -%}
+{%- assign section_index = section.index -%}
+
+{% liquid
+  assign slide_product = block_settings.product
+  assign background_image = block_settings.background_image
+  assign card_position = block_settings.card_position | default: 'right'
+  assign hotspot_x = block_settings.hotspot_x | default: 50
+  assign hotspot_y = block_settings.hotspot_y | default: 50
+  assign card_vertical = block_settings.card_vertical_position | default: 50
+%}
+
+{% capture children %}
+  {%- comment -%} Background Image Container {%- endcomment -%}
+  <div class="stl-slide__image-container">
+    {%- if block_settings.toggle_overlay -%}
+      {% render 'overlay', settings: block_settings %}
+    {%- endif -%}
+
+    {%- if background_image -%}
+      {%- liquid
+        assign height = background_image.width | divided_by: background_image.aspect_ratio | round
+        assign sizes = '100vw'
+        assign widths = '832, 1200, 1600, 1920, 2560, 3840'
+
+        assign loading = 'lazy'
+        if block_index == 0 and section_index <= 3
+          assign loading = 'eager'
+        endif
+
+        assign fetchpriority = 'low'
+        if block_index == 0 and section_index == 1
+          assign fetchpriority = 'high'
+        endif
+      -%}
+      {{
+        background_image
+        | image_url: width: 3840
+        | image_tag: height: height, sizes: sizes, widths: widths, class: 'stl-slide__image', loading: loading, fetchpriority: fetchpriority
+      }}
+    {%- else -%}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'stl-slide__image' }}
+    {%- endif -%}
+
+    {%- comment -%} Hotspot Marker {%- endcomment -%}
+    {% if slide_product != blank %}
+      <button
+        class="stl-hotspot {% if section.settings.hotspot_pulse %}stl-hotspot--pulse{% endif %}"
+        style="
+          left: {{ hotspot_x }}%;
+          top: {{ hotspot_y }}%;
+          --hotspot-bg: {{ section.settings.hotspot_color | default: '#FFFFFF57' }};
+          --hotspot-bullseye: {{ section.settings.hotspot_bullseye_color | default: '#ffffff' }};
+        "
+        aria-label="View product: {{ slide_product.title | escape }}"
+        type="button"
+      ></button>
+    {% endif %}
+  </div>
+
+  {%- comment -%} Product Card Overlay {%- endcomment -%}
+  {% if slide_product != blank %}
+    <div
+      class="stl-card-wrapper stl-card-wrapper--{{ card_position }}"
+      style="--card-vertical: {{ card_vertical }}%;"
+    >
+      {% render 'shop-the-look-card',
+        product: slide_product,
+        position: card_position,
+        color_scheme: section.settings.card_color_scheme,
+        section_id: section.id,
+        block: block
+      %}
+    </div>
+  {% endif %}
+{% endcapture %}
+
+{% render 'slideshow-slide',
+  index: block_index,
+  class: 'stl-slide',
+  children: children,
+  attributes: block.shopify_attributes,
+  slide_size: section.settings.slide_height,
+  navigate_to_slide: true
+%}
+
 {% schema %}
 {
-  "name": "Shop the look slide",
+  "name": "Slide",
   "settings": [
     {
       "type": "image_picker",
@@ -102,7 +189,7 @@
   ],
   "presets": [
     {
-      "name": "Shop the look slide"
+      "name": "Slide"
     }
   ]
 }
