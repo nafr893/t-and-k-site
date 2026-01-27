@@ -152,6 +152,8 @@
                         "color": "var(--color-foreground)",
                         "background": false,
                         "background_color": "#00000026",
+                        "border_color": "#000000",
+                        "border_weight": 1,
                         "corner_radius": 0,
                         "padding-block-start": 0,
                         "padding-block-end": 0,
@@ -377,6 +379,8 @@
                         "color": "var(--color-foreground)",
                         "background": false,
                         "background_color": "#00000026",
+                        "border_color": "#000000",
+                        "border_weight": 1,
                         "corner_radius": 0,
                         "padding-block-start": 0,
                         "padding-block-end": 0,
@@ -602,6 +606,8 @@
                         "color": "var(--color-foreground)",
                         "background": false,
                         "background_color": "#00000026",
+                        "border_color": "#000000",
+                        "border_weight": 1,
                         "corner_radius": 0,
                         "padding-block-start": 0,
                         "padding-block-end": 0,
@@ -855,6 +861,8 @@
                         "color": "var(--color-foreground)",
                         "background": false,
                         "background_color": "#00000026",
+                        "border_color": "#000000",
+                        "border_weight": 1,
                         "corner_radius": 0,
                         "padding-block-start": 0,
                         "padding-block-end": 0,
@@ -1080,6 +1088,8 @@
                         "color": "var(--color-foreground)",
                         "background": false,
                         "background_color": "#00000026",
+                        "border_color": "#000000",
+                        "border_weight": 1,
                         "corner_radius": 0,
                         "padding-block-start": 0,
                         "padding-block-end": 0,
@@ -1305,6 +1315,8 @@
                         "color": "var(--color-foreground)",
                         "background": false,
                         "background_color": "#00000026",
+                        "border_color": "#000000",
+                        "border_weight": 1,
                         "corner_radius": 0,
                         "padding-block-start": 0,
                         "padding-block-end": 0,
@@ -1476,6 +1488,8 @@
                 "color": "var(--color-foreground)",
                 "background": false,
                 "background_color": "#00000026",
+                "border_color": "#000000",
+                "border_weight": 1,
                 "corner_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 16,
@@ -1605,6 +1619,8 @@
             "color": "var(--color-foreground-heading)",
             "background": false,
             "background_color": "#00000026",
+            "border_color": "#000000",
+            "border_weight": 1,
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
@@ -1840,6 +1856,8 @@
                 "color": "var(--color-foreground)",
                 "background": false,
                 "background_color": "#00000026",
+                "border_color": "#000000",
+                "border_weight": 1,
                 "corner_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
@@ -1990,6 +2008,80 @@
         "padding-block-end": 0
       }
     },
+    "product_hotspots_q9JgQx": {
+      "type": "product-hotspots",
+      "blocks": {
+        "hotspot_product_YmxNGP": {
+          "type": "_hotspot-product",
+          "settings": {
+            "product": "turkey-chest-rig",
+            "x-position": 45,
+            "y-position": 45
+          },
+          "blocks": {}
+        },
+        "hotspot_product_Hz8JHC": {
+          "type": "_hotspot-product",
+          "settings": {
+            "product": "",
+            "x-position": 60,
+            "y-position": 60
+          },
+          "blocks": {}
+        },
+        "heading": {
+          "type": "text",
+          "name": "t:names.heading",
+          "static": true,
+          "settings": {
+            "text": "<p>Shop the look</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h4",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "border_color": "#000000",
+            "border_weight": 1,
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "hotspot_product_YmxNGP",
+        "hotspot_product_Hz8JHC"
+      ],
+      "name": "t:names.product_hotspots",
+      "settings": {
+        "image": "shopify://shop_images/DSC05725.jpg",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "section_width": "full-width",
+        "section_height": "auto",
+        "hotspot_color": "#FFFFFF57",
+        "bullseye_color": "#ffffff",
+        "color_scheme": "scheme-1",
+        "product_title_gap": 8,
+        "product_title_preset": "",
+        "product_price_preset": "",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
     "hero_LLDaze": {
       "type": "hero",
       "blocks": {
@@ -2010,6 +2102,8 @@
             "color": "var(--color-foreground)",
             "background": false,
             "background_color": "#00000026",
+            "border_color": "#000000",
+            "border_weight": 1,
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
@@ -2035,6 +2129,8 @@
             "color": "var(--color-foreground)",
             "background": false,
             "background_color": "#00000026",
+            "border_color": "#000000",
+            "border_weight": 1,
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
@@ -2106,6 +2202,7 @@
     "product_list_fa6P9H",
     "slide_product_showcase_kEEcQg",
     "section_RCNz66",
+    "product_hotspots_q9JgQx",
     "hero_LLDaze"
   ]
 }
