@@ -855,9 +855,9 @@
                   "type": "accordion",
                   "name": "t:names.accordion",
                   "settings": {
-                    "icon": "caret",
+                    "icon": "plus",
                     "dividers": true,
-                    "type_preset": "h6",
+                    "type_preset": "h5",
                     "inherit_color_scheme": true,
                     "color_scheme": "",
                     "border": "none",
@@ -873,7 +873,7 @@
                     "accordion_row_GcM8te": {
                       "type": "_accordion-row",
                       "settings": {
-                        "heading": "Return policy",
+                        "heading": "PRODUCT OVERVIEW",
                         "open_by_default": true,
                         "icon": "none",
                         "width": 20
@@ -913,7 +913,7 @@
                             "link": "",
                             "open_in_new_tab": false,
                             "placeholder": "",
-                            "padding-block-start": 0,
+                            "padding-block-start": 5,
                             "padding-block-end": 0,
                             "padding-inline-start": 0,
                             "padding-inline-end": 0
