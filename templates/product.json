@@ -507,7 +507,7 @@
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
+                "gap": 0,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -1868,7 +1868,7 @@
         "corner_radius": 0,
         "slide_height": "medium",
         "content_position": "below-media",
-        "color_scheme": "",
+        "color_scheme": "scheme-58084d4c-a86e-4d0a-855e-a0966e5043f7",
         "icons_style": "none",
         "icons_shape": "none",
         "slideshow_controls_style": "counter",
@@ -1913,7 +1913,8 @@
           "type": "video",
           "name": "t:names.video",
           "settings": {
-            "source": "uploaded",
+            "source": "url",
+            "video_url": "https://www.youtube.com/watch?v=Vd2MAnHD-48&list=TLGGuwmX2VAxPcEyNzAxMjAyNg",
             "video_autoplay": false,
             "video_loop": true,
             "alt": "",
@@ -2056,6 +2057,53 @@
         "padding-block-end": 32
       }
     },
+    "176955356472b05daa": {
+      "type": "_blocks",
+      "blocks": {
+        "stamped_reviews_main_widget_3nQpmg": {
+          "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
+          "settings": {
+            "animation": true,
+            "tags_exclude": "",
+            "tags_include": "",
+            "search": "",
+            "linkify": true,
+            "use_metafields": false,
+            "sku_tagtype": "sku"
+          }
+        }
+      },
+      "block_order": [
+        "stamped_reviews_main_widget_3nQpmg"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "product_recommendations_qggXJq": {
       "type": "product-recommendations",
       "blocks": {
@@ -2184,7 +2232,7 @@
         "product": "{{ closest.product }}",
         "recommendation_type": "related",
         "layout_type": "grid",
-        "carousel_on_mobile": false,
+        "carousel_on_mobile": true,
         "max_products": 4,
         "columns": 4,
         "mobile_columns": "2",
@@ -2198,12 +2246,125 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "hero_fBGAdf": {
+      "type": "hero",
+      "blocks": {
+        "text_GXqTtH": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>LIFETIME<br/>WARRANTY</h2>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "border_color": "#000000",
+            "border_weight": 1,
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_ARinxr": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Our products are built to last, and we back that with a lifetime guarantee.</strong></p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "left",
+            "type_preset": "paragraph",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "border_color": "#000000",
+            "border_weight": 1,
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_A9qhED": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "LEARN MORE",
+            "link": "shopify://collections/all",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_GXqTtH",
+        "text_ARinxr",
+        "button_A9qhED"
+      ],
+      "name": "t:names.hero",
+      "settings": {
+        "media_type_1": "image",
+        "image_1": "shopify://shop_images/P1133861_1.webp",
+        "media_type_2": "image",
+        "stack_media_on_mobile": false,
+        "custom_mobile_media": false,
+        "media_type_1_mobile": "image",
+        "media_type_2_mobile": "image",
+        "link": "",
+        "open_in_new_tab": false,
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "flex-end",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "large",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "toggle_overlay": true,
+        "overlay_color": "#00000026",
+        "overlay_style": "gradient",
+        "gradient_direction": "to top",
+        "blurred_reflection": false,
+        "reflection_opacity": 75,
+        "padding-block-start": 40,
+        "padding-block-end": 64
+      }
     }
   },
   "order": [
     "main",
     "slideshow_Erb898",
     "section_9LAr7E",
-    "product_recommendations_qggXJq"
+    "176955356472b05daa",
+    "product_recommendations_qggXJq",
+    "hero_fBGAdf"
   ]
 }
