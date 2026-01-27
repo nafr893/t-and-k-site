@@ -1093,7 +1093,7 @@
                     "accordion_row_MyCUGW": {
                       "type": "_accordion-row",
                       "settings": {
-                        "heading": "Shipping",
+                        "heading": "MATERIALS",
                         "open_by_default": true,
                         "icon": "none",
                         "width": 20
