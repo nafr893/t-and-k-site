@@ -2015,8 +2015,8 @@
           "type": "_shop-the-look-slide",
           "settings": {
             "background_image": "shopify://shop_images/DSC05756.jpg",
-            "product": "",
-            "card_position": "right",
+            "product": "turkey-chest-rig",
+            "card_position": "left",
             "card_vertical_position": 50,
             "hotspot_x": 35,
             "hotspot_y": 45,
@@ -2029,7 +2029,8 @@
         "shop_the_look_slide_eCVjRa": {
           "type": "_shop-the-look-slide",
           "settings": {
-            "product": "",
+            "background_image": "shopify://shop_images/DSC05725.jpg",
+            "product": "3k-duffle-bag",
             "card_position": "left",
             "card_vertical_position": 50,
             "hotspot_x": 65,
