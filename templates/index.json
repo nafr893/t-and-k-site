@@ -2008,78 +2008,59 @@
         "padding-block-end": 0
       }
     },
-    "product_hotspots_q9JgQx": {
-      "type": "product-hotspots",
+    "shop_the_look_slideshow_jyHkdL": {
+      "type": "shop-the-look-slideshow",
       "blocks": {
-        "hotspot_product_YmxNGP": {
-          "type": "_hotspot-product",
+        "shop_the_look_slide_dehM9G": {
+          "type": "_shop-the-look-slide",
           "settings": {
+            "background_image": "shopify://shop_images/DSC05756.jpg",
             "product": "turkey-chest-rig",
-            "x-position": 45,
-            "y-position": 45
+            "card_position": "left",
+            "card_vertical_position": 50,
+            "hotspot_x": 35,
+            "hotspot_y": 45,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid"
           },
           "blocks": {}
         },
-        "hotspot_product_Hz8JHC": {
-          "type": "_hotspot-product",
+        "shop_the_look_slide_eCVjRa": {
+          "type": "_shop-the-look-slide",
           "settings": {
-            "product": "",
-            "x-position": 60,
-            "y-position": 60
-          },
-          "blocks": {}
-        },
-        "heading": {
-          "type": "text",
-          "name": "t:names.heading",
-          "static": true,
-          "settings": {
-            "text": "<p>Shop the look</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h4",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "color": "var(--color-foreground)",
-            "background": false,
-            "background_color": "#00000026",
-            "border_color": "#000000",
-            "border_weight": 1,
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "background_image": "shopify://shop_images/DSC05725.jpg",
+            "product": "3k-duffle-bag",
+            "card_position": "left",
+            "card_vertical_position": 50,
+            "hotspot_x": 65,
+            "hotspot_y": 55,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "hotspot_product_YmxNGP",
-        "hotspot_product_Hz8JHC"
+        "shop_the_look_slide_dehM9G",
+        "shop_the_look_slide_eCVjRa"
       ],
-      "name": "t:names.product_hotspots",
+      "name": "Shop the look slideshow",
       "settings": {
-        "image": "shopify://shop_images/DSC05725.jpg",
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
+        "autoplay": false,
+        "autoplay_speed": 5,
+        "slide_height": "medium",
         "section_width": "full-width",
-        "section_height": "auto",
+        "corner_radius": 0,
+        "arrow_style": "arrow",
         "hotspot_color": "#FFFFFF57",
-        "bullseye_color": "#ffffff",
-        "color_scheme": "scheme-1",
-        "product_title_gap": 8,
-        "product_title_preset": "",
-        "product_price_preset": "",
-        "padding-block-start": 40,
-        "padding-block-end": 40
+        "hotspot_bullseye_color": "#ffffff",
+        "hotspot_pulse": true,
+        "color_scheme": "",
+        "card_color_scheme": "",
+        "padding-block-start": 0,
+        "padding-block-end": 0
       }
     },
     "hero_LLDaze": {
@@ -2202,7 +2183,7 @@
     "product_list_fa6P9H",
     "slide_product_showcase_kEEcQg",
     "section_RCNz66",
-    "product_hotspots_q9JgQx",
+    "shop_the_look_slideshow_jyHkdL",
     "hero_LLDaze"
   ]
 }
