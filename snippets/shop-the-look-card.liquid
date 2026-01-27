@@ -41,11 +41,11 @@
     <div class="stl-card__badges">
       {% if product.available == false %}
         <span class="stl-card__badge stl-card__badge--sold-out">
-          {{ 'content.product_badge_sold_out' | t }}
+          Sold out
         </span>
       {% elsif product.compare_at_price > product.price %}
         <span class="stl-card__badge stl-card__badge--sale">
-          {{ 'content.product_badge_sale' | t }}
+          Sale
         </span>
       {% elsif product.metafields.custom.is_new == true %}
         <span class="stl-card__badge stl-card__badge--new">
@@ -75,7 +75,7 @@
         assign rating_count = product.metafields.reviews.rating_count | default: 0
         assign rating_decimal = rating | modulo: 1
       %}
-      <div class="stl-card__rating" aria-label="{{ 'accessibility.star_rating' | t: rating: rating, max: scale_max }}">
+      <div class="stl-card__rating" aria-label="Rating: {{ rating }} out of {{ scale_max }} stars">
         <div class="stl-card__stars">
           {% for i in (1..scale_max) %}
             {% liquid
@@ -122,7 +122,7 @@
     {%- comment -%} CTA Button {%- endcomment -%}
     <div class="stl-card__cta">
       <a href="{{ product.url }}" class="stl-card__button button button--primary">
-        {{ 'content.view_product' | t | default: 'View Product' }}
+        View Product
       </a>
     </div>
   </div>

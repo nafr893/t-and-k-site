@@ -38,13 +38,72 @@
 >
   {% capture slides %}
     {% for block in section.blocks %}
+      {% liquid
+        assign slide_product = block.settings.product
+        assign background_image = block.settings.background_image
+        assign card_position = block.settings.card_position | default: 'right'
+        assign hotspot_x = block.settings.hotspot_x | default: 50
+        assign hotspot_y = block.settings.hotspot_y | default: 50
+        assign card_vertical = block.settings.card_vertical_position | default: 50
+      %}
+
       {% render 'slideshow-slide',
         index: forloop.index0,
         slide_id: block.id,
         class: 'stl-slide',
         slide_size: section.settings.slide_height
       %}
-        {% render block %}
+        <div
+          class="stl-slide__content"
+          style="
+            --hotspot-x: {{ hotspot_x }}%;
+            --hotspot-y: {{ hotspot_y }}%;
+            --card-vertical: {{ card_vertical }}%;
+          "
+          {{ block.shopify_attributes }}
+        >
+          {%- comment -%} Background Image {%- endcomment -%}
+          <div class="stl-slide__background-wrapper">
+            {% if background_image != blank %}
+              {% render 'image', image: background_image, class: 'stl-slide__background' %}
+            {% else %}
+              {{ 'lifestyle-1' | placeholder_svg_tag: 'stl-slide__background stl-slide__placeholder' }}
+            {% endif %}
+
+            {%- comment -%} Optional Overlay {%- endcomment -%}
+            {% if block.settings.toggle_overlay %}
+              {% render 'overlay', settings: block.settings, layer: 'var(--layer-flat)' %}
+            {% endif %}
+
+            {%- comment -%} Hotspot Marker {%- endcomment -%}
+            {% if slide_product != blank %}
+              <button
+                class="stl-hotspot {% if section.settings.hotspot_pulse %}stl-hotspot--pulse{% endif %}"
+                style="
+                  left: calc(var(--hotspot-x) - var(--hotspot-size) / 2);
+                  top: calc(var(--hotspot-y) - var(--hotspot-size) / 2);
+                  --hotspot-bg: {{ section.settings.hotspot_color | default: '#FFFFFF57' }};
+                  --hotspot-bullseye: {{ section.settings.hotspot_bullseye_color | default: '#ffffff' }};
+                "
+                aria-label="View product: {{ slide_product.title | escape }}"
+                type="button"
+              ></button>
+            {% endif %}
+          </div>
+
+          {%- comment -%} Product Card {%- endcomment -%}
+          {% if slide_product != blank %}
+            <div class="stl-card-wrapper stl-card-wrapper--{{ card_position }}">
+              {% render 'shop-the-look-card',
+                product: slide_product,
+                position: card_position,
+                color_scheme: section.settings.card_color_scheme,
+                section_id: section.id,
+                block: block
+              %}
+            </div>
+          {% endif %}
+        </div>
       {% endrender %}
     {% endfor %}
   {% endcapture %}
@@ -332,13 +391,13 @@
     {
       "type": "checkbox",
       "id": "autoplay",
-      "label": "t:settings.auto_rotate_slides",
+      "label": "Auto-rotate slides",
       "default": false
     },
     {
       "type": "range",
       "id": "autoplay_speed",
-      "label": "t:settings.speed",
+      "label": "Speed",
       "min": 3,
       "max": 10,
       "step": 1,
@@ -349,43 +408,43 @@
     {
       "type": "select",
       "id": "slide_height",
-      "label": "t:settings.height",
+      "label": "Height",
       "options": [
         {
           "value": "small",
-          "label": "t:options.small"
+          "label": "Small"
         },
         {
           "value": "medium",
-          "label": "t:options.medium"
+          "label": "Medium"
         },
         {
           "value": "large",
-          "label": "t:options.large"
+          "label": "Large"
         },
         {
           "value": "auto",
-          "label": "t:options.auto"
+          "label": "Auto"
         }
       ],
       "default": "medium"
     },
     {
       "type": "header",
-      "content": "t:content.section_layout"
+      "content": "Section layout"
     },
     {
       "type": "select",
       "id": "section_width",
-      "label": "t:settings.width",
+      "label": "Width",
       "options": [
         {
           "value": "page-width",
-          "label": "t:options.page"
+          "label": "Page width"
         },
         {
           "value": "full-width",
-          "label": "t:options.full"
+          "label": "Full width"
         }
       ],
       "default": "full-width"
@@ -393,7 +452,7 @@
     {
       "type": "range",
       "id": "corner_radius",
-      "label": "t:settings.corner_radius",
+      "label": "Corner radius",
       "min": 0,
       "max": 50,
       "step": 1,
@@ -412,11 +471,11 @@
       "options": [
         {
           "value": "arrow",
-          "label": "t:options.arrows"
+          "label": "Arrows"
         },
         {
           "value": "chevron",
-          "label": "t:options.chevrons"
+          "label": "Chevrons"
         }
       ],
       "default": "arrow"
@@ -447,12 +506,12 @@
     },
     {
       "type": "header",
-      "content": "t:content.colors"
+      "content": "Colors"
     },
     {
       "type": "color_scheme",
       "id": "color_scheme",
-      "label": "t:settings.color_scheme",
+      "label": "Color scheme",
       "default": "scheme-1"
     },
     {
@@ -463,12 +522,12 @@
     },
     {
       "type": "header",
-      "content": "t:content.padding"
+      "content": "Padding"
     },
     {
       "type": "range",
       "id": "padding-block-start",
-      "label": "t:settings.top",
+      "label": "Top",
       "min": 0,
       "max": 100,
       "step": 1,
@@ -478,7 +537,7 @@
     {
       "type": "range",
       "id": "padding-block-end",
-      "label": "t:settings.bottom",
+      "label": "Bottom",
       "min": 0,
       "max": 100,
       "step": 1,
@@ -488,21 +547,22 @@
   ],
   "blocks": [
     {
-      "type": "_shop-the-look-slide"
+      "type": "_shop-the-look-slide",
+      "name": "Slide"
     }
   ],
   "presets": [
     {
       "name": "Shop the look slideshow",
-      "category": "t:categories.products",
+      "category": "Products",
       "settings": {
         "section_width": "full-width",
         "slide_height": "medium",
         "autoplay": false,
         "hotspot_pulse": true
       },
-      "blocks": {
-        "slide_1": {
+      "blocks": [
+        {
           "type": "_shop-the-look-slide",
           "settings": {
             "card_position": "right",
@@ -511,7 +571,7 @@
             "hotspot_y": 45
           }
         },
-        "slide_2": {
+        {
           "type": "_shop-the-look-slide",
           "settings": {
             "card_position": "left",
@@ -520,8 +580,7 @@
             "hotspot_y": 55
           }
         }
-      },
-      "block_order": ["slide_1", "slide_2"]
+      ]
     }
   ]
 }
