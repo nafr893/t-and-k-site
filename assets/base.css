@@ -4038,3 +4038,25 @@ text-component {
     font-size: max(1rem, 100%);
   }
 }
+
+
+
+/* slideshow controls. */ 
+
+slideshow-controls#slideshow-controls {
+    display: grid;
+    position: relative;
+    padding-right: .5rem;
+    justify-content: end !important
+    
+}
+
+
+div.slideshow-controls__counter {
+    background: none !important; 
+    color: #767676 !important;
+    margin-right: 0.5rem !important;
+    span.slash {
+        color: #767676 !important;
+    }
+}
