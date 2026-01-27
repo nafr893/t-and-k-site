@@ -1,5 +1,3 @@
-
-
 {% assign block_settings = block.settings %}
 {% assign icon_block_class = 'icon-block__media icon-block-' | append: block.id %}
 
@@ -13,28 +11,62 @@
   %}
 {% endcapture %}
 
+{%- comment -%}
+  Build the clickable / non-clickable inner (anchor or plain icon),
+  then wrap in a styled container that uses the new settings.
+{%- endcomment -%}
 {%- if block_settings.link != blank -%}
-  <a
-    href="{{ block_settings.link }}"
-    class="text-inherit"
-    {% if block_settings.open_in_new_tab %}
-      target="_blank" rel="noopener"
-    {% endif %}
-  >
-    {{ icon }}
-  </a>
+  {%- capture inner_html -%}
+    <a
+      href="{{ block_settings.link }}"
+      class="text-inherit"
+      {% if block_settings.open_in_new_tab %}
+        target="_blank" rel="noopener"
+      {% endif %}
+    >
+      {{ icon }}
+    </a>
+  {%- endcapture -%}
 {%- else -%}
-  {{ icon }}
+  {%- capture inner_html -%}{{ icon }}{%- endcapture -%}
 {%- endif -%}
+
+{%- comment -%}
+  Inline wrapper style built from settings:
+    - background_color
+    - border_color + border_weight
+    - container_width / container_height
+  Uses box-sizing so border wraps padding properly.
+{%- endcomment -%}
+{%- capture wrapper_style -%}
+display: inline-flex;
+align-items: center;
+justify-content: center;
+box-sizing: border-box;
+width: {{ block_settings.container_width | default: 48 }}px;
+height: {{ block_settings.container_height | default: 48 }}px;
+background: {{ block_settings.background_color | default: 'transparent' }};
+{%- if block_settings.border_weight and block_settings.border_weight != 0 -%}
+  border: {{ block_settings.border_weight }}px solid {{ block_settings.border_color | default: '#000' }};
+{%- endif -%}
+border-radius: {{ block_settings.corner_radius | default: 0 }}px;
+padding: 0;
+overflow: hidden;
+{%- endcapture -%}
+
+<div class="icon-block" style="{{ wrapper_style | strip }}">
+  {{ inner_html }}
+</div>
 
 {% stylesheet %}
   .icon-block {
-    display: flex;
+    display: inline-flex;
     flex-shrink: 0;
   }
 
   .icon-block__media {
     height: auto;
+    display: block;
   }
 {% endstylesheet %}
 
@@ -295,7 +327,7 @@
     {
       "type": "range",
       "id": "width",
-      "label": "t:settings.width",
+      "label": "Icon size (px)",
       "min": 12,
       "max": 200,
       "step": 2,
@@ -312,6 +344,50 @@
       "id": "open_in_new_tab",
       "label": "t:settings.open_new_tab",
       "default": false
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "alpha": true,
+      "default": "transparent"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "alpha": true,
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "border_weight",
+      "label": "Border weight (px)",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Container width (px)",
+      "min": 12,
+      "max": 300,
+      "step": 3,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "container_height",
+      "label": "Container height (px)",
+      "min": 12,
+      "max": 300,
+      "step": 3,
+      "unit": "px",
+      "default": 48
     }
   ],
   "presets": [
