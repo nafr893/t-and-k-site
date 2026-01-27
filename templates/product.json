@@ -1584,9 +1584,9 @@
             "overlay_style": "solid",
             "gradient_direction": "to top",
             "padding-block-start": 48,
-            "padding-block-end": 48,
-            "padding-inline-start": 48,
-            "padding-inline-end": 48
+            "padding-block-end": 36,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20
           },
           "blocks": {
             "group_XCTkif": {
