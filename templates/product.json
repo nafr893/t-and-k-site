@@ -2270,7 +2270,7 @@
         "slideshow_gap": 12,
         "corner_radius": 0,
         "slide_height": "large",
-        "content_position": "below-media",
+        "content_position": "on-media",
         "color_scheme": "scheme-2",
         "icons_style": "none",
         "icons_shape": "none",
