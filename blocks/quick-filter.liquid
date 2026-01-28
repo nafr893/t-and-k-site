@@ -90,17 +90,28 @@ width: 100%;
   }
 
   
-  .quick-filter__buttons {
+  
+.quick-filter__buttons {
   display: flex;
-    flex-wrap: nowrap;
-    z-index: 99;
-    width: calc(100vw);
-    overflow: scroll;
-    font-size: 13px;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(244, 244, 244, .541) transparent;
-    gap: 10px;
-  }
+  flex-wrap: nowrap;
+  z-index: 99;
+  width: 100vw;
+
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  font-size: 13px;
+  gap: 10px;
+
+  padding-bottom: 10px;        /* 👈 creates space above scrollbar */
+  box-sizing: border-box;      /* 👈 ensures padding doesn’t break width */
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(244, 244, 244, .541) transparent;
+}
+
+
+  
 
 
   .quick-filter__button {
