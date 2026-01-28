@@ -305,7 +305,7 @@ div.spacing-style.slide__content.background-transparent {
   box-sizing: border-box;
 }
 
-}
+
 /* prevent horizontal overflow */
 main#MainContent.content-for-layout {
     overflow-x: hidden; 
