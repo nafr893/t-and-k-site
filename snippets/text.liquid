@@ -66,6 +66,10 @@
       --text-corner-radius: {{ block_settings.corner_radius }}px;
       --text-padding: max(var(--padding-2xs), calc((var(--text-corner-radius) + var(--padding-xs)) * (1 - cos(45deg))));
     {% endif %}
+
+    /* border variables exposed so theme can render border */
+    --text-border-color: {{ block_settings.border_color | default: 'transparent' }};
+    --text-border-width: {{ block_settings.border_weight | default: 0 }}px;
   "
 
   {{ block.shopify_attributes }}
@@ -210,6 +214,11 @@
     padding-block-end: max(var(--text-padding), var(--padding-block-end, 0));
     padding-inline-start: max(var(--text-padding), var(--padding-inline-start, 0));
     padding-inline-end: max(var(--text-padding), var(--padding-inline-end, 0));
+  }
+
+  /* Apply border from block variables */
+  .text-block {
+    border: calc(var(--text-border-width, 0px)) solid var(--text-border-color, transparent);
   }
 
   .custom-color,
