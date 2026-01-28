@@ -2672,7 +2672,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   position: absolute;
   inset: 0;
   background-color: var(--color-primary-button-background);
-  border-radius: 0;
+  border-radius: var(--style-border-radius-lg);
 }
 
 .cart-bubble__text {
