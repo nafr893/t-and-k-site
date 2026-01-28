@@ -50,7 +50,7 @@
 
 {% capture attributes %}
   class="{{ class }} spacing-style text-block text-block--{{ block.id }} {{ block_settings.type_preset }}
-    {{ text_block_classes }}"
+    {{ text_block_classes }}{% if block_settings.border_weight and block_settings.border_weight != 0 %} text-block--has-border{% endif %}"
   style="
     {% render 'spacing-padding', settings: block_settings %}
     {% render 'typography-style', settings: block_settings %}
@@ -61,15 +61,15 @@
     {% endif %}
     {% if block_settings.background %}
       --text-background-color: {{ block_settings.background_color | default: 'rgb(255 255 255 / 1.0)' }};
-      --text-corner-radius: {{ block_settings.corner_radius | default: 0 }}px;
+      --text-corner-radius: {{ block_settings.corner_radius }}px;
       --text-padding: max(var(--padding-2xs), calc((var(--text-corner-radius) + var(--padding-xs)) * (1 - cos(45deg))));
     {% endif %}
 
-    /* border variables exposed so theme can render border; explicit inline fallback prevents a stray 1px rule from showing */
+    /* border variables exposed so theme can render border */
     --text-border-color: {{ block_settings.border_color | default: 'transparent' }};
     --text-border-width: {{ block_settings.border_weight | default: 0 }}px;
-    border: {{ block_settings.border_weight | default: 0 }}px solid {{ block_settings.border_color | default: 'transparent' }};
   "
+
   {{ block.shopify_attributes }}
 {% endcapture %}
 
@@ -214,8 +214,8 @@
     padding-inline-end: max(var(--text-padding), var(--padding-inline-end, 0));
   }
 
-  /* Apply border from block variables */
-  .text-block {
+  /* Apply border only when block explicitly requests it */
+  .text-block.text-block--has-border {
     border: calc(var(--text-border-width, 0px)) solid var(--text-border-color, transparent);
   }
 
