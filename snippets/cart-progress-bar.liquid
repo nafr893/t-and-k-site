@@ -11,7 +11,7 @@
 
 <div class="cart-progress">
  {% if cart_total >= free_shipping_threshold %}
-   <p class="cart-progress__message">You’ve unlocked an entry!</p>
+   <p class="cart-progress__message">You’ve unlocked Free Shipping!</p>
  {% else %}
    <p class="cart-progress__message">
      You're <span class="highlight" >{{ remaining_amount | money_without_trailing_zeros }} </span> away from <span class="highlight">Free Shipping</span>
