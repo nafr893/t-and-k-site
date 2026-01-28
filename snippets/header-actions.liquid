@@ -139,7 +139,9 @@
                   {{ 'content.your_cart_is_empty' | t }}
                 </h2>
 
+
                 <div class="cart-drawer__items">
+                {% render 'cart-progress-bar' %}
                   {% render 'cart-products', drawer_context: 'drawer' %}
                 </div>
               </div>
