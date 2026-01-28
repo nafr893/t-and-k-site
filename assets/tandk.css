@@ -298,3 +298,9 @@ div.spacing-style.slide__content.background-transparent {
     z-index: 99 !important;
     overflow: visible; 
 }
+
+
+/* Text block wrapper */
+.text-block {
+  box-sizing: border-box;
+}
