@@ -294,8 +294,8 @@ li::marker {
 }
 
 div.spacing-style.slide__content.background-transparent {
-    display: inline !important; 
-    z-index: 99 !important;
+   
+
     overflow: visible; 
 }
 
