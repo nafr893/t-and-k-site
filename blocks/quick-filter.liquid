@@ -54,11 +54,12 @@
       --quick-filter-gap: {{ block.settings.button_gap }}px;
     "
   >
-    <div class="quick-filter__buttons">
+    <div class="quick-filter__buttons" role="tablist" aria-label="Quick filter">
       <button
         type="button"
         class="quick-filter__button quick-filter__button--active"
         data-filter="all"
+        aria-pressed="true"
       >
         {{ block.settings.all_button_label | default: 'All' }}
       </button>
@@ -68,6 +69,7 @@
           type="button"
           class="quick-filter__button"
           data-filter="{{ filter | escape }}"
+          aria-pressed="false"
         >
           {{ filter }}
         </button>
@@ -79,6 +81,75 @@
     </script>
   </div>
 {% endif %}
+
+{% stylesheet %}
+  /* Wrapper should NOT clip the scroll container */
+  .quick-filter {
+    display: block;
+    width: 100%;
+    overflow: visible;
+  }
+
+  /* Scrollable row */
+  .quick-filter__buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: var(--quick-filter-gap, 8px);
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0; /* critical inside flex/grid parents */
+
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
+  /* Hide scrollbar for Chrome, Safari, Opera */
+  .quick-filter__buttons::-webkit-scrollbar {
+    display: none;
+  }
+
+  .quick-filter__button {
+    appearance: none;
+    background: transparent;
+    border: 1px solid currentColor;
+    padding: var(--padding-sm) var(--padding-md);
+    font-family: inherit;
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    flex: 0 0 auto; /* prevents shrinking so scrolling actually happens */
+    white-space: nowrap;
+  }
+
+  .quick-filter__button:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .quick-filter__button--active {
+    background: var(--color-foreground, #000);
+    color: var(--color-background, #fff);
+  }
+
+  .quick-filter__button--active:hover {
+    background: var(--color-foreground, #000);
+  }
+
+  /* Hide filtered products */
+  .product-grid__item.quick-filter-hidden {
+    display: none;
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -110,59 +181,3 @@
   ]
 }
 {% endschema %}
-  {% stylesheet %}
-    .quick-filter {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: var(--quick-filter-gap, 8px);
-      overflow-x: hidden;
-      overflow-y: hidden;
-       -webkit-overflow-scrolling: touch;
-    }
-
-  .quick-filter__buttons {
-display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    gap: var(--quick-filter-gap, 8px);
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
-    scroll-behavior: smooth;
-
-  }
-
-  .quick-filter__button {
-    appearance: none;
-    background: transparent;
-    border: 1px solid currentColor;
-    padding: var(--padding-sm) var(--padding-md);
-    font-family: inherit;
-    font-size: var(--font-size-sm);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    flex-shrink: 0;
-    white-space: nowrap;
-  }
-
-  .quick-filter__button:hover {
-    background: rgba(0, 0, 0, 0.05);
-  }
-
-  .quick-filter__button--active {
-    background: var(--color-foreground, #000);
-    color: var(--color-background, #fff);
-  }
-
-  .quick-filter__button--active:hover {
-    background: var(--color-foreground, #000);
-  }
-
-    /* Hide filtered products */
-    .product-grid__item.quick-filter-hidden {
-      display: none;
-    }
-  {% endstylesheet %}
