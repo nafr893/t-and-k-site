@@ -315,5 +315,5 @@ main#MainContent.content-for-layout {
  }
  text-component.cart__total-value.cart-secondary-typography {
     font-size: 1rem !important;
-    font-weight: 500 !important;
+    font-weight: 700;
  }
