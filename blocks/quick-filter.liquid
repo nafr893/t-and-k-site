@@ -78,58 +78,61 @@
       { {{ product_filter_map }} }
     </script>
   </div>
-
-  {% stylesheet %}
-    .quick-filter {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--quick-filter-gap, 8px);
-    }
-
-    .quick-filter__buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--quick-filter-gap, 8px);
-    }
-
-    .quick-filter__button {
-      appearance: none;
-      background: transparent;
-      border: 1px solid currentColor;
-      padding: var(--padding-sm) var(--padding-md);
-      font-family: inherit;
-      font-size: var(--font-size-sm);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      cursor: pointer;
-      transition: background-color 0.2s ease, color 0.2s ease;
-    }
-
-    .quick-filter__button:hover {
-      background: rgba(0, 0, 0, 0.05);
-    }
-
-    .quick-filter__button--active {
-      background: var(--color-foreground, #000);
-      color: var(--color-background, #fff);
-    }
-
-    .quick-filter__button--active:hover {
-      background: var(--color-foreground, #000);
-    }
-
-    /* Hide filtered products */
-    .product-grid__item.quick-filter-hidden {
-      display: none;
-    }
-  {% endstylesheet %}
 {% endif %}
+
+{% stylesheet %}
+  .quick-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--quick-filter-gap, 8px);
+  }
+
+  .quick-filter__buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--quick-filter-gap, 8px);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .quick-filter__button {
+    appearance: none;
+    background: transparent;
+    border: 1px solid currentColor;
+    padding: var(--padding-sm) var(--padding-md);
+    font-family: inherit;
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .quick-filter__button:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .quick-filter__button--active {
+    background: var(--color-foreground, #000);
+    color: var(--color-background, #fff);
+  }
+
+  .quick-filter__button--active:hover {
+    background: var(--color-foreground, #000);
+  }
+
+  /* Hide filtered products */
+  .product-grid__item.quick-filter-hidden {
+    display: none;
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
   "name": "Quick Filter",
   "tag": "div",
-  "class": "quick-filter-block",
   "settings": [
     {
       "type": "text",
@@ -150,7 +153,8 @@
   ],
   "presets": [
     {
-      "name": "Quick Filter"
+      "name": "Quick Filter",
+      "category": "Collection"
     }
   ]
 }
