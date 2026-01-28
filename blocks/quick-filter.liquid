@@ -80,48 +80,16 @@
   </div>
 {% endif %}
 
-{% schema %}
-{
-  "name": "Quick Filter",
-  "tag": "div",
-  "class": "quick-filter-block",
-  "settings": [
-    {
-      "type": "text",
-      "id": "all_button_label",
-      "label": "\"All\" button label",
-      "default": "All"
-    },
-    {
-      "type": "range",
-      "id": "button_gap",
-      "label": "Button gap",
-      "min": 0,
-      "max": 32,
-      "step": 2,
-      "unit": "px",
-      "default": 8
-    }
-  ],
-  "presets": [
-    {
-      "name": "Quick Filter"
-    }
-  ]
-}
-{% endschema %}
-  {% stylesheet %}
-    .quick-filter {
-         display: flex;
-      flex-wrap: nowrap;
-      gap: var(--quick-filter-gap, 8px);
-      overflow-x: hidden;
-      overflow-y: hidden;
-       -webkit-overflow-scrolling: touch;
-    }
+{% stylesheet %}
+  .quick-filter {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--quick-filter-gap, 8px);
+    overflow: hidden;
+  }
 
   .quick-filter__buttons {
-display: flex;
+    display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     gap: var(--quick-filter-gap, 8px);
@@ -130,7 +98,13 @@ display: flex;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
     scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
 
+  /* Hide scrollbar for Chrome, Safari, Opera */
+  .quick-filter__buttons::-webkit-scrollbar {
+    display: none;
   }
 
   .quick-filter__button {
@@ -161,8 +135,39 @@ display: flex;
     background: var(--color-foreground, #000);
   }
 
-    /* Hide filtered products */
-    .product-grid__item.quick-filter-hidden {
-      display: none;
+  /* Hide filtered products */
+  .product-grid__item.quick-filter-hidden {
+    display: none;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Quick Filter",
+  "tag": "div",
+  "class": "quick-filter-block",
+  "settings": [
+    {
+      "type": "text",
+      "id": "all_button_label",
+      "label": "\"All\" button label",
+      "default": "All"
+    },
+    {
+      "type": "range",
+      "id": "button_gap",
+      "label": "Button gap",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 8
     }
-  {% endstylesheet %}
+  ],
+  "presets": [
+    {
+      "name": "Quick Filter"
+    }
+  ]
+}
+{% endschema %}
