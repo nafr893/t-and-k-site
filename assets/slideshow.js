@@ -457,6 +457,10 @@ export class Slideshow extends Component {
     if (this.refs.slides?.[0]) {
       this.refs.slides[0].setAttribute('aria-hidden', 'false');
     }
+
+    // If animations/timeline fail to run, make sure slide content is visible.
+    // This is defensive: it only forces visibility when computed opacity remains 0.
+    queueMicrotask(() => this.#ensureSlideContentVisible());
   }
 
   /**
@@ -523,6 +527,9 @@ export class Slideshow extends Component {
 
       this.#resizeObserver.observe(this.refs.slideshowContainer);
     });
+
+    // Defensive fallback for slide content visibility when animations/timelines don't run
+    queueMicrotask(() => this.#ensureSlideContentVisible());
   }
 
   /**
@@ -858,6 +865,37 @@ export class Slideshow extends Component {
     });
 
     return visibleSlides.length;
+  }
+
+  /**
+   * If slide content elements remain invisible (opacity: 0) because animation-timeline
+   * didn't run or timeline variable is missing, disable animation and set opacity so
+   * text/buttons become visible. Safe to run multiple times.
+   */
+  #ensureSlideContentVisible() {
+    try {
+      const slides = this.refs.slides || [];
+      if (!slides.length) return;
+
+      // Check first slide's content computed opacity
+      const firstContent = slides[0].querySelector?.('.slide__content');
+      if (!firstContent) return;
+      const cs = getComputedStyle(firstContent);
+      if (parseFloat(cs.opacity) > 0) return; // already visible
+
+      // Force all slide contents visible by disabling animations
+      for (const slide of slides) {
+        const content = slide.querySelector?.('.slide__content');
+        if (content) {
+          content.style.animation = 'none';
+          content.style.opacity = '1';
+          content.style.transition = 'none';
+        }
+      }
+    } catch (e) {
+      // swallow errors — non-blocking defensive fix
+      // console.debug('ensureSlideContentVisible failed', e);
+    }
   }
 }
 
