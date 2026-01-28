@@ -80,12 +80,12 @@
   </div>
 {% endif %}
 
-{% stylesheet %}
-  .quick-filter {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--quick-filter-gap, 8px);
-  }
+  {% stylesheet %}
+    .quick-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--quick-filter-gap, 8px);
+    }
 
   .quick-filter__buttons {
     display: flex;
@@ -123,16 +123,18 @@
     background: var(--color-foreground, #000);
   }
 
-  /* Hide filtered products */
-  .product-grid__item.quick-filter-hidden {
-    display: none;
-  }
-{% endstylesheet %}
+    /* Hide filtered products */
+    .product-grid__item.quick-filter-hidden {
+      display: none;
+    }
+  {% endstylesheet %}
+{% endif %}
 
 {% schema %}
 {
   "name": "Quick Filter",
   "tag": "div",
+  "class": "quick-filter-block",
   "settings": [
     {
       "type": "text",
@@ -153,8 +155,7 @@
   ],
   "presets": [
     {
-      "name": "Quick Filter",
-      "category": "Collection"
+      "name": "Quick Filter"
     }
   ]
 }

@@ -12,6 +12,15 @@
     "section": {
       "type": "section",
       "blocks": {
+        "quick_filter_APLbY6": {
+          "type": "quick-filter",
+          "name": "Quick Filter",
+          "settings": {
+            "all_button_label": "All",
+            "button_gap": 8
+          },
+          "blocks": {}
+        },
         "text_tqQTNE": {
           "type": "text",
           "name": "Title",
@@ -72,6 +81,7 @@
         }
       },
       "block_order": [
+        "quick_filter_APLbY6",
         "text_tqQTNE",
         "text_twGGkJ"
       ],
