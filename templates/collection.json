@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "section": {
       "type": "section",
@@ -28,7 +29,10 @@
             "wrap": "pretty",
             "color": "",
             "background": false,
+            "border": false,
             "background_color": "#00000026",
+            "border_color": "#000000",
+            "border_weight": 0,
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
@@ -54,7 +58,10 @@
             "wrap": "pretty",
             "color": "",
             "background": false,
+            "border": false,
             "background_color": "#00000026",
+            "border_color": "#000000",
+            "border_weight": 0,
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
@@ -79,19 +86,20 @@
         "vertical_alignment_flex_direction_column": "center",
         "gap": 12,
         "section_width": "page-width",
-        "section_height": "",
+        "section_height": "small",
         "section_height_custom": 50,
-        "color_scheme": "scheme-1",
-        "background_media": "none",
+        "color_scheme": "scheme-2",
+        "background_media": "image",
         "video_position": "cover",
+        "background_image": "{{ collection.metafields.custom.collection_banner_image.value }}",
         "background_image_position": "cover",
         "border": "none",
         "border_width": 1,
         "border_opacity": 100,
         "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
+        "toggle_overlay": true,
+        "overlay_color": "#00000087",
+        "overlay_style": "gradient",
         "gradient_direction": "to top",
         "padding-block-start": 48,
         "padding-block-end": 48
@@ -155,6 +163,20 @@
               },
               "blocks": {}
             },
+            "swatches_Xn8XCt": {
+              "type": "swatches",
+              "name": "t:names.swatches",
+              "settings": {
+                "product_swatches_alignment": "flex-start",
+                "product_swatches_alignment_mobile": "flex-start",
+                "hide_padding": false,
+                "product_swatches_padding_top": 4,
+                "product_swatches_padding_bottom": 0,
+                "product_swatches_padding_left": 0,
+                "product_swatches_padding_right": 0
+              },
+              "blocks": {}
+            },
             "product_title_4nY4eT": {
               "type": "product-title",
               "name": "t:names.product_title",
@@ -177,6 +199,48 @@
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_M3LVrT": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>{{ closest.product.metafields.custom.product_card_description.value }}</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "border": false,
+                "background_color": "",
+                "border_color": "#000000",
+                "border_weight": 0,
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "review_mHjiza": {
+              "type": "review",
+              "name": "t:names.product_review_stars",
+              "settings": {
+                "stars_style": "shaded",
+                "show_number": true,
+                "rating_color": "primary",
+                "type_preset": "paragraph",
+                "width": "100%",
+                "alignment": "left"
               },
               "blocks": {}
             },
@@ -205,7 +269,10 @@
           },
           "block_order": [
             "card-gallery",
+            "swatches_Xn8XCt",
             "product_title_4nY4eT",
+            "text_M3LVrT",
+            "review_mHjiza",
             "price_EzJzMm"
           ]
         }
@@ -214,6 +281,8 @@
         "layout_type": "grid",
         "product_card_size": "medium",
         "mobile_product_card_size": "small",
+        "enable_infinite_scroll": true,
+        "products_per_page": 24,
         "product_grid_width": "centered",
         "full_width_on_mobile": true,
         "columns_gap_horizontal": 16,
