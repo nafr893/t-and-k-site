@@ -2179,6 +2179,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
+        "visibility": "desktop_only",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
@@ -2772,6 +2773,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
+        "visibility": "both",
         "padding-block-start": 48,
         "padding-block-end": 32
       }
