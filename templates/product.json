@@ -1011,7 +1011,7 @@
                                 "background": true,
                                 "background_color": "#ededed",
                                 "border_color": "#525252",
-                                "border_weight": 1,
+                                "border_weight": 3,
                                 "corner_radius": 0,
                                 "padding-block-start": 2,
                                 "padding-block-end": 2,
