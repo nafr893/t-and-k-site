@@ -1169,7 +1169,7 @@
                         "text_ppVFfL": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>{{ closest.product.description }}</p>",
+                            "text": "{{ closest.product.description }}",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
@@ -1673,7 +1673,7 @@
         "enable_sticky_add_to_cart": false,
         "color_scheme": "",
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 20
       }
     },
     "slideshow_Erb898": {
