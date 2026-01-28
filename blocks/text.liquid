@@ -319,11 +319,16 @@
       "default": false
     },
     {
+      "type": "checkbox",
+      "id": "border",
+      "label": "Border",
+      "default": false
+    },
+    {
       "type": "color",
       "id": "background_color",
       "label": "t:settings.background_color",
       "alpha": true,
-      
       "visible_if": "{{ block.settings.background }}"
     },
     {
@@ -331,7 +336,8 @@
       "id": "border_color",
       "label": "Border color",
       "alpha": true,
-      "default": "#000000"
+      "default": "#000000",
+      "visible_if": "{{ block.settings.border }}"
     },
     {
       "type": "range",
@@ -341,7 +347,8 @@
       "max": 10,
       "step": 1,
       "unit": "px",
-      "default": 0
+      "default": 0,
+      "visible_if": "{{ block.settings.border }}"
     },
     {
       "type": "range",

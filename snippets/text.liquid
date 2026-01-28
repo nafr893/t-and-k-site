@@ -209,15 +209,11 @@
     background-color: var(--text-background-color);
     border-radius: var(--text-corner-radius);
 
+    /* To avoid text being cropped when using a border radius we add a minimum padding. */
     padding-block-start: max(var(--text-padding), var(--padding-block-start, 0));
     padding-block-end: max(var(--text-padding), var(--padding-block-end, 0));
     padding-inline-start: max(var(--text-padding), var(--padding-inline-start, 0));
     padding-inline-end: max(var(--text-padding), var(--padding-inline-end, 0));
-  }
-
-  /* Only apply border when block explicitly has one */
-  .text-block.text-block--has-border {
-    border: calc(var(--text-border-width, 0px)) solid var(--text-border-color, transparent);
   }
 
   .custom-color,
