@@ -1,39 +1,4 @@
-{%- comment -%}
-  Wrapper that exposes theme CSS variables so border/padding/background set in
-  the editor are honoured on the live page.
-{%- endcomment -%}
-
-{%- assign p_top = block.settings['padding-block-start'] | default: 0 -%}
-{%- assign p_bottom = block.settings['padding-block-end'] | default: 0 -%}
-{%- assign p_left = block.settings['padding-inline-start'] | default: 0 -%}
-{%- assign p_right = block.settings['padding-inline-end'] | default: 0 -%}
-
-{%- capture wrapper_style -%}
-box-sizing: border-box;
-padding-top: {{ p_top }}px;
-padding-bottom: {{ p_bottom }}px;
-padding-left: {{ p_left }}px;
-padding-right: {{ p_right }}px;
-/* legacy background / radius (keep for themes that do not read vars) */
-background: {{ block.settings.background_color | default: 'transparent' }};
-border-radius: {{ block.settings.corner_radius | default: 0 }}px;
-
-/* expose editor values as CSS variables the theme can consume */
---text-background-color: {{ block.settings.background_color | default: 'transparent' }};
---text-corner-radius: {{ block.settings.corner_radius | default: 0 }}px;
---text-padding-block-start: {{ p_top }}px;
---text-padding-block-end: {{ p_bottom }}px;
---text-padding-inline-start: {{ p_left }}px;
---text-padding-inline-end: {{ p_right }}px;
-
-/* border variables */
---text-border-color: {{ block.settings.border_color | default: 'transparent' }};
---text-border-width: {{ block.settings.border_weight | default: 0 }}px;
-{%- endcapture -%}
-
-<div class="text-block" style="{{ wrapper_style | strip }}">
-  {% render 'text', block: block %}
-</div>
+{% render 'text', block: block %}
 
 {% schema %}
 {
