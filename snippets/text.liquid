@@ -63,16 +63,13 @@
     {% endif %}
     {% if block_settings.background %}
       --text-background-color: {{ block_settings.background_color | default: 'rgb(255 255 255 / 1.0)' }};
+      --text-corner-radius: {{ block_settings.corner_radius }}px;
       --text-padding: max(var(--padding-2xs), calc((var(--text-corner-radius) + var(--padding-xs)) * (1 - cos(45deg))));
     {% endif %}
 
-    /* Border support driven by Theme Editor */
-    --text-border-enabled: {% if block_settings.border %}1{% else %}0{% endif %};
+    /* border variables exposed so theme can render border */
     --text-border-color: {{ block_settings.border_color | default: 'transparent' }};
     --text-border-width: {{ block_settings.border_weight | default: 0 }}px;
-
-    /* Radius is needed for both background and border */
-    --text-corner-radius: {{ block_settings.corner_radius | default: 0 }}px;
   "
 
   {{ block.shopify_attributes }}
@@ -130,13 +127,6 @@
     display: flex;
     flex-direction: column;
     align-items: var(--horizontal-alignment);
-
-    /* Border support (driven by theme editor settings) */
-    border-style: solid;
-    border-width: calc(var(--text-border-width, 0px) * var(--text-border-enabled, 0));
-    border-color: var(--text-border-color, transparent);
-    border-radius: var(--text-corner-radius, 0px);
-    box-sizing: border-box;
   }
 
   .text-block > * {
@@ -217,6 +207,7 @@
 
   .text-block--background {
     background-color: var(--text-background-color);
+    border-radius: var(--text-corner-radius);
 
     /* To avoid text being cropped when using a border radius we add a minimum padding. */
     padding-block-start: max(var(--text-padding), var(--padding-block-start, 0));
