@@ -1005,7 +1005,7 @@
                               "name": "t:names.text",
                               "settings": {
                                 "text": "<p><strong>{{ closest.product.metafields.custom.product_used_case.value }}</strong></p>",
-                                "width": "100%",
+                                "width": "fit-content",
                                 "max_width": "none",
                                 "alignment": "center",
                                 "type_preset": "custom",
