@@ -89,36 +89,30 @@ width: 100%;
   overflow: visible; 
   }
 
-  /* Scrollable row */
-  .quick-filter__buttons {
+  
+  
+.quick-filter__buttons {
   display: flex;
   flex-wrap: nowrap;
-  gap: 8px;
+  z-index: 99;
+  width: 100vw;
 
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y: hidden;
 
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior-x: contain;
-  touch-action: pan-x;
+  font-size: 13px;
+  gap: 10px;
 
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  }
+  padding-bottom: 15px;       
+  box-sizing: border-box;     
 
-  .quick-filter__buttons > * {
-    flex: 0 0 auto;
-    white-space: nowrap;
-  }
+  scrollbar-width: thin;
+  scrollbar-color: rgba(244, 244, 244, .541) transparent;
+}
 
-  /* Hide scrollbar for Chrome, Safari, Opera */
-  .quick-filter__buttons::-webkit-scrollbar {
-    display: none;
-  }
+
+  
+
 
   .quick-filter__button {
     appearance: none;
