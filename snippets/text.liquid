@@ -50,7 +50,9 @@
 
 {% capture attributes %}
   class="{{ class }} spacing-style text-block text-block--{{ block.id }} {{ block_settings.type_preset }}
-    {{ text_block_classes }}{% if block_settings.border_weight and block_settings.border_weight != 0 %} text-block--has-border{% endif %}"
+    {{ text_block_classes }}
+  "
+
   style="
     {% render 'spacing-padding', settings: block_settings %}
     {% render 'typography-style', settings: block_settings %}
@@ -64,10 +66,6 @@
       --text-corner-radius: {{ block_settings.corner_radius }}px;
       --text-padding: max(var(--padding-2xs), calc((var(--text-corner-radius) + var(--padding-xs)) * (1 - cos(45deg))));
     {% endif %}
-
-    /* border variables exposed so theme can render border */
-    --text-border-color: {{ block_settings.border_color | default: 'transparent' }};
-    --text-border-width: {{ block_settings.border_weight | default: 0 }}px;
   "
 
   {{ block.shopify_attributes }}
@@ -212,11 +210,6 @@
     padding-block-end: max(var(--text-padding), var(--padding-block-end, 0));
     padding-inline-start: max(var(--text-padding), var(--padding-inline-start, 0));
     padding-inline-end: max(var(--text-padding), var(--padding-inline-end, 0));
-  }
-
-  /* Apply border only when block explicitly requests it */
-  .text-block.text-block--has-border {
-    border: calc(var(--text-border-width, 0px)) solid var(--text-border-color, transparent);
   }
 
   .custom-color,
