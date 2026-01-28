@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "section": {
       "type": "section",
@@ -28,7 +29,10 @@
             "wrap": "pretty",
             "color": "",
             "background": false,
+            "border": false,
             "background_color": "#00000026",
+            "border_color": "#000000",
+            "border_weight": 0,
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
@@ -54,7 +58,10 @@
             "wrap": "pretty",
             "color": "",
             "background": false,
+            "border": false,
             "background_color": "#00000026",
+            "border_color": "#000000",
+            "border_weight": 0,
             "corner_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
@@ -79,11 +86,12 @@
         "vertical_alignment_flex_direction_column": "center",
         "gap": 12,
         "section_width": "page-width",
-        "section_height": "",
+        "section_height": "small",
         "section_height_custom": 50,
         "color_scheme": "scheme-1",
-        "background_media": "none",
+        "background_media": "image",
         "video_position": "cover",
+        "background_image": "{{ collection.metafields.custom.collection_banner_image.value }}",
         "background_image_position": "cover",
         "border": "none",
         "border_width": 1,
@@ -214,6 +222,8 @@
         "layout_type": "grid",
         "product_card_size": "medium",
         "mobile_product_card_size": "small",
+        "enable_infinite_scroll": true,
+        "products_per_page": 24,
         "product_grid_width": "centered",
         "full_width_on_mobile": true,
         "columns_gap_horizontal": 16,
