@@ -88,11 +88,16 @@
     }
 
   .quick-filter__buttons {
-    display: flex;
+display: flex;
     flex-wrap: nowrap;
+    flex-direction: row;
     gap: var(--quick-filter-gap, 8px);
     overflow-x: auto;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
+
   }
 
   .quick-filter__button {
