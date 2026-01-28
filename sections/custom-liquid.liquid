@@ -1,12 +1,34 @@
 
 
-<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+{% if section.settings.visibility == 'desktop_only' %}
+  {% assign visibility_class = 'custom-liquid--hide-mobile' %}
+{% elsif section.settings.visibility == 'mobile_only' %}
+  {% assign visibility_class = 'custom-liquid--hide-desktop' %}
+{% else %}
+  {% assign visibility_class = '' %}
+{% endif %}
+
+<div class="section-background color-{{ section.settings.color_scheme }} {{ visibility_class }}"></div>
 <div
-  class="section section--{{ section.settings.section_width }} spacing-style {% if section.settings.color_scheme != blank %}color-{{ section.settings.color_scheme }}{% endif %}"
+  class="section section--{{ section.settings.section_width }} spacing-style {% if section.settings.color_scheme != blank %}color-{{ section.settings.color_scheme }}{% endif %} {{ visibility_class }}"
   style="{% render 'spacing-padding', settings: section.settings %}"
 >
   {{ section.settings.custom_liquid }}
 </div>
+
+{% stylesheet %}
+  @media screen and (max-width: 749px) {
+    .custom-liquid--hide-mobile {
+      display: none !important;
+    }
+  }
+
+  @media screen and (min-width: 750px) {
+    .custom-liquid--hide-desktop {
+      display: none !important;
+    }
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -39,6 +61,26 @@
         }
       ],
       "default": "page-width"
+    },
+    {
+      "type": "select",
+      "id": "visibility",
+      "label": "Visibility",
+      "options": [
+        {
+          "value": "both",
+          "label": "Mobile & Desktop"
+        },
+        {
+          "value": "desktop_only",
+          "label": "Desktop only"
+        },
+        {
+          "value": "mobile_only",
+          "label": "Mobile only"
+        }
+      ],
+      "default": "both"
     },
     {
       "type": "header",
