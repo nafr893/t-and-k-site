@@ -12,15 +12,6 @@
     "section": {
       "type": "section",
       "blocks": {
-        "quick_filter_APLbY6": {
-          "type": "quick-filter",
-          "name": "Quick Filter",
-          "settings": {
-            "all_button_label": "All",
-            "button_gap": 8
-          },
-          "blocks": {}
-        },
         "text_tqQTNE": {
           "type": "text",
           "name": "Title",
@@ -29,7 +20,7 @@
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
-            "type_preset": "h2",
+            "type_preset": "h3",
             "font": "var(--font-primary--family)",
             "font_size": "",
             "line_height": "normal",
@@ -58,7 +49,7 @@
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
-            "type_preset": "rte",
+            "type_preset": "paragraph",
             "font": "var(--font-primary--family)",
             "font_size": "",
             "line_height": "normal",
@@ -78,12 +69,21 @@
             "padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "quick_filter_APLbY6": {
+          "type": "quick-filter",
+          "name": "Quick Filter",
+          "settings": {
+            "all_button_label": "All",
+            "button_gap": 6
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "quick_filter_APLbY6",
         "text_tqQTNE",
-        "text_twGGkJ"
+        "text_twGGkJ",
+        "quick_filter_APLbY6"
       ],
       "name": "Collection heading",
       "settings": {
@@ -93,7 +93,7 @@
         "vertical_alignment": "center",
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "flex-end",
         "gap": 12,
         "section_width": "page-width",
         "section_height": "small",
@@ -112,7 +112,7 @@
         "overlay_style": "gradient",
         "gradient_direction": "to top",
         "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-end": 28
       }
     },
     "main": {
