@@ -1073,41 +1073,11 @@
                               "block_order": [
                                 "text_KfVqAR"
                               ]
-                            },
-                            "text_BHB6F8": {
-                              "type": "text",
-                              "name": "t:names.text",
-                              "settings": {
-                                "text": "<p><strong>{{ closest.product.metafields.custom.product_used_case.value }}</strong></p>",
-                                "width": "fit-content",
-                                "max_width": "normal",
-                                "alignment": "center",
-                                "type_preset": "custom",
-                                "font": "var(--font-body--family)",
-                                "font_size": "0.75rem",
-                                "line_height": "normal",
-                                "letter_spacing": "normal",
-                                "case": "uppercase",
-                                "wrap": "pretty",
-                                "color": "var(--color-foreground)",
-                                "background": true,
-                                "border": true,
-                                "background_color": "#ededed",
-                                "border_color": "#525252",
-                                "border_weight": 1,
-                                "corner_radius": 0,
-                                "padding-block-start": 2,
-                                "padding-block-end": 2,
-                                "padding-inline-start": 10,
-                                "padding-inline-end": 10
-                              },
-                              "blocks": {}
                             }
                           },
                           "block_order": [
                             "text_fNwXtp",
-                            "group_dff74D",
-                            "text_BHB6F8"
+                            "group_dff74D"
                           ]
                         },
                         "group_nPnLHi": {
