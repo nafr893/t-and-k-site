@@ -2590,6 +2590,7 @@
         "slideshow_controls_style": "counter",
         "autoplay": false,
         "autoplay_speed": 4,
+        "visibility": "mobile_only",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
