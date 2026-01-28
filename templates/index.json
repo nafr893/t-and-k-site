@@ -151,6 +151,7 @@
                         "wrap": "pretty",
                         "color": "var(--color-foreground)",
                         "background": false,
+                        "border": false,
                         "background_color": "#00000026",
                         "border_color": "#000000",
                         "border_weight": 1,
@@ -378,6 +379,7 @@
                         "wrap": "pretty",
                         "color": "var(--color-foreground)",
                         "background": false,
+                        "border": false,
                         "background_color": "#00000026",
                         "border_color": "#000000",
                         "border_weight": 1,
@@ -605,6 +607,7 @@
                         "wrap": "pretty",
                         "color": "var(--color-foreground)",
                         "background": false,
+                        "border": false,
                         "background_color": "#00000026",
                         "border_color": "#000000",
                         "border_weight": 1,
@@ -860,6 +863,7 @@
                         "wrap": "pretty",
                         "color": "var(--color-foreground)",
                         "background": false,
+                        "border": false,
                         "background_color": "#00000026",
                         "border_color": "#000000",
                         "border_weight": 1,
@@ -1087,6 +1091,7 @@
                         "wrap": "pretty",
                         "color": "var(--color-foreground)",
                         "background": false,
+                        "border": false,
                         "background_color": "#00000026",
                         "border_color": "#000000",
                         "border_weight": 1,
@@ -1314,6 +1319,7 @@
                         "wrap": "pretty",
                         "color": "var(--color-foreground)",
                         "background": false,
+                        "border": false,
                         "background_color": "#00000026",
                         "border_color": "#000000",
                         "border_weight": 1,
@@ -1487,6 +1493,7 @@
                 "wrap": "pretty",
                 "color": "var(--color-foreground)",
                 "background": false,
+                "border": false,
                 "background_color": "#00000026",
                 "border_color": "#000000",
                 "border_weight": 1,
@@ -1618,6 +1625,7 @@
             "wrap": "pretty",
             "color": "var(--color-foreground-heading)",
             "background": false,
+            "border": false,
             "background_color": "#00000026",
             "border_color": "#000000",
             "border_weight": 1,
@@ -1855,6 +1863,7 @@
                 "wrap": "pretty",
                 "color": "var(--color-foreground)",
                 "background": false,
+                "border": false,
                 "background_color": "#00000026",
                 "border_color": "#000000",
                 "border_weight": 1,
@@ -2008,61 +2017,6 @@
         "padding-block-end": 0
       }
     },
-    "shop_the_look_slideshow_jyHkdL": {
-      "type": "shop-the-look-slideshow",
-      "blocks": {
-        "shop_the_look_slide_dehM9G": {
-          "type": "_shop-the-look-slide",
-          "settings": {
-            "background_image": "shopify://shop_images/DSC05756.jpg",
-            "product": "turkey-chest-rig",
-            "card_position": "left",
-            "card_vertical_position": 50,
-            "hotspot_x": 35,
-            "hotspot_y": 45,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid"
-          },
-          "blocks": {}
-        },
-        "shop_the_look_slide_eCVjRa": {
-          "type": "_shop-the-look-slide",
-          "settings": {
-            "background_image": "shopify://shop_images/DSC05725.jpg",
-            "product": "3k-duffle-bag",
-            "card_position": "left",
-            "card_vertical_position": 50,
-            "hotspot_x": 65,
-            "hotspot_y": 55,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "shop_the_look_slide_dehM9G",
-        "shop_the_look_slide_eCVjRa"
-      ],
-      "name": "Shop the look slideshow",
-      "settings": {
-        "autoplay": false,
-        "autoplay_speed": 5,
-        "slide_height": "medium",
-        "section_width": "full-width",
-        "corner_radius": 0,
-        "arrow_style": "arrow",
-        "hotspot_color": "#ffffff57",
-        "hotspot_bullseye_color": "#ffffff",
-        "hotspot_pulse": true,
-        "color_scheme": "",
-        "card_color_scheme": "",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
     "hero_LLDaze": {
       "type": "hero",
       "blocks": {
@@ -2082,6 +2036,7 @@
             "wrap": "pretty",
             "color": "var(--color-foreground)",
             "background": false,
+            "border": false,
             "background_color": "#00000026",
             "border_color": "#000000",
             "border_weight": 1,
@@ -2109,6 +2064,7 @@
             "wrap": "pretty",
             "color": "var(--color-foreground)",
             "background": false,
+            "border": false,
             "background_color": "#00000026",
             "border_color": "#000000",
             "border_weight": 1,
@@ -2125,7 +2081,7 @@
           "name": "t:names.button",
           "settings": {
             "label": "LEARN MORE",
-            "link": "shopify://collections/all",
+            "link": "https://tandkhunting.com/collections/range-gea",
             "open_in_new_tab": false,
             "style_class": "button",
             "width": "fit-content",
@@ -2183,7 +2139,6 @@
     "product_list_fa6P9H",
     "slide_product_showcase_kEEcQg",
     "section_RCNz66",
-    "shop_the_look_slideshow_jyHkdL",
     "hero_LLDaze"
   ]
 }
