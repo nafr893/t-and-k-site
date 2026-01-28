@@ -304,3 +304,7 @@ div.spacing-style.slide__content.background-transparent {
 .text-block {
   box-sizing: border-box;
 }
+
+button.tabbed-drawer__close-button {
+    border-left: 1px solid #e5e5e5;
+}
