@@ -79,6 +79,39 @@
     </script>
   </div>
 
+
+{% endif %}
+
+{% schema %}
+{
+  "name": "Quick Filter",
+  "tag": "div",
+  "class": "quick-filter-block",
+  "settings": [
+    {
+      "type": "text",
+      "id": "all_button_label",
+      "label": "\"All\" button label",
+      "default": "All"
+    },
+    {
+      "type": "range",
+      "id": "button_gap",
+      "label": "Button gap",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quick Filter"
+    }
+  ]
+}
+{% endschema %}
   {% stylesheet %}
     .quick-filter {
       display: flex;
@@ -123,35 +156,3 @@
       display: none;
     }
   {% endstylesheet %}
-{% endif %}
-
-{% schema %}
-{
-  "name": "Quick Filter",
-  "tag": "div",
-  "class": "quick-filter-block",
-  "settings": [
-    {
-      "type": "text",
-      "id": "all_button_label",
-      "label": "\"All\" button label",
-      "default": "All"
-    },
-    {
-      "type": "range",
-      "id": "button_gap",
-      "label": "Button gap",
-      "min": 0,
-      "max": 32,
-      "step": 2,
-      "unit": "px",
-      "default": 8
-    }
-  ],
-  "presets": [
-    {
-      "name": "Quick Filter"
-    }
-  ]
-}
-{% endschema %}
