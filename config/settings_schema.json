@@ -1770,6 +1770,80 @@
       },
       {
         "type": "header",
+        "content": "Empty cart banners"
+      },
+      {
+        "type": "text",
+        "id": "empty_cart_heading",
+        "label": "Empty cart heading",
+        "default": "Start Here"
+      },
+      {
+        "type": "image_picker",
+        "id": "empty_cart_banner_1_image",
+        "label": "Banner 1 image"
+      },
+      {
+        "type": "text",
+        "id": "empty_cart_banner_1_text",
+        "label": "Banner 1 text",
+        "default": "Range Gear"
+      },
+      {
+        "type": "url",
+        "id": "empty_cart_banner_1_link",
+        "label": "Banner 1 link"
+      },
+      {
+        "type": "image_picker",
+        "id": "empty_cart_banner_2_image",
+        "label": "Banner 2 image"
+      },
+      {
+        "type": "text",
+        "id": "empty_cart_banner_2_text",
+        "label": "Banner 2 text",
+        "default": "Hunting Gear"
+      },
+      {
+        "type": "url",
+        "id": "empty_cart_banner_2_link",
+        "label": "Banner 2 link"
+      },
+      {
+        "type": "image_picker",
+        "id": "empty_cart_banner_3_image",
+        "label": "Banner 3 image"
+      },
+      {
+        "type": "text",
+        "id": "empty_cart_banner_3_text",
+        "label": "Banner 3 text",
+        "default": "Build Your System"
+      },
+      {
+        "type": "url",
+        "id": "empty_cart_banner_3_link",
+        "label": "Banner 3 link"
+      },
+      {
+        "type": "image_picker",
+        "id": "empty_cart_banner_4_image",
+        "label": "Banner 4 image"
+      },
+      {
+        "type": "text",
+        "id": "empty_cart_banner_4_text",
+        "label": "Banner 4 text",
+        "default": "Explore Our Brand"
+      },
+      {
+        "type": "url",
+        "id": "empty_cart_banner_4_link",
+        "label": "Banner 4 link"
+      },
+      {
+        "type": "header",
         "content": "t:content.product_media"
       },
       {
