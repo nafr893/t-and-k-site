@@ -1,3 +1,4 @@
+
 /* New Heading CSS */ 
 
 h1, h2, h3, h4, h5, h6 {
@@ -247,74 +248,53 @@ slideshow-controls#slideshow-controls {
 
 /* breadcrumbs styles css */
 nav.breadcrumbs {
-  padding-top: 1%;
-  margin: 0px;
-  height: fit-content;
-}
+padding-top: 1%;
+margin: 0px;
+height: fit-content;
 
-nav.breadcrumbs .breadcrumbs__list {
-  display: flex;
-  align-items: baseline;
-  margin: 0px;
-  gap: 3px;
-  padding-left: 0px;
+
+
+
+.breadcrumbs__list {
+ display: flex;
+ align-items: baseline;
+ margin: 0px;
+ gap: 3px;
+ padding-left: 0px;
+
+ li::marker {
+   content: '';
+   display: none !important ;
+ }
 }
 
 @media (max-width: 480px) {
-  nav.breadcrumbs .breadcrumbs__list {
-    padding-left: 10px !important;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    list-style: none !important;
-  }
+.breadcrumbs__list {
+padding-left: 10px !important ;
+padding-top: 3px;
+padding-bottom: 3px;
+padding-left: 0px !important;
+list-style: none !important;
+
+li::marker {
+   content: '' !important ;
+ }
+}
 }
 
-li#breadcrumb-text,
-a#breadcrumb-text {
-  color: #2c2c2c;
-  font-size: 14px !important;
+
+li#breadcrumb-text, a#breadcrumb-text {
+color: #2c2c2c;
+font-size: 14px !important ;
 }
 
-/* remove list markers globally for breadcrumbs */
-nav.breadcrumbs li::marker {
-  display: none !important;
+li::marker {
+ display: none !important ;
+}
 }
 
-/* keep spacing-style override well-formed */
 div.spacing-style.slide__content.background-transparent {
-  display: inline !important;
-  z-index: 99 !important;
-  overflow: visible;
-}
-
-/* DEBUG: force slideshow controls visible while debugging -->
-   Remove this once you confirm controls render */ 
-@media screen and (max-width: 9999px) {
-  .slideshow-controls,
-  slideshow-controls,
-  #slideshow-controls,
-  .slideshow-controls__dots,
-  .slideshow-controls__counter,
-  .slideshow-controls__thumbnails,
-  .slideshow-controls__thumbnails-container {
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    height: auto !important;
-    max-height: none !important;
-  }
-
-  .slideshow-controls__thumbnails {
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch;
-    gap: 0.5rem;
-  }
-
-  .slideshow-controls__thumbnail,
-  .slideshow-controls__dot {
-    display: inline-flex !important;
-    width: auto !important;
-    height: auto !important;
-    opacity: 1 !important;
-  }
+    display: inline !important; 
+    z-index: 99 !important;
+    overflow: visible; 
 }
