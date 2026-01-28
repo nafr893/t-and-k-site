@@ -317,3 +317,8 @@ main#MainContent.content-for-layout {
     font-size: 1rem !important;
     font-weight: 600;
  }
+
+ .cart-drawer__header {
+    padding-bottom: 0px; 
+    
+ }
