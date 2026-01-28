@@ -314,6 +314,6 @@ main#MainContent.content-for-layout {
     font-family: Ibm Plex mono !important; 
  }
  text-component.cart__total-value.cart-secondary-typography {
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
  }
