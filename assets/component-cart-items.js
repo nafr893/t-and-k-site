@@ -170,21 +170,9 @@ class CartItemsComponent extends Component {
           })
         );
 
-        // Check if cart is becoming empty - if so, force fresh render for proper DOM update
-        const willBeEmpty = newCartItemCount === 0;
-        const isCurrentlyEmpty = this.querySelector('.cart-drawer__empty-state') !== null;
+        morphSection(this.sectionId, parsedResponseText.sections[this.sectionId]);
 
-        if (willBeEmpty && !isCurrentlyEmpty) {
-          // Transitioning to empty state - force fresh render
-          sectionRenderer.renderSection(this.sectionId, { cache: false }).then(() => {
-            this.#updateCartQuantitySelectorButtonStates();
-            this.#syncDialogEmptyState();
-          });
-        } else {
-          morphSection(this.sectionId, parsedResponseText.sections[this.sectionId]);
-          this.#updateCartQuantitySelectorButtonStates();
-          this.#syncDialogEmptyState();
-        }
+        this.#updateCartQuantitySelectorButtonStates();
       })
       .catch((error) => {
         console.error(error);
@@ -239,49 +227,16 @@ class CartItemsComponent extends Component {
     }
     if (event.target === this) return;
 
-    // Check if currently in empty state - if so, force a fresh section render
-    // because the morph may not handle the dramatic DOM structure change well
-    const isCurrentlyEmpty = this.querySelector('.cart-drawer__empty-state') !== null;
-
-    if (isCurrentlyEmpty) {
-      // Force fresh render from server when transitioning from empty to filled
-      sectionRenderer.renderSection(this.sectionId, { cache: false }).then(() => {
-        this.#updateCartQuantitySelectorButtonStates();
-        this.#syncDialogEmptyState();
-      });
-      return;
-    }
-
     const cartItemsHtml = event.detail.data.sections?.[this.sectionId];
     if (cartItemsHtml) {
       morphSection(this.sectionId, cartItemsHtml);
 
       // Update button states for all cart quantity selectors after morph
       this.#updateCartQuantitySelectorButtonStates();
-      this.#syncDialogEmptyState();
     } else {
       sectionRenderer.renderSection(this.sectionId, { cache: false });
     }
   };
-
-  /**
-   * Syncs the dialog's cart-drawer--empty class with the actual cart state.
-   * This handles cases where the morph updates content but the dialog class doesn't update.
-   */
-  #syncDialogEmptyState() {
-    const dialog = this.closest('dialog');
-    if (!dialog) return;
-
-    // Check if cart has items by looking for cart items or empty state
-    const hasItems = this.querySelector('.cart-drawer__summary') !== null;
-    const isEmpty = this.querySelector('.cart-drawer__empty-state') !== null;
-
-    if (hasItems && !isEmpty) {
-      dialog.classList.remove('cart-drawer--empty');
-    } else if (isEmpty && !hasItems) {
-      dialog.classList.add('cart-drawer--empty');
-    }
-  }
 
   /**
    * Disables the cart items.
