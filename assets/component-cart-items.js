@@ -173,6 +173,7 @@ class CartItemsComponent extends Component {
         morphSection(this.sectionId, parsedResponseText.sections[this.sectionId]);
 
         this.#updateCartQuantitySelectorButtonStates();
+        this.#syncDialogEmptyState();
       })
       .catch((error) => {
         console.error(error);
@@ -233,10 +234,30 @@ class CartItemsComponent extends Component {
 
       // Update button states for all cart quantity selectors after morph
       this.#updateCartQuantitySelectorButtonStates();
+      this.#syncDialogEmptyState();
     } else {
       sectionRenderer.renderSection(this.sectionId, { cache: false });
     }
   };
+
+  /**
+   * Syncs the dialog's cart-drawer--empty class with the actual cart state.
+   * This handles cases where the morph updates content but the dialog class doesn't update.
+   */
+  #syncDialogEmptyState() {
+    const dialog = this.closest('dialog');
+    if (!dialog) return;
+
+    // Check if cart has items by looking for cart items or empty state
+    const hasItems = this.querySelector('.cart-drawer__summary') !== null;
+    const isEmpty = this.querySelector('.cart-drawer__empty-state') !== null;
+
+    if (hasItems && !isEmpty) {
+      dialog.classList.remove('cart-drawer--empty');
+    } else if (isEmpty && !hasItems) {
+      dialog.classList.add('cart-drawer--empty');
+    }
+  }
 
   /**
    * Disables the cart items.
