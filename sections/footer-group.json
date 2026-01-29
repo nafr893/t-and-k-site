@@ -156,7 +156,10 @@
                 "wrap": "pretty",
                 "color": "var(--color-foreground)",
                 "background": false,
+                "border": false,
                 "background_color": "#00000026",
+                "border_color": "#000000",
+                "border_weight": 0,
                 "corner_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
@@ -181,7 +184,10 @@
                 "wrap": "pretty",
                 "color": "var(--color-foreground)",
                 "background": false,
+                "border": false,
                 "background_color": "#00000026",
+                "border_color": "#000000",
+                "border_weight": 0,
                 "corner_radius": 0,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
@@ -340,7 +346,7 @@
         "group_H6VpwJ",
         "group_KfkJcz"
       ],
-      "name": "t:names.footer",
+      "name": "Footer Desktop",
       "settings": {
         "section_width": "page-width",
         "gap": 20,
@@ -449,6 +455,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
+        "visibility": "both",
         "padding-block-start": 0,
         "padding-block-end": 20
       }
