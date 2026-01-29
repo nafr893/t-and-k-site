@@ -133,68 +133,17 @@
                 class="cart-drawer__content motion-reduce"
                 aria-label="{{ 'accessibility.cart' | t }}"
               >
-                <div class="cart-drawer__empty-state">
-                  <h2
-                    class="cart-drawer__heading h4 cart-drawer__heading--empty"
-                    id="cart-drawer-heading-empty"
-                  >
-                    {{ 'content.your_cart_is_empty' | t }}
-                  </h2>
+                <h2
+                  class="cart-drawer__heading h4 cart-drawer__heading--empty"
+                  id="cart-drawer-heading-empty"
+                >
+                  {{ 'content.your_cart_is_empty' | t }}
+                </h2>
 
-                  {% if settings.empty_cart_heading != blank %}
-                    <p class="cart-drawer__empty-subheading h2">{{ settings.empty_cart_heading }}</p>
-                  {% endif %}
 
-                  <div class="cart-drawer__empty-banners">
-                    {% for i in (1..4) %}
-                      {% liquid
-                        case i
-                          when 1
-                            assign banner_image = settings.empty_cart_banner_1_image
-                            assign banner_text = settings.empty_cart_banner_1_text
-                            assign banner_link = settings.empty_cart_banner_1_link
-                          when 2
-                            assign banner_image = settings.empty_cart_banner_2_image
-                            assign banner_text = settings.empty_cart_banner_2_text
-                            assign banner_link = settings.empty_cart_banner_2_link
-                          when 3
-                            assign banner_image = settings.empty_cart_banner_3_image
-                            assign banner_text = settings.empty_cart_banner_3_text
-                            assign banner_link = settings.empty_cart_banner_3_link
-                          when 4
-                            assign banner_image = settings.empty_cart_banner_4_image
-                            assign banner_text = settings.empty_cart_banner_4_text
-                            assign banner_link = settings.empty_cart_banner_4_link
-                        endcase
-                      %}
-
-                      {% if banner_image != blank or banner_text != blank %}
-                        <a
-                          class="cart-drawer__empty-banner"
-                          {% if banner_link != blank %}
-                            href="{{ banner_link }}"
-                          {% endif %}
-                        >
-                          {% if banner_image != blank %}
-                            {{
-                              banner_image
-                              | image_url: width: 800
-                              | image_tag:
-                                class: 'cart-drawer__empty-banner-image',
-                                loading: 'lazy',
-                                widths: '400, 600, 800'
-                            }}
-                          {% else %}
-                            <div class="cart-drawer__empty-banner-placeholder"></div>
-                          {% endif %}
-
-                          {% if banner_text != blank %}
-                            <span class="cart-drawer__empty-banner-text h4">{{ banner_text }}</span>
-                          {% endif %}
-                        </a>
-                      {% endif %}
-                    {% endfor %}
-                  </div>
+                <div class="cart-drawer__items">
+                {% render 'cart-progress-bar' %}
+                  {% render 'cart-products', drawer_context: 'drawer' %}
                 </div>
               </div>
             {%- else -%}
@@ -230,7 +179,6 @@
                 <scroll-hint
                   class="cart-drawer__items"
                 >
-                  {% render 'cart-progress-bar' %}
                   {% render 'cart-products', drawer_context: 'drawer' %}
                 </scroll-hint>
 
@@ -468,13 +416,12 @@
   }
 
   .cart-drawer--empty .cart-drawer__content {
-    text-align: left;
+    text-align: center;
     min-height: auto;
   }
 
   .cart-drawer--empty .cart-drawer__heading {
     margin-bottom: var(--margin-md);
-    font-size: var(--font-h5--size);
   }
 
   .cart-drawer__items .cart-items__table-row {
@@ -543,7 +490,7 @@
 
   .cart-drawer__heading--empty {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .cart-drawer__items {
@@ -572,11 +519,13 @@
   .cart-drawer--empty .cart-drawer__inner {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100dvh;
     margin-top: 0;
   }
 
-  .cart-drawer:not(:has(.cart-form)):not(.cart-drawer--empty) .cart-drawer__content {
+  .cart-drawer:not(:has(.cart-form)) .cart-drawer__content {
     justify-content: center;
   }
 
@@ -604,7 +553,7 @@
   }
 
   .cart-drawer--empty .cart-drawer__heading {
-    text-align: left;
+    text-align: center;
   }
 
   .cart-drawer:not(:has(.cart-form)) .cart-items__wrapper {
@@ -719,62 +668,5 @@
       --cart-bubble-top: 4px;
       --cart-bubble-right: 4px;
     }
-  }
-
-  /* Empty cart banners */
-  .cart-drawer__empty-state {
-    padding: var(--cart-drawer-padding);
-
-    @media screen and (min-width: 750px) {
-      padding: var(--cart-drawer-padding-desktop);
-    }
-  }
-
-  .cart-drawer__empty-subheading {
-    margin-top: var(--margin-xs);
-    margin-bottom: var(--margin-lg);
-    font-weight: 900;
-    text-transform: uppercase !important;
-    font-family: erbaum !important;
-  }
-
-  .cart-drawer__empty-banners {
-    display: flex;
-    flex-direction: column;
-    gap: var(--gap-md);
-  }
-
-  .cart-drawer__empty-banner {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    border-radius: var(--style-border-radius-card, 0);
-    text-decoration: none;
-    height: 17dvh;
-  }
-
-  .cart-drawer__empty-banner-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .cart-drawer__empty-banner-placeholder {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(var(--color-foreground-rgb) / 0.1);
-  }
-
-  .cart-drawer__empty-banner-text {
-    position: absolute;
-    bottom: var(--padding-lg);
-    left: var(--padding-lg);
-    color: #ffffff !important;
-    text-transform: uppercase;
-    font-weight: 900;
-    text-shadow: 0 1px 4px rgb(0 0 0 / 0.4);
-    pointer-events: none;
-     font-family: erbaum !important;
   }
 {% endstylesheet %}
