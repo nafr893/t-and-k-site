@@ -46,7 +46,12 @@ footer#shopify-section-sections--20919892934902__footer_m9NzUG {
 div#shopify-section-sections--20919892934902__footer_utilities_jLGE8U, div#shopify-section-sections--20919892934902__section_6Kb9kh {
     display: none; 
 }
-
+/* h4 footer font settings */ 
+footer#shopify-section-sections--20919892934902__footer_7BdxXe {
+    h4 {
+        font-family: erbaum !important; 
+    }
+}
 
 
 
