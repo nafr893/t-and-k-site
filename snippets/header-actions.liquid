@@ -12,10 +12,7 @@
     "
     data-testid="cart-icon"
   >
-    <span
-      class="svg-wrapper"
-      aria-hidden="true"
-    >
+    <span class="svg-wrapper" aria-hidden="true">
       {{ 'icon-cart.svg' | inline_asset_content }}
     </span>
 
@@ -23,14 +20,9 @@
   </cart-icon>
 {% endcapture %}
 
-<header-actions
-  {{- block.shopify_attributes -}}
->
+<header-actions {{- block.shopify_attributes -}}>
   {% if shop.customer_accounts_enabled %}
-    <script
-      src="{{ 'dialog.js' | asset_url }}"
-      type="module"
-    ></script>
+    <script src="{{ 'dialog.js' | asset_url }}" type="module"></script>
 
     <anchored-popover-component
       data-close-on-resize="true"
@@ -47,10 +39,7 @@
       </div>
     </anchored-popover-component>
 
-    <dialog-component
-      class="account-drawer"
-      {{ block.shopify_attributes }}
-    >
+    <dialog-component class="account-drawer" {{ block.shopify_attributes }}>
       {% render 'account-button', attributes: 'on:click="/showDialog"' %}
       <dialog
         ref="dialog"
@@ -65,10 +54,7 @@
           aria-label="{{ 'actions.close_dialog' | t }}"
           autofocus
         >
-          <span
-            class="svg-wrapper"
-            aria-hidden="true"
-          >
+          <span class="svg-wrapper" aria-hidden="true">
             {{- 'icon-close.svg' | inline_asset_content -}}
           </span>
         </button>
@@ -101,11 +87,10 @@
       >
         {{ cart_icon }}
       </button>
-      
 
       <dialog
         ref="dialog"
-        class="cart-drawer__dialog dialog-modal dialog-drawer color-{{ settings.drawer_color_scheme }}{% if cart.empty? %} cart-drawer--empty{%endif%}"
+        class="cart-drawer__dialog dialog-modal dialog-drawer color-{{ settings.drawer_color_scheme }}{% if cart.empty? %} cart-drawer--empty{% endif %}"
         aria-labelledby="{% if cart.empty? %}cart-drawer-heading-empty{% else %}cart-drawer-heading{% endif %}"
         scroll-lock
         cart-summary-sticky="true"
@@ -129,10 +114,7 @@
                 </button>
               </div>
 
-              <div
-                class="cart-drawer__content motion-reduce"
-                aria-label="{{ 'accessibility.cart' | t }}"
-              >
+              <div class="cart-drawer__content motion-reduce" aria-label="{{ 'accessibility.cart' | t }}">
                 <div class="cart-drawer__empty-state">
                   <h2
                     class="cart-drawer__heading h4 cart-drawer__heading--empty"
@@ -195,17 +177,16 @@
                       {% endif %}
                     {% endfor %}
                   </div>
+
+                  {# Keep V2 logic behavior: still render cart-products in empty drawer #}
+                  <div class="cart-drawer__items">
+                    {% render 'cart-products', drawer_context: 'drawer' %}
+                  </div>
                 </div>
               </div>
             {%- else -%}
-              <div
-                class="cart-drawer__header"
-                id="cart-drawer-header"
-              >
-                <h2
-                  class="cart-drawer__heading h4"
-                  id="cart-drawer-heading"
-                >
+              <div class="cart-drawer__header" id="cart-drawer-header">
+                <h2 class="cart-drawer__heading h4" id="cart-drawer-heading">
                   {{ 'content.cart_title' | t }}
                   {% render 'cart-bubble' %}
                 </h2>
@@ -227,16 +208,12 @@
                 aria-label="{{ 'accessibility.cart' | t }}"
                 style="--header-height: 60px;"
               >
-                <scroll-hint
-                  class="cart-drawer__items"
-                >
+                <scroll-hint class="cart-drawer__items">
                   {% render 'cart-progress-bar' %}
                   {% render 'cart-products', drawer_context: 'drawer' %}
                 </scroll-hint>
 
-                <div
-                  class="cart-drawer__summary"
-                >
+                <div class="cart-drawer__summary">
                   {% render 'cart-summary' %}
                 </div>
               </scroll-hint>
@@ -374,23 +351,13 @@
   }
 
   @keyframes account-drawer-slide-in {
-    from {
-      transform: translateY(100%);
-    }
-
-    to {
-      transform: translateY(0);
-    }
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
   }
 
   @keyframes account-drawer-slide-out {
-    from {
-      transform: translateY(0);
-    }
-
-    to {
-      transform: translateY(100%);
-    }
+    from { transform: translateY(0); }
+    to { transform: translateY(100%); }
   }
 
   .cart-drawer {
@@ -426,7 +393,6 @@
     flex-direction: column;
   }
 
-  /* Needed to ensure the drawer is full height */
   .cart-drawer__dialog:modal {
     max-height: 100dvh;
     overflow-y: hidden;
@@ -468,13 +434,12 @@
   }
 
   .cart-drawer--empty .cart-drawer__content {
-    text-align: left;
+    text-align: center;
     min-height: auto;
   }
 
   .cart-drawer--empty .cart-drawer__heading {
     margin-bottom: var(--margin-md);
-    font-size: var(--font-h5--size);
   }
 
   .cart-drawer__items .cart-items__table-row {
@@ -505,7 +470,6 @@
     padding: var(--cart-drawer-summary-padding);
     margin-top: auto;
     background-color: var(--color-background);
-    /* stylelint-disable-next-line color-named */
     mask-image: linear-gradient(to bottom, transparent, black var(--cart-drawer-summary-padding));
 
     @media screen and (min-width: 750px) {
@@ -543,7 +507,7 @@
 
   .cart-drawer__heading--empty {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .cart-drawer__items {
@@ -572,11 +536,13 @@
   .cart-drawer--empty .cart-drawer__inner {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100dvh;
     margin-top: 0;
   }
 
-  .cart-drawer:not(:has(.cart-form)):not(.cart-drawer--empty) .cart-drawer__content {
+  .cart-drawer:not(:has(.cart-form)) .cart-drawer__content {
     justify-content: center;
   }
 
@@ -604,7 +570,7 @@
   }
 
   .cart-drawer--empty .cart-drawer__heading {
-    text-align: left;
+    text-align: center;
   }
 
   .cart-drawer:not(:has(.cart-form)) .cart-items__wrapper {
@@ -679,7 +645,6 @@
   }
 
   .header-actions__cart-icon.header-actions__cart-icon--has-cart svg {
-    /* Create donut mask where the cart bubble sits */
     mask: radial-gradient(
       calc(var(--cart-bubble-size) + 2px) at calc(100% - var(--cart-bubble-right)) var(--cart-bubble-top),
       transparent 45.45%,
@@ -688,8 +653,13 @@
     );
   }
 
+  /* Keep your V2 custom bubble background tweaks */
   .cart-drawer__heading .cart-bubble__background {
     background-color: rgb(var(--color-foreground-rgb) / var(--opacity-10-25));
+    border-radius: 0px;
+    height: 20px;
+    width: 20px;
+    place-self: center;
   }
 
   .cart-drawer__heading .cart-bubble__text {
@@ -704,7 +674,6 @@
   .cart-bubble--animating .cart-bubble__text {
     --start-y: -1em;
     --start-opacity: 1;
-    /* Set initial transform state before animation starts */
     transform: translate(0, var(--start-y, -1em));
     opacity: var(--start-opacity, 1);
     animation: move-and-fade var(--animation-speed) var(--animation-easing);
@@ -721,7 +690,7 @@
     }
   }
 
-  /* Empty cart banners */
+  /* ====== V1 empty-cart banner styles brought over ====== */
   .cart-drawer__empty-state {
     padding: var(--cart-drawer-padding);
 
@@ -775,6 +744,6 @@
     font-weight: 900;
     text-shadow: 0 1px 4px rgb(0 0 0 / 0.4);
     pointer-events: none;
-     font-family: erbaum !important;
+    font-family: erbaum !important;
   }
 {% endstylesheet %}
