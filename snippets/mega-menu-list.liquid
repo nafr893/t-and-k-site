@@ -234,7 +234,7 @@
     assign temp_column_count = column_count | plus: min_featured_collection_columns
 
     if temp_column_count > max_menu_columns
-      assign max_collection_columns = 3
+      assign max_collection_columns = 2
     else
       assign max_collection_columns = max_menu_columns | minus: column_count
     endif
