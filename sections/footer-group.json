@@ -291,12 +291,87 @@
                   "block_order": [
                     "menu_BKcpGX"
                   ]
+                },
+                "group_ykaWiJ": {
+                  "type": "group",
+                  "name": "t:names.group",
+                  "settings": {
+                    "content_direction": "column",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "logo_BymXKH": {
+                      "type": "logo",
+                      "name": "t:names.logo",
+                      "settings": {
+                        "inverse": true,
+                        "font": "heading",
+                        "unit": "pixel",
+                        "percent_width": 100,
+                        "pixel_height": 120,
+                        "custom_mobile_size": false,
+                        "unit_mobile": "percent",
+                        "percent_width_mobile": 100,
+                        "pixel_height_mobile": 120,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    },
+                    "localization_hNmqmT": {
+                      "type": "localization",
+                      "name": "Localization",
+                      "settings": {
+                        "popover_color_scheme": "scheme-1"
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "logo_BymXKH",
+                    "localization_hNmqmT"
+                  ]
                 }
               },
               "block_order": [
                 "group_gWyabQ",
                 "group_BAX3JX",
-                "group_YkRXLN"
+                "group_YkRXLN",
+                "group_ykaWiJ"
               ]
             },
             "divider_EDnaEh": {
