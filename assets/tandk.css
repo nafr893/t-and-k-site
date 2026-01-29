@@ -86,7 +86,10 @@ padding-left: 40px;
   height: 44px; 
 }
 
-
+/* hide desktop footer on mobile */
+footer#shopify-section-sections--20919892934902__footer_7BdxXe {
+    display: none; 
+}
 
 /* Hide Desktop Banner on mobile */ 
     div#shopify-section-template--20919893328118__slideshow_VMx8dk {
