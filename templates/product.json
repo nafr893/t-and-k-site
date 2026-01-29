@@ -2180,7 +2180,7 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "visibility": "desktop_only",
-        "padding-block-start": 0,
+        "padding-block-start": 24,
         "padding-block-end": 24
       }
     },
