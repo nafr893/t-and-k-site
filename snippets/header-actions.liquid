@@ -230,6 +230,7 @@
                 <scroll-hint
                   class="cart-drawer__items"
                 >
+                  {% render 'cart-progress-bar' %}
                   {% render 'cart-products', drawer_context: 'drawer' %}
                 </scroll-hint>
 
@@ -473,6 +474,7 @@
 
   .cart-drawer--empty .cart-drawer__heading {
     margin-bottom: var(--margin-md);
+    font-size: var(--font-h5--size);
   }
 
   .cart-drawer__items .cart-items__table-row {
@@ -732,13 +734,14 @@
     margin-top: var(--margin-xs);
     margin-bottom: var(--margin-lg);
     font-weight: 900;
-    text-transform: uppercase;
+    text-transform: uppercase !important;
+    font-family: erbaum !important;
   }
 
   .cart-drawer__empty-banners {
     display: flex;
     flex-direction: column;
-    gap: var(--gap-xs);
+    gap: var(--gap-md);
   }
 
   .cart-drawer__empty-banner {
@@ -747,7 +750,7 @@
     overflow: hidden;
     border-radius: var(--style-border-radius-card, 0);
     text-decoration: none;
-    aspect-ratio: 16 / 7;
+    height: 17dvh;
   }
 
   .cart-drawer__empty-banner-image {
@@ -767,10 +770,11 @@
     position: absolute;
     bottom: var(--padding-lg);
     left: var(--padding-lg);
-    color: #fff;
+    color: #ffffff !important;
     text-transform: uppercase;
     font-weight: 900;
     text-shadow: 0 1px 4px rgb(0 0 0 / 0.4);
     pointer-events: none;
+     font-family: erbaum !important;
   }
 {% endstylesheet %}
