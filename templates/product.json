@@ -2181,7 +2181,7 @@
         "gradient_direction": "to top",
         "visibility": "desktop_only",
         "padding-block-start": 0,
-        "padding-block-end": 0
+        "padding-block-end": 24
       }
     },
     "slideshow_Erb898": {
@@ -2602,6 +2602,7 @@
         "text_i3L6rU": {
           "type": "text",
           "name": "t:names.heading",
+          "disabled": true,
           "settings": {
             "text": "<h4>PRODUCT OVERVIEW</h4>",
             "width": "fit-content",
