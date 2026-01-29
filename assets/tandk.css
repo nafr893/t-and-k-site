@@ -48,7 +48,7 @@ div#shopify-section-sections--20919892934902__footer_utilities_jLGE8U, div#shopi
 }
 /* h4 footer font settings */ 
 footer#shopify-section-sections--20919892934902__footer_7BdxXe {
-    h4 {
+    summary.menu__heading.h4{
         font-family: erbaum !important; 
     }
 }
