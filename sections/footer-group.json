@@ -797,8 +797,8 @@
                     "custom_width_mobile": 100,
                     "height": "fit",
                     "custom_height": 100,
-                    "inherit_color_scheme": true,
-                    "color_scheme": "",
+                    "inherit_color_scheme": false,
+                    "color_scheme": "scheme-2",
                     "background_media": "none",
                     "video_position": "cover",
                     "background_image_position": "cover",
@@ -819,93 +819,50 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {
-                    "text_j7jJHi": {
-                      "type": "text",
+                    "social_links_YUdEDK": {
+                      "type": "social-links",
+                      "name": "t:names.social_media_links",
                       "settings": {
-                        "text": "<h2>BE THE FIRST TO KNOW</h2>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "h3",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "border": false,
-                        "background_color": "",
-                        "border_color": "#000000",
-                        "border_weight": 0,
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
+                        "facebook_url": "https://www.facebook.com/tandkhunting/",
+                        "instagram_url": "https://www.instagram.com/tandkhunting/?hl=en",
+                        "youtube_url": "https://www.youtube.com/channel/UCvqFB385J6ZjkyyaMmrjlAw",
+                        "tiktok_url": "",
+                        "twitter_url": "",
+                        "threads_url": "",
+                        "linkedin_url": "",
+                        "bluesky_url": "",
+                        "snapchat_url": "",
+                        "pinterest_url": "",
+                        "tumblr_url": "",
+                        "vimeo_url": "",
+                        "custom_url": ""
                       },
                       "blocks": {}
                     },
-                    "text_3iN7cW": {
-                      "type": "text",
+                    "footer_policy_list_VhNzdb": {
+                      "type": "footer-policy-list",
+                      "name": "t:names.policy_list",
                       "settings": {
-                        "text": "<p>Stay in the loop for product drops, restocks and everything T&K.</p>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "color": "var(--color-foreground)",
-                        "background": false,
-                        "border": false,
-                        "background_color": "",
-                        "border_color": "#000000",
-                        "border_weight": 0,
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
+                        "font_size": "0.75rem",
+                        "case": "none"
                       },
                       "blocks": {}
                     },
-                    "email_signup_HBAY9J": {
-                      "type": "email-signup",
-                      "name": "t:names.email_signup",
+                    "footer_copyright_HdGzRC": {
+                      "type": "footer-copyright",
+                      "name": "t:names.copyright",
                       "settings": {
-                        "width": "fill",
-                        "custom_width": 100,
-                        "inherit_color_scheme": true,
-                        "color_scheme": "",
-                        "heading": "",
-                        "heading_preset": "h3",
-                        "border_style": "all",
-                        "border_width": 1,
-                        "border_radius": 0,
-                        "input_type_preset": "paragraph",
-                        "style_class": "button",
-                        "display_type": "text",
-                        "label": "Sign up",
-                        "integrated_button": false,
-                        "button_type_preset": "paragraph",
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
+                        "show_powered_by": true,
+                        "font_size": "0.75rem",
+                        "case": "none"
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
-                    "text_j7jJHi",
-                    "text_3iN7cW",
-                    "email_signup_HBAY9J"
+                    "social_links_YUdEDK",
+                    "footer_policy_list_VhNzdb",
+                    "footer_copyright_HdGzRC"
                   ]
                 }
               },
