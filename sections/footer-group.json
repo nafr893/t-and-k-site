@@ -377,7 +377,7 @@
                           "name": "t:names.menu",
                           "settings": {
                             "menu": "customer-service",
-                            "heading": "CUSTOMER SERVICE",
+                            "heading": "SERVICE",
                             "menu_spacing": 12,
                             "show_as_accordion": false,
                             "accordion_icon": "caret",
