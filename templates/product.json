@@ -2784,6 +2784,7 @@
         "stamped_reviews_main_widget_3nQpmg": {
           "type": "shopify://apps/stamped-reviews/blocks/main-widget/a103faaf-2125-4b0e-89fa-de5149736723",
           "settings": {
+            "take_questions": 10,
             "animation": true,
             "tags_exclude": "",
             "tags_include": "",
