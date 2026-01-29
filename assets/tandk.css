@@ -39,8 +39,11 @@ div.product-information {
     padding-top: 24px !important; 
 }
 
-
+/* hide mobile footer parts on desktop */ 
 footer#shopify-section-sections--20919892934902__footer_m9NzUG {
+    display: none; 
+}
+div#shopify-section-sections--20919892934902__footer_utilities_jLGE8U, div#shopify-section-sections--20919892934902__section_6Kb9kh {
     display: none; 
 }
 
