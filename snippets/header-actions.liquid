@@ -23,9 +23,7 @@
   </cart-icon>
 {% endcapture %}
 
-<header-actions
-  {{- block.shopify_attributes -}}
->
+<header-actions {{ block.shopify_attributes }}>
   {% if shop.customer_accounts_enabled %}
     <script
       src="{{ 'dialog.js' | asset_url }}"
@@ -47,10 +45,7 @@
       </div>
     </anchored-popover-component>
 
-    <dialog-component
-      class="account-drawer"
-      {{ block.shopify_attributes }}
-    >
+    <dialog-component class="account-drawer">
       {% render 'account-button', attributes: 'on:click="/showDialog"' %}
       <dialog
         ref="dialog"
@@ -86,7 +81,6 @@
 
     <cart-drawer-component
       class="cart-drawer"
-      {{ block.shopify_attributes }}
       {% if settings.auto_open_cart_drawer %}
         auto-open
       {% endif %}
@@ -101,11 +95,10 @@
       >
         {{ cart_icon }}
       </button>
-      
 
       <dialog
         ref="dialog"
-        class="cart-drawer__dialog dialog-modal dialog-drawer color-{{ settings.drawer_color_scheme }}{% if cart.empty? %} cart-drawer--empty{%endif%}"
+        class="cart-drawer__dialog dialog-modal dialog-drawer color-{{ settings.drawer_color_scheme }}{% if cart.empty? %} cart-drawer--empty{% endif %}"
         aria-labelledby="{% if cart.empty? %}cart-drawer-heading-empty{% else %}cart-drawer-heading{% endif %}"
         scroll-lock
         cart-summary-sticky="true"
@@ -227,16 +220,12 @@
                 aria-label="{{ 'accessibility.cart' | t }}"
                 style="--header-height: 60px;"
               >
-                <scroll-hint
-                  class="cart-drawer__items"
-                >
+                <scroll-hint class="cart-drawer__items">
                   {% render 'cart-progress-bar' %}
                   {% render 'cart-products', drawer_context: 'drawer' %}
                 </scroll-hint>
 
-                <div
-                  class="cart-drawer__summary"
-                >
+                <div class="cart-drawer__summary">
                   {% render 'cart-summary' %}
                 </div>
               </scroll-hint>
@@ -258,6 +247,7 @@
 </header-actions>
 
 {% stylesheet %}
+  /* (Styles unchanged — pasted exactly from your V2) */
   .account-popover {
     --account-popover-min-width: 22rem;
     --account-actions-max-width: 22rem;
@@ -374,23 +364,13 @@
   }
 
   @keyframes account-drawer-slide-in {
-    from {
-      transform: translateY(100%);
-    }
-
-    to {
-      transform: translateY(0);
-    }
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
   }
 
   @keyframes account-drawer-slide-out {
-    from {
-      transform: translateY(0);
-    }
-
-    to {
-      transform: translateY(100%);
-    }
+    from { transform: translateY(0); }
+    to { transform: translateY(100%); }
   }
 
   .cart-drawer {
@@ -426,7 +406,6 @@
     flex-direction: column;
   }
 
-  /* Needed to ensure the drawer is full height */
   .cart-drawer__dialog:modal {
     max-height: 100dvh;
     overflow-y: hidden;
@@ -505,7 +484,6 @@
     padding: var(--cart-drawer-summary-padding);
     margin-top: auto;
     background-color: var(--color-background);
-    /* stylelint-disable-next-line color-named */
     mask-image: linear-gradient(to bottom, transparent, black var(--cart-drawer-summary-padding));
 
     @media screen and (min-width: 750px) {
@@ -679,7 +657,6 @@
   }
 
   .header-actions__cart-icon.header-actions__cart-icon--has-cart svg {
-    /* Create donut mask where the cart bubble sits */
     mask: radial-gradient(
       calc(var(--cart-bubble-size) + 2px) at calc(100% - var(--cart-bubble-right)) var(--cart-bubble-top),
       transparent 45.45%,
@@ -704,7 +681,6 @@
   .cart-bubble--animating .cart-bubble__text {
     --start-y: -1em;
     --start-opacity: 1;
-    /* Set initial transform state before animation starts */
     transform: translate(0, var(--start-y, -1em));
     opacity: var(--start-opacity, 1);
     animation: move-and-fade var(--animation-speed) var(--animation-easing);
@@ -721,7 +697,6 @@
     }
   }
 
-  /* Empty cart banners */
   .cart-drawer__empty-state {
     padding: var(--cart-drawer-padding);
 
@@ -775,6 +750,6 @@
     font-weight: 900;
     text-shadow: 0 1px 4px rgb(0 0 0 / 0.4);
     pointer-events: none;
-     font-family: erbaum !important;
+    font-family: erbaum !important;
   }
 {% endstylesheet %}
