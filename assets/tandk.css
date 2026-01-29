@@ -327,3 +327,8 @@ main#MainContent.content-for-layout {
 
  }
 
+div.stamped-review-header {
+    img {
+        width: fit-content !important; 
+    }
+}
