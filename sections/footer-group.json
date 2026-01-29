@@ -57,7 +57,7 @@
             "text_bzhyFb": {
               "type": "text",
               "settings": {
-                "text": "<h2>Join our email list</h2>",
+                "text": "<h2>BE THE FIRST TO KNOW</h2>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -85,7 +85,7 @@
             "text_b6LmQm": {
               "type": "text",
               "settings": {
-                "text": "<p>Get exclusive deals and early access to new products.</p>",
+                "text": "<p>Stay in the loop for product drops, restocks and everything T&K.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
