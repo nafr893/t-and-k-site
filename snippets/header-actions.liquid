@@ -178,13 +178,13 @@
                     {% endfor %}
                   </div>
 
-                  <!-- Keep V2 logic behavior: still render cart-products in empty drawer 
+                  <!-- Keep V2 logic behavior: still render cart-products in empty drawer -->
                   <div class="cart-drawer__items">
                     {% render 'cart-products', drawer_context: 'drawer' %}
                   </div>
                 </div>
               </div>
-              -->
+              
             {%- else -%}
               <div class="cart-drawer__header" id="cart-drawer-header">
                 <h2 class="cart-drawer__heading h4" id="cart-drawer-heading">
