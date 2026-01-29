@@ -53,7 +53,7 @@
   # Set up grid configuration based on menu type
   case menu_content_type
     when 'collection_images'
-      assign cols_per_item = columns_per_item | default: 3
+      assign cols_per_item = columns_per_item | default: 2
       assign grid_desktop = grid_columns | default: 8
 
       # Special case: fewer than 5 collection images

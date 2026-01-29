@@ -230,7 +230,7 @@
 
   if menu_content_type == 'featured_collections'
     # desktop breakpoint
-    assign min_featured_collection_columns = min_collections | times: 2
+    assign min_featured_collection_columns = min_collections | times: 3
     assign temp_column_count = column_count | plus: min_featured_collection_columns
 
     if temp_column_count > max_menu_columns
