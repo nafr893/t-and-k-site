@@ -239,7 +239,7 @@
       assign max_collection_columns = max_menu_columns | minus: column_count
     endif
 
-    assign max_featured_collections = max_collection_columns | divided_by: 3 | floor
+    assign max_featured_collections = max_collection_columns | divided_by: 1 | floor
     assign max_menu_columns = max_menu_columns | minus: max_collection_columns
 
     # tablet breakpoint
