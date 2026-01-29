@@ -370,3 +370,9 @@ div.stamped-review-header {
         width: fit-content !important; 
     }
 }
+
+/* header mega menu settings */ 
+p.resource-card__title.h5 {
+    font-weight: bold; 
+    text-transform: uppercase; 
+}
