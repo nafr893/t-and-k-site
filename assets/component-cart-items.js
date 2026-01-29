@@ -170,10 +170,21 @@ class CartItemsComponent extends Component {
           })
         );
 
-        morphSection(this.sectionId, parsedResponseText.sections[this.sectionId]);
+        // Check if cart is becoming empty - if so, force fresh render for proper DOM update
+        const willBeEmpty = newCartItemCount === 0;
+        const isCurrentlyEmpty = this.querySelector('.cart-drawer__empty-state') !== null;
 
-        this.#updateCartQuantitySelectorButtonStates();
-        this.#syncDialogEmptyState();
+        if (willBeEmpty && !isCurrentlyEmpty) {
+          // Transitioning to empty state - force fresh render
+          sectionRenderer.renderSection(this.sectionId, { cache: false }).then(() => {
+            this.#updateCartQuantitySelectorButtonStates();
+            this.#syncDialogEmptyState();
+          });
+        } else {
+          morphSection(this.sectionId, parsedResponseText.sections[this.sectionId]);
+          this.#updateCartQuantitySelectorButtonStates();
+          this.#syncDialogEmptyState();
+        }
       })
       .catch((error) => {
         console.error(error);
@@ -227,6 +238,19 @@ class CartItemsComponent extends Component {
       return;
     }
     if (event.target === this) return;
+
+    // Check if currently in empty state - if so, force a fresh section render
+    // because the morph may not handle the dramatic DOM structure change well
+    const isCurrentlyEmpty = this.querySelector('.cart-drawer__empty-state') !== null;
+
+    if (isCurrentlyEmpty) {
+      // Force fresh render from server when transitioning from empty to filled
+      sectionRenderer.renderSection(this.sectionId, { cache: false }).then(() => {
+        this.#updateCartQuantitySelectorButtonStates();
+        this.#syncDialogEmptyState();
+      });
+      return;
+    }
 
     const cartItemsHtml = event.detail.data.sections?.[this.sectionId];
     if (cartItemsHtml) {
