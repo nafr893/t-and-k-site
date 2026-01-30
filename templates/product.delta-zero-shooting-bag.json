@@ -2083,7 +2083,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4>New arrivals</h4>",
+                    "text": "<h4>FEATURE 3</h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",

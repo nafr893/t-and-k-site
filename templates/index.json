@@ -717,6 +717,7 @@
         "slideshow_controls_style": "none",
         "autoplay": true,
         "autoplay_speed": 4,
+        "visibility": "both",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
@@ -1429,6 +1430,7 @@
         "slideshow_controls_style": "none",
         "autoplay": true,
         "autoplay_speed": 4,
+        "visibility": "both",
         "padding-block-start": 0,
         "padding-block-end": 0
       }
@@ -1924,8 +1926,8 @@
       },
       "name": "Featured collection",
       "settings": {
-        "collection": "suppressor-covers",
-        "layout_type": "grid",
+        "collection": "best-sellers",
+        "layout_type": "carousel",
         "carousel_on_mobile": true,
         "max_products": 8,
         "columns": 4,
@@ -2013,6 +2015,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
+        "visibility": "both",
         "padding-block-start": 0,
         "padding-block-end": 0
       }

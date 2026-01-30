@@ -68,6 +68,7 @@
 </add-to-cart-component>
 
 {% stylesheet %}
+
   .add-to-cart-button {
     --text-speed: 0.26;
     --base-delay: calc(var(--text-speed) * 0.25);
@@ -89,6 +90,11 @@
     }
   }
 
+  .add-to-cart__added, span.svg-wrapper.add-to-cart-icon {
+  display: none; 
+  }
+
+/* remove add to cart checkmark animation
   .add-to-cart-button .svg-wrapper .checkmark-burst {
     width: 30px;
     height: 30px;
@@ -110,6 +116,7 @@
 
   .add-to-cart__added {
     --atc-opacity: 1;
+    display: none; 
     --atc-destination: 0px;
     position: absolute;
     top: 50%;
@@ -188,7 +195,7 @@
     }
 
     .add-to-cart-text {
-      /* stylelint-disable-next-line plugin/no-unsupported-browser-features */
+      
       clip-path: circle(0% at 50% 50%);
       filter: blur(2px);
       opacity: 0;
@@ -232,7 +239,7 @@
       transition-timing-function: ease-out;
     }
   }
-
+*/
   .add-to-cart-text {
     /* stylelint-disable-next-line plugin/no-unsupported-browser-features */
     clip-path: circle(100% at 50% 50%);

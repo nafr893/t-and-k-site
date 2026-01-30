@@ -2718,7 +2718,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
   align-items: center;
   cursor: pointer;
   width: var(--minimum-touch-target);
-  height: var(--minimum-touch-target);
+  height: 1.5rem;
   flex-shrink: 0;
   color: var(--color-input-text);
 }
@@ -2832,6 +2832,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
 }
 
 /* Fly to cart animation */
+/* remove fly to cart animation
 fly-to-cart {
   --offset-y: 10px;
 
@@ -2912,6 +2913,8 @@ fly-to-cart.fly-to-cart--sticky {
     translate: 0 var(--travel-y, 0);
   }
 }
+
+*/
 
 /* ------------------------------------------------------------------------------ */
 

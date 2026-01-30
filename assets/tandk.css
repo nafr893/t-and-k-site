@@ -27,13 +27,50 @@ padding-left: 60px;
 
 
 
+
 /* Hide Mobile Banner on Desktop */
  @media (min-width: 480px) {
 div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
     display: none; 
 
 }
+
+span.menu-list__link-title {
+    font-weight: 600; 
+}
+
+div.product-information {
+    padding-top: 24px !important; 
+}
+
+/* hide mobile footer parts on desktop */ 
+footer#shopify-section-sections--20919892934902__footer_m9NzUG {
+    display: none; 
+}
+div#shopify-section-sections--20919892934902__footer_utilities_jLGE8U, div#shopify-section-sections--20919892934902__section_6Kb9kh {
+    display: none; 
+}
+/* h4 footer font settings */ 
+footer#shopify-section-sections--20919892934902__footer_7BdxXe {
+    padding-left: 1.75rem !important; 
+    padding-right: 1.75rem !important; 
+    summary.menu__heading.h4{
+        font-family: erbaum !important; 
+    }
+}
+
+
+
+
+
+
+
+
  }
+
+
+
+
 /* Mobile homepage height */
   @media (max-width: 480px) {
 
@@ -63,7 +100,10 @@ padding-left: 40px;
   height: 44px; 
 }
 
-
+/* hide desktop footer on mobile */
+footer#shopify-section-sections--20919892934902__footer_7BdxXe {
+    display: none; 
+}
 
 /* Hide Desktop Banner on mobile */ 
     div#shopify-section-template--20919893328118__slideshow_VMx8dk {
@@ -237,11 +277,17 @@ div.slideshow-controls__counter {
     }
 }
 
+div.product-information__media {
+    slideshow-controls#slideshow-controls {
+    justify-content: start !important;
+    }
+}
+
 slideshow-controls#slideshow-controls {
     display: grid;
     position: relative;
     padding-right: .5rem;
-    justify-content: end !important
+    justify-content: end !important;
     
 }
 
@@ -310,4 +356,27 @@ div.spacing-style.slide__content.background-transparent {
 main#MainContent.content-for-layout {
     overflow-x: hidden; 
 }
- 
+ .cart-secondary-typography {
+    font-family: Ibm Plex mono !important; 
+ }
+ text-component.cart__total-value.cart-secondary-typography {
+    font-size: 1rem !important;
+    font-weight: 600;
+ }
+
+ .cart-drawer__header {
+    padding-bottom: 0px !important; 
+
+ }
+
+div.stamped-review-header {
+    img {
+        width: fit-content !important; 
+    }
+}
+
+/* header mega menu settings */ 
+p.resource-card__title.h5 {
+    font-weight: bold; 
+    text-transform: uppercase; 
+}
