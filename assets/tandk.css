@@ -35,6 +35,10 @@ div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
 
 }
 
+span.menu-list__link-title {
+    font-weight: bold; 
+}
+
 div.product-information {
     padding-top: 24px !important; 
 }
