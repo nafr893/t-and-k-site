@@ -67,11 +67,21 @@
             "padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "quick_filter_VcKLeF": {
+          "type": "quick-filter",
+          "name": "Quick Filter",
+          "settings": {
+            "all_button_label": "All",
+            "button_gap": 8
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "text_UVM4TR",
-        "text_czc9bn"
+        "text_czc9bn",
+        "quick_filter_VcKLeF"
       ],
       "name": "t:names.hero",
       "settings": {
