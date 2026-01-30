@@ -19,7 +19,7 @@
             "width": "100%",
             "max_width": "narrow",
             "alignment": "left",
-            "type_preset": "h1",
+            "type_preset": "h2",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
             "line_height": "normal",
@@ -42,7 +42,6 @@
         },
         "text_czc9bn": {
           "type": "text",
-          "disabled": true,
           "settings": {
             "text": "<p>Stories from the field, hard-earned knowledge, and honest breakdowns of hunting gear and equipment. A place to learn, prepare, and sharpen your skills for the next hunt.</p>",
             "width": "100%",
