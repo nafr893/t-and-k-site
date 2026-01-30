@@ -42,6 +42,7 @@
         },
         "text_czc9bn": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<p>Stories from the field, hard-earned knowledge, and honest breakdowns of hunting gear and equipment. A place to learn, prepare, and sharpen your skills for the next hunt.</p>",
             "width": "100%",
