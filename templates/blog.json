@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "main": {
       "type": "main-blog",
@@ -15,7 +16,7 @@
           "type": "text",
           "name": "Title",
           "settings": {
-            "text": "<h1>{{ closest.blog.title }}</h1>",
+            "text": "<h1>FIELD NOTES</h1>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -28,7 +29,10 @@
             "wrap": "pretty",
             "color": "",
             "background": false,
+            "border": false,
             "background_color": "#00000026",
+            "border_color": "#000000",
+            "border_weight": 0,
             "corner_radius": 0,
             "padding-block-start": 48,
             "padding-block-end": 48,
@@ -79,6 +83,23 @@
                 "alignment": "left",
                 "show_alignment": false,
                 "padding-block-start": 0,
+                "padding-block-end": 0
+              },
+              "blocks": {}
+            },
+            "content": {
+              "type": "_blog-post-description",
+              "static": true,
+              "settings": {
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "padding-block-start": 16,
                 "padding-block-end": 0
               },
               "blocks": {}
