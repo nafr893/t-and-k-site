@@ -19,7 +19,7 @@
             "width": "100%",
             "max_width": "narrow",
             "alignment": "left",
-            "type_preset": "h1",
+            "type_preset": "h2",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
             "line_height": "normal",
@@ -43,7 +43,7 @@
         "text_czc9bn": {
           "type": "text",
           "settings": {
-            "text": "<p>Made with care and unconditionally loved by our customers.</p>",
+            "text": "<p>Stories from the field, hard-earned knowledge, and honest breakdowns of hunting gear and equipment.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "left",
@@ -62,16 +62,26 @@
             "border_weight": 0,
             "corner_radius": 0,
             "padding-block-start": 0,
-            "padding-block-end": 32,
+            "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "quick_filter_blog_ekxdfE": {
+          "type": "quick-filter-blog",
+          "name": "Quick Filter Blog",
+          "settings": {
+            "all_button_label": "All",
+            "button_gap": 8
           },
           "blocks": {}
         }
       },
       "block_order": [
         "text_UVM4TR",
-        "text_czc9bn"
+        "text_czc9bn",
+        "quick_filter_blog_ekxdfE"
       ],
       "name": "t:names.hero",
       "settings": {
@@ -97,13 +107,13 @@
         "section_height_custom": 60,
         "color_scheme": "scheme-5",
         "toggle_overlay": true,
-        "overlay_color": "#0000006c",
+        "overlay_color": "#0000006b",
         "overlay_style": "gradient",
         "gradient_direction": "to top",
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 40,
-        "padding-block-end": 0
+        "padding-block-end": 20
       }
     },
     "main": {
