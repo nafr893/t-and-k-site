@@ -1700,7 +1700,7 @@ media-gallery.media-gallery--grid .media-gallery__grid .product-media-container 
 }
 
 .product-media-container img {
-  aspect-ratio: inherit;
+  aspect-ratio: inherit !important;
   object-fit: cover;
 }
 
