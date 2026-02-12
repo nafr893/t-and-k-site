@@ -2298,7 +2298,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC05675.webp",
+                    "image": "shopify://shop_images/DSC04871.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2321,7 +2321,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Three-chamber modular architecture</strong></h4>",
+                    "text": "<h4>No-slip, rigid fitment</h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2350,7 +2350,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Three independent fill zones let you tune height, shape, and firmness so the bag matches the position, not the other way around.</p>",
+                    "text": "<p>These gaiters are built to stay put. Once they’re set, they don’t ride up, twist, or creep around your boot when you’re side-hilling or post-holing.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2426,7 +2426,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC05684.webp",
+                    "image": "shopify://shop_images/DSC04885.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2449,7 +2449,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Wrap-around compression</strong></h4>",
+                    "text": "<h4>Stainless underwire underfoot</h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2478,7 +2478,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Full-length compression straps cinch the bag tight to posts, branches, and barricades so it becomes part of the structure, not just padding.</p>",
+                    "text": "<p>The rubber-coated stainless underwire holds its shape and takes abuse from rock, ice, and mud without turning into a floppy strap halfway through the season.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2554,7 +2554,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC05706.webp",
+                    "image": "shopify://shop_images/DSC04862.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2577,7 +2577,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Lightweight AND stable fill</strong></h4>",
+                    "text": "<h4>Heavy-duty closure system</h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2606,7 +2606,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Filled with Spex•Lite® 5125H the Delta Zero™ is built to balance stability and recoil management without hauling around a sandbag.</p>",
+                    "text": "<p>A #10 YKK zipper backed up with hook-and-loop Velcro gives you fast on/off with a secure seal that’s built for harsh environments.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3541,7 +3541,7 @@
             "accordion_row_ryQ9Td": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What is the Delta Zero shooting bag used for?",
+                "heading": "Are these good for snow and wet conditions?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3550,7 +3550,7 @@
                 "text_PFfBBg": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>It’s a modular support bag for real-world shooting positions, barricades, rocks, posts, prone, kneeling, and rear-bag support.</p>",
+                    "text": "<p>Yes. HardTrak™ gaiters are built for harsh environments and are water resistant with a rigid fit designed to keep snow, mud, and debris out.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3583,7 +3583,7 @@
             "accordion_row_XE9tYL": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "How is this different from a standard barricade bag?",
+                "heading": "Do these gaiters stay in place?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3592,7 +3592,7 @@
                 "text_GYYtLC": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>The Delta Zero uses a three-chamber design with independent fill zones and wrap-around compression, creating multiple contact points and better stability than a single-chamber cube/wedge.</p>",
+                    "text": "<p>Yes, between the no-slip design, elastic tightening, underwire, and metal J-hook lace securing, they’re built to stay locked in.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3626,7 +3626,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Does it come filled?",
+                "heading": "Are the zippers heavy duty?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3636,7 +3636,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Yes, it ships standard with Spex•Lite® 5125H, a premium lightweight fill designed to balance stability and packability.</p>",
+                    "text": "<p>Yes, HardTrak™ uses a #10 YKK zipper with hook-and-loop Velcro to reinforce the closure.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3670,7 +3670,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Is it made in the USA?",
+                "heading": "What’s the underfoot strap made of?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3680,7 +3680,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Yes, the Delta Zero™ is made in the USA and built with 500D Cordura® and other durable USA materials.</p>",
+                    "text": "<p>A stainless steel underwire with rubber coating for structure and long-term durability.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3709,13 +3709,58 @@
               "block_order": [
                 "text_BC7K7N"
               ]
+            },
+            "accordion_row_63QDTY": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "Are these gaiters made in the USA?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_DQK9hf": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>Yes, HardTrak™ gaiters are 100% built in the USA.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "border": false,
+                    "background_color": "",
+                    "border_color": "#000000",
+                    "border_weight": 0,
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_DQK9hf"
+              ]
             }
           },
           "block_order": [
             "accordion_row_ryQ9Td",
             "accordion_row_XE9tYL",
             "accordion_row_HdqWcD",
-            "accordion_row_74RWF7"
+            "accordion_row_74RWF7",
+            "accordion_row_63QDTY"
           ]
         }
       },
