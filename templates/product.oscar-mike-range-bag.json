@@ -3541,7 +3541,7 @@
             "accordion_row_ryQ9Td": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What is the Delta Zero shooting bag used for?",
+                "heading": "Is this a tactical/MOLLE range bag?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3550,7 +3550,7 @@
                 "text_PFfBBg": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>It’s a modular support bag for real-world shooting positions, barricades, rocks, posts, prone, kneeling, and rear-bag support.</p>",
+                    "text": "<p>It uses <strong>laser-cut Squadron PALS panels</strong> that are <strong>MOLLE-compatible</strong>, so you can add pouches without traditional webbing bulk.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3583,7 +3583,7 @@
             "accordion_row_XE9tYL": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "How is this different from a standard barricade bag?",
+                "heading": "Does the bag keep its shape when it’s not full?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3592,7 +3592,7 @@
                 "text_GYYtLC": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>The Delta Zero uses a three-chamber design with independent fill zones and wrap-around compression, creating multiple contact points and better stability than a single-chamber cube/wedge.</p>",
+                    "text": "<p>Yes, <strong>full-foam body reinforcement</strong> is designed to keep it rigid and easy to load/unload.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3626,7 +3626,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Does it come filled?",
+                "heading": "What can the 3” foam insert hold?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3636,7 +3636,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Yes, it ships standard with Spex•Lite® 5125H, a premium lightweight fill designed to balance stability and packability.</p>",
+                    "text": "<p><strong>AR mags, pistol mags, cleaning kit, eye/ear pro, and essential tools</strong>.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3670,7 +3670,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Is it made in the USA?",
+                "heading": "Where is the Oscar Mike Range Bag built?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3680,7 +3680,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Yes, the Delta Zero™ is made in the USA and built with 500D Cordura® and other durable USA materials.</p>",
+                    "text": "<p>It’s <strong>built in the USA and handcrafted in the USA</strong>.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3709,13 +3709,58 @@
               "block_order": [
                 "text_BC7K7N"
               ]
+            },
+            "accordion_row_TdrDnV": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "How big is it?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_yeb7GB": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p><strong>19” × 10” × 11”</strong> and <strong>32.25 L</strong> capacity.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "border": false,
+                    "background_color": "",
+                    "border_color": "#000000",
+                    "border_weight": 0,
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_yeb7GB"
+              ]
             }
           },
           "block_order": [
             "accordion_row_ryQ9Td",
             "accordion_row_XE9tYL",
             "accordion_row_HdqWcD",
-            "accordion_row_74RWF7"
+            "accordion_row_74RWF7",
+            "accordion_row_TdrDnV"
           ]
         }
       },
