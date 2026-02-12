@@ -3412,7 +3412,7 @@
           "name": "t:names.video",
           "settings": {
             "source": "url",
-            "video_url": "https://www.youtube.com/watch?v=Vd2MAnHD-48&list=TLGGuwmX2VAxPcEyNzAxMjAyNg",
+            "video_url": "https://www.youtube.com/watch?v=OEhe9atiB7k",
             "video_autoplay": false,
             "video_loop": true,
             "alt": "",
