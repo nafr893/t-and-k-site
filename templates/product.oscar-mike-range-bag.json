@@ -3072,7 +3072,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05706_1_-2.webp",
+            "image_1": "shopify://shop_images/DSC04608.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -3137,7 +3137,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Lightweight AND stable fill</strong></h4>",
+                    "text": "<h4><strong>Laser-cut Squadron PALS panels (MOLLE-compatible)</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3178,7 +3178,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Filled with Spex•Lite® 5125H the Delta Zero™ is built to balance stability and recoil management without hauling around a sandbag.</p>",
+                    "text": "<p>Expand your setup with pouches/accessories—without the sag and snag points of traditional webbing.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
