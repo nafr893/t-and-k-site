@@ -2449,7 +2449,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<p><strong>3” foam organizer insert </strong></p>",
+                    "text": "<h4><strong>3” foam organizer insert </strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2925,7 +2925,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05684.webp",
+            "image_1": "shopify://shop_images/DSC02826.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -2990,7 +2990,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Wrap-around compression</strong></h4>",
+                    "text": "<h4><strong>3” foam organizer insert </strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3031,7 +3031,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Full-length compression straps cinch the bag tight to posts, branches, and barricades so it becomes part of the structure, not just padding.</p>",
+                    "text": "<p>Dedicated storage for mags and essentials so you’re not digging for gear between strings.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
