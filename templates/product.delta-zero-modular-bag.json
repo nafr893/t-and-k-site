@@ -1507,8 +1507,8 @@
                                   "name": "t:names.icon",
                                   "settings": {
                                     "icon": "price_tag",
-                                    "image_upload": "shopify://shop_images/SPEX_LITE_v1.png",
-                                    "width": 90,
+                                    "image_upload": "shopify://shop_images/Spex_lite_fill_v1.png",
+                                    "width": 30,
                                     "link": "",
                                     "open_in_new_tab": false,
                                     "background_color": "#f5f5f5",
