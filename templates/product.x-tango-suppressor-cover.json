@@ -3541,7 +3541,7 @@
             "accordion_row_ryQ9Td": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What is the Delta Zero shooting bag used for?",
+                "heading": "Is the X Tango suppressor cover full-auto rated?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3550,7 +3550,7 @@
                 "text_PFfBBg": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>It’s a modular support bag for real-world shooting positions, barricades, rocks, posts, prone, kneeling, and rear-bag support.</p>",
+                    "text": "<p>Yes. It’s designed for hard use, including semi-auto and full-auto platforms.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3583,7 +3583,7 @@
             "accordion_row_XE9tYL": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "How is this different from a standard barricade bag?",
+                "heading": "What temperature is it rated for?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3592,7 +3592,7 @@
                 "text_GYYtLC": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>The Delta Zero uses a three-chamber design with independent fill zones and wrap-around compression, creating multiple contact points and better stability than a single-chamber cube/wedge.</p>",
+                    "text": "<p>Material ratings: carbon fiber sleeve up to 1800°F, Kevlar/Nomex up to 800°F, Technora rope up to 950°F.</p><p>Use guidance: it’s built to withstand 600°F+ during real-world firing schedules.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3626,7 +3626,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Does it come filled?",
+                "heading": "Does it reduce heat mirage?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3636,7 +3636,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Yes, it ships standard with Spex•Lite® 5125H, a premium lightweight fill designed to balance stability and packability.</p>",
+                    "text": "<p>Yes, mirage reduction is one of the main reasons to run this cover, especially when the suppressor heats up.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3670,7 +3670,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Is it made in the USA?",
+                "heading": "Can I rapid fire with it on?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3680,7 +3680,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Yes, the Delta Zero™ is made in the USA and built with 500D Cordura® and other durable USA materials.</p>",
+                    "text": "<p>For rapid fire beyond ~60 rounds without cooldown, the guidance is to remove the cover.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3709,13 +3709,58 @@
               "block_order": [
                 "text_BC7K7N"
               ]
+            },
+            "accordion_row_7rzepm": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "Is it made in the USA?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_wrFYF3": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>Yes, this is a hand crafted USA item.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "border": false,
+                    "background_color": "",
+                    "border_color": "#000000",
+                    "border_weight": 0,
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_wrFYF3"
+              ]
             }
           },
           "block_order": [
             "accordion_row_ryQ9Td",
             "accordion_row_XE9tYL",
             "accordion_row_HdqWcD",
-            "accordion_row_74RWF7"
+            "accordion_row_74RWF7",
+            "accordion_row_7rzepm"
           ]
         }
       },
