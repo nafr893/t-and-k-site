@@ -2511,7 +2511,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC05675.webp",
+                    "image": "shopify://shop_images/DSC04507.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2534,7 +2534,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Three-chamber modular architecture</strong></h4>",
+                    "text": "<h4><strong>Field protection without the bulk</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2563,7 +2563,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Three independent fill zones let you tune height, shape, and firmness so the bag matches the position, not the other way around.</p>",
+                    "text": "<p>The whole case is shaped to carry easier and pack smaller, no wasted space.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2639,7 +2639,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC05684.webp",
+                    "image": "shopify://shop_images/DSC05756.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2662,7 +2662,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Wrap-around compression</strong></h4>",
+                    "text": "<h4><strong>¼” foam core (intentional padding)</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2691,7 +2691,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Full-length compression straps cinch the bag tight to posts, branches, and barricades so it becomes part of the structure, not just padding.</p>",
+                    "text": "<p>Enough impact protection for real-world transport, without turning it into a heavy travel case.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2767,7 +2767,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC05706.webp",
+                    "image": "shopify://shop_images/DSC04548.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2790,7 +2790,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Lightweight AND stable fill</strong></h4>",
+                    "text": "<h4><strong>Backpack straps for hands-free carry</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2819,7 +2819,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Filled with Spex•Lite® 5125H the Delta Zero™ is built to balance stability and recoil management without hauling around a sandbag.</p>",
+                    "text": "<p>When you’re moving through terrain or juggling other gear, this matters.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
