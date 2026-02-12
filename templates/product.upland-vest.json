@@ -2070,7 +2070,7 @@
                       "type": "_accordion-row",
                       "settings": {
                         "heading": "QUICK SPECS",
-                        "open_by_default": true,
+                        "open_by_default": false,
                         "icon": "none",
                         "width": 20
                       },
