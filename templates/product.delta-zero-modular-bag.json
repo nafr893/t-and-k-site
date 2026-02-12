@@ -1827,7 +1827,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>FEATURE 1</strong></h4>",
+                    "text": "<h4><strong>Three-chamber modular architecture</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1856,7 +1856,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                    "text": "<p>Three independent fill zones let you tune height, shape, and firmness so the bag matches the position, not the other way around.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1955,7 +1955,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4>FEATURE 2</h4>",
+                    "text": "<h4><strong>Wrap-around compression</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -1984,7 +1984,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                    "text": "<p>Full-length compression straps cinch the bag tight to posts, branches, and barricades so it becomes part of the structure, not just padding.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2083,7 +2083,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4>FEATURE 3</h4>",
+                    "text": "<h4><strong>Lightweight AND stable fill</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2112,7 +2112,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>We make things that work better and last longer. Our products solve real problems with clean design and honest materials.</p>",
+                    "text": "<p>Filled with Spex•Lite® 5125H the Delta Zero™ is built to balance stability and recoil management without hauling around a sandbag.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
