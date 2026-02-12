@@ -2298,7 +2298,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC05675.webp",
+                    "image": "shopify://shop_images/DSC08008.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2321,7 +2321,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Three-chamber modular architecture</strong></h4>",
+                    "text": "<h4><strong>STABLE BUILT IN STRUCTURE</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2350,7 +2350,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Three independent fill zones let you tune height, shape, and firmness so the bag matches the position, not the other way around.</p>",
+                    "text": "<p>Full-foam reinforcement keeps the bag upright and easy to load, even when it’s empty.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2426,7 +2426,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC05684.webp",
+                    "image": "shopify://shop_images/DSC02826.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2449,7 +2449,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Wrap-around compression</strong></h4>",
+                    "text": "<p><strong>3” foam organizer insert </strong></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2478,7 +2478,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Full-length compression straps cinch the bag tight to posts, branches, and barricades so it becomes part of the structure, not just padding.</p>",
+                    "text": "<p>Dedicated storage for mags and essentials so you’re not digging for gear between strings.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2554,7 +2554,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC05706.webp",
+                    "image": "shopify://shop_images/DSC04608.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2577,7 +2577,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Lightweight AND stable fill</strong></h4>",
+                    "text": "<h4><strong>Laser-cut Squadron PALS panels (MOLLE-compatible)</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2606,7 +2606,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Filled with Spex•Lite® 5125H the Delta Zero™ is built to balance stability and recoil management without hauling around a sandbag.</p>",
+                    "text": "<p>Expand your setup with pouches/accessories—without the sag and snag points of traditional webbing.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
