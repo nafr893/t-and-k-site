@@ -149,7 +149,6 @@
                   "blocks": {
                     "stamped_reviews_star_rating_badge_XFAchf": {
                       "type": "shopify://apps/stamped-reviews/blocks/star-rating-badge/a103faaf-2125-4b0e-89fa-de5149736723",
-                      "disabled": true,
                       "settings": {
                         "use_metafields": false,
                         "sku_tagtype": "sku",
@@ -160,6 +159,7 @@
                     "review_hrdgnc": {
                       "type": "review",
                       "name": "t:names.product_review_stars",
+                      "disabled": true,
                       "settings": {
                         "stars_style": "shaded",
                         "show_number": true,
