@@ -3114,7 +3114,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05675.webp",
+            "image_1": "shopify://shop_images/DSC02812.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -3219,7 +3219,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h4><strong>Three-chamber modular architecture</strong></h4>",
+                        "text": "<h4><strong>Forward-opening magnetic lid</strong></h4>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -3305,7 +3305,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Three independent fill zones let you tune height, shape, and firmness so the bag matches the position, not the other way around. </p>",
+                        "text": "<p>Fast, one-handed access that opens away from your face—so you can glass, range, and move without fighting your bino pack.</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -3351,7 +3351,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05684.webp",
+            "image_1": "shopify://shop_images/DSC04712.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -3416,7 +3416,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Wrap-around compression</strong></h4>",
+                    "text": "<h4><strong>All-around PALS mounting</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3457,7 +3457,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Full-length compression straps cinch the bag tight to posts, branches, and barricades so it becomes part of the structure, not just padding.</p>",
+                    "text": "<p>Run it slick or build it out. Add compatible accessories where you want them so your setup matches your hunt, western, whitetail, or turkey.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3498,7 +3498,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05706_1_-2.webp",
+            "image_1": "shopify://shop_images/DSC02802.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -3563,7 +3563,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Lightweight AND stable fill</strong></h4>",
+                    "text": "<h4><strong>Spacer mesh yoke harness</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3604,7 +3604,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Filled with Spex•Lite® 5125H the Delta Zero™ is built to balance stability and recoil management without hauling around a sandbag.</p>",
+                    "text": "<p>Breathable and comfortable for steep climbs and all-day sits. It carries the weight without hot spots and keeps the harness riding right.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
