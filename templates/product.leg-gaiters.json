@@ -2688,7 +2688,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05675.webp",
+            "image_1": "shopify://shop_images/DSC04871.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -2793,7 +2793,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h4><strong>Three-chamber modular architecture</strong></h4>",
+                        "text": "<h4><strong>No-slip, rigid fitment</strong></h4>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -2879,7 +2879,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Three independent fill zones let you tune height, shape, and firmness so the bag matches the position, not the other way around. </p>",
+                        "text": "<p>These gaiters are built to stay put. Once they’re set, they don’t ride up, twist, or creep around your boot when you’re side-hilling or post-holing.</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -2925,7 +2925,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05684.webp",
+            "image_1": "shopify://shop_images/DSC04885.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -2990,7 +2990,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Wrap-around compression</strong></h4>",
+                    "text": "<h4><strong>Stainless underwire underfoot</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3031,7 +3031,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Full-length compression straps cinch the bag tight to posts, branches, and barricades so it becomes part of the structure, not just padding.</p>",
+                    "text": "<p>The rubber-coated stainless underwire holds its shape and takes abuse from rock, ice, and mud without turning into a floppy strap halfway through the season.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3072,7 +3072,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05706_1_-2.webp",
+            "image_1": "shopify://shop_images/DSC04862.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -3137,7 +3137,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Lightweight AND stable fill</strong></h4>",
+                    "text": "<h4><strong>Heavy-duty closure system</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3178,7 +3178,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Filled with Spex•Lite® 5125H the Delta Zero™ is built to balance stability and recoil management without hauling around a sandbag.</p>",
+                    "text": "<p>A #10 YKK zipper backed up with hook-and-loop Velcro gives you fast on/off with a secure seal that’s built for harsh environments.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
