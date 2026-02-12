@@ -3967,7 +3967,7 @@
             "accordion_row_ryQ9Td": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What is the Delta Zero shooting bag used for?",
+                "heading": "Will this bino harness work for western hunting and whitetail/turkey?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3976,7 +3976,7 @@
                 "text_PFfBBg": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>It’s a modular support bag for real-world shooting positions, barricades, rocks, posts, prone, kneeling, and rear-bag support.</p>",
+                    "text": "<p>Yes. It’s built as an all-around chest bino pack—stable enough for mountain miles and comfortable enough for long sits or all-day turkey runs.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -4009,7 +4009,7 @@
             "accordion_row_XE9tYL": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "How is this different from a standard barricade bag?",
+                "heading": "How do I choose the right size?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -4018,7 +4018,7 @@
                 "text_GYYtLC": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>The Delta Zero uses a three-chamber design with independent fill zones and wrap-around compression, creating multiple contact points and better stability than a single-chamber cube/wedge.</p>",
+                    "text": "<p>Use the sizing guide here:<a href=\"https://tandkhunting.com/blogs/news/what-size-of-binocular-harness-do-i-need\"> <span style=\"text-decoration:underline\">https://tandkhunting.com/blogs/news/what-size-of-binocular-harness-do-i-need</span></a></p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -4052,7 +4052,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Does it come filled?",
+                "heading": "Is the lid magnetic?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -4062,7 +4062,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Yes, it ships standard with Spex•Lite® 5125H, a premium lightweight fill designed to balance stability and packability.</p>",
+                    "text": "<p>Yes, this harness uses strong magnets for fast access. If you use a pacemaker/implanted device/insulin pump, do not use it. Also keep it away from compasses/GPS.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -4096,7 +4096,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Is it made in the USA?",
+                "heading": "Can I attach accessories to it?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -4106,7 +4106,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Yes, the Delta Zero™ is made in the USA and built with 500D Cordura® and other durable USA materials.</p>",
+                    "text": "<p>Yes. The HellRidge™ has PALS mounting around the harness so you can add compatible pouches and build out your kit.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -4135,13 +4135,58 @@
               "block_order": [
                 "text_BC7K7N"
               ]
+            },
+            "accordion_row_RfdL3X": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "Is it made in the USA?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_4rBwG4": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>Yes, 100% built in the USA with premium American-sourced materials.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "border": false,
+                    "background_color": "",
+                    "border_color": "#000000",
+                    "border_weight": 0,
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_4rBwG4"
+              ]
             }
           },
           "block_order": [
             "accordion_row_ryQ9Td",
             "accordion_row_XE9tYL",
             "accordion_row_HdqWcD",
-            "accordion_row_74RWF7"
+            "accordion_row_74RWF7",
+            "accordion_row_RfdL3X"
           ]
         }
       },
