@@ -1568,7 +1568,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p><strong>DURABLE CONSTRUCTION</strong></p>",
+                                    "text": "<p><strong>SPEX•LITE® 5125H LIGHTWEIGHT FILL</strong></p>",
                                     "width": "fit-content",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1597,7 +1597,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p>Made with 1000D nylon and 400D pack cloth layering.</p>",
+                                    "text": "<p>Spex•Lite® 5125H is a lightweight, high-loft insulation that delivers reliable warmth without added bulk.</p>",
                                     "width": "100%",
                                     "max_width": "normal",
                                     "alignment": "left",
