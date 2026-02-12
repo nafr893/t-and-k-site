@@ -2688,7 +2688,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05675.webp",
+            "image_1": "shopify://shop_images/DSC05571.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -2793,7 +2793,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h4><strong>Three-chamber modular architecture</strong></h4>",
+                        "text": "<h4><strong>Extreme heat protection (1800°F carbon fiber sleeve)</strong></h4>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -2879,7 +2879,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Three independent fill zones let you tune height, shape, and firmness so the bag matches the position, not the other way around. </p>",
+                        "text": "<p>Built to handle real heat so your cover doesn’t become the weak link.</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -2925,7 +2925,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05684.webp",
+            "image_1": "shopify://shop_images/DSC08182_6a234785-9e78-4d2d-96b5-4fe62efa9f3c.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -2990,7 +2990,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Wrap-around compression</strong></h4>",
+                    "text": "<h4><strong>Mirage reduction</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3031,7 +3031,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Full-length compression straps cinch the bag tight to posts, branches, and barricades so it becomes part of the structure, not just padding.</p>",
+                    "text": "<p>Helps cut heat distortion so you can keep a cleaner sight picture through longer strings.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3072,7 +3072,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05706_1_-2.webp",
+            "image_1": "shopify://shop_images/DSC05562.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -3137,7 +3137,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Lightweight AND stable fill</strong></h4>",
+                    "text": "<h4><strong>Retention that stays locked in (Technora rope, 950°F rated)</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3178,7 +3178,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Filled with Spex•Lite® 5125H the Delta Zero™ is built to balance stability and recoil management without hauling around a sandbag.</p>",
+                    "text": "<p>High-strength tie-down designed to hold tight under heat and recoil.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
