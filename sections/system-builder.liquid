@@ -10,7 +10,7 @@
 {{ 'system-builder.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
-  assign harness_models = shop.metaobjects.harness_name.values
+  assign harness_models = shop.metaobjects.harness_model.values
   assign harness_types = shop.metaobjects.harness_type.values
   assign harness_accessories = shop.metaobjects.harness_accessory.values
 -%}
