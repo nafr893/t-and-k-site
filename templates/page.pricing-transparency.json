@@ -418,12 +418,42 @@
                     "padding-inline-end": 0
                   },
                   "blocks": {}
+                },
+                "text_FUgCwM": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>Even though our gear costs more upfront, <strong>our gross margins are often smaller </strong>than overseas-made brands. We invest more into materials, labor, and local sourcing, and make <em>less </em>per product than companies importing cheap gear.</p>",
+                    "width": "fit-content",
+                    "max_width": "none",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "border": false,
+                    "background_color": "",
+                    "border_color": "#000000",
+                    "border_weight": 0,
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
                 "text_TKfgKT",
                 "text_Ky9VdW",
-                "image_BNw37y"
+                "image_BNw37y",
+                "text_FUgCwM"
               ]
             }
           },
