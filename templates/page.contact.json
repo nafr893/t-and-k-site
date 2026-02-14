@@ -469,7 +469,7 @@
             "accordion_row_QkCjVK": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What is the return policy?",
+                "heading": "What is the warranty policy?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -478,7 +478,7 @@
                 "text_cHpDTM": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
+                    "text": "<p>Our products are built to last, and we back that with a <strong>lifetime guarantee. </strong>For more details visit our <a href=\"/pages/shipping-policy\" title=\"Shipping and Warranty\">warranty info page</a>. </p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
