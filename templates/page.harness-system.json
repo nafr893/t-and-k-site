@@ -500,7 +500,7 @@
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/Bino_harness_banner.webp",
+        "image_1": "shopify://shop_images/DSC04959-2.webp",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
@@ -529,10 +529,25 @@
         "padding-block-start": 40,
         "padding-block-end": 40
       }
+    },
+    "system_builder_UQLUfP": {
+      "type": "system-builder",
+      "name": "System Builder",
+      "settings": {
+        "heading": "BUILD YOUR HARNESS SYSTEM",
+        "subheading": "",
+        "harness_models_step_title": "1. Choose Your Harness",
+        "harness_accessories_step_title": "2. Add Accessories",
+        "accessories_step_title": "3. Extras",
+        "summary_title": "Your Selection",
+        "total_label": "Total",
+        "add_to_cart_text": "Add All to Cart"
+      }
     }
   },
   "order": [
     "main",
-    "hero_hxtEgW"
+    "hero_hxtEgW",
+    "system_builder_UQLUfP"
   ]
 }
