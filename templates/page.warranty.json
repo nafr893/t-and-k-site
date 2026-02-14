@@ -121,6 +121,18 @@
                   },
                   "blocks": {}
                 },
+                "divider_GizXnG": {
+                  "type": "_divider",
+                  "name": "t:names.divider",
+                  "settings": {
+                    "thickness": 1,
+                    "corner_radius": "square",
+                    "width_percent": 100,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0
+                  },
+                  "blocks": {}
+                },
                 "text_BWyUzk": {
                   "type": "text",
                   "name": "t:names.text",
@@ -182,6 +194,7 @@
               },
               "block_order": [
                 "text_HBYQ4q",
+                "divider_GizXnG",
                 "text_BWyUzk",
                 "text_JMMWBK"
               ]
