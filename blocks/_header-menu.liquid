@@ -134,6 +134,16 @@
                 style="{% render 'submenu-font-styles', settings: block_settings %}"
               >
                 {% assign list_id = 'MegaMenuList-' | append: forloop.index %}
+                {% liquid
+                  assign effective_content_type = menu_content_type
+                  if menu_content_type == 'custom_image_cards' and block_settings.mega_menu_cards_menu_title != blank
+                    assign cards_title_lower = block_settings.mega_menu_cards_menu_title | downcase | strip
+                    assign link_title_lower = link.title | downcase | strip
+                    if link_title_lower != cards_title_lower
+                      assign effective_content_type = 'text'
+                    endif
+                  endif
+                %}
                 <div class="mega-menu section section--full-width-margin section--{{ section.settings.section_width }}">
                   <div
                     class="mega-menu__grid"
@@ -146,7 +156,7 @@
                       grid_columns_count: 5,
                       grid_columns_count_tablet: 4,
                       grid_columns_count_collection_images: 8,
-                      menu_content_type: menu_content_type,
+                      menu_content_type: effective_content_type,
                       content_aspect_ratio: ratio,
                       image_border_radius: image_border_radius,
                       block_settings: block_settings
@@ -911,6 +921,13 @@
         }
       ],
       "default": "collection_images"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_cards_menu_title",
+      "label": "Show cards under menu item",
+      "info": "Enter the exact menu item title (e.g. \"SHOP\"). Leave blank to show cards under all menus.",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
     },
     {
       "type": "header",
