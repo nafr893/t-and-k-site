@@ -96,7 +96,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h3>CONTACT T&K SUPPORT</h3>",
+                    "text": "<h2>DISCOVER OUR COMPANY</h2>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -121,9 +121,91 @@
                   },
                   "blocks": {}
                 },
+                "image_km3jyi": {
+                  "type": "image",
+                  "name": "t:names.image",
+                  "settings": {
+                    "image": "shopify://shop_images/P1122402.jpg",
+                    "link": "",
+                    "image_ratio": "adapt",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_iQf4Gt": {
+                  "type": "text",
+                  "name": "t:names.heading",
+                  "settings": {
+                    "text": "<h4><strong>A FAMILY-OWNED AMERICAN MANUFACTURER</strong></h4>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "border": false,
+                    "background_color": "",
+                    "border_color": "#000000",
+                    "border_weight": 0,
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "text_b6RrNk": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>T & K was founded in 2018 by father-son duo <strong>Tyler and Keith</strong>, built from a shared belief that American manufacturing still matters. Tyler, a Marine Corps Infantry veteran with multiple deployments to Afghanistan, teamed up with his father Keith, who served after being drafted into the Army during the Vietnam War. After nearly five years in law enforcement, Tyler hung up his badge to pursue T & K full time.</p><p>From day one, the company has been rooted in <strong>service, grit, and uncompromising craftsmanship</strong>. T & K proudly employs and contracts local American workers to cut and sew our soft-nylon gear, while sourcing materials from trusted U.S. manufacturers committed to the same standard of quality.</p><p>Every piece of T & K gear is engineered to endure the brutal demands of both the battlefield and the backcountry, delivering unmatched durability, performance, and comfort no matter where your mission takes you.</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "border": false,
+                    "background_color": "",
+                    "border_color": "#000000",
+                    "border_weight": 0,
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
                 "text_JMMWBK": {
                   "type": "text",
                   "name": "t:names.text",
+                  "disabled": true,
                   "settings": {
                     "text": "<p>We’re committed to providing reliable, easy support through the channels listed below. Our team is standing by to help.</p>",
                     "width": "fit-content",
@@ -153,12 +235,16 @@
               },
               "block_order": [
                 "text_HBYQ4q",
+                "image_km3jyi",
+                "text_iQf4Gt",
+                "text_b6RrNk",
                 "text_JMMWBK"
               ]
             },
             "group_BH3UPE": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -293,6 +379,7 @@
             "group_n37zNR": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "content_direction": "column",
                 "vertical_on_mobile": true,
