@@ -101,7 +101,7 @@
         "color_scheme": "scheme-2",
         "background_media": "image",
         "video_position": "cover",
-        "background_image": "{{ collection.metafields.custom.collection_banner_image.value }}",
+        "background_image": "shopify://shop_images/DSC08141.webp",
         "background_image_position": "cover",
         "border": "none",
         "border_width": 1,
@@ -111,6 +111,7 @@
         "overlay_color": "#00000087",
         "overlay_style": "gradient",
         "gradient_direction": "to top",
+        "visibility": "both",
         "padding-block-start": 48,
         "padding-block-end": 28
       }
