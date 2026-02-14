@@ -575,8 +575,8 @@
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
-                "width": "fill",
-                "custom_width": 100,
+                "width": "custom",
+                "custom_width": 30,
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
                 "height": "fit",
@@ -840,7 +840,7 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "visibility": "both",
-        "padding-block-start": 0,
+        "padding-block-start": 60,
         "padding-block-end": 0
       }
     },
