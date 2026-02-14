@@ -111,6 +111,7 @@
         "overlay_color": "#00000087",
         "overlay_style": "gradient",
         "gradient_direction": "to top",
+        "visibility": "both",
         "padding-block-start": 48,
         "padding-block-end": 28
       }

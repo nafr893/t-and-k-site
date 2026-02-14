@@ -1356,7 +1356,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p><strong>B52 SQUADRON LAMINATE</strong></p>",
+                                    "text": "<p><strong>KEVLAR/NOMEX FABRIC</strong></p>",
                                     "width": "fit-content",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1385,7 +1385,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p>Durable, layered composite material engineered for lightweight strength, structure, and long-term wear resistance in hard-use gear.</p>",
+                                    "text": "<p>Rated up to 800°F for exceptional heat retention and durability.</p>",
                                     "width": "100%",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1420,218 +1420,6 @@
                           "block_order": [
                             "group_BMAExp",
                             "group_yrTD6k"
-                          ]
-                        },
-                        "group_YdP8dB": {
-                          "type": "group",
-                          "name": "Feature",
-                          "settings": {
-                            "content_direction": "row",
-                            "vertical_on_mobile": false,
-                            "horizontal_alignment": "space-between",
-                            "vertical_alignment": "flex-start",
-                            "align_baseline": false,
-                            "horizontal_alignment_flex_direction_column": "flex-start",
-                            "vertical_alignment_flex_direction_column": "center",
-                            "gap": 30,
-                            "width": "fill",
-                            "custom_width": 100,
-                            "width_mobile": "fill",
-                            "custom_width_mobile": 100,
-                            "height": "fit",
-                            "custom_height": 100,
-                            "inherit_color_scheme": true,
-                            "color_scheme": "",
-                            "background_media": "none",
-                            "video_position": "cover",
-                            "background_image_position": "cover",
-                            "border": "none",
-                            "border_width": 1,
-                            "border_opacity": 100,
-                            "border_radius": 0,
-                            "toggle_overlay": false,
-                            "overlay_color": "#00000026",
-                            "overlay_style": "solid",
-                            "gradient_direction": "to top",
-                            "link": "",
-                            "open_in_new_tab": false,
-                            "placeholder": "",
-                            "padding-block-start": 15,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {
-                            "group_KeUNMe": {
-                              "type": "group",
-                              "name": "t:names.group",
-                              "settings": {
-                                "content_direction": "column",
-                                "vertical_on_mobile": true,
-                                "horizontal_alignment": "flex-start",
-                                "vertical_alignment": "center",
-                                "align_baseline": false,
-                                "horizontal_alignment_flex_direction_column": "flex-start",
-                                "vertical_alignment_flex_direction_column": "center",
-                                "gap": 12,
-                                "width": "fit-content",
-                                "custom_width": 100,
-                                "width_mobile": "fit-content",
-                                "custom_width_mobile": 100,
-                                "height": "fit",
-                                "custom_height": 100,
-                                "inherit_color_scheme": true,
-                                "color_scheme": "",
-                                "background_media": "none",
-                                "video_position": "cover",
-                                "background_image_position": "cover",
-                                "border": "none",
-                                "border_width": 1,
-                                "border_opacity": 100,
-                                "border_radius": 0,
-                                "toggle_overlay": false,
-                                "overlay_color": "#00000026",
-                                "overlay_style": "solid",
-                                "gradient_direction": "to top",
-                                "link": "",
-                                "open_in_new_tab": false,
-                                "placeholder": "",
-                                "padding-block-start": 0,
-                                "padding-block-end": 0,
-                                "padding-inline-start": 0,
-                                "padding-inline-end": 0
-                              },
-                              "blocks": {
-                                "icon_3HMML8": {
-                                  "type": "icon",
-                                  "name": "t:names.icon",
-                                  "settings": {
-                                    "icon": "price_tag",
-                                    "image_upload": "shopify://shop_images/Rope_Icon_v1.png",
-                                    "width": 30,
-                                    "link": "",
-                                    "open_in_new_tab": false,
-                                    "background_color": "#f5f5f5",
-                                    "border_color": "#767676",
-                                    "border_weight": 1,
-                                    "container_width": 48,
-                                    "container_height": 48
-                                  },
-                                  "blocks": {}
-                                }
-                              },
-                              "block_order": [
-                                "icon_3HMML8"
-                              ]
-                            },
-                            "group_pRVgwN": {
-                              "type": "group",
-                              "name": "t:names.group",
-                              "settings": {
-                                "content_direction": "column",
-                                "vertical_on_mobile": true,
-                                "horizontal_alignment": "flex-start",
-                                "vertical_alignment": "center",
-                                "align_baseline": false,
-                                "horizontal_alignment_flex_direction_column": "flex-start",
-                                "vertical_alignment_flex_direction_column": "center",
-                                "gap": 2,
-                                "width": "fill",
-                                "custom_width": 100,
-                                "width_mobile": "fill",
-                                "custom_width_mobile": 80,
-                                "height": "fit",
-                                "custom_height": 100,
-                                "inherit_color_scheme": true,
-                                "color_scheme": "",
-                                "background_media": "none",
-                                "video_position": "cover",
-                                "background_image_position": "cover",
-                                "border": "none",
-                                "border_width": 1,
-                                "border_opacity": 100,
-                                "border_radius": 0,
-                                "toggle_overlay": false,
-                                "overlay_color": "#00000026",
-                                "overlay_style": "solid",
-                                "gradient_direction": "to top",
-                                "link": "",
-                                "open_in_new_tab": false,
-                                "placeholder": "",
-                                "padding-block-start": 0,
-                                "padding-block-end": 0,
-                                "padding-inline-start": 0,
-                                "padding-inline-end": 0
-                              },
-                              "blocks": {
-                                "text_JFGX8k": {
-                                  "type": "text",
-                                  "name": "t:names.text",
-                                  "settings": {
-                                    "text": "<p><strong>TECHNORA ROPE</strong></p>",
-                                    "width": "fit-content",
-                                    "max_width": "normal",
-                                    "alignment": "left",
-                                    "type_preset": "rte",
-                                    "font": "var(--font-body--family)",
-                                    "font_size": "1rem",
-                                    "line_height": "normal",
-                                    "letter_spacing": "normal",
-                                    "case": "none",
-                                    "wrap": "pretty",
-                                    "color": "var(--color-foreground)",
-                                    "background": false,
-                                    "border": false,
-                                    "background_color": "#00000026",
-                                    "border_color": "#000000",
-                                    "border_weight": 1,
-                                    "corner_radius": 0,
-                                    "padding-block-start": 0,
-                                    "padding-block-end": 0,
-                                    "padding-inline-start": 0,
-                                    "padding-inline-end": 0
-                                  },
-                                  "blocks": {}
-                                },
-                                "text_JYJbeB": {
-                                  "type": "text",
-                                  "name": "t:names.text",
-                                  "settings": {
-                                    "text": "<p>Rated up to 950°F for high-strength retention under heat.</p>",
-                                    "width": "100%",
-                                    "max_width": "normal",
-                                    "alignment": "left",
-                                    "type_preset": "rte",
-                                    "font": "var(--font-body--family)",
-                                    "font_size": "1rem",
-                                    "line_height": "normal",
-                                    "letter_spacing": "normal",
-                                    "case": "none",
-                                    "wrap": "pretty",
-                                    "color": "var(--color-foreground)",
-                                    "background": false,
-                                    "border": false,
-                                    "background_color": "#00000026",
-                                    "border_color": "#000000",
-                                    "border_weight": 1,
-                                    "corner_radius": 0,
-                                    "padding-block-start": 0,
-                                    "padding-block-end": 0,
-                                    "padding-inline-start": 0,
-                                    "padding-inline-end": 0
-                                  },
-                                  "blocks": {}
-                                }
-                              },
-                              "block_order": [
-                                "text_JFGX8k",
-                                "text_JYJbeB"
-                              ]
-                            }
-                          },
-                          "block_order": [
-                            "group_KeUNMe",
-                            "group_pRVgwN"
                           ]
                         },
                         "group_GBbPcE": {
@@ -1719,7 +1507,7 @@
                                   "name": "t:names.icon",
                                   "settings": {
                                     "icon": "price_tag",
-                                    "image_upload": "shopify://shop_images/Carbon_Fiber_Icon_71419f7f-13e9-4dbb-b2bd-07b0c7fabd91.png",
+                                    "image_upload": "shopify://shop_images/Rope_Icon_v1.png",
                                     "width": 30,
                                     "link": "",
                                     "open_in_new_tab": false,
@@ -1780,7 +1568,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p><strong>CARBON FIBER SLEEVE</strong></p>",
+                                    "text": "<p><strong>TECHNORA ROPE</strong></p>",
                                     "width": "fit-content",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1809,7 +1597,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p>Withstands temperatures up to 1800°F for superior suppressor heat protection.</p>",
+                                    "text": "<p>Rated up to 950°F for high-strength retention under heat.</p>",
                                     "width": "100%",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1845,24 +1633,236 @@
                             "group_cm6i6M",
                             "group_MPJtyA"
                           ]
+                        },
+                        "group_3xAtUm": {
+                          "type": "group",
+                          "name": "Feature",
+                          "settings": {
+                            "content_direction": "row",
+                            "vertical_on_mobile": false,
+                            "horizontal_alignment": "space-between",
+                            "vertical_alignment": "flex-start",
+                            "align_baseline": false,
+                            "horizontal_alignment_flex_direction_column": "flex-start",
+                            "vertical_alignment_flex_direction_column": "center",
+                            "gap": 30,
+                            "width": "fill",
+                            "custom_width": 100,
+                            "width_mobile": "fill",
+                            "custom_width_mobile": 100,
+                            "height": "fit",
+                            "custom_height": 100,
+                            "inherit_color_scheme": true,
+                            "color_scheme": "",
+                            "background_media": "none",
+                            "video_position": "cover",
+                            "background_image_position": "cover",
+                            "border": "none",
+                            "border_width": 1,
+                            "border_opacity": 100,
+                            "border_radius": 0,
+                            "toggle_overlay": false,
+                            "overlay_color": "#00000026",
+                            "overlay_style": "solid",
+                            "gradient_direction": "to top",
+                            "link": "",
+                            "open_in_new_tab": false,
+                            "placeholder": "",
+                            "padding-block-start": 15,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {
+                            "group_Y6rCyq": {
+                              "type": "group",
+                              "name": "t:names.group",
+                              "settings": {
+                                "content_direction": "column",
+                                "vertical_on_mobile": true,
+                                "horizontal_alignment": "flex-start",
+                                "vertical_alignment": "center",
+                                "align_baseline": false,
+                                "horizontal_alignment_flex_direction_column": "flex-start",
+                                "vertical_alignment_flex_direction_column": "center",
+                                "gap": 12,
+                                "width": "fit-content",
+                                "custom_width": 100,
+                                "width_mobile": "fit-content",
+                                "custom_width_mobile": 100,
+                                "height": "fit",
+                                "custom_height": 100,
+                                "inherit_color_scheme": true,
+                                "color_scheme": "",
+                                "background_media": "none",
+                                "video_position": "cover",
+                                "background_image_position": "cover",
+                                "border": "none",
+                                "border_width": 1,
+                                "border_opacity": 100,
+                                "border_radius": 0,
+                                "toggle_overlay": false,
+                                "overlay_color": "#00000026",
+                                "overlay_style": "solid",
+                                "gradient_direction": "to top",
+                                "link": "",
+                                "open_in_new_tab": false,
+                                "placeholder": "",
+                                "padding-block-start": 0,
+                                "padding-block-end": 0,
+                                "padding-inline-start": 0,
+                                "padding-inline-end": 0
+                              },
+                              "blocks": {
+                                "icon_NFXJJf": {
+                                  "type": "icon",
+                                  "name": "t:names.icon",
+                                  "settings": {
+                                    "icon": "price_tag",
+                                    "image_upload": "shopify://shop_images/Carbon_Fiber_Icon_71419f7f-13e9-4dbb-b2bd-07b0c7fabd91.png",
+                                    "width": 30,
+                                    "link": "",
+                                    "open_in_new_tab": false,
+                                    "background_color": "#f5f5f5",
+                                    "border_color": "#767676",
+                                    "border_weight": 1,
+                                    "container_width": 48,
+                                    "container_height": 48
+                                  },
+                                  "blocks": {}
+                                }
+                              },
+                              "block_order": [
+                                "icon_NFXJJf"
+                              ]
+                            },
+                            "group_L7PByD": {
+                              "type": "group",
+                              "name": "t:names.group",
+                              "settings": {
+                                "content_direction": "column",
+                                "vertical_on_mobile": true,
+                                "horizontal_alignment": "flex-start",
+                                "vertical_alignment": "center",
+                                "align_baseline": false,
+                                "horizontal_alignment_flex_direction_column": "flex-start",
+                                "vertical_alignment_flex_direction_column": "center",
+                                "gap": 2,
+                                "width": "fill",
+                                "custom_width": 100,
+                                "width_mobile": "fill",
+                                "custom_width_mobile": 80,
+                                "height": "fit",
+                                "custom_height": 100,
+                                "inherit_color_scheme": true,
+                                "color_scheme": "",
+                                "background_media": "none",
+                                "video_position": "cover",
+                                "background_image_position": "cover",
+                                "border": "none",
+                                "border_width": 1,
+                                "border_opacity": 100,
+                                "border_radius": 0,
+                                "toggle_overlay": false,
+                                "overlay_color": "#00000026",
+                                "overlay_style": "solid",
+                                "gradient_direction": "to top",
+                                "link": "",
+                                "open_in_new_tab": false,
+                                "placeholder": "",
+                                "padding-block-start": 0,
+                                "padding-block-end": 0,
+                                "padding-inline-start": 0,
+                                "padding-inline-end": 0
+                              },
+                              "blocks": {
+                                "text_NWgxMA": {
+                                  "type": "text",
+                                  "name": "t:names.text",
+                                  "settings": {
+                                    "text": "<p><strong>CARBON FIBER SLEEVE</strong></p>",
+                                    "width": "fit-content",
+                                    "max_width": "normal",
+                                    "alignment": "left",
+                                    "type_preset": "rte",
+                                    "font": "var(--font-body--family)",
+                                    "font_size": "1rem",
+                                    "line_height": "normal",
+                                    "letter_spacing": "normal",
+                                    "case": "none",
+                                    "wrap": "pretty",
+                                    "color": "var(--color-foreground)",
+                                    "background": false,
+                                    "border": false,
+                                    "background_color": "#00000026",
+                                    "border_color": "#000000",
+                                    "border_weight": 1,
+                                    "corner_radius": 0,
+                                    "padding-block-start": 0,
+                                    "padding-block-end": 0,
+                                    "padding-inline-start": 0,
+                                    "padding-inline-end": 0
+                                  },
+                                  "blocks": {}
+                                },
+                                "text_YFEcc3": {
+                                  "type": "text",
+                                  "name": "t:names.text",
+                                  "settings": {
+                                    "text": "<p>Withstands temperatures up to 1800°F for superior suppressor heat protection.</p>",
+                                    "width": "100%",
+                                    "max_width": "normal",
+                                    "alignment": "left",
+                                    "type_preset": "rte",
+                                    "font": "var(--font-body--family)",
+                                    "font_size": "1rem",
+                                    "line_height": "normal",
+                                    "letter_spacing": "normal",
+                                    "case": "none",
+                                    "wrap": "pretty",
+                                    "color": "var(--color-foreground)",
+                                    "background": false,
+                                    "border": false,
+                                    "background_color": "#00000026",
+                                    "border_color": "#000000",
+                                    "border_weight": 1,
+                                    "corner_radius": 0,
+                                    "padding-block-start": 0,
+                                    "padding-block-end": 0,
+                                    "padding-inline-start": 0,
+                                    "padding-inline-end": 0
+                                  },
+                                  "blocks": {}
+                                }
+                              },
+                              "block_order": [
+                                "text_NWgxMA",
+                                "text_YFEcc3"
+                              ]
+                            }
+                          },
+                          "block_order": [
+                            "group_Y6rCyq",
+                            "group_L7PByD"
+                          ]
                         }
                       },
                       "block_order": [
                         "group_Jp8y3X",
-                        "group_YdP8dB",
-                        "group_GBbPcE"
+                        "group_GBbPcE",
+                        "group_3xAtUm"
                       ]
                     },
-                    "accordion_row_njCVXp": {
+                    "accordion_row_nfzyeB": {
                       "type": "_accordion-row",
                       "settings": {
                         "heading": "QUICK SPECS",
-                        "open_by_default": true,
+                        "open_by_default": false,
                         "icon": "none",
                         "width": 20
                       },
                       "blocks": {
-                        "group_LK3LkD": {
+                        "group_BQDmbP": {
                           "type": "group",
                           "name": "t:names.group",
                           "disabled": true,
@@ -1903,7 +1903,7 @@
                             "padding-inline-end": 0
                           },
                           "blocks": {
-                            "group_J7j6pT": {
+                            "group_hJHTpn": {
                               "type": "group",
                               "name": "t:names.group",
                               "settings": {
@@ -1943,7 +1943,7 @@
                                 "padding-inline-end": 0
                               },
                               "blocks": {
-                                "text_PB7gr6": {
+                                "text_T867Bn": {
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
@@ -1974,10 +1974,10 @@
                                 }
                               },
                               "block_order": [
-                                "text_PB7gr6"
+                                "text_T867Bn"
                               ]
                             },
-                            "group_Nrc68V": {
+                            "group_i8HHCX": {
                               "type": "group",
                               "name": "t:names.group",
                               "settings": {
@@ -2017,7 +2017,7 @@
                                 "padding-inline-end": 0
                               },
                               "blocks": {
-                                "text_AnAYEg": {
+                                "text_kBkN6x": {
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
@@ -2048,16 +2048,16 @@
                                 }
                               },
                               "block_order": [
-                                "text_AnAYEg"
+                                "text_kBkN6x"
                               ]
                             }
                           },
                           "block_order": [
-                            "group_J7j6pT",
-                            "group_Nrc68V"
+                            "group_hJHTpn",
+                            "group_i8HHCX"
                           ]
                         },
-                        "group_QmCqtG": {
+                        "group_N3yHTB": {
                           "type": "group",
                           "name": "t:names.group",
                           "settings": {
@@ -2098,10 +2098,10 @@
                           },
                           "blocks": {}
                         },
-                        "text_atJYRb": {
+                        "text_RFeBbn": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Use:</strong> Bolt-action rifles, low rate of fire</p><p><strong>Primary benefits: </strong>Mirage reduction, heat protection, environmental shielding</p><p><strong>Materials: </strong>High-temp carbon fiber + high-temp rope + B52 Squadron laminate</p><p><strong>Made in: </strong>USA (hand crafted)</p><p><strong>Lead time note:</strong> Allow 1–2 weeks for shipment (production lead time)</p>",
+                            "text": "<p><strong>Use: </strong>Range + field</p><p><strong>Heat stack: </strong>Carbon fiber sleeve (up to 1800°F) + Kevlar/Nomex (up to 800°F) + Technora retention (up to 950°F)</p><p><strong>Real-world firing schedule rating: </strong>600°F+</p><p><strong>Platform:</strong> Semi-auto + full-auto capable</p><p><strong>Primary benefits: </strong>Heat protection, mirage reduction, suppressor protection, stable retention</p><p><strong>Made in: </strong>USA</p><p><strong>Lead time note: </strong>Hand crafted item, allow 1–2 weeks for shipment (production lead time)</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
@@ -2128,297 +2128,16 @@
                         }
                       },
                       "block_order": [
-                        "group_LK3LkD",
-                        "group_QmCqtG",
-                        "text_atJYRb"
-                      ]
-                    },
-                    "accordion_row_j7dTRb": {
-                      "type": "_accordion-row",
-                      "settings": {
-                        "heading": "FITMENT GUIDELINES",
-                        "open_by_default": true,
-                        "icon": "none",
-                        "width": 20
-                      },
-                      "blocks": {
-                        "group_Lp3Txd": {
-                          "type": "group",
-                          "name": "t:names.group",
-                          "disabled": true,
-                          "settings": {
-                            "content_direction": "row",
-                            "vertical_on_mobile": false,
-                            "horizontal_alignment": "flex-start",
-                            "vertical_alignment": "center",
-                            "align_baseline": false,
-                            "horizontal_alignment_flex_direction_column": "flex-start",
-                            "vertical_alignment_flex_direction_column": "center",
-                            "gap": 10,
-                            "width": "fill",
-                            "custom_width": 100,
-                            "width_mobile": "custom",
-                            "custom_width_mobile": 60,
-                            "height": "fit",
-                            "custom_height": 100,
-                            "inherit_color_scheme": true,
-                            "color_scheme": "",
-                            "background_media": "none",
-                            "video_position": "cover",
-                            "background_image_position": "cover",
-                            "border": "none",
-                            "border_width": 1,
-                            "border_opacity": 100,
-                            "border_radius": 0,
-                            "toggle_overlay": false,
-                            "overlay_color": "#00000026",
-                            "overlay_style": "solid",
-                            "gradient_direction": "to top",
-                            "link": "",
-                            "open_in_new_tab": false,
-                            "placeholder": "",
-                            "padding-block-start": 5,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {
-                            "group_6YxWPH": {
-                              "type": "group",
-                              "name": "t:names.group",
-                              "settings": {
-                                "content_direction": "column",
-                                "vertical_on_mobile": true,
-                                "horizontal_alignment": "flex-start",
-                                "vertical_alignment": "center",
-                                "align_baseline": false,
-                                "horizontal_alignment_flex_direction_column": "flex-start",
-                                "vertical_alignment_flex_direction_column": "center",
-                                "gap": 12,
-                                "width": "fit-content",
-                                "custom_width": 100,
-                                "width_mobile": "fit-content",
-                                "custom_width_mobile": 100,
-                                "height": "fit",
-                                "custom_height": 100,
-                                "inherit_color_scheme": true,
-                                "color_scheme": "",
-                                "background_media": "none",
-                                "video_position": "cover",
-                                "background_image_position": "cover",
-                                "border": "none",
-                                "border_width": 1,
-                                "border_opacity": 100,
-                                "border_radius": 0,
-                                "toggle_overlay": false,
-                                "overlay_color": "#00000026",
-                                "overlay_style": "solid",
-                                "gradient_direction": "to top",
-                                "link": "",
-                                "open_in_new_tab": false,
-                                "placeholder": "",
-                                "padding-block-start": 0,
-                                "padding-block-end": 0,
-                                "padding-inline-start": 0,
-                                "padding-inline-end": 0
-                              },
-                              "blocks": {
-                                "text_9NphmW": {
-                                  "type": "text",
-                                  "name": "t:names.text",
-                                  "settings": {
-                                    "text": "<p><strong>Best Used For:</strong></p>",
-                                    "width": "fit-content",
-                                    "max_width": "normal",
-                                    "alignment": "left",
-                                    "type_preset": "rte",
-                                    "font": "var(--font-body--family)",
-                                    "font_size": "1rem",
-                                    "line_height": "normal",
-                                    "letter_spacing": "normal",
-                                    "case": "none",
-                                    "wrap": "pretty",
-                                    "color": "var(--color-foreground)",
-                                    "background": false,
-                                    "border": false,
-                                    "background_color": "",
-                                    "border_color": "#000000",
-                                    "border_weight": 0,
-                                    "corner_radius": 0,
-                                    "padding-block-start": 0,
-                                    "padding-block-end": 0,
-                                    "padding-inline-start": 0,
-                                    "padding-inline-end": 0
-                                  },
-                                  "blocks": {}
-                                }
-                              },
-                              "block_order": [
-                                "text_9NphmW"
-                              ]
-                            },
-                            "group_9XXLrM": {
-                              "type": "group",
-                              "name": "t:names.group",
-                              "settings": {
-                                "content_direction": "column",
-                                "vertical_on_mobile": true,
-                                "horizontal_alignment": "flex-start",
-                                "vertical_alignment": "center",
-                                "align_baseline": false,
-                                "horizontal_alignment_flex_direction_column": "flex-start",
-                                "vertical_alignment_flex_direction_column": "center",
-                                "gap": 12,
-                                "width": "fill",
-                                "custom_width": 100,
-                                "width_mobile": "fill",
-                                "custom_width_mobile": 100,
-                                "height": "fit",
-                                "custom_height": 100,
-                                "inherit_color_scheme": true,
-                                "color_scheme": "",
-                                "background_media": "none",
-                                "video_position": "cover",
-                                "background_image_position": "cover",
-                                "border": "none",
-                                "border_width": 1,
-                                "border_opacity": 100,
-                                "border_radius": 0,
-                                "toggle_overlay": false,
-                                "overlay_color": "#00000026",
-                                "overlay_style": "solid",
-                                "gradient_direction": "to top",
-                                "link": "",
-                                "open_in_new_tab": false,
-                                "placeholder": "",
-                                "padding-block-start": 0,
-                                "padding-block-end": 0,
-                                "padding-inline-start": 0,
-                                "padding-inline-end": 0
-                              },
-                              "blocks": {
-                                "text_Pgpkxr": {
-                                  "type": "text",
-                                  "name": "t:names.text",
-                                  "settings": {
-                                    "text": "<p><strong>{{ closest.product.metafields.custom.product_used_case.value }}</strong></p>",
-                                    "width": "fit-content",
-                                    "max_width": "normal",
-                                    "alignment": "left",
-                                    "type_preset": "custom",
-                                    "font": "var(--font-body--family)",
-                                    "font_size": "0.75rem",
-                                    "line_height": "normal",
-                                    "letter_spacing": "normal",
-                                    "case": "uppercase",
-                                    "wrap": "pretty",
-                                    "color": "var(--color-foreground)",
-                                    "background": true,
-                                    "border": false,
-                                    "background_color": "#ededed",
-                                    "border_color": "#000000",
-                                    "border_weight": 0,
-                                    "corner_radius": 0,
-                                    "padding-block-start": 0,
-                                    "padding-block-end": 0,
-                                    "padding-inline-start": 10,
-                                    "padding-inline-end": 10
-                                  },
-                                  "blocks": {}
-                                }
-                              },
-                              "block_order": [
-                                "text_Pgpkxr"
-                              ]
-                            }
-                          },
-                          "block_order": [
-                            "group_6YxWPH",
-                            "group_9XXLrM"
-                          ]
-                        },
-                        "group_YHeyUV": {
-                          "type": "group",
-                          "name": "t:names.group",
-                          "settings": {
-                            "content_direction": "column",
-                            "vertical_on_mobile": true,
-                            "horizontal_alignment": "flex-start",
-                            "vertical_alignment": "center",
-                            "align_baseline": false,
-                            "horizontal_alignment_flex_direction_column": "flex-start",
-                            "vertical_alignment_flex_direction_column": "center",
-                            "gap": 12,
-                            "width": "fill",
-                            "custom_width": 100,
-                            "width_mobile": "fill",
-                            "custom_width_mobile": 100,
-                            "height": "fit",
-                            "custom_height": 100,
-                            "inherit_color_scheme": true,
-                            "color_scheme": "",
-                            "background_media": "none",
-                            "video_position": "cover",
-                            "background_image_position": "cover",
-                            "border": "none",
-                            "border_width": 1,
-                            "border_opacity": 100,
-                            "border_radius": 0,
-                            "toggle_overlay": false,
-                            "overlay_color": "#00000026",
-                            "overlay_style": "solid",
-                            "gradient_direction": "to top",
-                            "link": "",
-                            "open_in_new_tab": false,
-                            "placeholder": "",
-                            "padding-block-start": 16,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        },
-                        "text_RhFG8a": {
-                          "type": "text",
-                          "settings": {
-                            "text": "<p>Designed for bolt-action rifles and low-rate-of-fire applications</p><p></p><p>Not intended for semi-automatic or full-automatic firing schedules</p><p></p><p>Semi-auto or full-auto use requires the X Tango™ Xtreme Temp Suppressor Cover</p><p></p><p>Cover must not overlap any portion of a muzzle brake or muzzle device</p><p></p><p>Leaving a small portion of the suppressor exposed at the muzzle end is recommended</p>",
-                            "width": "100%",
-                            "max_width": "normal",
-                            "alignment": "left",
-                            "type_preset": "rte",
-                            "font": "var(--font-body--family)",
-                            "font_size": "1rem",
-                            "line_height": "normal",
-                            "letter_spacing": "normal",
-                            "case": "none",
-                            "wrap": "pretty",
-                            "color": "var(--color-foreground)",
-                            "background": false,
-                            "border": false,
-                            "background_color": "#00000026",
-                            "border_color": "#000000",
-                            "border_weight": 1,
-                            "corner_radius": 0,
-                            "padding-block-start": 0,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {}
-                        }
-                      },
-                      "block_order": [
-                        "group_Lp3Txd",
-                        "group_YHeyUV",
-                        "text_RhFG8a"
+                        "group_BQDmbP",
+                        "group_N3yHTB",
+                        "text_RFeBbn"
                       ]
                     }
                   },
                   "block_order": [
                     "accordion_row_GcM8te",
                     "accordion_row_MyCUGW",
-                    "accordion_row_njCVXp",
-                    "accordion_row_j7dTRb"
+                    "accordion_row_nfzyeB"
                   ]
                 }
               },
@@ -2579,7 +2298,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC05576.webp",
+                    "image": "shopify://shop_images/DSC05571.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2602,7 +2321,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4>Mirage mitigation for precision shooting</h4>",
+                    "text": "<h4><strong>Extreme heat protection (1800°F carbon fiber sleeve)</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2631,7 +2350,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Keeps heat shimmer off your sight picture so you can spot impacts and stay on your dope.</p>",
+                    "text": "<p>Built to handle real heat so your cover doesn’t become the weak link.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2707,7 +2426,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC08111.webp",
+                    "image": "shopify://shop_images/DSC08182.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2730,7 +2449,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4>Safer handling</h4>",
+                    "text": "<h4><strong>Mirage reduction</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2759,7 +2478,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Helps protect your hands and gear when you’re moving rifles, swapping positions, or packing up.</p>",
+                    "text": "<p>Helps cut heat distortion so you can keep a cleaner sight picture through longer strings.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2835,7 +2554,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC08139.webp",
+                    "image": "shopify://shop_images/DSC05562.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2858,7 +2577,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4>Built for bolt guns (snug, stable fit)</h4>",
+                    "text": "<h4><strong>Retention that stays locked in (Technora rope, 950°F rated)</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2887,7 +2606,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Designed around low-rate-of-fire use so it stays secure without being overbuilt for the wrong job.</p>",
+                    "text": "<p>High-strength tie-down designed to hold tight under heat and recoil.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2940,7 +2659,7 @@
         "vertical_alignment": "center",
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "flex-start",
         "gap": 24,
         "section_width": "page-width",
         "section_height": "small",
@@ -2969,7 +2688,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05576.webp",
+            "image_1": "shopify://shop_images/DSC05571.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -3074,7 +2793,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h4>Mirage mitigation for precision shooting</h4>",
+                        "text": "<h4><strong>Extreme heat protection (1800°F carbon fiber sleeve)</strong></h4>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -3160,7 +2879,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Keeps heat shimmer off your sight picture so you can spot impacts and stay on your dope.</p>",
+                        "text": "<p>Built to handle real heat so your cover doesn’t become the weak link.</p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -3206,7 +2925,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC08111.webp",
+            "image_1": "shopify://shop_images/DSC08182_6a234785-9e78-4d2d-96b5-4fe62efa9f3c.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -3271,7 +2990,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h5>SAFER HANDLING</h5>",
+                    "text": "<h4><strong>Mirage reduction</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3312,7 +3031,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Helps protect your hands and gear when you’re moving rifles, swapping positions, or packing up.</p>",
+                    "text": "<p>Helps cut heat distortion so you can keep a cleaner sight picture through longer strings.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3349,11 +3068,11 @@
             "group_iJjPBw"
           ]
         },
-        "slide_jFGpJw": {
+        "slide_jKyYEh": {
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC08158_40259744-05a8-4386-b375-44be90a29412.webp",
+            "image_1": "shopify://shop_images/DSC05562.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -3374,7 +3093,7 @@
             "padding-inline-end": 20
           },
           "blocks": {
-            "group_fGMQPb": {
+            "group_qCrLTP": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
@@ -3414,11 +3133,11 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "text_T79dhA": {
+                "text_rbPG4E": {
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4>Built for bolt guns (snug, stable fit)</h4>",
+                    "text": "<h4><strong>Retention that stays locked in (Technora rope, 950°F rated)</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3443,7 +3162,7 @@
                   },
                   "blocks": {}
                 },
-                "divider_QNRC98": {
+                "divider_cy3gpC": {
                   "type": "_divider",
                   "name": "t:names.divider",
                   "settings": {
@@ -3455,11 +3174,11 @@
                   },
                   "blocks": {}
                 },
-                "text_4pcNxe": {
+                "text_eBjrgT": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Designed around low-rate-of-fire use so it stays secure without being overbuilt for the wrong job.</p>",
+                    "text": "<p>High-strength tie-down designed to hold tight under heat and recoil.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3486,21 +3205,21 @@
                 }
               },
               "block_order": [
-                "text_T79dhA",
-                "divider_QNRC98",
-                "text_4pcNxe"
+                "text_rbPG4E",
+                "divider_cy3gpC",
+                "text_eBjrgT"
               ]
             }
           },
           "block_order": [
-            "group_fGMQPb"
+            "group_qCrLTP"
           ]
         }
       },
       "block_order": [
         "slide_w9aiBj",
         "slide_J4bRgz",
-        "slide_jFGpJw"
+        "slide_jKyYEh"
       ],
       "name": "Slideshow: Mobile",
       "settings": {
@@ -3520,6 +3239,20 @@
         "visibility": "mobile_only",
         "padding-block-start": 0,
         "padding-block-end": 0
+      }
+    },
+    "divider_VFdgXn": {
+      "type": "divider",
+      "name": "t:names.divider_section",
+      "settings": {
+        "color_scheme": "",
+        "section_width": "page-width",
+        "thickness": 1,
+        "corner_radius": "square",
+        "width_percent": 100,
+        "alignment_horizontal": "center",
+        "padding-block-start": 16,
+        "padding-block-end": 16
       }
     },
     "section_9LAr7E": {
@@ -3560,7 +3293,7 @@
           "name": "t:names.video",
           "settings": {
             "source": "url",
-            "video_url": "https://www.youtube.com/watch?v=OEhe9atiB7k",
+            "video_url": "https://www.youtube.com/watch?v=Vd2MAnHD-48&list=TLGGuwmX2VAxPcEyNzAxMjAyNg",
             "video_autoplay": false,
             "video_loop": true,
             "alt": "",
@@ -3675,6 +3408,7 @@
         "video_KXiw6e",
         "group_tLHtMc"
       ],
+      "disabled": true,
       "name": "t:names.video_section",
       "settings": {
         "content_direction": "column",
@@ -3753,10 +3487,10 @@
         "padding-block-end": 0
       }
     },
-    "section_6gQFfh": {
+    "section_mbH3bM": {
       "type": "section",
       "blocks": {
-        "text_gkBdBg": {
+        "text_9iBdBU": {
           "type": "text",
           "name": "t:names.heading",
           "settings": {
@@ -3785,7 +3519,7 @@
           },
           "blocks": {}
         },
-        "accordion_VWTxqU": {
+        "accordion_b6LkkN": {
           "type": "accordion",
           "name": "t:names.accordion",
           "settings": {
@@ -3804,19 +3538,19 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "accordion_row_aUmLMD": {
+            "accordion_row_ryQ9Td": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Is the Kilo suppressor cover good for bolt-action rifles?",
+                "heading": "Is the X Tango suppressor cover full-auto rated?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
               },
               "blocks": {
-                "text_HekCeb": {
+                "text_PFfBBg": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Yes, this cover is engineered specifically for bolt-action rifles and low-rate-of-fire use.</p>",
+                    "text": "<p>Yes. It’s designed for hard use, including semi-auto and full-auto platforms.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3843,22 +3577,22 @@
                 }
               },
               "block_order": [
-                "text_HekCeb"
+                "text_PFfBBg"
               ]
             },
-            "accordion_row_tHVJcC": {
+            "accordion_row_XE9tYL": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Can I use the Kilo on a semi-auto rifle?",
+                "heading": "What temperature is it rated for?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
               },
               "blocks": {
-                "text_pccJ7g": {
+                "text_GYYtLC": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>It’s not intended for semi-auto or full-auto firing schedules. For that use, T&K recommends the X Tango™ Xtreme Temp Suppressor Cover.</p>",
+                    "text": "<p>Material ratings: carbon fiber sleeve up to 1800°F, Kevlar/Nomex up to 800°F, Technora rope up to 950°F.</p><p>Use guidance: it’s built to withstand 600°F+ during real-world firing schedules.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3885,24 +3619,24 @@
                 }
               },
               "block_order": [
-                "text_pccJ7g"
+                "text_GYYtLC"
               ]
             },
-            "accordion_row_igNcF3": {
+            "accordion_row_HdqWcD": {
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "What does a suppressor cover do for mirage?",
+                "heading": "Does it reduce heat mirage?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
               },
               "blocks": {
-                "text_WJ9yLe": {
+                "text_JyDwVr": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>It helps reduce heat shimmer coming off a hot suppressor so you can maintain a clearer sight picture.</p>",
+                    "text": "<p>Yes, mirage reduction is one of the main reasons to run this cover, especially when the suppressor heats up.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3929,24 +3663,24 @@
                 }
               },
               "block_order": [
-                "text_WJ9yLe"
+                "text_JyDwVr"
               ]
             },
-            "accordion_row_4Cqjdb": {
+            "accordion_row_74RWF7": {
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Should the cover overlap my muzzle brake?",
+                "heading": "Can I rapid fire with it on?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
               },
               "blocks": {
-                "text_rVKCXz": {
+                "text_BC7K7N": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>No. The cover must not overlap any portion of a muzzle brake or muzzle device. Leave a small portion of the suppressor exposed at the muzzle end.</p>",
+                    "text": "<p>For rapid fire beyond ~60 rounds without cooldown, the guidance is to remove the cover.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3973,24 +3707,24 @@
                 }
               },
               "block_order": [
-                "text_rVKCXz"
+                "text_BC7K7N"
               ]
             },
-            "accordion_row_7zc43y": {
+            "accordion_row_7rzepm": {
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Where is it made?",
+                "heading": "Is it made in the USA?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
               },
               "blocks": {
-                "text_HCNRFc": {
+                "text_wrFYF3": {
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>This is a hand crafted USA item.</p>",
+                    "text": "<p>Yes, this is a hand crafted USA item.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -4017,22 +3751,22 @@
                 }
               },
               "block_order": [
-                "text_HCNRFc"
+                "text_wrFYF3"
               ]
             }
           },
           "block_order": [
-            "accordion_row_aUmLMD",
-            "accordion_row_tHVJcC",
-            "accordion_row_igNcF3",
-            "accordion_row_4Cqjdb",
-            "accordion_row_7zc43y"
+            "accordion_row_ryQ9Td",
+            "accordion_row_XE9tYL",
+            "accordion_row_HdqWcD",
+            "accordion_row_74RWF7",
+            "accordion_row_7rzepm"
           ]
         }
       },
       "block_order": [
-        "text_gkBdBg",
-        "accordion_VWTxqU"
+        "text_9iBdBU",
+        "accordion_b6LkkN"
       ],
       "name": "t:names.faq_section",
       "settings": {
@@ -4385,9 +4119,10 @@
     "main",
     "section_ATHgTf",
     "slideshow_Erb898",
+    "divider_VFdgXn",
     "section_9LAr7E",
     "176955356472b05daa",
-    "section_6gQFfh",
+    "section_mbH3bM",
     "product_recommendations_qggXJq",
     "hero_fBGAdf"
   ]
