@@ -200,7 +200,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h5>HOURS<br/>Monday - Friday<br/>8AM - 5PM Mountain Time</h5>",
+                    "text": "<p><strong>HOURS<br/>Monday - Friday<br/>8AM - 5PM Mountain Time</strong></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -229,7 +229,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h5>PHONE<br/>605-877-4561</h5>",
+                    "text": "<p><strong>PHONE<br/>605-877-4561</strong></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -258,7 +258,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<h5>EMAIL<br/>customerservice@tandkhunting.com</h5>",
+                    "text": "<p><strong>EMAIL<br/>customerservice@tandkhunting.com</strong></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
