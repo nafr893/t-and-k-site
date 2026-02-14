@@ -1,0 +1,613 @@
+/**
+ * System Builder Web Component — Harness Configurator
+ * A simplified product configurator for harness models and accessories.
+ */
+class SystemBuilder extends HTMLElement {
+  constructor() {
+    super();
+
+    // Track active accessory chip handles
+    this.activeAccessories = new Set();
+
+    // Track which products are selected for cart (keyed by variant ID)
+    // Format: { variantId: { id, title, price, image, productTitle, productType, available, quantity } }
+    this.selectedProducts = {};
+
+    // Data storage
+    this.data = {
+      harnessModels: [],
+      harnessAccessories: [],
+      accessories: []
+    };
+  }
+
+  connectedCallback() {
+    this.loadData();
+    this.bindEvents();
+    this.initializeState();
+  }
+
+  /**
+   * Load metaobject data from embedded JSON
+   */
+  loadData() {
+    const harnessModelsEl = this.querySelector('[data-harness-models]');
+    const harnessAccessoriesEl = this.querySelector('[data-harness-accessories]');
+    const accessoriesEl = this.querySelector('[data-accessories]');
+
+    try {
+      this.data.harnessModels = harnessModelsEl ? JSON.parse(harnessModelsEl.textContent) : [];
+      this.data.harnessAccessories = harnessAccessoriesEl ? JSON.parse(harnessAccessoriesEl.textContent) : [];
+      this.data.accessories = accessoriesEl ? JSON.parse(accessoriesEl.textContent) : [];
+    } catch (e) {
+      console.error('System Builder: Error parsing data', e);
+    }
+  }
+
+  /**
+   * Bind event listeners
+   */
+  bindEvents() {
+    this.addEventListener('click', (e) => {
+      const chip = e.target.closest('[data-chip]');
+      if (chip) {
+        this.handleChipClick(chip);
+        return;
+      }
+
+      const productCard = e.target.closest('[data-product-card]');
+      if (productCard) {
+        this.handleProductCardClick(productCard);
+        return;
+      }
+
+      const addToCartBtn = e.target.closest('[data-add-to-cart]');
+      if (addToCartBtn) {
+        this.handleAddToCart(addToCartBtn);
+        return;
+      }
+
+      const removeBtn = e.target.closest('[data-summary-remove]');
+      if (removeBtn) {
+        this.handleRemoveFromSummary(removeBtn);
+        return;
+      }
+
+      const quantityIncreaseBtn = e.target.closest('[data-quantity-increase]');
+      if (quantityIncreaseBtn) {
+        this.handleQuantityChange(quantityIncreaseBtn.dataset.quantityIncrease, 1);
+        return;
+      }
+
+      const quantityDecreaseBtn = e.target.closest('[data-quantity-decrease]');
+      if (quantityDecreaseBtn) {
+        this.handleQuantityChange(quantityDecreaseBtn.dataset.quantityDecrease, -1);
+        return;
+      }
+    });
+
+    // Keyboard support for product cards
+    this.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        const productCard = e.target.closest('[data-product-card]');
+        if (productCard) {
+          e.preventDefault();
+          this.handleProductCardClick(productCard);
+        }
+      }
+    });
+  }
+
+  /**
+   * Initialize state — display all initial content
+   */
+  initializeState() {
+    this.displayHarnessModels();
+
+    if (this.data.accessories.length > 0) {
+      this.displayBlockAccessories();
+    }
+
+    this.updateSummary();
+  }
+
+  /**
+   * Display harness model product cards immediately
+   */
+  displayHarnessModels() {
+    const grid = this.querySelector('[data-harness-models-grid]');
+    if (!grid) return;
+
+    // Collect all variants from all harness models
+    const allVariants = [];
+    this.data.harnessModels.forEach(model => {
+      if (model.variants) {
+        model.variants.forEach(v => allVariants.push(v));
+      }
+    });
+
+    if (allVariants.length === 0) {
+      grid.innerHTML = '<p class="system-builder__empty-message">No harness models configured.</p>';
+      return;
+    }
+
+    grid.innerHTML = allVariants.map(variant => this.renderProductCard(variant, 'harness-model')).join('');
+  }
+
+  /**
+   * Handle chip click — toggle behavior for harness accessories
+   */
+  handleChipClick(chip) {
+    const field = chip.dataset.field;
+    const value = chip.dataset.value;
+
+    if (field !== 'harness-accessory') return;
+
+    // Toggle chip selection (multiple can be active)
+    const isSelected = chip.classList.contains('system-builder__chip--selected');
+
+    if (isSelected) {
+      chip.classList.remove('system-builder__chip--selected');
+      chip.setAttribute('aria-pressed', 'false');
+      this.activeAccessories.delete(value);
+      this.removeAccessoryCards(value);
+    } else {
+      chip.classList.add('system-builder__chip--selected');
+      chip.setAttribute('aria-pressed', 'true');
+      this.activeAccessories.add(value);
+      this.addAccessoryCards(value);
+    }
+
+    this.updateSummary();
+  }
+
+  /**
+   * Add product cards for an accessory to the grid
+   */
+  addAccessoryCards(handle) {
+    const grid = this.querySelector('[data-harness-accessories-grid]');
+    if (!grid) return;
+
+    const accessory = this.data.harnessAccessories.find(a => a.handle === handle);
+    if (!accessory || !accessory.variants) return;
+
+    const html = accessory.variants.map(variant =>
+      `<div data-accessory-group="${handle}">${this.renderProductCard(variant, 'harness-accessory')}</div>`
+    ).join('');
+
+    grid.insertAdjacentHTML('beforeend', html);
+  }
+
+  /**
+   * Remove product cards for an accessory from the grid
+   */
+  removeAccessoryCards(handle) {
+    const grid = this.querySelector('[data-harness-accessories-grid]');
+    if (!grid) return;
+
+    // Deselect any selected products from this accessory before removing
+    const cards = grid.querySelectorAll(`[data-accessory-group="${handle}"] [data-product-card]`);
+    cards.forEach(card => {
+      const variantId = card.dataset.variantId;
+      if (variantId && this.selectedProducts[variantId]) {
+        delete this.selectedProducts[variantId];
+      }
+    });
+
+    // Remove the card containers
+    grid.querySelectorAll(`[data-accessory-group="${handle}"]`).forEach(el => el.remove());
+  }
+
+  /**
+   * Display block accessories
+   */
+  displayBlockAccessories() {
+    const grid = this.querySelector('[data-accessories-grid]');
+    if (!grid) return;
+
+    grid.innerHTML = this.data.accessories.map(accessory =>
+      this.renderProductCard(accessory, 'accessory')
+    ).join('');
+  }
+
+  /**
+   * Handle product card click — toggle selection
+   */
+  handleProductCardClick(card) {
+    const isAvailable = card.dataset.available !== 'false';
+    if (!isAvailable) return;
+
+    const variantId = card.dataset.variantId;
+    const productType = card.dataset.productType;
+    if (!variantId || !productType) return;
+
+    // Find the product data
+    let productData = null;
+
+    if (productType === 'harness-model') {
+      for (const model of this.data.harnessModels) {
+        productData = model.variants?.find(v => String(v.id) === String(variantId));
+        if (productData) break;
+      }
+    } else if (productType === 'harness-accessory') {
+      for (const acc of this.data.harnessAccessories) {
+        productData = acc.variants?.find(v => String(v.id) === String(variantId));
+        if (productData) break;
+      }
+    } else if (productType === 'accessory') {
+      productData = this.data.accessories.find(a => String(a.id) === String(variantId));
+    }
+
+    // Toggle selection
+    if (this.selectedProducts[variantId]) {
+      delete this.selectedProducts[variantId];
+    } else if (productData) {
+      this.selectedProducts[variantId] = {
+        ...productData,
+        productType,
+        quantity: 1
+      };
+    }
+
+    const isSelected = !!this.selectedProducts[variantId];
+    card.classList.toggle('system-builder__product-card--selected', isSelected);
+    card.setAttribute('aria-pressed', isSelected);
+
+    this.updateSummary();
+  }
+
+  /**
+   * Handle remove button click in summary
+   */
+  handleRemoveFromSummary(button) {
+    const variantId = button.dataset.summaryRemove;
+    if (!variantId || !this.selectedProducts[variantId]) return;
+
+    delete this.selectedProducts[variantId];
+
+    this.querySelectorAll(`[data-product-card][data-variant-id="${variantId}"]`).forEach(card => {
+      card.classList.remove('system-builder__product-card--selected');
+      card.setAttribute('aria-pressed', 'false');
+    });
+
+    this.updateSummary();
+  }
+
+  /**
+   * Handle quantity change in summary
+   */
+  handleQuantityChange(variantId, delta) {
+    if (!variantId || !this.selectedProducts[variantId]) return;
+
+    const product = this.selectedProducts[variantId];
+    const newQuantity = (product.quantity || 1) + delta;
+
+    if (newQuantity <= 0) {
+      delete this.selectedProducts[variantId];
+
+      this.querySelectorAll(`[data-product-card][data-variant-id="${variantId}"]`).forEach(card => {
+        card.classList.remove('system-builder__product-card--selected');
+        card.setAttribute('aria-pressed', 'false');
+      });
+    } else {
+      product.quantity = newQuantity;
+    }
+
+    this.updateSummary();
+  }
+
+  /**
+   * Render a product card HTML string
+   */
+  renderProductCard(variantData, productType) {
+    const imageUrl = variantData.image ? this.getImageUrl(variantData.image, 200) : '';
+    const price = this.formatMoney(variantData.price);
+    const displayTitle = variantData.productTitle
+      ? (variantData.title && variantData.title !== 'Default Title'
+          ? `${variantData.productTitle} - ${variantData.title}`
+          : variantData.productTitle)
+      : variantData.title || 'Product';
+
+    const isSelected = !!this.selectedProducts[variantData.id];
+    const isAvailable = variantData.available !== false;
+    const outOfStockClass = !isAvailable ? ' system-builder__product-card--out-of-stock' : '';
+
+    return `
+      <div class="system-builder__product-card${isSelected ? ' system-builder__product-card--selected' : ''}${outOfStockClass}"
+           data-product-card
+           data-product-type="${productType}"
+           data-variant-id="${variantData.id}"
+           data-available="${isAvailable}"
+           role="button"
+           tabindex="0"
+           aria-pressed="${isSelected}"
+           aria-label="Click to ${isSelected ? 'remove from' : 'add to'} your system: ${displayTitle}${!isAvailable ? ' (Out of Stock)' : ''}">
+        <div class="system-builder__product-select-indicator">
+          <span class="system-builder__checkmark"></span>
+        </div>
+        ${!isAvailable ? '<div class="system-builder__out-of-stock-badge">Out of Stock</div>' : ''}
+        <div class="system-builder__product-image">
+          ${imageUrl
+            ? `<img src="${imageUrl}" alt="${displayTitle}" class="system-builder__product-img" loading="lazy">`
+            : '<div class="system-builder__product-placeholder-image"></div>'
+          }
+        </div>
+        <div class="system-builder__product-info">
+          <h4 class="system-builder__product-title">${displayTitle}</h4>
+          <p class="system-builder__product-price">${price}</p>
+          ${!isAvailable ? '<p class="system-builder__stock-status">This item is currently out of stock</p>' : ''}
+        </div>
+        <input type="hidden" name="variant_id" value="${variantData.id}">
+      </div>
+    `;
+  }
+
+  /**
+   * Update summary section
+   */
+  updateSummary() {
+    const summary = this.querySelector('[data-summary]');
+    if (!summary) return;
+
+    const summaryItemsContainer = summary.querySelector('[data-summary-items]');
+    const emptyState = summary.querySelector('[data-summary-empty]');
+    const footer = summary.querySelector('[data-summary-footer]');
+
+    const selectedProductCount = Object.keys(this.selectedProducts).length;
+    const hasSelectedProducts = selectedProductCount > 0;
+
+    if (emptyState) emptyState.hidden = hasSelectedProducts;
+    if (footer) footer.hidden = !hasSelectedProducts;
+
+    if (summaryItemsContainer) {
+      summaryItemsContainer.innerHTML = '';
+
+      const productsByType = {
+        'harness-model': [],
+        'harness-accessory': [],
+        'accessory': []
+      };
+
+      Object.entries(this.selectedProducts).forEach(([variantId, product]) => {
+        if (product && product.productType && productsByType[product.productType]) {
+          productsByType[product.productType].push({ variantId, ...product });
+        }
+      });
+
+      ['harness-model', 'harness-accessory', 'accessory'].forEach(type => {
+        productsByType[type].forEach(product => {
+          const itemHtml = this.createSummaryItemHtml(product.variantId, product);
+          summaryItemsContainer.insertAdjacentHTML('beforeend', itemHtml);
+        });
+      });
+    }
+
+    // Calculate total
+    let total = 0;
+    let itemCount = 0;
+
+    Object.values(this.selectedProducts).forEach(product => {
+      if (product?.price) {
+        const qty = product.quantity || 1;
+        total += product.price * qty;
+        itemCount += qty;
+      }
+    });
+
+    const totalEl = summary.querySelector('[data-total-price]');
+    if (totalEl) totalEl.textContent = this.formatMoney(total);
+
+    const addToCartBtn = summary.querySelector('[data-add-to-cart]');
+    if (addToCartBtn) {
+      const baseText = addToCartBtn.dataset.originalText || addToCartBtn.textContent;
+      if (!addToCartBtn.dataset.originalText) addToCartBtn.dataset.originalText = baseText;
+      addToCartBtn.textContent = itemCount > 0
+        ? `Add to Cart (${itemCount} item${itemCount > 1 ? 's' : ''})`
+        : baseText;
+    }
+  }
+
+  /**
+   * Create summary item HTML
+   */
+  createSummaryItemHtml(variantId, product) {
+    const displayTitle = product.productTitle
+      ? (product.title && product.title !== 'Default Title'
+          ? `${product.productTitle} - ${product.title}`
+          : product.productTitle)
+      : product.title || 'Product';
+
+    const imageUrl = product.image ? this.getImageUrl(product.image, 120) : '';
+    const quantity = product.quantity || 1;
+
+    return `
+      <div class="system-builder__summary-item" data-summary-item="${variantId}">
+        <div class="system-builder__summary-item-image">
+          ${imageUrl ? `<img src="${imageUrl}" alt="${displayTitle}" loading="lazy">` : ''}
+        </div>
+        <div class="system-builder__summary-item-details">
+          <span class="system-builder__summary-name">${displayTitle}</span>
+          <span class="system-builder__summary-price">${this.formatMoney(product.price * quantity)}</span>
+        </div>
+        <div class="system-builder__summary-quantity">
+          <button type="button" class="system-builder__quantity-btn" data-quantity-decrease="${variantId}" aria-label="Decrease quantity">−</button>
+          <span class="system-builder__quantity-value" data-quantity-display="${variantId}">${quantity}</span>
+          <button type="button" class="system-builder__quantity-btn" data-quantity-increase="${variantId}" aria-label="Increase quantity">+</button>
+        </div>
+        <button type="button" class="system-builder__summary-remove" data-summary-remove="${variantId}" aria-label="Remove item">&times;</button>
+      </div>
+    `;
+  }
+
+  /**
+   * Clear all selections and reset the UI
+   */
+  clearAllSelections() {
+    this.selectedProducts = {};
+
+    this.querySelectorAll('[data-product-card]').forEach(card => {
+      card.classList.remove('system-builder__product-card--selected');
+      card.setAttribute('aria-pressed', 'false');
+    });
+
+    this.updateSummary();
+  }
+
+  /**
+   * Handle add to cart
+   */
+  async handleAddToCart(button) {
+    const items = [];
+
+    Object.entries(this.selectedProducts).forEach(([variantId, product]) => {
+      if (product?.id) {
+        items.push({ id: product.id, quantity: product.quantity || 1 });
+      }
+    });
+
+    if (items.length === 0) {
+      button.textContent = 'Select products first';
+      setTimeout(() => {
+        button.textContent = button.dataset.originalText || 'Add All to Cart';
+      }, 2000);
+      return;
+    }
+
+    button.disabled = true;
+    const originalText = button.textContent;
+    button.dataset.originalText = originalText;
+    button.textContent = 'Adding...';
+
+    try {
+      const sectionsToBundle = ['variant-added'];
+      document.documentElement.dispatchEvent(
+        new CustomEvent('cart:prepare-bundled-sections', {
+          bubbles: true,
+          detail: { sections: sectionsToBundle }
+        })
+      );
+
+      const firstVariantId = items[0].id;
+      const sectionsUrl = `${window.Shopify?.routes?.root || '/'}variants/${firstVariantId}`;
+
+      const response = await fetch(`${window.Shopify?.routes?.root || '/'}cart/add.js`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          items,
+          sections: sectionsToBundle.join(','),
+          sections_url: sectionsUrl
+        })
+      });
+
+      const responseData = await response.json();
+
+      if (!response.ok) {
+        const errorMessage = responseData.description || responseData.message || '';
+        if (errorMessage.toLowerCase().includes('out of stock') ||
+            errorMessage.toLowerCase().includes('not available') ||
+            errorMessage.toLowerCase().includes('inventory')) {
+          throw new Error('out_of_stock');
+        }
+        throw new Error(errorMessage || 'Failed to add to cart');
+      }
+
+      const cartResponse = await fetch(`${window.Shopify?.routes?.root || '/'}cart.js`, {
+        headers: { 'Accept': 'application/json' }
+      });
+      const cart = await cartResponse.json();
+      cart.sections = responseData.sections;
+
+      this.updateCartCount(cart.item_count);
+
+      document.dispatchEvent(
+        new CustomEvent('variant:add', {
+          bubbles: true,
+          detail: {
+            items: responseData.hasOwnProperty('items') ? responseData.items : [responseData],
+            cart: cart
+          }
+        })
+      );
+
+      document.documentElement.dispatchEvent(
+        new CustomEvent('cart:change', { bubbles: true, detail: { baseEvent: 'variant:add', cart } })
+      );
+      document.dispatchEvent(
+        new CustomEvent('cart:refresh', { bubbles: true, detail: { cart } })
+      );
+
+      this.clearAllSelections();
+
+      button.textContent = originalText;
+      button.disabled = false;
+
+    } catch (error) {
+      console.error('System Builder: Error adding to cart', error);
+
+      let errorText = 'Error - Try Again';
+      if (error.message === 'out_of_stock') {
+        errorText = 'Some items are out of stock';
+      } else if (error.message && error.message.length <= 30) {
+        errorText = error.message;
+      }
+
+      button.textContent = errorText;
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.disabled = false;
+      }, 2500);
+    }
+  }
+
+  /**
+   * Update cart count in header
+   */
+  updateCartCount(count) {
+    const selectors = [
+      '.cart-count', '.cart-count-bubble', '[data-cart-count]', '.cart__count',
+      '.header__cart-count', '#cart-icon-bubble', '.cart-icon__count',
+      '.js-cart-count', '[data-cart-item-count]', '.site-header__cart-count'
+    ];
+
+    selectors.forEach(selector => {
+      document.querySelectorAll(selector).forEach(el => {
+        if (el.tagName !== 'SPAN' || !el.querySelector('span')) {
+          el.textContent = count;
+        }
+        if (count > 0) {
+          el.removeAttribute('hidden');
+          el.style.display = '';
+        }
+      });
+    });
+  }
+
+  /**
+   * Format money value
+   */
+  formatMoney(cents) {
+    if (typeof cents !== 'number') return '';
+    if (window.Shopify?.formatMoney) return window.Shopify.formatMoney(cents);
+    return `$${(cents / 100).toFixed(2)}`;
+  }
+
+  /**
+   * Get image URL with size
+   */
+  getImageUrl(image, size) {
+    if (!image) return '';
+    if (typeof image === 'string') {
+      return image.replace(/(\.[^.]+)$/, `_${size}x$1`);
+    }
+    if (image.src) {
+      return image.src.replace(/(\.[^.]+)$/, `_${size}x$1`);
+    }
+    return '';
+  }
+}
+
+customElements.define('system-builder', SystemBuilder);

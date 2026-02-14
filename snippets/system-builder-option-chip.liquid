@@ -1,0 +1,25 @@
+{%- comment -%}
+  System Builder Option Chip
+  A clickable chip/button for selection options in the system builder.
+
+  Required parameters:
+  - value: The data value for this option
+  - label: Display text for the chip
+  - field: The field this chip belongs to (e.g., 'optic-brand', 'optic-model')
+
+  Optional parameters:
+  - selected: Boolean, whether this chip is initially selected
+  - disabled: Boolean, whether this chip is disabled
+{%- endcomment -%}
+
+<button
+  type="button"
+  class="system-builder__chip{% if selected %} system-builder__chip--selected{% endif %}{% if disabled %} system-builder__chip--disabled{% endif %}"
+  data-chip
+  data-field="{{ field }}"
+  data-value="{{ value }}"
+  {% if disabled %}disabled{% endif %}
+  aria-pressed="{{ selected | default: false }}"
+>
+  <span class="system-builder__chip-label">{{ label }}</span>
+</button>

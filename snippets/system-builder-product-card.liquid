@@ -1,0 +1,50 @@
+{%- comment -%}
+  System Builder Product Card
+  Displays an auto-selected product in the system builder.
+
+  This snippet provides the HTML structure for product cards.
+  The JavaScript component will clone/populate this template dynamically.
+
+  Optional parameters (for server-side rendering):
+  - product: The product object to display
+  - product_type: Type identifier (e.g., 'mag-ring', 'adapter', 'phone-case')
+{%- endcomment -%}
+
+{%- if product != blank -%}
+  <div class="system-builder__product-card" data-product-card data-product-type="{{ product_type }}">
+    <div class="system-builder__product-image">
+      {%- if product.featured_image != blank -%}
+        {{ product.featured_image | image_url: width: 200 | image_tag: loading: 'lazy', class: 'system-builder__product-img' }}
+      {%- else -%}
+        <div class="system-builder__product-placeholder-image">
+          {{ 'product-1' | placeholder_svg_tag }}
+        </div>
+      {%- endif -%}
+    </div>
+    <div class="system-builder__product-info">
+      <h4 class="system-builder__product-title">{{ product.title }}</h4>
+      <p class="system-builder__product-price">{{ product.price | money }}</p>
+      {%- if product.variants.size > 1 -%}
+        <p class="system-builder__product-variant-note">{{ product.variants.size }} variants available</p>
+      {%- endif -%}
+    </div>
+    <input type="hidden" name="variant_id" value="{{ product.selected_or_first_available_variant.id }}" data-variant-id>
+  </div>
+{%- endif -%}
+
+{%- comment -%}
+  Template for JavaScript to use when creating product cards dynamically.
+  This is wrapped in a template tag so it's not rendered but available for cloning.
+{%- endcomment -%}
+<template id="system-builder-product-card-template">
+  <div class="system-builder__product-card" data-product-card>
+    <div class="system-builder__product-image">
+      <img src="" alt="" class="system-builder__product-img" loading="lazy" data-product-image>
+    </div>
+    <div class="system-builder__product-info">
+      <h4 class="system-builder__product-title" data-product-title></h4>
+      <p class="system-builder__product-price" data-product-price></p>
+    </div>
+    <input type="hidden" name="variant_id" value="" data-variant-id>
+  </div>
+</template>
