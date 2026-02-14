@@ -632,7 +632,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Our products are built to last — and we back that with a <strong>lifetime guarantee</strong> covering:</p><ul><li><strong>Wear and tear</strong> from hunting and field use<br/></li><li>Defects in materials or workmanship<br/></li></ul><p>However, the following applies:</p><ul><li><strong>Intentional damage</strong> to game the system voids the warranty.<br/></li><li>If your item can’t be fixed and it’s <strong>not your fault</strong>, we’ll replace it or offer <strong>store credit</strong> equal to the item’s value.<br/></li><li>We reserve the right to deny claims we believe are <strong>intentional or fraudulent</strong>.<br/></li></ul><p> </p>",
+                    "text": "<p>Our products are built to last — and we back that with a <strong>lifetime guarantee</strong> covering:</p><ul><li><strong>Wear and tear</strong> from hunting and field use<br/></li><li>Defects in materials or workmanship<br/></li></ul><p>However, the following applies:</p><ul><li><strong>Intentional damage</strong> to game the system voids the warranty.<br/></li><li>If your item can’t be fixed and it’s <strong>not your fault</strong>, we’ll replace it or offer <strong>store credit</strong> equal to the item’s value.<br/></li><li>We reserve the right to deny claims we believe are <strong>intentional or fraudulent</strong>.</li></ul>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
