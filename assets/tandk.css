@@ -385,3 +385,8 @@ div.accordion {
     border-top: 1px solid #d1d1d1;
     border-bottom: 1px solid #d1d1d1;
 }
+
+span.mega-menu__link-title.wrap-text, span.mega-menu__custom-card-title.wrap-text {
+font-weight: bold;
+
+}

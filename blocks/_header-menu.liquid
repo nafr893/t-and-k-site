@@ -136,10 +136,20 @@
                 {% assign list_id = 'MegaMenuList-' | append: forloop.index %}
                 {% liquid
                   assign effective_content_type = menu_content_type
-                  if menu_content_type == 'custom_image_cards' and block_settings.mega_menu_cards_menu_title != blank
-                    assign cards_title_lower = block_settings.mega_menu_cards_menu_title | downcase | strip
+                  assign active_card_set = 0
+                  if menu_content_type == 'custom_image_cards'
                     assign link_title_lower = link.title | downcase | strip
-                    if link_title_lower != cards_title_lower
+
+                    assign set1_title = block_settings.mega_menu_cards_menu_title | downcase | strip
+                    assign set2_title = block_settings.mega_menu_cards_2_menu_title | downcase | strip
+
+                    if set1_title != blank and link_title_lower == set1_title
+                      assign active_card_set = 1
+                    elsif set2_title != blank and link_title_lower == set2_title
+                      assign active_card_set = 2
+                    elsif set1_title == blank and set2_title == blank
+                      assign active_card_set = 1
+                    else
                       assign effective_content_type = 'text'
                     endif
                   endif
@@ -159,7 +169,8 @@
                       menu_content_type: effective_content_type,
                       content_aspect_ratio: ratio,
                       image_border_radius: image_border_radius,
-                      block_settings: block_settings
+                      block_settings: block_settings,
+                      active_card_set: active_card_set
                     %}
                   </div>
                 </div>
@@ -923,15 +934,15 @@
       "default": "collection_images"
     },
     {
-      "type": "text",
-      "id": "mega_menu_cards_menu_title",
-      "label": "Show cards under menu item",
-      "info": "Enter the exact menu item title (e.g. \"SHOP\"). Leave blank to show cards under all menus.",
+      "type": "header",
+      "content": "Card Set 1",
       "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
     },
     {
-      "type": "header",
-      "content": "Mega Menu Image Cards",
+      "type": "text",
+      "id": "mega_menu_cards_menu_title",
+      "label": "Menu item title",
+      "info": "Enter the exact menu item title (e.g. \"SHOP\"). Leave blank to show under all menus.",
       "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
     },
     {
@@ -1003,6 +1014,90 @@
     {
       "type": "url",
       "id": "mega_menu_card_4_url",
+      "label": "Card 4 Link",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "header",
+      "content": "Card Set 2",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_cards_2_menu_title",
+      "label": "Menu item title",
+      "info": "Enter the exact menu item title (e.g. \"Pursuit\"). Leave blank to skip this set.",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "mega_menu_card_2_1_image",
+      "label": "Card 1 Image",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_card_2_1_title",
+      "label": "Card 1 Title",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_card_2_1_url",
+      "label": "Card 1 Link",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "mega_menu_card_2_2_image",
+      "label": "Card 2 Image",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_card_2_2_title",
+      "label": "Card 2 Title",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_card_2_2_url",
+      "label": "Card 2 Link",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "mega_menu_card_2_3_image",
+      "label": "Card 3 Image",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_card_2_3_title",
+      "label": "Card 3 Title",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_card_2_3_url",
+      "label": "Card 3 Link",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "mega_menu_card_2_4_image",
+      "label": "Card 4 Image",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_card_2_4_title",
+      "label": "Card 4 Title",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_card_2_4_url",
       "label": "Card 4 Link",
       "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
     },

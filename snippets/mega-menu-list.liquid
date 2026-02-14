@@ -72,21 +72,46 @@
   endif
 
   if menu_content_type == 'custom_image_cards'
-    assign custom_card_images = '' | split: ','
-    assign custom_card_titles = '' | split: ','
-    assign custom_card_urls = '' | split: ','
     assign custom_card_count = 0
 
-    if block_settings.mega_menu_card_1_image != blank
+    if active_card_set == 2
+      assign cc_1_image = block_settings.mega_menu_card_2_1_image
+      assign cc_1_title = block_settings.mega_menu_card_2_1_title
+      assign cc_1_url = block_settings.mega_menu_card_2_1_url
+      assign cc_2_image = block_settings.mega_menu_card_2_2_image
+      assign cc_2_title = block_settings.mega_menu_card_2_2_title
+      assign cc_2_url = block_settings.mega_menu_card_2_2_url
+      assign cc_3_image = block_settings.mega_menu_card_2_3_image
+      assign cc_3_title = block_settings.mega_menu_card_2_3_title
+      assign cc_3_url = block_settings.mega_menu_card_2_3_url
+      assign cc_4_image = block_settings.mega_menu_card_2_4_image
+      assign cc_4_title = block_settings.mega_menu_card_2_4_title
+      assign cc_4_url = block_settings.mega_menu_card_2_4_url
+    else
+      assign cc_1_image = block_settings.mega_menu_card_1_image
+      assign cc_1_title = block_settings.mega_menu_card_1_title
+      assign cc_1_url = block_settings.mega_menu_card_1_url
+      assign cc_2_image = block_settings.mega_menu_card_2_image
+      assign cc_2_title = block_settings.mega_menu_card_2_title
+      assign cc_2_url = block_settings.mega_menu_card_2_url
+      assign cc_3_image = block_settings.mega_menu_card_3_image
+      assign cc_3_title = block_settings.mega_menu_card_3_title
+      assign cc_3_url = block_settings.mega_menu_card_3_url
+      assign cc_4_image = block_settings.mega_menu_card_4_image
+      assign cc_4_title = block_settings.mega_menu_card_4_title
+      assign cc_4_url = block_settings.mega_menu_card_4_url
+    endif
+
+    if cc_1_image != blank
       assign custom_card_count = custom_card_count | plus: 1
     endif
-    if block_settings.mega_menu_card_2_image != blank
+    if cc_2_image != blank
       assign custom_card_count = custom_card_count | plus: 1
     endif
-    if block_settings.mega_menu_card_3_image != blank
+    if cc_3_image != blank
       assign custom_card_count = custom_card_count | plus: 1
     endif
-    if block_settings.mega_menu_card_4_image != blank
+    if cc_4_image != blank
       assign custom_card_count = custom_card_count | plus: 1
     endif
   endif
@@ -386,51 +411,50 @@
         class="mega-menu__content-list mega-menu__content-list--custom-cards list-unstyled"
       >
         {% assign card_index = 0 %}
-        {% assign card_images = block_settings.mega_menu_card_1_image | append: '||' | append: block_settings.mega_menu_card_2_image | append: '||' | append: block_settings.mega_menu_card_3_image | append: '||' | append: block_settings.mega_menu_card_4_image %}
 
-        {% if block_settings.mega_menu_card_1_image != blank and card_index < max_image_card_columns %}
+        {% if cc_1_image != blank and card_index < max_image_card_columns %}
           {% assign card_index = card_index | plus: 1 %}
           <li class="mega-menu__content-list-item mega-menu__custom-card{% if card_index > max_image_card_columns_tablet %} mega-menu__content-list-item--hidden-tablet{% endif %}">
-            <a href="{{ block_settings.mega_menu_card_1_url | default: '#' }}" class="mega-menu__custom-card-link">
+            <a href="{{ cc_1_url | default: '#' }}" class="mega-menu__custom-card-link">
               <div class="mega-menu__custom-card-image-wrapper">
-                {{ block_settings.mega_menu_card_1_image | image_url: width: 600 | image_tag: class: 'mega-menu__custom-card-image', loading: 'lazy', sizes: '(min-width: 990px) 300px, 200px' }}
-                <span class="mega-menu__custom-card-title">{{ block_settings.mega_menu_card_1_title }}</span>
+                {{ cc_1_image | image_url: width: 600 | image_tag: class: 'mega-menu__custom-card-image', loading: 'lazy', sizes: '(min-width: 990px) 300px, 200px' }}
+                <span class="mega-menu__custom-card-title">{{ cc_1_title }}</span>
               </div>
             </a>
           </li>
         {% endif %}
 
-        {% if block_settings.mega_menu_card_2_image != blank and card_index < max_image_card_columns %}
+        {% if cc_2_image != blank and card_index < max_image_card_columns %}
           {% assign card_index = card_index | plus: 1 %}
           <li class="mega-menu__content-list-item mega-menu__custom-card{% if card_index > max_image_card_columns_tablet %} mega-menu__content-list-item--hidden-tablet{% endif %}">
-            <a href="{{ block_settings.mega_menu_card_2_url | default: '#' }}" class="mega-menu__custom-card-link">
+            <a href="{{ cc_2_url | default: '#' }}" class="mega-menu__custom-card-link">
               <div class="mega-menu__custom-card-image-wrapper">
-                {{ block_settings.mega_menu_card_2_image | image_url: width: 600 | image_tag: class: 'mega-menu__custom-card-image', loading: 'lazy', sizes: '(min-width: 990px) 300px, 200px' }}
-                <span class="mega-menu__custom-card-title">{{ block_settings.mega_menu_card_2_title }}</span>
+                {{ cc_2_image | image_url: width: 600 | image_tag: class: 'mega-menu__custom-card-image', loading: 'lazy', sizes: '(min-width: 990px) 300px, 200px' }}
+                <span class="mega-menu__custom-card-title">{{ cc_2_title }}</span>
               </div>
             </a>
           </li>
         {% endif %}
 
-        {% if block_settings.mega_menu_card_3_image != blank and card_index < max_image_card_columns %}
+        {% if cc_3_image != blank and card_index < max_image_card_columns %}
           {% assign card_index = card_index | plus: 1 %}
           <li class="mega-menu__content-list-item mega-menu__custom-card{% if card_index > max_image_card_columns_tablet %} mega-menu__content-list-item--hidden-tablet{% endif %}">
-            <a href="{{ block_settings.mega_menu_card_3_url | default: '#' }}" class="mega-menu__custom-card-link">
+            <a href="{{ cc_3_url | default: '#' }}" class="mega-menu__custom-card-link">
               <div class="mega-menu__custom-card-image-wrapper">
-                {{ block_settings.mega_menu_card_3_image | image_url: width: 600 | image_tag: class: 'mega-menu__custom-card-image', loading: 'lazy', sizes: '(min-width: 990px) 300px, 200px' }}
-                <span class="mega-menu__custom-card-title">{{ block_settings.mega_menu_card_3_title }}</span>
+                {{ cc_3_image | image_url: width: 600 | image_tag: class: 'mega-menu__custom-card-image', loading: 'lazy', sizes: '(min-width: 990px) 300px, 200px' }}
+                <span class="mega-menu__custom-card-title">{{ cc_3_title }}</span>
               </div>
             </a>
           </li>
         {% endif %}
 
-        {% if block_settings.mega_menu_card_4_image != blank and card_index < max_image_card_columns %}
+        {% if cc_4_image != blank and card_index < max_image_card_columns %}
           {% assign card_index = card_index | plus: 1 %}
           <li class="mega-menu__content-list-item mega-menu__custom-card{% if card_index > max_image_card_columns_tablet %} mega-menu__content-list-item--hidden-tablet{% endif %}">
-            <a href="{{ block_settings.mega_menu_card_4_url | default: '#' }}" class="mega-menu__custom-card-link">
+            <a href="{{ cc_4_url | default: '#' }}" class="mega-menu__custom-card-link">
               <div class="mega-menu__custom-card-image-wrapper">
-                {{ block_settings.mega_menu_card_4_image | image_url: width: 600 | image_tag: class: 'mega-menu__custom-card-image', loading: 'lazy', sizes: '(min-width: 990px) 300px, 200px' }}
-                <span class="mega-menu__custom-card-title">{{ block_settings.mega_menu_card_4_title }}</span>
+                {{ cc_4_image | image_url: width: 600 | image_tag: class: 'mega-menu__custom-card-image', loading: 'lazy', sizes: '(min-width: 990px) 300px, 200px' }}
+                <span class="mega-menu__custom-card-title">{{ cc_4_title }}</span>
               </div>
             </a>
           </li>
