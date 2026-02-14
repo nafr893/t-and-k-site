@@ -269,7 +269,7 @@
                   "settings": {
                     "text": "<p>Most companies take the easy route — they outsource production to countries where labor costs a fraction of what Americans earn. We don’t. Every piece of <strong>T & K Hunting Gear</strong> is <strong>cut, sewn, and built right here in the USA</strong> by American workers earning <strong>$20–$30 an hour</strong>, not $3–$5 like overseas factories.</p><p>We could triple our profits overnight by sending our work abroad. But that would mean sacrificing our standards, our people, and our promise to you. That’s not who we are.</p>",
                     "width": "fit-content",
-                    "max_width": "normal",
+                    "max_width": "none",
                     "alignment": "left",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
