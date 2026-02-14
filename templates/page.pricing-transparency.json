@@ -332,7 +332,7 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "padding-block-start": 0,
+                "padding-block-start": 20,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
@@ -490,7 +490,7 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "padding-block-start": 0,
+                "padding-block-start": 20,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
@@ -531,7 +531,7 @@
                   "settings": {
                     "text": "<p>Our <strong>American-made Leg Gaiters</strong> retail for <strong>$200 - $204</strong>, but they cost us roughly <strong>$90–$100</strong> to make in South Dakota and Georgia, using <strong>100% U.S.-sourced materials</strong> and 100% American labor.</p><p>That includes cutting, sewing, quality control, packaging, and the premium components that make them last season after season. For comparison, most imported gaiters selling for half the price cost only <strong>$20–$25</strong> to produce overseas.</p>",
                     "width": "fit-content",
-                    "max_width": "normal",
+                    "max_width": "none",
                     "alignment": "left",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
@@ -648,7 +648,7 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "padding-block-start": 0,
+                "padding-block-start": 20,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
