@@ -598,7 +598,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Where are your products manufactured?",
+                "heading": "What if my product is out of stock?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -608,7 +608,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
+                    "text": "<p>Since each of our products are handcrafted to order, we may have limited capacity and sell out of stock quickly. To be notified when your product is restocked, sign up for the \"email me when available\" form on the product page, or subscribe to our newsletter for restock updates. </p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -637,58 +637,13 @@
               "block_order": [
                 "text_aF89kU"
               ]
-            },
-            "accordion_row_6hXMHr": {
-              "type": "_accordion-row",
-              "name": "t:names.accordion_row",
-              "settings": {
-                "heading": "How much does shipping cost?",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text_jQHNLt": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Shipping is calculated based on your location and the items in your order. You will always know the shipping price before you purchase.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "border": false,
-                    "background_color": "",
-                    "border_color": "#000000",
-                    "border_weight": 0,
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_jQHNLt"
-              ]
             }
           },
           "block_order": [
             "accordion_row_QkCjVK",
             "accordion_row_VWDBUt",
             "accordion_row_7tYPg8",
-            "accordion_row_KtXQ8J",
-            "accordion_row_6hXMHr"
+            "accordion_row_KtXQ8J"
           ]
         }
       },
