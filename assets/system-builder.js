@@ -18,9 +18,10 @@ class SystemBuilder extends HTMLElement {
 
     // Data storage
     this.data = {
-      harnessModels: [],
+      harnessModels: [],    // chip labels only
+      harnessTypes: [],     // products linked to models
       harnessAccessories: [],
-      accessories: []
+      accessories: []       // block accessories
     };
   }
 
@@ -35,11 +36,13 @@ class SystemBuilder extends HTMLElement {
    */
   loadData() {
     const harnessModelsEl = this.querySelector('[data-harness-models]');
+    const harnessTypesEl = this.querySelector('[data-harness-types]');
     const harnessAccessoriesEl = this.querySelector('[data-harness-accessories]');
     const accessoriesEl = this.querySelector('[data-accessories]');
 
     try {
       this.data.harnessModels = harnessModelsEl ? JSON.parse(harnessModelsEl.textContent) : [];
+      this.data.harnessTypes = harnessTypesEl ? JSON.parse(harnessTypesEl.textContent) : [];
       this.data.harnessAccessories = harnessAccessoriesEl ? JSON.parse(harnessAccessoriesEl.textContent) : [];
       this.data.accessories = accessoriesEl ? JSON.parse(accessoriesEl.textContent) : [];
     } catch (e) {
@@ -116,19 +119,31 @@ class SystemBuilder extends HTMLElement {
   }
 
   /**
-   * Display harness model product cards for the selected model
+   * Display harness product cards for the selected model (from harness_type entries)
    */
-  displayHarnessModels(handle) {
+  displayHarnessModels(modelHandle) {
     const grid = this.querySelector('[data-harness-models-grid]');
     if (!grid) return;
 
-    const model = this.data.harnessModels.find(m => m.handle === handle);
-    if (!model || !model.variants || model.variants.length === 0) {
+    // Find all harness_type entries linked to this model
+    const matchingTypes = this.data.harnessTypes.filter(ht =>
+      ht.modelHandles && ht.modelHandles.includes(modelHandle)
+    );
+
+    // Collect all variants from matching types
+    const allVariants = [];
+    matchingTypes.forEach(ht => {
+      if (ht.variants) {
+        ht.variants.forEach(v => allVariants.push(v));
+      }
+    });
+
+    if (allVariants.length === 0) {
       grid.innerHTML = '';
       return;
     }
 
-    grid.innerHTML = model.variants.map(variant => this.renderProductCard(variant, 'harness-model')).join('');
+    grid.innerHTML = allVariants.map(variant => this.renderProductCard(variant, 'harness-model')).join('');
   }
 
   /**
@@ -321,8 +336,8 @@ class SystemBuilder extends HTMLElement {
     let productData = null;
 
     if (productType === 'harness-model') {
-      for (const model of this.data.harnessModels) {
-        productData = model.variants?.find(v => String(v.id) === String(variantId));
+      for (const ht of this.data.harnessTypes) {
+        productData = ht.variants?.find(v => String(v.id) === String(variantId));
         if (productData) break;
       }
     } else if (productType === 'harness-accessory') {

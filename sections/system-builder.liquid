@@ -1,20 +1,24 @@
 {%- comment -%}
   System Builder Section — Harness Configurator
-  A simplified product configurator for harness models and accessories.
 
-  - harness_model: Top-level harness products displayed immediately
-  - harness_accessory: Clickable chips that reveal associated products
+  Metaobject structure:
+  - harness_model: Top-level chip buttons (harness_name text field only)
+  - harness_type: Products linked to a model (harness_model ref list + harness_product variant list)
+  - harness_accessory: Accessory chips filtered by model (accessory_name + harness_type model ref + accessory_product variants)
 {%- endcomment -%}
 
 {{ 'system-builder.css' | asset_url | stylesheet_tag }}
 
 {%- liquid
   assign harness_models = shop.metaobjects.harness_model.values
+  assign harness_types = shop.metaobjects.harness_type.values
   assign harness_accessories = shop.metaobjects.harness_accessory.values
 -%}
 
 <system-builder class="system-builder section-{{ section.id }}" id="system-builder-{{ section.id }}">
   {%- comment -%} Data payloads for JavaScript {%- endcomment -%}
+
+  {%- comment -%} Harness models — chip labels only {%- endcomment -%}
   <script type="application/json" data-harness-models>
     [
       {%- paginate harness_models by 250 -%}
@@ -22,9 +26,28 @@
         {
           "id": {{ model.id | json }},
           "handle": {{ model.system.handle | json }},
-          "harnessType": {{ model.harness_type | json }},
+          "name": {{ model.harness_name | json }}
+        }{%- unless forloop.last -%},{%- endunless -%}
+      {%- endfor -%}
+      {%- endpaginate -%}
+    ]
+  </script>
+
+  {%- comment -%} Harness types — products linked to models {%- endcomment -%}
+  <script type="application/json" data-harness-types>
+    [
+      {%- paginate harness_types by 250 -%}
+      {%- for ht in harness_types -%}
+        {
+          "id": {{ ht.id | json }},
+          "handle": {{ ht.system.handle | json }},
+          "modelHandles": [
+            {%- for ref in ht.harness_model.value -%}
+              {{ ref.system.handle | json }}{%- unless forloop.last -%},{%- endunless -%}
+            {%- endfor -%}
+          ],
           "variants": [
-            {%- for variant in model.variants.value -%}
+            {%- for variant in ht.harness_product.value -%}
               {
                 "id": {{ variant.id | json }},
                 "title": {{ variant.title | json }},
@@ -41,6 +64,7 @@
     ]
   </script>
 
+  {%- comment -%} Harness accessories — filtered by model {%- endcomment -%}
   <script type="application/json" data-harness-accessories>
     [
       {%- paginate harness_accessories by 250 -%}
@@ -49,13 +73,13 @@
           "id": {{ accessory.id | json }},
           "handle": {{ accessory.system.handle | json }},
           "name": {{ accessory.accessory_name | json }},
-          "harnessTypeHandles": [
+          "modelHandles": [
             {%- for ref in accessory.harness_type.value -%}
               {{ ref.system.handle | json }}{%- unless forloop.last -%},{%- endunless -%}
             {%- endfor -%}
           ],
           "variants": [
-            {%- for variant in accessory.variants.value -%}
+            {%- for variant in accessory.accessory_product.value -%}
               {
                 "id": {{ variant.id | json }},
                 "title": {{ variant.title | json }},
@@ -114,7 +138,7 @@
               {%- for model in harness_models -%}
                 {%- render 'system-builder-option-chip',
                   value: model.system.handle,
-                  label: model.harness_type,
+                  label: model.harness_name,
                   field: 'harness-model'
                 -%}
               {%- else -%}
