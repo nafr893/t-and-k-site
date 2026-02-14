@@ -22,6 +22,7 @@
         {
           "id": {{ model.id | json }},
           "handle": {{ model.system.handle | json }},
+          "harnessType": {{ model.harness_type | json }},
           "variants": [
             {%- for variant in model.variants.value -%}
               {
@@ -48,6 +49,11 @@
           "id": {{ accessory.id | json }},
           "handle": {{ accessory.system.handle | json }},
           "name": {{ accessory.accessory_name | json }},
+          "harnessTypeHandles": [
+            {%- for ref in accessory.harness_type.value -%}
+              {{ ref.system.handle | json }}{%- unless forloop.last -%},{%- endunless -%}
+            {%- endfor -%}
+          ],
           "variants": [
             {%- for variant in accessory.variants.value -%}
               {
@@ -99,11 +105,26 @@
     <div class="system-builder__layout">
       {%- comment -%} Left Column: Steps {%- endcomment -%}
       <div class="system-builder__steps">
-        {%- comment -%} Harness Models — displayed immediately {%- endcomment -%}
+        {%- comment -%} Harness Models — chip selection then product cards {%- endcomment -%}
         <div class="system-builder__step" data-step="harness-models">
           <h3 class="system-builder__step-title h4">{{ section.settings.harness_models_step_title }}</h3>
+          <div class="system-builder__field" data-field="harness-model">
+            <div class="system-builder__chips" data-chips="harness-model">
+              {%- paginate harness_models by 250 -%}
+              {%- for model in harness_models -%}
+                {%- render 'system-builder-option-chip',
+                  value: model.system.handle,
+                  label: model.harness_type,
+                  field: 'harness-model'
+                -%}
+              {%- else -%}
+                <p class="system-builder__empty-message">No harness models configured.</p>
+              {%- endfor -%}
+              {%- endpaginate -%}
+            </div>
+          </div>
           <div class="system-builder__accessories-grid" data-harness-models-grid>
-            {%- comment -%} Product cards populated by JavaScript on load {%- endcomment -%}
+            {%- comment -%} Product cards populated by JavaScript when a harness type chip is clicked {%- endcomment -%}
           </div>
         </div>
 

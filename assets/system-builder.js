@@ -6,6 +6,9 @@ class SystemBuilder extends HTMLElement {
   constructor() {
     super();
 
+    // Track selected harness model handle (single-select)
+    this.activeHarnessModel = null;
+
     // Track active accessory chip handles
     this.activeAccessories = new Set();
 
@@ -99,10 +102,11 @@ class SystemBuilder extends HTMLElement {
   }
 
   /**
-   * Initialize state — display all initial content
+   * Initialize state — display block accessories, hide accessories step until a model is selected
    */
   initializeState() {
-    this.displayHarnessModels();
+    // Hide accessories step until a harness model is selected
+    this.updateAccessoriesVisibility();
 
     if (this.data.accessories.length > 0) {
       this.displayBlockAccessories();
@@ -112,38 +116,132 @@ class SystemBuilder extends HTMLElement {
   }
 
   /**
-   * Display harness model product cards immediately
+   * Display harness model product cards for the selected model
    */
-  displayHarnessModels() {
+  displayHarnessModels(handle) {
     const grid = this.querySelector('[data-harness-models-grid]');
     if (!grid) return;
 
-    // Collect all variants from all harness models
-    const allVariants = [];
-    this.data.harnessModels.forEach(model => {
-      if (model.variants) {
-        model.variants.forEach(v => allVariants.push(v));
-      }
-    });
-
-    if (allVariants.length === 0) {
-      grid.innerHTML = '<p class="system-builder__empty-message">No harness models configured.</p>';
+    const model = this.data.harnessModels.find(m => m.handle === handle);
+    if (!model || !model.variants || model.variants.length === 0) {
+      grid.innerHTML = '';
       return;
     }
 
-    grid.innerHTML = allVariants.map(variant => this.renderProductCard(variant, 'harness-model')).join('');
+    grid.innerHTML = model.variants.map(variant => this.renderProductCard(variant, 'harness-model')).join('');
   }
 
   /**
-   * Handle chip click — toggle behavior for harness accessories
+   * Show/hide and filter the accessories step based on the selected harness model
+   */
+  updateAccessoriesVisibility() {
+    const accessoriesStep = this.querySelector('[data-step="harness-accessories"]');
+    if (!accessoriesStep) return;
+
+    if (!this.activeHarnessModel) {
+      accessoriesStep.hidden = true;
+      return;
+    }
+
+    accessoriesStep.hidden = false;
+
+    // Filter accessory chips — show only those linked to the selected harness model
+    const chips = accessoriesStep.querySelectorAll('[data-chip][data-field="harness-accessory"]');
+    chips.forEach(chip => {
+      const handle = chip.dataset.value;
+      const accessory = this.data.harnessAccessories.find(a => a.handle === handle);
+      if (!accessory) return;
+
+      // Show chip if its harnessTypeHandles includes the active model, or if no filter is set
+      const isLinked = !accessory.harnessTypeHandles || accessory.harnessTypeHandles.length === 0
+        || accessory.harnessTypeHandles.includes(this.activeHarnessModel);
+
+      chip.style.display = isLinked ? '' : 'none';
+
+      // If chip was active but is now hidden, deactivate it
+      if (!isLinked && chip.classList.contains('system-builder__chip--selected')) {
+        chip.classList.remove('system-builder__chip--selected');
+        chip.setAttribute('aria-pressed', 'false');
+        this.activeAccessories.delete(handle);
+        this.removeAccessoryCards(handle);
+      }
+    });
+  }
+
+  /**
+   * Handle chip click
    */
   handleChipClick(chip) {
     const field = chip.dataset.field;
     const value = chip.dataset.value;
 
-    if (field !== 'harness-accessory') return;
+    if (field === 'harness-model') {
+      this.handleHarnessModelChipClick(chip, value);
+    } else if (field === 'harness-accessory') {
+      this.handleAccessoryChipClick(chip, value);
+    }
 
-    // Toggle chip selection (multiple can be active)
+    this.updateSummary();
+  }
+
+  /**
+   * Handle harness model chip click — single-select
+   */
+  handleHarnessModelChipClick(chip, value) {
+    const wasSelected = chip.classList.contains('system-builder__chip--selected');
+
+    // Deselect all model chips
+    this.querySelectorAll('[data-chip][data-field="harness-model"]').forEach(c => {
+      c.classList.remove('system-builder__chip--selected');
+      c.setAttribute('aria-pressed', 'false');
+    });
+
+    // Clear existing model product selections
+    const modelGrid = this.querySelector('[data-harness-models-grid]');
+    if (modelGrid) {
+      modelGrid.querySelectorAll('[data-product-card]').forEach(card => {
+        const variantId = card.dataset.variantId;
+        if (variantId && this.selectedProducts[variantId]) {
+          delete this.selectedProducts[variantId];
+        }
+      });
+    }
+
+    if (wasSelected) {
+      // Deselect — clear model and hide accessories
+      this.activeHarnessModel = null;
+      if (modelGrid) modelGrid.innerHTML = '';
+
+      // Clear all active accessories too
+      this.activeAccessories.forEach(handle => this.removeAccessoryCards(handle));
+      this.activeAccessories.clear();
+      this.querySelectorAll('[data-chip][data-field="harness-accessory"]').forEach(c => {
+        c.classList.remove('system-builder__chip--selected');
+        c.setAttribute('aria-pressed', 'false');
+      });
+    } else {
+      // Select new model
+      chip.classList.add('system-builder__chip--selected');
+      chip.setAttribute('aria-pressed', 'true');
+      this.activeHarnessModel = value;
+      this.displayHarnessModels(value);
+
+      // Clear accessories from previous model
+      this.activeAccessories.forEach(handle => this.removeAccessoryCards(handle));
+      this.activeAccessories.clear();
+      this.querySelectorAll('[data-chip][data-field="harness-accessory"]').forEach(c => {
+        c.classList.remove('system-builder__chip--selected');
+        c.setAttribute('aria-pressed', 'false');
+      });
+    }
+
+    this.updateAccessoriesVisibility();
+  }
+
+  /**
+   * Handle accessory chip click — multi-select toggle
+   */
+  handleAccessoryChipClick(chip, value) {
     const isSelected = chip.classList.contains('system-builder__chip--selected');
 
     if (isSelected) {
@@ -157,8 +255,6 @@ class SystemBuilder extends HTMLElement {
       this.activeAccessories.add(value);
       this.addAccessoryCards(value);
     }
-
-    this.updateSummary();
   }
 
   /**
