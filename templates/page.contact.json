@@ -511,7 +511,7 @@
             "accordion_row_VWDBUt": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Are any purchases final sale?",
+                "heading": "What is your return policy?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -520,7 +520,7 @@
                 "text_E97QJd": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>We are unable to accept returns on certain items. These will be carefully marked before purchase.</p>",
+                    "text": "<p>We strive for each of our customers to be satisfied with their purchase. If that is not the case and you would like to file a return please visit our <a href=\"https://tandkhunting.com/apps/redo/returns-portal/login\" title=\"https://tandkhunting.com/apps/redo/returns-portal/login\">warranty/return portal.</a> </p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -554,7 +554,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "When will I get my order?",
+                "heading": "Where are T&K products made?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -564,7 +564,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
+                    "text": "<p>Each of our products are handcrafted and built in the USA. </p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
