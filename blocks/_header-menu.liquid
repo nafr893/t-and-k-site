@@ -143,12 +143,13 @@
                       parent_link: link,
                       id: list_id,
                       section: section,
-                      grid_columns_count: 6,
+                      grid_columns_count: 5,
                       grid_columns_count_tablet: 4,
                       grid_columns_count_collection_images: 8,
                       menu_content_type: menu_content_type,
                       content_aspect_ratio: ratio,
-                      image_border_radius: image_border_radius
+                      image_border_radius: image_border_radius,
+                      block_settings: block_settings
                     %}
                   </div>
                 </div>
@@ -715,6 +716,54 @@
     display: none;
   }
 
+  /* Custom image cards */
+  .mega-menu__content-list--custom-cards {
+    grid-template-columns: repeat(var(--menu-content-columns-tablet), minmax(0, 1fr));
+
+    @media screen and (min-width: 990px) {
+      grid-template-columns: repeat(var(--menu-content-columns-desktop), minmax(0, 1fr));
+    }
+  }
+
+  .mega-menu__custom-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .mega-menu__custom-card-image-wrapper {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: var(--resource-card-corner-radius, 0px);
+  }
+
+  .mega-menu__custom-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .mega-menu__custom-card-link:hover .mega-menu__custom-card-image {
+    transform: scale(1.05);
+  }
+
+  .mega-menu__custom-card-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--padding-lg);
+    color: #fff;
+    font-family: var(--menu-parent-font-family);
+    font-weight: var(--menu-parent-font-weight);
+    font-size: var(--menu-parent-font-size);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+  }
+
   .mega-menu__submenu {
     /* preserves the inherited grid layout when this submenu wrapper is used */
     display: contents;
@@ -855,9 +904,90 @@
         {
           "value": "featured_collections",
           "label": "t:options.featured_collections"
+        },
+        {
+          "value": "custom_image_cards",
+          "label": "Custom image cards"
         }
       ],
       "default": "collection_images"
+    },
+    {
+      "type": "header",
+      "content": "Mega Menu Image Cards",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "mega_menu_card_1_image",
+      "label": "Card 1 Image",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_card_1_title",
+      "label": "Card 1 Title",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_card_1_url",
+      "label": "Card 1 Link",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "mega_menu_card_2_image",
+      "label": "Card 2 Image",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_card_2_title",
+      "label": "Card 2 Title",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_card_2_url",
+      "label": "Card 2 Link",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "mega_menu_card_3_image",
+      "label": "Card 3 Image",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_card_3_title",
+      "label": "Card 3 Title",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_card_3_url",
+      "label": "Card 3 Link",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "mega_menu_card_4_image",
+      "label": "Card 4 Image",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_card_4_title",
+      "label": "Card 4 Title",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_card_4_url",
+      "label": "Card 4 Link",
+      "visible_if": "{{ block.settings.menu_style == 'custom_image_cards' }}"
     },
     {
       "type": "select",

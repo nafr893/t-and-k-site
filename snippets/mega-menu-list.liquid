@@ -70,6 +70,26 @@
       assign menu_content_type = 'text'
     endif
   endif
+
+  if menu_content_type == 'custom_image_cards'
+    assign custom_card_images = '' | split: ','
+    assign custom_card_titles = '' | split: ','
+    assign custom_card_urls = '' | split: ','
+    assign custom_card_count = 0
+
+    if block_settings.mega_menu_card_1_image != blank
+      assign custom_card_count = custom_card_count | plus: 1
+    endif
+    if block_settings.mega_menu_card_2_image != blank
+      assign custom_card_count = custom_card_count | plus: 1
+    endif
+    if block_settings.mega_menu_card_3_image != blank
+      assign custom_card_count = custom_card_count | plus: 1
+    endif
+    if block_settings.mega_menu_card_4_image != blank
+      assign custom_card_count = custom_card_count | plus: 1
+    endif
+  endif
 %}
 <ul
   data-menu-list-id="{{ id }}"
@@ -247,6 +267,18 @@
     assign max_featured_collections_tablet = 1
     assign max_menu_columns_tablet = max_menu_columns_tablet | minus: max_collection_columns_tablet
   endif
+
+  if menu_content_type == 'custom_image_cards'
+    # desktop: remaining columns go to image cards
+    assign max_image_card_columns = max_menu_columns | minus: column_count | at_least: 0 | at_most: 4
+    assign max_image_card_columns = max_image_card_columns | at_most: custom_card_count
+    assign max_menu_columns = max_menu_columns | minus: max_image_card_columns
+
+    # tablet: show up to 2 image cards
+    assign max_image_card_columns_tablet = max_menu_columns_tablet | minus: column_count | at_least: 0 | at_most: 2
+    assign max_image_card_columns_tablet = max_image_card_columns_tablet | at_most: custom_card_count
+    assign max_menu_columns_tablet = max_menu_columns_tablet | minus: max_image_card_columns_tablet
+  endif
 %}
 
 {% style %}
@@ -343,6 +375,66 @@
             %}
           </li>
         {% endfor %}
+      </ul>
+    </span>
+  {% when 'custom_image_cards' %}
+    <span
+      class="mega-menu__content"
+      style="--menu-content-columns-desktop: {{ max_image_card_columns }}; --menu-content-columns-tablet: {{ max_image_card_columns_tablet }}; --resource-card-corner-radius: {{ image_border_radius }}px;"
+    >
+      <ul
+        class="mega-menu__content-list mega-menu__content-list--custom-cards list-unstyled"
+      >
+        {% assign card_index = 0 %}
+        {% assign card_images = block_settings.mega_menu_card_1_image | append: '||' | append: block_settings.mega_menu_card_2_image | append: '||' | append: block_settings.mega_menu_card_3_image | append: '||' | append: block_settings.mega_menu_card_4_image %}
+
+        {% if block_settings.mega_menu_card_1_image != blank and card_index < max_image_card_columns %}
+          {% assign card_index = card_index | plus: 1 %}
+          <li class="mega-menu__content-list-item mega-menu__custom-card{% if card_index > max_image_card_columns_tablet %} mega-menu__content-list-item--hidden-tablet{% endif %}">
+            <a href="{{ block_settings.mega_menu_card_1_url | default: '#' }}" class="mega-menu__custom-card-link">
+              <div class="mega-menu__custom-card-image-wrapper">
+                {{ block_settings.mega_menu_card_1_image | image_url: width: 600 | image_tag: class: 'mega-menu__custom-card-image', loading: 'lazy', sizes: '(min-width: 990px) 300px, 200px' }}
+                <span class="mega-menu__custom-card-title">{{ block_settings.mega_menu_card_1_title }}</span>
+              </div>
+            </a>
+          </li>
+        {% endif %}
+
+        {% if block_settings.mega_menu_card_2_image != blank and card_index < max_image_card_columns %}
+          {% assign card_index = card_index | plus: 1 %}
+          <li class="mega-menu__content-list-item mega-menu__custom-card{% if card_index > max_image_card_columns_tablet %} mega-menu__content-list-item--hidden-tablet{% endif %}">
+            <a href="{{ block_settings.mega_menu_card_2_url | default: '#' }}" class="mega-menu__custom-card-link">
+              <div class="mega-menu__custom-card-image-wrapper">
+                {{ block_settings.mega_menu_card_2_image | image_url: width: 600 | image_tag: class: 'mega-menu__custom-card-image', loading: 'lazy', sizes: '(min-width: 990px) 300px, 200px' }}
+                <span class="mega-menu__custom-card-title">{{ block_settings.mega_menu_card_2_title }}</span>
+              </div>
+            </a>
+          </li>
+        {% endif %}
+
+        {% if block_settings.mega_menu_card_3_image != blank and card_index < max_image_card_columns %}
+          {% assign card_index = card_index | plus: 1 %}
+          <li class="mega-menu__content-list-item mega-menu__custom-card{% if card_index > max_image_card_columns_tablet %} mega-menu__content-list-item--hidden-tablet{% endif %}">
+            <a href="{{ block_settings.mega_menu_card_3_url | default: '#' }}" class="mega-menu__custom-card-link">
+              <div class="mega-menu__custom-card-image-wrapper">
+                {{ block_settings.mega_menu_card_3_image | image_url: width: 600 | image_tag: class: 'mega-menu__custom-card-image', loading: 'lazy', sizes: '(min-width: 990px) 300px, 200px' }}
+                <span class="mega-menu__custom-card-title">{{ block_settings.mega_menu_card_3_title }}</span>
+              </div>
+            </a>
+          </li>
+        {% endif %}
+
+        {% if block_settings.mega_menu_card_4_image != blank and card_index < max_image_card_columns %}
+          {% assign card_index = card_index | plus: 1 %}
+          <li class="mega-menu__content-list-item mega-menu__custom-card{% if card_index > max_image_card_columns_tablet %} mega-menu__content-list-item--hidden-tablet{% endif %}">
+            <a href="{{ block_settings.mega_menu_card_4_url | default: '#' }}" class="mega-menu__custom-card-link">
+              <div class="mega-menu__custom-card-image-wrapper">
+                {{ block_settings.mega_menu_card_4_image | image_url: width: 600 | image_tag: class: 'mega-menu__custom-card-image', loading: 'lazy', sizes: '(min-width: 990px) 300px, 200px' }}
+                <span class="mega-menu__custom-card-title">{{ block_settings.mega_menu_card_4_title }}</span>
+              </div>
+            </a>
+          </li>
+        {% endif %}
       </ul>
     </span>
 {% endcase %}
