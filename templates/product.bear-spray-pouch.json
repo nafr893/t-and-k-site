@@ -1203,7 +1203,6 @@
                     },
                     "accordion_row_MyCUGW": {
                       "type": "_accordion-row",
-                      "disabled": true,
                       "settings": {
                         "heading": "MANUFACTURING",
                         "open_by_default": true,
@@ -1296,7 +1295,7 @@
                                   "name": "t:names.icon",
                                   "settings": {
                                     "icon": "price_tag",
-                                    "image_upload": "shopify://shop_images/Kevlar_Icon_1cae299a-2969-48f5-9428-bacf0b0f3012.png",
+                                    "image_upload": "shopify://shop_images/MOLLE_ICON_8cc6b4ac-80f4-4141-985a-c467d163d269.png",
                                     "width": 30,
                                     "link": "",
                                     "open_in_new_tab": false,
@@ -1357,7 +1356,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p><strong>500D CORDURA FABRIC</strong></p>",
+                                    "text": "<p><strong>MOLLE STRAPS</strong></p>",
                                     "width": "fit-content",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1386,7 +1385,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p>Rugged, abrasion-resistant nylon fabric built for lightweight durability in hard-use conditions.</p>",
+                                    "text": "<p>A modular webbing system for securely attaching and customizing gear.</p>",
                                     "width": "100%",
                                     "max_width": "normal",
                                     "alignment": "left",
