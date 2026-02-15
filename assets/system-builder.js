@@ -590,16 +590,12 @@ class SystemBuilder extends HTMLElement {
     button.textContent = 'Adding...';
 
     try {
-      const sectionsToBundle = ['variant-added'];
-      document.documentElement.dispatchEvent(
-        new CustomEvent('cart:prepare-bundled-sections', {
-          bubbles: true,
-          detail: { sections: sectionsToBundle }
-        })
-      );
-
-      const firstVariantId = items[0].id;
-      const sectionsUrl = `${window.Shopify?.routes?.root || '/'}variants/${firstVariantId}`;
+      // Collect cart drawer section IDs for section rendering
+      const cartItemComponents = document.querySelectorAll('cart-items-component[data-section-id]');
+      const sectionIds = [];
+      cartItemComponents.forEach(el => {
+        if (el.dataset.sectionId) sectionIds.push(el.dataset.sectionId);
+      });
 
       const response = await fetch(`${window.Shopify?.routes?.root || '/'}cart/add.js`, {
         method: 'POST',
@@ -609,8 +605,7 @@ class SystemBuilder extends HTMLElement {
         },
         body: JSON.stringify({
           items,
-          sections: sectionsToBundle.join(','),
-          sections_url: sectionsUrl
+          ...(sectionIds.length > 0 ? { sections: sectionIds.join(',') } : {})
         })
       });
 
@@ -630,25 +625,22 @@ class SystemBuilder extends HTMLElement {
         headers: { 'Accept': 'application/json' }
       });
       const cart = await cartResponse.json();
-      cart.sections = responseData.sections;
 
       this.updateCartCount(cart.item_count);
 
+      // Dispatch cart:update event — triggers cart drawer to open and cart items to re-render
       document.dispatchEvent(
-        new CustomEvent('variant:add', {
+        new CustomEvent('cart:update', {
           bubbles: true,
           detail: {
-            items: responseData.hasOwnProperty('items') ? responseData.items : [responseData],
-            cart: cart
+            resource: cart,
+            sourceId: this.id,
+            data: {
+              source: 'system-builder',
+              sections: responseData.sections || {}
+            }
           }
         })
-      );
-
-      document.documentElement.dispatchEvent(
-        new CustomEvent('cart:change', { bubbles: true, detail: { baseEvent: 'variant:add', cart } })
-      );
-      document.dispatchEvent(
-        new CustomEvent('cart:refresh', { bubbles: true, detail: { cart } })
       );
 
       this.clearAllSelections();
