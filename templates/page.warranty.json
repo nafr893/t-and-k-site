@@ -1274,6 +1274,7 @@
       "block_order": [
         "group_Cjt9xq"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -2455,7 +2456,6 @@
       "block_order": [
         "group_37Lzha"
       ],
-      "disabled": true,
       "settings": {
         "content_direction": "column",
         "gap": 32,
