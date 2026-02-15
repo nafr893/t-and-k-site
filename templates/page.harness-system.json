@@ -468,7 +468,7 @@
           "settings": {
             "text": "<p><strong>Use the Harness Builder below to choose your harness system and add accessories. Save $20 when you add 2 accessories.</strong></p>",
             "width": "fit-content",
-            "max_width": "narrow",
+            "max_width": "normal",
             "alignment": "left",
             "type_preset": "rte",
             "font": "var(--font-body--family)",
