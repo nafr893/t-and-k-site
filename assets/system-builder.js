@@ -189,9 +189,9 @@ class SystemBuilder extends HTMLElement {
       const accessory = this.data.harnessAccessories.find(a => a.handle === handle);
       if (!accessory) return;
 
-      // Show chip if its harnessTypeHandles includes the active model, or if no filter is set
-      const isLinked = !accessory.harnessTypeHandles || accessory.harnessTypeHandles.length === 0
-        || accessory.harnessTypeHandles.includes(this.activeHarnessModel);
+      // Show chip if its modelHandles includes the active model, or if no filter is set
+      const isLinked = !accessory.modelHandles || accessory.modelHandles.length === 0
+        || accessory.modelHandles.includes(this.activeHarnessModel);
 
       chip.style.display = isLinked ? '' : 'none';
 
@@ -664,26 +664,7 @@ class SystemBuilder extends HTMLElement {
         throw new Error(errorMessage || 'Failed to add to cart');
       }
 
-      // Auto-apply discount code if bundle qualifies
-      if (this.bundleDiscount.enabled && this.bundleDiscount.discountCode) {
-        let harnessCount = 0;
-        let accCount = 0;
-        Object.values(this.selectedProducts).forEach(p => {
-          if (p?.productType === 'harness-model') harnessCount += (p.quantity || 1);
-          if (p?.productType === 'harness-accessory') accCount += (p.quantity || 1);
-        });
-        if (harnessCount > 0 && accCount >= this.bundleDiscount.minAccessories) {
-          try {
-            await fetch(`${window.Shopify?.routes?.root || '/'}discount/${encodeURIComponent(this.bundleDiscount.discountCode)}`, {
-              method: 'GET'
-            });
-          } catch (e) {
-            console.warn('System Builder: Could not apply discount code', e);
-          }
-        }
-      }
-
-      // Fetch updated cart (with discount applied)
+      // Fetch updated cart
       const cartResponse = await fetch(`${window.Shopify?.routes?.root || '/'}cart.js`, {
         headers: { 'Accept': 'application/json' }
       });
