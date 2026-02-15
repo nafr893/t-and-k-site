@@ -151,8 +151,10 @@ color: #ffffff;
 /* Desktop Wrapping */
  @media (min-width: 480px) {
 .quick-filter__buttons {
-display: flex;
-flex-wrap: wrap;
+display: flex !important;
+flex-wrap: wrap !important;
+width: 100dvw; 
+overflow-x: auto; 
 }
  }
 
