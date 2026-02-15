@@ -138,7 +138,7 @@
               {%- for model in harness_models -%}
                 {%- render 'system-builder-option-chip',
                   value: model.system.handle,
-                  label: model.harness_name,
+                  label: model.harness_name.value,
                   field: 'harness-model'
                 -%}
               {%- else -%}
