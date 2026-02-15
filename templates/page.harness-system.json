@@ -422,7 +422,7 @@
         "text_zEFXHk": {
           "type": "text",
           "settings": {
-            "text": "<h1>BUILD YOUR HARNESS</h1>",
+            "text": "<h1>BUILD YOUR HARNESS </h1>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -562,6 +562,20 @@
         "padding-block-end": 0
       }
     },
+    "system_builder_UQLUfP": {
+      "type": "system-builder",
+      "name": "System Builder",
+      "settings": {
+        "heading": "BUILD YOUR HARNESS SYSTEM",
+        "subheading": "",
+        "harness_models_step_title": "1. Choose Your Harness",
+        "harness_accessories_step_title": "2. Add Accessories",
+        "accessories_step_title": "3. Extras",
+        "summary_title": "Your Selection",
+        "total_label": "Total",
+        "add_to_cart_text": "Add All to Cart"
+      }
+    },
     "section_egCJ9F": {
       "type": "section",
       "name": "t:names.custom_section",
@@ -592,20 +606,6 @@
         "visibility": "both",
         "padding-block-start": 0,
         "padding-block-end": 0
-      }
-    },
-    "system_builder_UQLUfP": {
-      "type": "system-builder",
-      "name": "System Builder",
-      "settings": {
-        "heading": "BUILD YOUR HARNESS SYSTEM",
-        "subheading": "",
-        "harness_models_step_title": "1. Choose Your Harness",
-        "harness_accessories_step_title": "2. Add Accessories",
-        "accessories_step_title": "3. Extras",
-        "summary_title": "Your Selection",
-        "total_label": "Total",
-        "add_to_cart_text": "Add All to Cart"
       }
     }
   },
