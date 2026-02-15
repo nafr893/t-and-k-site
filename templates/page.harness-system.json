@@ -419,10 +419,26 @@
     "hero_hxtEgW": {
       "type": "hero",
       "blocks": {
+        "custom_label_3NfyRV": {
+          "type": "custom-label",
+          "name": "Custom label",
+          "settings": {
+            "text": "SAVE $20",
+            "link": "",
+            "text_color": "#ffffff",
+            "bg_color": "#ffffff",
+            "bg_opacity": 15,
+            "hover_bg_color": "#f2f2f2",
+            "hover_bg_opacity": 15,
+            "border_color": "#ffffff",
+            "border_opacity": 100
+          },
+          "blocks": {}
+        },
         "text_zEFXHk": {
           "type": "text",
           "settings": {
-            "text": "<h1>BUILD YOUR HARNESS</h1>",
+            "text": "<h1>BUILD YOUR HARNESS </h1>",
             "width": "fit-content",
             "max_width": "narrow",
             "alignment": "left",
@@ -450,9 +466,9 @@
         "text_W9ykxw": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>Use the Harness Builder below to choose your harness system and add accessories. </strong></p>",
+            "text": "<p><strong>Use the Harness Builder below to choose your harness system and add accessories. Save $20 when you add 2 accessories.</strong></p>",
             "width": "fit-content",
-            "max_width": "narrow",
+            "max_width": "normal",
             "alignment": "left",
             "type_preset": "rte",
             "font": "var(--font-body--family)",
@@ -493,6 +509,7 @@
         }
       },
       "block_order": [
+        "custom_label_3NfyRV",
         "text_zEFXHk",
         "text_W9ykxw",
         "button_dmM3Qc"
@@ -562,6 +579,20 @@
         "padding-block-end": 0
       }
     },
+    "system_builder_UQLUfP": {
+      "type": "system-builder",
+      "name": "System Builder",
+      "settings": {
+        "heading": "BUILD YOUR HARNESS SYSTEM",
+        "subheading": "",
+        "harness_models_step_title": "1. Choose Your Harness",
+        "harness_accessories_step_title": "2. Add Accessories",
+        "accessories_step_title": "3. Extras",
+        "summary_title": "Your Selection",
+        "total_label": "Total",
+        "add_to_cart_text": "Add All to Cart"
+      }
+    },
     "section_egCJ9F": {
       "type": "section",
       "name": "t:names.custom_section",
@@ -592,20 +623,6 @@
         "visibility": "both",
         "padding-block-start": 0,
         "padding-block-end": 0
-      }
-    },
-    "system_builder_UQLUfP": {
-      "type": "system-builder",
-      "name": "System Builder",
-      "settings": {
-        "heading": "BUILD YOUR HARNESS SYSTEM",
-        "subheading": "",
-        "harness_models_step_title": "1. Choose Your Harness",
-        "harness_accessories_step_title": "2. Add Accessories",
-        "accessories_step_title": "3. Extras",
-        "summary_title": "Your Selection",
-        "total_label": "Total",
-        "add_to_cart_text": "Add All to Cart"
       }
     }
   },
