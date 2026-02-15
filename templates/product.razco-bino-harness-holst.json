@@ -1169,7 +1169,7 @@
                         "text_ppVFfL": {
                           "type": "text",
                           "settings": {
-                            "text": "{{ closest.product.description }}",
+                            "text": "<p>{{ closest.product.description }}</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
