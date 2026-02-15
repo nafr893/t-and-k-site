@@ -149,7 +149,6 @@
                   "blocks": {
                     "stamped_reviews_star_rating_badge_XFAchf": {
                       "type": "shopify://apps/stamped-reviews/blocks/star-rating-badge/a103faaf-2125-4b0e-89fa-de5149736723",
-                      "disabled": true,
                       "settings": {
                         "use_metafields": false,
                         "sku_tagtype": "sku",
@@ -160,6 +159,7 @@
                     "review_hrdgnc": {
                       "type": "review",
                       "name": "t:names.product_review_stars",
+                      "disabled": true,
                       "settings": {
                         "stars_style": "shaded",
                         "show_number": true,
@@ -1356,7 +1356,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p><strong>500D CORDURA FABRIC</strong></p>",
+                                    "text": "<p><strong>1000D CORDURA FABRIC</strong></p>",
                                     "width": "fit-content",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1507,7 +1507,7 @@
                                   "name": "t:names.icon",
                                   "settings": {
                                     "icon": "price_tag",
-                                    "image_upload": "shopify://shop_images/Spex_lite_fill_v1.png",
+                                    "image_upload": "shopify://shop_images/foam_icon_25b63589-2cae-403e-89d3-92c04d6b44c0.png",
                                     "width": 30,
                                     "link": "",
                                     "open_in_new_tab": false,
@@ -1568,7 +1568,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p><strong>SPEX•LITE® 5125H LIGHTWEIGHT FILL</strong></p>",
+                                    "text": "<p><strong>FOAM PADDING</strong></p>",
                                     "width": "fit-content",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1597,7 +1597,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p>Spex•Lite® 5125H is a lightweight, high-loft insulation that delivers reliable warmth without added bulk.</p>",
+                                    "text": "<p>¼\" cross-linked polyethylene foam body provides impact protection</p>",
                                     "width": "100%",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1642,6 +1642,7 @@
                     },
                     "accordion_row_nfzyeB": {
                       "type": "_accordion-row",
+                      "disabled": true,
                       "settings": {
                         "heading": "QUICK SPECS",
                         "open_by_default": false,
@@ -2438,6 +2439,7 @@
         "text_9tVMAh",
         "group_GN8Lkg"
       ],
+      "disabled": true,
       "name": "Key features Desktop",
       "settings": {
         "content_direction": "column",
@@ -3008,6 +3010,7 @@
         "slide_J4bRgz",
         "slide_jKyYEh"
       ],
+      "disabled": true,
       "name": "Slideshow: Mobile",
       "settings": {
         "display_mode": "full_frame",
