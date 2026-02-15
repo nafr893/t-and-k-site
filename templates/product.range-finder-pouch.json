@@ -1203,6 +1203,7 @@
                     },
                     "accordion_row_MyCUGW": {
                       "type": "_accordion-row",
+                      "disabled": true,
                       "settings": {
                         "heading": "MANUFACTURING",
                         "open_by_default": true,
@@ -1642,6 +1643,7 @@
                     },
                     "accordion_row_nfzyeB": {
                       "type": "_accordion-row",
+                      "disabled": true,
                       "settings": {
                         "heading": "QUICK SPECS",
                         "open_by_default": false,
