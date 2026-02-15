@@ -136,9 +136,11 @@
             <div class="system-builder__chips" data-chips="harness-model">
               {%- paginate harness_models by 250 -%}
               {%- for model in harness_models -%}
+                {%- capture chip_label -%}{{ model.harness_name.value | default: model.harness_name }}{% endcapture %}
+                {%- assign chip_label = chip_label | strip -%}
                 {%- render 'system-builder-option-chip',
                   value: model.system.handle,
-                  label: model.harness_name.value,
+                  label: chip_label,
                   field: 'harness-model'
                 -%}
               {%- else -%}
