@@ -2084,7 +2084,7 @@
           "name": "t:names.button",
           "settings": {
             "label": "LEARN MORE",
-            "link": "https://tandkhunting.com/collections/range-gea",
+            "link": "shopify://pages/shipping-policy",
             "open_in_new_tab": false,
             "style_class": "button",
             "width": "fit-content",
