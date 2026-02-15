@@ -2438,6 +2438,7 @@
         "text_9tVMAh",
         "group_GN8Lkg"
       ],
+      "disabled": true,
       "name": "Key features Desktop",
       "settings": {
         "content_direction": "column",
@@ -3080,7 +3081,7 @@
           "name": "t:names.video",
           "settings": {
             "source": "url",
-            "video_url": "https://www.youtube.com/watch?v=Vd2MAnHD-48&list=TLGGuwmX2VAxPcEyNzAxMjAyNg",
+            "video_url": "https://www.youtube.com/watch?v=hHo5hPq0Nhw",
             "video_autoplay": false,
             "video_loop": true,
             "alt": "",
@@ -3195,7 +3196,6 @@
         "video_KXiw6e",
         "group_tLHtMc"
       ],
-      "disabled": true,
       "name": "t:names.video_section",
       "settings": {
         "content_direction": "column",
