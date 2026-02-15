@@ -2439,6 +2439,7 @@
         "text_9tVMAh",
         "group_GN8Lkg"
       ],
+      "disabled": true,
       "name": "Key features Desktop",
       "settings": {
         "content_direction": "column",
@@ -3009,6 +3010,7 @@
         "slide_J4bRgz",
         "slide_jKyYEh"
       ],
+      "disabled": true,
       "name": "Slideshow: Mobile",
       "settings": {
         "display_mode": "full_frame",
