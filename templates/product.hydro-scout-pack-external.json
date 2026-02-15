@@ -1295,7 +1295,7 @@
                                   "name": "t:names.icon",
                                   "settings": {
                                     "icon": "price_tag",
-                                    "image_upload": "shopify://shop_images/Kevlar_Icon_1cae299a-2969-48f5-9428-bacf0b0f3012.png",
+                                    "image_upload": "shopify://shop_images/MOLLE_ICON_8cc6b4ac-80f4-4141-985a-c467d163d269.png",
                                     "width": 30,
                                     "link": "",
                                     "open_in_new_tab": false,
@@ -1356,7 +1356,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p><strong>KEVLAR/NOMEX FABRIC</strong></p>",
+                                    "text": "<p><strong>MOLLE WEBBING</strong></p>",
                                     "width": "fit-content",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1385,7 +1385,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p>Rated up to 800°F for exceptional heat retention and durability.</p>",
+                                    "text": "<p>A modular webbing system for securely attaching and customizing gear.</p>",
                                     "width": "100%",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1425,6 +1425,7 @@
                         "group_GBbPcE": {
                           "type": "group",
                           "name": "Feature",
+                          "disabled": true,
                           "settings": {
                             "content_direction": "row",
                             "vertical_on_mobile": false,
@@ -1507,7 +1508,7 @@
                                   "name": "t:names.icon",
                                   "settings": {
                                     "icon": "price_tag",
-                                    "image_upload": "shopify://shop_images/Rope_Icon_v1.png",
+                                    "image_upload": "shopify://shop_images/Spex_lite_fill_v1.png",
                                     "width": 30,
                                     "link": "",
                                     "open_in_new_tab": false,
@@ -1568,7 +1569,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p><strong>TECHNORA ROPE</strong></p>",
+                                    "text": "<p><strong>SPEX•LITE® 5125H LIGHTWEIGHT FILL</strong></p>",
                                     "width": "fit-content",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1597,7 +1598,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p>Rated up to 950°F for high-strength retention under heat.</p>",
+                                    "text": "<p>Spex•Lite® 5125H is a lightweight, high-loft insulation that delivers reliable warmth without added bulk.</p>",
                                     "width": "100%",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1633,228 +1634,16 @@
                             "group_cm6i6M",
                             "group_MPJtyA"
                           ]
-                        },
-                        "group_3xAtUm": {
-                          "type": "group",
-                          "name": "Feature",
-                          "settings": {
-                            "content_direction": "row",
-                            "vertical_on_mobile": false,
-                            "horizontal_alignment": "space-between",
-                            "vertical_alignment": "flex-start",
-                            "align_baseline": false,
-                            "horizontal_alignment_flex_direction_column": "flex-start",
-                            "vertical_alignment_flex_direction_column": "center",
-                            "gap": 30,
-                            "width": "fill",
-                            "custom_width": 100,
-                            "width_mobile": "fill",
-                            "custom_width_mobile": 100,
-                            "height": "fit",
-                            "custom_height": 100,
-                            "inherit_color_scheme": true,
-                            "color_scheme": "",
-                            "background_media": "none",
-                            "video_position": "cover",
-                            "background_image_position": "cover",
-                            "border": "none",
-                            "border_width": 1,
-                            "border_opacity": 100,
-                            "border_radius": 0,
-                            "toggle_overlay": false,
-                            "overlay_color": "#00000026",
-                            "overlay_style": "solid",
-                            "gradient_direction": "to top",
-                            "link": "",
-                            "open_in_new_tab": false,
-                            "placeholder": "",
-                            "padding-block-start": 15,
-                            "padding-block-end": 0,
-                            "padding-inline-start": 0,
-                            "padding-inline-end": 0
-                          },
-                          "blocks": {
-                            "group_Y6rCyq": {
-                              "type": "group",
-                              "name": "t:names.group",
-                              "settings": {
-                                "content_direction": "column",
-                                "vertical_on_mobile": true,
-                                "horizontal_alignment": "flex-start",
-                                "vertical_alignment": "center",
-                                "align_baseline": false,
-                                "horizontal_alignment_flex_direction_column": "flex-start",
-                                "vertical_alignment_flex_direction_column": "center",
-                                "gap": 12,
-                                "width": "fit-content",
-                                "custom_width": 100,
-                                "width_mobile": "fit-content",
-                                "custom_width_mobile": 100,
-                                "height": "fit",
-                                "custom_height": 100,
-                                "inherit_color_scheme": true,
-                                "color_scheme": "",
-                                "background_media": "none",
-                                "video_position": "cover",
-                                "background_image_position": "cover",
-                                "border": "none",
-                                "border_width": 1,
-                                "border_opacity": 100,
-                                "border_radius": 0,
-                                "toggle_overlay": false,
-                                "overlay_color": "#00000026",
-                                "overlay_style": "solid",
-                                "gradient_direction": "to top",
-                                "link": "",
-                                "open_in_new_tab": false,
-                                "placeholder": "",
-                                "padding-block-start": 0,
-                                "padding-block-end": 0,
-                                "padding-inline-start": 0,
-                                "padding-inline-end": 0
-                              },
-                              "blocks": {
-                                "icon_NFXJJf": {
-                                  "type": "icon",
-                                  "name": "t:names.icon",
-                                  "settings": {
-                                    "icon": "price_tag",
-                                    "image_upload": "shopify://shop_images/Carbon_Fiber_Icon_71419f7f-13e9-4dbb-b2bd-07b0c7fabd91.png",
-                                    "width": 30,
-                                    "link": "",
-                                    "open_in_new_tab": false,
-                                    "background_color": "#f5f5f5",
-                                    "border_color": "#767676",
-                                    "border_weight": 1,
-                                    "container_width": 48,
-                                    "container_height": 48
-                                  },
-                                  "blocks": {}
-                                }
-                              },
-                              "block_order": [
-                                "icon_NFXJJf"
-                              ]
-                            },
-                            "group_L7PByD": {
-                              "type": "group",
-                              "name": "t:names.group",
-                              "settings": {
-                                "content_direction": "column",
-                                "vertical_on_mobile": true,
-                                "horizontal_alignment": "flex-start",
-                                "vertical_alignment": "center",
-                                "align_baseline": false,
-                                "horizontal_alignment_flex_direction_column": "flex-start",
-                                "vertical_alignment_flex_direction_column": "center",
-                                "gap": 2,
-                                "width": "fill",
-                                "custom_width": 100,
-                                "width_mobile": "fill",
-                                "custom_width_mobile": 80,
-                                "height": "fit",
-                                "custom_height": 100,
-                                "inherit_color_scheme": true,
-                                "color_scheme": "",
-                                "background_media": "none",
-                                "video_position": "cover",
-                                "background_image_position": "cover",
-                                "border": "none",
-                                "border_width": 1,
-                                "border_opacity": 100,
-                                "border_radius": 0,
-                                "toggle_overlay": false,
-                                "overlay_color": "#00000026",
-                                "overlay_style": "solid",
-                                "gradient_direction": "to top",
-                                "link": "",
-                                "open_in_new_tab": false,
-                                "placeholder": "",
-                                "padding-block-start": 0,
-                                "padding-block-end": 0,
-                                "padding-inline-start": 0,
-                                "padding-inline-end": 0
-                              },
-                              "blocks": {
-                                "text_NWgxMA": {
-                                  "type": "text",
-                                  "name": "t:names.text",
-                                  "settings": {
-                                    "text": "<p><strong>CARBON FIBER SLEEVE</strong></p>",
-                                    "width": "fit-content",
-                                    "max_width": "normal",
-                                    "alignment": "left",
-                                    "type_preset": "rte",
-                                    "font": "var(--font-body--family)",
-                                    "font_size": "1rem",
-                                    "line_height": "normal",
-                                    "letter_spacing": "normal",
-                                    "case": "none",
-                                    "wrap": "pretty",
-                                    "color": "var(--color-foreground)",
-                                    "background": false,
-                                    "border": false,
-                                    "background_color": "#00000026",
-                                    "border_color": "#000000",
-                                    "border_weight": 1,
-                                    "corner_radius": 0,
-                                    "padding-block-start": 0,
-                                    "padding-block-end": 0,
-                                    "padding-inline-start": 0,
-                                    "padding-inline-end": 0
-                                  },
-                                  "blocks": {}
-                                },
-                                "text_YFEcc3": {
-                                  "type": "text",
-                                  "name": "t:names.text",
-                                  "settings": {
-                                    "text": "<p>Withstands temperatures up to 1800°F for superior suppressor heat protection.</p>",
-                                    "width": "100%",
-                                    "max_width": "normal",
-                                    "alignment": "left",
-                                    "type_preset": "rte",
-                                    "font": "var(--font-body--family)",
-                                    "font_size": "1rem",
-                                    "line_height": "normal",
-                                    "letter_spacing": "normal",
-                                    "case": "none",
-                                    "wrap": "pretty",
-                                    "color": "var(--color-foreground)",
-                                    "background": false,
-                                    "border": false,
-                                    "background_color": "#00000026",
-                                    "border_color": "#000000",
-                                    "border_weight": 1,
-                                    "corner_radius": 0,
-                                    "padding-block-start": 0,
-                                    "padding-block-end": 0,
-                                    "padding-inline-start": 0,
-                                    "padding-inline-end": 0
-                                  },
-                                  "blocks": {}
-                                }
-                              },
-                              "block_order": [
-                                "text_NWgxMA",
-                                "text_YFEcc3"
-                              ]
-                            }
-                          },
-                          "block_order": [
-                            "group_Y6rCyq",
-                            "group_L7PByD"
-                          ]
                         }
                       },
                       "block_order": [
                         "group_Jp8y3X",
-                        "group_GBbPcE",
-                        "group_3xAtUm"
+                        "group_GBbPcE"
                       ]
                     },
                     "accordion_row_nfzyeB": {
                       "type": "_accordion-row",
+                      "disabled": true,
                       "settings": {
                         "heading": "QUICK SPECS",
                         "open_by_default": false,
@@ -2101,7 +1890,7 @@
                         "text_RFeBbn": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Use: </strong>Range + field</p><p><strong>Heat stack: </strong>Carbon fiber sleeve (up to 1800°F) + Kevlar/Nomex (up to 800°F) + Technora retention (up to 950°F)</p><p><strong>Real-world firing schedule rating: </strong>600°F+</p><p><strong>Platform:</strong> Semi-auto + full-auto capable</p><p><strong>Primary benefits: </strong>Heat protection, mirage reduction, suppressor protection, stable retention</p><p><strong>Made in: </strong>USA</p><p><strong>Lead time note: </strong>Hand crafted item, allow 1–2 weeks for shipment (production lead time)</p>",
+                            "text": "<p>Weight / support: 1.6 lb</p><p>Architecture: 3 independent fill chambers (3 fill ports)</p><p>Compression: Full-length wrap-around straps</p><p>Fill (standard): Spex•Lite® 5125H lightweight fill</p><p>Made in: USA</p><p>Fabric: 500D Cordura®</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
@@ -2298,7 +2087,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC05571.webp",
+                    "image": "shopify://shop_images/DSC05675.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2321,7 +2110,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Extreme heat protection (1800°F carbon fiber sleeve)</strong></h4>",
+                    "text": "<h4><strong>Three-chamber modular architecture</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2350,7 +2139,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Built to handle real heat so your cover doesn’t become the weak link.</p>",
+                    "text": "<p>Three independent fill zones let you tune height, shape, and firmness so the bag matches the position, not the other way around.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2426,7 +2215,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC08182.webp",
+                    "image": "shopify://shop_images/DSC05684.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2449,7 +2238,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Mirage reduction</strong></h4>",
+                    "text": "<h4><strong>Wrap-around compression</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2478,7 +2267,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Helps cut heat distortion so you can keep a cleaner sight picture through longer strings.</p>",
+                    "text": "<p>Full-length compression straps cinch the bag tight to posts, branches, and barricades so it becomes part of the structure, not just padding.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2554,7 +2343,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC05562.webp",
+                    "image": "shopify://shop_images/DSC05706.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2577,7 +2366,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Retention that stays locked in (Technora rope, 950°F rated)</strong></h4>",
+                    "text": "<h4><strong>Lightweight AND stable fill</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2606,7 +2395,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>High-strength tie-down designed to hold tight under heat and recoil.</p>",
+                    "text": "<p>Filled with Spex•Lite® 5125H the Delta Zero™ is built to balance stability and recoil management without hauling around a sandbag.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2651,6 +2440,7 @@
         "text_9tVMAh",
         "group_GN8Lkg"
       ],
+      "disabled": true,
       "name": "Key features Desktop",
       "settings": {
         "content_direction": "column",
@@ -2688,7 +2478,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05571.webp",
+            "image_1": "shopify://shop_images/DSC05675.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -2793,7 +2583,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h4><strong>Extreme heat protection (1800°F carbon fiber sleeve)</strong></h4>",
+                        "text": "<h4><strong>Three-chamber modular architecture</strong></h4>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -2879,7 +2669,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Built to handle real heat so your cover doesn’t become the weak link.</p>",
+                        "text": "<p>Three independent fill zones let you tune height, shape, and firmness so the bag matches the position, not the other way around. </p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -2925,7 +2715,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC08182_6a234785-9e78-4d2d-96b5-4fe62efa9f3c.webp",
+            "image_1": "shopify://shop_images/DSC05684.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -2990,7 +2780,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Mirage reduction</strong></h4>",
+                    "text": "<h4><strong>Wrap-around compression</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3031,7 +2821,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Helps cut heat distortion so you can keep a cleaner sight picture through longer strings.</p>",
+                    "text": "<p>Full-length compression straps cinch the bag tight to posts, branches, and barricades so it becomes part of the structure, not just padding.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3072,7 +2862,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05562.webp",
+            "image_1": "shopify://shop_images/DSC05706_1_-2.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -3137,7 +2927,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Retention that stays locked in (Technora rope, 950°F rated)</strong></h4>",
+                    "text": "<h4><strong>Lightweight AND stable fill</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3178,7 +2968,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>High-strength tie-down designed to hold tight under heat and recoil.</p>",
+                    "text": "<p>Filled with Spex•Lite® 5125H the Delta Zero™ is built to balance stability and recoil management without hauling around a sandbag.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3221,6 +3011,7 @@
         "slide_J4bRgz",
         "slide_jKyYEh"
       ],
+      "disabled": true,
       "name": "Slideshow: Mobile",
       "settings": {
         "display_mode": "full_frame",
@@ -3408,6 +3199,7 @@
         "video_KXiw6e",
         "group_tLHtMc"
       ],
+      "disabled": true,
       "name": "t:names.video_section",
       "settings": {
         "content_direction": "column",
@@ -3540,7 +3332,7 @@
             "accordion_row_ryQ9Td": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Is the X Tango suppressor cover full-auto rated?",
+                "heading": "What is the Delta Zero shooting bag used for?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3549,7 +3341,7 @@
                 "text_PFfBBg": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Yes. It’s designed for hard use, including semi-auto and full-auto platforms.</p>",
+                    "text": "<p>It’s a modular support bag for real-world shooting positions, barricades, rocks, posts, prone, kneeling, and rear-bag support.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3582,7 +3374,7 @@
             "accordion_row_XE9tYL": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What temperature is it rated for?",
+                "heading": "How is this different from a standard barricade bag?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3591,7 +3383,7 @@
                 "text_GYYtLC": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Material ratings: carbon fiber sleeve up to 1800°F, Kevlar/Nomex up to 800°F, Technora rope up to 950°F.</p><p>Use guidance: it’s built to withstand 600°F+ during real-world firing schedules.</p>",
+                    "text": "<p>The Delta Zero uses a three-chamber design with independent fill zones and wrap-around compression, creating multiple contact points and better stability than a single-chamber cube/wedge.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3625,7 +3417,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Does it reduce heat mirage?",
+                "heading": "Does it come filled?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3635,7 +3427,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Yes, mirage reduction is one of the main reasons to run this cover, especially when the suppressor heats up.</p>",
+                    "text": "<p>Yes, it ships standard with Spex•Lite® 5125H, a premium lightweight fill designed to balance stability and packability.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3669,7 +3461,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Can I rapid fire with it on?",
+                "heading": "Is it made in the USA?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3679,7 +3471,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>For rapid fire beyond ~60 rounds without cooldown, the guidance is to remove the cover.</p>",
+                    "text": "<p>Yes, the Delta Zero™ is made in the USA and built with 500D Cordura® and other durable USA materials.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3708,58 +3500,13 @@
               "block_order": [
                 "text_BC7K7N"
               ]
-            },
-            "accordion_row_7rzepm": {
-              "type": "_accordion-row",
-              "name": "t:names.accordion_row",
-              "settings": {
-                "heading": "Is it made in the USA?",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text_wrFYF3": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Yes, this is a hand crafted USA item.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "border": false,
-                    "background_color": "",
-                    "border_color": "#000000",
-                    "border_weight": 0,
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_wrFYF3"
-              ]
             }
           },
           "block_order": [
             "accordion_row_ryQ9Td",
             "accordion_row_XE9tYL",
             "accordion_row_HdqWcD",
-            "accordion_row_74RWF7",
-            "accordion_row_7rzepm"
+            "accordion_row_74RWF7"
           ]
         }
       },

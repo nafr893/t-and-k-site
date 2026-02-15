@@ -1356,7 +1356,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p><strong>KEVLAR/NOMEX FABRIC</strong></p>",
+                                    "text": "<p><strong>1000D CORDURA FABRIC</strong></p>",
                                     "width": "fit-content",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1385,7 +1385,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p>Rated up to 800°F for exceptional heat retention and durability.</p>",
+                                    "text": "<p>Rugged, abrasion-resistant nylon fabric built for lightweight durability in hard-use conditions.</p>",
                                     "width": "100%",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1507,7 +1507,7 @@
                                   "name": "t:names.icon",
                                   "settings": {
                                     "icon": "price_tag",
-                                    "image_upload": "shopify://shop_images/Rope_Icon_v1.png",
+                                    "image_upload": "shopify://shop_images/Steel_Wire_Icon_v1.png",
                                     "width": 30,
                                     "link": "",
                                     "open_in_new_tab": false,
@@ -1568,7 +1568,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p><strong>TECHNORA ROPE</strong></p>",
+                                    "text": "<p><strong>UNDERFOOT SYSTEM</strong></p>",
                                     "width": "fit-content",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1597,7 +1597,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p>Rated up to 950°F for high-strength retention under heat.</p>",
+                                    "text": "<p>Stainless steel underwire with rubber coating for rigid, durable hold.</p>",
                                     "width": "100%",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1634,7 +1634,7 @@
                             "group_MPJtyA"
                           ]
                         },
-                        "group_3xAtUm": {
+                        "group_yL3TEa": {
                           "type": "group",
                           "name": "Feature",
                           "settings": {
@@ -1674,7 +1674,7 @@
                             "padding-inline-end": 0
                           },
                           "blocks": {
-                            "group_Y6rCyq": {
+                            "group_hzkArk": {
                               "type": "group",
                               "name": "t:names.group",
                               "settings": {
@@ -1714,12 +1714,12 @@
                                 "padding-inline-end": 0
                               },
                               "blocks": {
-                                "icon_NFXJJf": {
+                                "icon_kC4DdN": {
                                   "type": "icon",
                                   "name": "t:names.icon",
                                   "settings": {
                                     "icon": "price_tag",
-                                    "image_upload": "shopify://shop_images/Carbon_Fiber_Icon_71419f7f-13e9-4dbb-b2bd-07b0c7fabd91.png",
+                                    "image_upload": "shopify://shop_images/Zipper_Icon_4_68f1a888-a879-4a23-b313-3c458f5d8c22.png",
                                     "width": 30,
                                     "link": "",
                                     "open_in_new_tab": false,
@@ -1733,10 +1733,10 @@
                                 }
                               },
                               "block_order": [
-                                "icon_NFXJJf"
+                                "icon_kC4DdN"
                               ]
                             },
-                            "group_L7PByD": {
+                            "group_GtVLxB": {
                               "type": "group",
                               "name": "t:names.group",
                               "settings": {
@@ -1776,11 +1776,11 @@
                                 "padding-inline-end": 0
                               },
                               "blocks": {
-                                "text_NWgxMA": {
+                                "text_kKz6Pz": {
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p><strong>CARBON FIBER SLEEVE</strong></p>",
+                                    "text": "<p><strong>#10 YKK ZIPPERS</strong></p>",
                                     "width": "fit-content",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1805,11 +1805,11 @@
                                   },
                                   "blocks": {}
                                 },
-                                "text_YFEcc3": {
+                                "text_XtrphN": {
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p>Withstands temperatures up to 1800°F for superior suppressor heat protection.</p>",
+                                    "text": "<p>We use a heavy-duty #10 YKK zipper for strength, easy access, and secure closure.</p>",
                                     "width": "100%",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1836,25 +1836,26 @@
                                 }
                               },
                               "block_order": [
-                                "text_NWgxMA",
-                                "text_YFEcc3"
+                                "text_kKz6Pz",
+                                "text_XtrphN"
                               ]
                             }
                           },
                           "block_order": [
-                            "group_Y6rCyq",
-                            "group_L7PByD"
+                            "group_hzkArk",
+                            "group_GtVLxB"
                           ]
                         }
                       },
                       "block_order": [
                         "group_Jp8y3X",
                         "group_GBbPcE",
-                        "group_3xAtUm"
+                        "group_yL3TEa"
                       ]
                     },
                     "accordion_row_nfzyeB": {
                       "type": "_accordion-row",
+                      "disabled": true,
                       "settings": {
                         "heading": "QUICK SPECS",
                         "open_by_default": false,
@@ -2101,7 +2102,7 @@
                         "text_RFeBbn": {
                           "type": "text",
                           "settings": {
-                            "text": "<p><strong>Use: </strong>Range + field</p><p><strong>Heat stack: </strong>Carbon fiber sleeve (up to 1800°F) + Kevlar/Nomex (up to 800°F) + Technora retention (up to 950°F)</p><p><strong>Real-world firing schedule rating: </strong>600°F+</p><p><strong>Platform:</strong> Semi-auto + full-auto capable</p><p><strong>Primary benefits: </strong>Heat protection, mirage reduction, suppressor protection, stable retention</p><p><strong>Made in: </strong>USA</p><p><strong>Lead time note: </strong>Hand crafted item, allow 1–2 weeks for shipment (production lead time)</p>",
+                            "text": "<p>Weight / support: 1.6 lb</p><p>Architecture: 3 independent fill chambers (3 fill ports)</p><p>Compression: Full-length wrap-around straps</p><p>Fill (standard): Spex•Lite® 5125H lightweight fill</p><p>Made in: USA</p><p>Fabric: 500D Cordura®</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
@@ -2298,7 +2299,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC05571.webp",
+                    "image": "shopify://shop_images/DSC05675.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2321,7 +2322,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Extreme heat protection (1800°F carbon fiber sleeve)</strong></h4>",
+                    "text": "<h4><strong>Three-chamber modular architecture</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2350,7 +2351,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Built to handle real heat so your cover doesn’t become the weak link.</p>",
+                    "text": "<p>Three independent fill zones let you tune height, shape, and firmness so the bag matches the position, not the other way around.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2426,7 +2427,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC08182.webp",
+                    "image": "shopify://shop_images/DSC05684.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2449,7 +2450,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Mirage reduction</strong></h4>",
+                    "text": "<h4><strong>Wrap-around compression</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2478,7 +2479,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Helps cut heat distortion so you can keep a cleaner sight picture through longer strings.</p>",
+                    "text": "<p>Full-length compression straps cinch the bag tight to posts, branches, and barricades so it becomes part of the structure, not just padding.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2554,7 +2555,7 @@
                   "type": "image",
                   "name": "t:names.image",
                   "settings": {
-                    "image": "shopify://shop_images/DSC05562.webp",
+                    "image": "shopify://shop_images/DSC05706.webp",
                     "link": "",
                     "image_ratio": "square",
                     "width": "fill",
@@ -2577,7 +2578,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Retention that stays locked in (Technora rope, 950°F rated)</strong></h4>",
+                    "text": "<h4><strong>Lightweight AND stable fill</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2606,7 +2607,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>High-strength tie-down designed to hold tight under heat and recoil.</p>",
+                    "text": "<p>Filled with Spex•Lite® 5125H the Delta Zero™ is built to balance stability and recoil management without hauling around a sandbag.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -2651,6 +2652,7 @@
         "text_9tVMAh",
         "group_GN8Lkg"
       ],
+      "disabled": true,
       "name": "Key features Desktop",
       "settings": {
         "content_direction": "column",
@@ -2688,7 +2690,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05571.webp",
+            "image_1": "shopify://shop_images/DSC05675.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -2793,7 +2795,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h4><strong>Extreme heat protection (1800°F carbon fiber sleeve)</strong></h4>",
+                        "text": "<h4><strong>Three-chamber modular architecture</strong></h4>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -2879,7 +2881,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Built to handle real heat so your cover doesn’t become the weak link.</p>",
+                        "text": "<p>Three independent fill zones let you tune height, shape, and firmness so the bag matches the position, not the other way around. </p>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -2925,7 +2927,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC08182_6a234785-9e78-4d2d-96b5-4fe62efa9f3c.webp",
+            "image_1": "shopify://shop_images/DSC05684.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -2990,7 +2992,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Mirage reduction</strong></h4>",
+                    "text": "<h4><strong>Wrap-around compression</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3031,7 +3033,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Helps cut heat distortion so you can keep a cleaner sight picture through longer strings.</p>",
+                    "text": "<p>Full-length compression straps cinch the bag tight to posts, branches, and barricades so it becomes part of the structure, not just padding.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3072,7 +3074,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05562.webp",
+            "image_1": "shopify://shop_images/DSC05706_1_-2.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -3137,7 +3139,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h4><strong>Retention that stays locked in (Technora rope, 950°F rated)</strong></h4>",
+                    "text": "<h4><strong>Lightweight AND stable fill</strong></h4>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3178,7 +3180,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>High-strength tie-down designed to hold tight under heat and recoil.</p>",
+                    "text": "<p>Filled with Spex•Lite® 5125H the Delta Zero™ is built to balance stability and recoil management without hauling around a sandbag.</p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3221,6 +3223,7 @@
         "slide_J4bRgz",
         "slide_jKyYEh"
       ],
+      "disabled": true,
       "name": "Slideshow: Mobile",
       "settings": {
         "display_mode": "full_frame",
@@ -3408,6 +3411,7 @@
         "video_KXiw6e",
         "group_tLHtMc"
       ],
+      "disabled": true,
       "name": "t:names.video_section",
       "settings": {
         "content_direction": "column",
@@ -3540,7 +3544,7 @@
             "accordion_row_ryQ9Td": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "Is the X Tango suppressor cover full-auto rated?",
+                "heading": "What is the Delta Zero shooting bag used for?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3549,7 +3553,7 @@
                 "text_PFfBBg": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Yes. It’s designed for hard use, including semi-auto and full-auto platforms.</p>",
+                    "text": "<p>It’s a modular support bag for real-world shooting positions, barricades, rocks, posts, prone, kneeling, and rear-bag support.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3582,7 +3586,7 @@
             "accordion_row_XE9tYL": {
               "type": "_accordion-row",
               "settings": {
-                "heading": "What temperature is it rated for?",
+                "heading": "How is this different from a standard barricade bag?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3591,7 +3595,7 @@
                 "text_GYYtLC": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Material ratings: carbon fiber sleeve up to 1800°F, Kevlar/Nomex up to 800°F, Technora rope up to 950°F.</p><p>Use guidance: it’s built to withstand 600°F+ during real-world firing schedules.</p>",
+                    "text": "<p>The Delta Zero uses a three-chamber design with independent fill zones and wrap-around compression, creating multiple contact points and better stability than a single-chamber cube/wedge.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3625,7 +3629,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Does it reduce heat mirage?",
+                "heading": "Does it come filled?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3635,7 +3639,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Yes, mirage reduction is one of the main reasons to run this cover, especially when the suppressor heats up.</p>",
+                    "text": "<p>Yes, it ships standard with Spex•Lite® 5125H, a premium lightweight fill designed to balance stability and packability.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3669,7 +3673,7 @@
               "type": "_accordion-row",
               "name": "t:names.accordion_row",
               "settings": {
-                "heading": "Can I rapid fire with it on?",
+                "heading": "Is it made in the USA?",
                 "open_by_default": false,
                 "icon": "none",
                 "width": 20
@@ -3679,7 +3683,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>For rapid fire beyond ~60 rounds without cooldown, the guidance is to remove the cover.</p>",
+                    "text": "<p>Yes, the Delta Zero™ is made in the USA and built with 500D Cordura® and other durable USA materials.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
@@ -3708,58 +3712,13 @@
               "block_order": [
                 "text_BC7K7N"
               ]
-            },
-            "accordion_row_7rzepm": {
-              "type": "_accordion-row",
-              "name": "t:names.accordion_row",
-              "settings": {
-                "heading": "Is it made in the USA?",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text_wrFYF3": {
-                  "type": "text",
-                  "name": "t:names.text",
-                  "settings": {
-                    "text": "<p>Yes, this is a hand crafted USA item.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "color": "var(--color-foreground)",
-                    "background": false,
-                    "border": false,
-                    "background_color": "",
-                    "border_color": "#000000",
-                    "border_weight": 0,
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_wrFYF3"
-              ]
             }
           },
           "block_order": [
             "accordion_row_ryQ9Td",
             "accordion_row_XE9tYL",
             "accordion_row_HdqWcD",
-            "accordion_row_74RWF7",
-            "accordion_row_7rzepm"
+            "accordion_row_74RWF7"
           ]
         }
       },
