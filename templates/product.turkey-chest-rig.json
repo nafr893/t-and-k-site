@@ -1295,7 +1295,7 @@
                                   "name": "t:names.icon",
                                   "settings": {
                                     "icon": "price_tag",
-                                    "image_upload": "shopify://shop_images/Kevlar_Icon_1cae299a-2969-48f5-9428-bacf0b0f3012.png",
+                                    "image_upload": "shopify://shop_images/foam_icon_25b63589-2cae-403e-89d3-92c04d6b44c0.png",
                                     "width": 30,
                                     "link": "",
                                     "open_in_new_tab": false,
@@ -1356,7 +1356,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p><strong>500D CORDURA FABRIC</strong></p>",
+                                    "text": "<p><strong>FOAM PADDING</strong></p>",
                                     "width": "fit-content",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1385,7 +1385,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p>Rugged, abrasion-resistant nylon fabric built for lightweight durability in hard-use conditions.</p>",
+                                    "text": "<p>¼\" cross-linked polyethylene foam body provides impact protection</p>",
                                     "width": "100%",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1507,7 +1507,7 @@
                                   "name": "t:names.icon",
                                   "settings": {
                                     "icon": "price_tag",
-                                    "image_upload": "shopify://shop_images/Spex_lite_fill_v1.png",
+                                    "image_upload": "shopify://shop_images/MOLLE_ICON_8cc6b4ac-80f4-4141-985a-c467d163d269.png",
                                     "width": 30,
                                     "link": "",
                                     "open_in_new_tab": false,
@@ -1568,7 +1568,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p><strong>SPEX•LITE® 5125H LIGHTWEIGHT FILL</strong></p>",
+                                    "text": "<p><strong>MIL-SPEC WEBBING</strong></p>",
                                     "width": "fit-content",
                                     "max_width": "normal",
                                     "alignment": "left",
@@ -1597,7 +1597,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p>Spex•Lite® 5125H is a lightweight, high-loft insulation that delivers reliable warmth without added bulk.</p>",
+                                    "text": "<p>MIL-SPEC nylon webbing for strength where it matters.</p>",
                                     "width": "100%",
                                     "max_width": "normal",
                                     "alignment": "left",
