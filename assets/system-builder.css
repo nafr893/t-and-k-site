@@ -483,6 +483,23 @@
   display: none;
 }
 
+/* Bundle Discount */
+.system-builder__summary-discount {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-2, 8px) 0;
+  font-size: 0.9rem;
+  color: #16a34a;
+}
+
+.system-builder__summary-discount-label {
+  font-weight: 500;
+}
+
+.system-builder__summary-discount-amount {
+  font-weight: 600;
+}
+
 .system-builder__summary-total {
   display: flex;
   justify-content: space-between;

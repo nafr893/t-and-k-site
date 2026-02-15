@@ -23,12 +23,34 @@ class SystemBuilder extends HTMLElement {
       harnessAccessories: [],
       accessories: []       // block accessories
     };
+
+    // Bundle discount config (read from data attributes)
+    this.bundleDiscount = {
+      enabled: false,
+      amount: 0,          // in dollars
+      minAccessories: 2,
+      discountCode: null
+    };
   }
 
   connectedCallback() {
+    this.loadDiscountConfig();
     this.loadData();
     this.bindEvents();
     this.initializeState();
+  }
+
+  /**
+   * Load bundle discount config from data attributes
+   */
+  loadDiscountConfig() {
+    const discountAmount = this.dataset.bundleDiscount;
+    if (discountAmount) {
+      this.bundleDiscount.enabled = true;
+      this.bundleDiscount.amount = parseFloat(discountAmount) || 20;
+      this.bundleDiscount.minAccessories = parseInt(this.dataset.bundleMinAccessories, 10) || 2;
+      this.bundleDiscount.discountCode = this.dataset.bundleDiscountCode || null;
+    }
   }
 
   /**
@@ -494,16 +516,37 @@ class SystemBuilder extends HTMLElement {
     }
 
     // Calculate total
-    let total = 0;
+    let subtotal = 0;
     let itemCount = 0;
+    let harnessModelCount = 0;
+    let accessoryCount = 0;
 
     Object.values(this.selectedProducts).forEach(product => {
       if (product?.price) {
         const qty = product.quantity || 1;
-        total += product.price * qty;
+        subtotal += product.price * qty;
         itemCount += qty;
+
+        if (product.productType === 'harness-model') harnessModelCount += qty;
+        if (product.productType === 'harness-accessory') accessoryCount += qty;
       }
     });
+
+    // Check bundle discount eligibility
+    const discountApplies = this.bundleDiscount.enabled
+      && harnessModelCount > 0
+      && accessoryCount >= this.bundleDiscount.minAccessories;
+
+    const discountCents = discountApplies ? this.bundleDiscount.amount * 100 : 0;
+    const total = Math.max(0, subtotal - discountCents);
+
+    // Update discount row visibility
+    const discountRow = summary.querySelector('[data-summary-discount]');
+    const discountAmountEl = summary.querySelector('[data-discount-amount]');
+    if (discountRow) discountRow.hidden = !discountApplies;
+    if (discountAmountEl && discountApplies) {
+      discountAmountEl.textContent = `-${this.formatMoney(discountCents)}`;
+    }
 
     const totalEl = summary.querySelector('[data-total-price]');
     if (totalEl) totalEl.textContent = this.formatMoney(total);
@@ -621,6 +664,26 @@ class SystemBuilder extends HTMLElement {
         throw new Error(errorMessage || 'Failed to add to cart');
       }
 
+      // Auto-apply discount code if bundle qualifies
+      if (this.bundleDiscount.enabled && this.bundleDiscount.discountCode) {
+        let harnessCount = 0;
+        let accCount = 0;
+        Object.values(this.selectedProducts).forEach(p => {
+          if (p?.productType === 'harness-model') harnessCount += (p.quantity || 1);
+          if (p?.productType === 'harness-accessory') accCount += (p.quantity || 1);
+        });
+        if (harnessCount > 0 && accCount >= this.bundleDiscount.minAccessories) {
+          try {
+            await fetch(`${window.Shopify?.routes?.root || '/'}discount/${encodeURIComponent(this.bundleDiscount.discountCode)}`, {
+              method: 'GET'
+            });
+          } catch (e) {
+            console.warn('System Builder: Could not apply discount code', e);
+          }
+        }
+      }
+
+      // Fetch updated cart (with discount applied)
       const cartResponse = await fetch(`${window.Shopify?.routes?.root || '/'}cart.js`, {
         headers: { 'Accept': 'application/json' }
       });

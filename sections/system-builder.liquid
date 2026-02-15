@@ -15,7 +15,17 @@
   assign harness_accessories = shop.metaobjects.harness_accessory.values
 -%}
 
-<system-builder class="system-builder section-{{ section.id }}" id="system-builder-{{ section.id }}">
+<system-builder
+  class="system-builder section-{{ section.id }}"
+  id="system-builder-{{ section.id }}"
+  {% if section.settings.bundle_discount_enabled %}
+    data-bundle-discount="{{ section.settings.bundle_discount_amount | default: 20 }}"
+    data-bundle-min-accessories="{{ section.settings.bundle_min_accessories | default: 2 }}"
+    {% if section.settings.bundle_discount_code != blank %}
+      data-bundle-discount-code="{{ section.settings.bundle_discount_code }}"
+    {% endif %}
+  {% endif %}
+>
   {%- comment -%} Data payloads for JavaScript {%- endcomment -%}
 
   {%- comment -%} Harness models — chip labels only {%- endcomment -%}
@@ -201,6 +211,11 @@
           </div>
 
           <div class="system-builder__summary-footer" data-summary-footer hidden>
+            <div class="system-builder__summary-discount" data-summary-discount hidden>
+              <span class="system-builder__summary-discount-label">{{ section.settings.bundle_discount_label | default: 'Bundle Discount' }}</span>
+              <span class="system-builder__summary-discount-amount" data-discount-amount></span>
+            </div>
+
             <div class="system-builder__summary-total">
               <span class="system-builder__summary-total-label">{{ section.settings.total_label | default: 'Total' }}</span>
               <span class="system-builder__summary-total-price" data-total-price></span>
@@ -290,6 +305,41 @@
       "id": "add_to_cart_text",
       "label": "Add to Cart Button Text",
       "default": "Add All to Cart"
+    },
+    {
+      "type": "header",
+      "content": "Bundle Discount"
+    },
+    {
+      "type": "checkbox",
+      "id": "bundle_discount_enabled",
+      "label": "Enable bundle discount",
+      "default": false
+    },
+    {
+      "type": "number",
+      "id": "bundle_discount_amount",
+      "label": "Discount amount (dollars)",
+      "default": 20
+    },
+    {
+      "type": "number",
+      "id": "bundle_min_accessories",
+      "label": "Minimum accessories required",
+      "default": 2,
+      "info": "Number of accessory products that must be selected (along with a harness) to trigger the discount."
+    },
+    {
+      "type": "text",
+      "id": "bundle_discount_code",
+      "label": "Shopify discount code",
+      "info": "Create a matching discount code in Shopify admin. This code will be auto-applied to the cart."
+    },
+    {
+      "type": "text",
+      "id": "bundle_discount_label",
+      "label": "Discount label",
+      "default": "Bundle Discount"
     }
   ],
   "blocks": [
