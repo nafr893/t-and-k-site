@@ -419,6 +419,22 @@
     "hero_hxtEgW": {
       "type": "hero",
       "blocks": {
+        "custom_label_3NfyRV": {
+          "type": "custom-label",
+          "name": "Custom label",
+          "settings": {
+            "text": "SAVE $20",
+            "link": "",
+            "text_color": "#ffffff",
+            "bg_color": "#ffffff",
+            "bg_opacity": 15,
+            "hover_bg_color": "#f2f2f2",
+            "hover_bg_opacity": 15,
+            "border_color": "#ffffff",
+            "border_opacity": 100
+          },
+          "blocks": {}
+        },
         "text_zEFXHk": {
           "type": "text",
           "settings": {
@@ -493,6 +509,7 @@
         }
       },
       "block_order": [
+        "custom_label_3NfyRV",
         "text_zEFXHk",
         "text_W9ykxw",
         "button_dmM3Qc"
