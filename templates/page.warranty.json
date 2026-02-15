@@ -138,8 +138,8 @@
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
             "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
+            "width": "custom",
+            "custom_width": 55,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
             "height": "fit",
@@ -178,7 +178,7 @@
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
-                "width": "fill",
+                "width": "custom",
                 "custom_width": 100,
                 "width_mobile": "fill",
                 "custom_width_mobile": 100,
@@ -1274,7 +1274,6 @@
       "block_order": [
         "group_Cjt9xq"
       ],
-      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "content_direction": "column",
@@ -2456,6 +2455,7 @@
       "block_order": [
         "group_37Lzha"
       ],
+      "disabled": true,
       "settings": {
         "content_direction": "column",
         "gap": 32,
