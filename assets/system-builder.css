@@ -184,7 +184,7 @@
 
 .system-builder__product-card--selected {
   border-color: var(--color-primary, #333);
-  background: var(--color-background-selected, #f0f7f0);
+  background: var(--color-background-selected, #f0f0f0);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
