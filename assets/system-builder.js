@@ -664,7 +664,26 @@ class SystemBuilder extends HTMLElement {
         throw new Error(errorMessage || 'Failed to add to cart');
       }
 
-      // Fetch updated cart
+      // Auto-apply discount code if bundle qualifies
+      if (this.bundleDiscount.enabled && this.bundleDiscount.discountCode) {
+        let harnessCount = 0;
+        let accCount = 0;
+        Object.values(this.selectedProducts).forEach(p => {
+          if (p?.productType === 'harness-model') harnessCount += (p.quantity || 1);
+          if (p?.productType === 'harness-accessory') accCount += (p.quantity || 1);
+        });
+        if (harnessCount > 0 && accCount >= this.bundleDiscount.minAccessories) {
+          try {
+            await fetch(`${window.Shopify?.routes?.root || '/'}discount/${encodeURIComponent(this.bundleDiscount.discountCode)}`, {
+              method: 'GET'
+            });
+          } catch (e) {
+            console.warn('System Builder: Could not apply discount code', e);
+          }
+        }
+      }
+
+      // Fetch updated cart (with discount applied)
       const cartResponse = await fetch(`${window.Shopify?.routes?.root || '/'}cart.js`, {
         headers: { 'Accept': 'application/json' }
       });
