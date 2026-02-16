@@ -590,7 +590,12 @@
         "accessories_step_title": "3. Extras",
         "summary_title": "Your Selection",
         "total_label": "Total",
-        "add_to_cart_text": "Add All to Cart"
+        "add_to_cart_text": "Add All to Cart",
+        "bundle_discount_enabled": true,
+        "bundle_discount_amount": 20,
+        "bundle_min_accessories": 2,
+        "bundle_discount_code": "",
+        "bundle_discount_label": "Harness + Any 2 Accessories = $20 off"
       }
     },
     "section_egCJ9F": {
