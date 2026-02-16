@@ -489,7 +489,7 @@
   justify-content: space-between;
   padding: var(--spacing-2, 8px) 0;
   font-size: 0.9rem;
-  color: #16a34a;
+  color: #6a6a6a;
 }
 
 .system-builder__summary-discount-label {
