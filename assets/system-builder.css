@@ -577,7 +577,6 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 4px 8px;
-  border-radius: var(--border-radius-sm, 4px);
 }
 
 .system-builder__stock-status {
