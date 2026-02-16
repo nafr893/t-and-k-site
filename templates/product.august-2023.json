@@ -550,24 +550,38 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "button_AY6wwV": {
-                  "type": "button",
-                  "name": "t:names.button",
+                "text_Ri8tix": {
+                  "type": "text",
+                  "name": "t:names.text",
                   "settings": {
-                    "label": "BUILD YOUR HARNESS SYSTEM",
-                    "link": "https://tandkhunting.com/pages/build-your-bino-harness",
-                    "open_in_new_tab": false,
-                    "style_class": "link",
+                    "text": "<p><a href=\"https://tandkhunting.com/pages/build-your-bino-harness\" title=\"https://tandkhunting.com/pages/build-your-bino-harness\"><strong>Build Your Harness System</strong></a></p>",
                     "width": "fit-content",
-                    "custom_width": 100,
-                    "width_mobile": "fit-content",
-                    "custom_width_mobile": 100
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "border": false,
+                    "background_color": "",
+                    "border_color": "#000000",
+                    "border_weight": 0,
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
                   },
                   "blocks": {}
                 }
               },
               "block_order": [
-                "button_AY6wwV"
+                "text_Ri8tix"
               ]
             },
             "group_DqXFKN": {
