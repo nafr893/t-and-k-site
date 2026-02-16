@@ -397,3 +397,14 @@ span.mega-menu__custom-card-title {
 span.mega-menu__link-title.wrap-text {
     font-weight: regular; 
 }
+
+div#bndlr-discount-message {
+   opacity: 0; 
+}
+
+span.bndlr-minus.bndlr-cart-values.bndlr-cart-discount-value.bndlr-money.conversion-bear-money.notranslate.ht-money.money  {
+opacity: 0; 
+}
+span.bndlr-cart-values.bndlr-cross-out.bndlr-cart-orig-price.bndlr-money.conversion-bear-money.notranslate.ht-money.money {
+    color: #888888;
+}
