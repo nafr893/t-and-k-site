@@ -473,7 +473,7 @@
           "name": "Bino Harness",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC02802-2.webp",
+            "image_1": "shopify://shop_images/DSC05727_b2133b30-e3a9-4e46-804f-b9e434a50742.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -578,7 +578,7 @@
                       "type": "custom-label",
                       "name": "Custom label",
                       "settings": {
-                        "text": "HELLRIDGE™",
+                        "text": "THUNDERSTRUTT™",
                         "link": "shopify://products/binocular-harness",
                         "text_color": "#ffffff",
                         "bg_color": "#bbbbbb",
@@ -1186,7 +1186,7 @@
           "name": "Bino Harness",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC04959-2.webp",
+            "image_1": "shopify://shop_images/DSC05727_b2133b30-e3a9-4e46-804f-b9e434a50742.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -1291,7 +1291,7 @@
                       "type": "custom-label",
                       "name": "Custom label",
                       "settings": {
-                        "text": "HELLRIDGE™",
+                        "text": "THUNDERSTRUTT™",
                         "link": "shopify://products/binocular-harness",
                         "text_color": "#ffffff",
                         "bg_color": "#bbbbbb",
