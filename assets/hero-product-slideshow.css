@@ -33,12 +33,14 @@
 .hps__media {
   border-radius: var(--hps-radius);
   overflow: hidden;
+  aspect-ratio: 1 / 1;
 }
 
 .hps__image {
   width: auto;
   height: 100%;
   display: block;
+  object-fit: cover; 
 }
 
 .hps__image--placeholder {
