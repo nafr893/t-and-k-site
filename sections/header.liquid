@@ -1,3 +1,5 @@
+
+
 {% liquid
   assign order = 'logo,menu,localization,search,mobile_search,actions'
 
@@ -598,7 +600,7 @@
 
     @media screen and (max-width: 749px) {
       --header-template-columns: var(--header-mobile-bookend) var(--header-mobile-bookend) 1fr
-        var(--header-mobile-bookend) var(--header-mobile-bookend) var(--header-mobile-bookend);
+        var(--header-mobile-bookend) var(--header-mobile-bookend);
 
       grid-template-areas: 'leftA leftB leftC center rightA rightB rightC';
       grid-column: span 3;
@@ -608,23 +610,23 @@
       padding-inline: 0 var(--padding-3xs);
 
       .header-logo {
-        grid-column: 1 / 4;
+        grid-area: left;
       }
 
-      .search-action {
-        grid-area: center;
+      &:not(:has(header-actions)) .search-action {
+        grid-area: leftB;
       }
 
-      .search-action.desktop\:hidden {
-        display: none;
-      }
-
-      header-actions {
+      &:not(:has(.account-actions)) .search-action {
         grid-area: rightA;
       }
 
-      .header__drawer {
-        grid-area: rightB;
+      .search-action {
+        grid-area: leftB;
+      }
+
+      header-actions {
+        grid-area: center;
       }
     }
   }
@@ -740,60 +742,6 @@
   .header-menu details[open] .menu-list__submenu,
   .header-menu .menu-list__submenu[data-active] {
     content-visibility: visible;
-  }
-
-  /* Mobile: enforce layout Logo | spacer | Search | Cart | Menu */
-  @media screen and (max-width: 749px) {
-    .header__columns {
-      /* five columns: logo / flexible spacer / search / cart / menu */
-      grid-template-columns: auto 1fr auto auto auto !important;
-      grid-template-areas: "logo spacer search cart menu";
-      align-items: center;
-      column-gap: var(--gap-sm);
-    }
-
-    /* Place elements into the grid areas */
-    .header-logo {
-      grid-area: logo;
-      justify-self: start;
-    }
-
-    /* flexible spacer — there may be no explicit element; this keeps the centre free */
-    /* if you have a specific spacer node, give it .header__spacer and it will land here */
-    .header__spacer {
-      grid-area: spacer;
-    }
-
-    /* search icon button */
-    .search-action,
-    .search-action * {
-      grid-area: search;
-      justify-self: end;
-      align-self: center;
-    }
-
-    /* header actions (cart/wishlist) — place in the cart area */
-    header-actions,
-    .header-actions {
-      grid-area: cart;
-      justify-self: end;
-      display: flex;
-      gap: var(--gap-xs);
-      align-items: center;
-    }
-
-    /* menu toggle (hamburger) */
-    .header__icon--menu,
-    button.menu-toggle,
-    header-menu button {
-      grid-area: menu;
-      justify-self: end;
-      align-self: center;
-    }
-
-    /* If search or menu are wrapped inside header-actions, ensure they are visible and ordered */
-    .header-actions .search-action { order: 0; }
-    .header-actions .header__icon--menu { order: 2; }
   }
 {% endstylesheet %}
 
