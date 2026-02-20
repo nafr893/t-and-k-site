@@ -86,7 +86,7 @@ footer#shopify-section-sections--20919892934902__footer_7BdxXe {
 
 /* hide account button mobile */ 
 button.account-button.header-actions__action {
-    display: none; 
+    display: none !important; 
 }
 
  /* Mobile Header Placement */ 
