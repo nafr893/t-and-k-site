@@ -37,7 +37,10 @@ div#shopify-section-template--20919893328118__slideshow_qRMpCJ {
 
 /* height of bino builder desktop */ 
 div.image-block.image-block--ARG5IUk9OZTZaSWRKc__image_4aMVye.image-block--height-fit.spacing-style.size-style {
-    height: 5dvh; 
+    height: 10dvh; 
+    img {
+        object-fit: cover; 
+    }
 }
 
 
