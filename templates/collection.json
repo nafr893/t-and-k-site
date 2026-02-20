@@ -244,7 +244,6 @@
             },
             "stamped_reviews_star_rating_badge_GdXfmR": {
               "type": "shopify://apps/stamped-reviews/blocks/star-rating-badge/a103faaf-2125-4b0e-89fa-de5149736723",
-              "disabled": true,
               "settings": {
                 "use_metafields": false,
                 "sku_tagtype": "sku",
