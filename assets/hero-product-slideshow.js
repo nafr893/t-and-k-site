@@ -142,6 +142,29 @@
           updateToVariant(variant, val);
         });
       });
+
+      // Radio-input swatches rendered by variant-swatches.liquid
+      const swatchesContainer = card.querySelector('.hpc__swatches');
+      if (swatchesContainer) {
+        /** @param {Event} ev */
+        function onSwatchClick(ev) {
+          ev.stopPropagation();
+        }
+
+        /** @param {Event} ev */
+        function onSwatchChange(ev) {
+          const target = ev.target;
+          if (!(target instanceof HTMLInputElement) || target.type !== 'radio') return;
+          const val = target.value;
+          const variant = findVariantByColorValue(val);
+          updateToVariant(variant, val);
+        }
+
+        // Stop clicks from bubbling up to the parent <a> and triggering navigation
+        swatchesContainer.addEventListener('click', onSwatchClick);
+        // Event delegation: handle change on any radio within the swatches container
+        swatchesContainer.addEventListener('change', onSwatchChange);
+      }
     });
   }
 
