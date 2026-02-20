@@ -251,15 +251,6 @@
                 "featured_product_handle": ""
               }
             },
-            "stamped_reviews_star_rating_badge_GdXfmR": {
-              "type": "shopify://apps/stamped-reviews/blocks/star-rating-badge/a103faaf-2125-4b0e-89fa-de5149736723",
-              "settings": {
-                "use_metafields": false,
-                "sku_tagtype": "sku",
-                "is_featured_product": false,
-                "featured_product_handle": ""
-              }
-            },
             "review_mHjiza": {
               "type": "review",
               "name": "t:names.product_review_stars",
@@ -303,7 +294,6 @@
             "product_title_4nY4eT",
             "text_M3LVrT",
             "stamped_reviews_star_rating_badge_aAMxCa",
-            "stamped_reviews_star_rating_badge_GdXfmR",
             "review_mHjiza",
             "price_EzJzMm"
           ]
