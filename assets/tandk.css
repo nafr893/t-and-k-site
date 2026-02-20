@@ -41,6 +41,7 @@ div.image-block.image-block--ARG5IUk9OZTZaSWRKc__image_4aMVye.image-block--heigh
     width: fit-content;
     img {
         object-fit: contain !important;
+        width: 9rem;
     }
 }
 
