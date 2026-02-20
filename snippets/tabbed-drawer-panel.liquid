@@ -84,10 +84,22 @@
         </div>
 
         <div class="tabbed-drawer__promo">
-          <h4 class="tabbed-drawer__promo-title">{{ block_settings.tabbed_shop_promo_title | default: 'Planning a Hunt?' }}</h4>
-          <a href="{{ block_settings.tabbed_shop_promo_url | default: '/pages/system-builder' }}" class="button button--secondary tabbed-drawer__promo-cta">
-            {{ block_settings.tabbed_shop_promo_cta | default: 'BUILD YOUR SYSTEM' }}
-          </a>
+          {% if block_settings.tabbed_shop_promo_image %}
+            <div class="tabbed-drawer__promo-image">
+              <img
+                src="{{ block_settings.tabbed_shop_promo_image | image_url: width: 200 }}"
+                alt="{{ block_settings.tabbed_shop_promo_title | default: 'Planning a Hunt?' }}"
+                width="200"
+                loading="lazy"
+              >
+            </div>
+          {% endif %}
+          <div class="tabbed-drawer__promo-body">
+            <h4 class="tabbed-drawer__promo-title">{{ block_settings.tabbed_shop_promo_title | default: 'Planning a Hunt?' }}</h4>
+            <a href="{{ block_settings.tabbed_shop_promo_url | default: '/pages/system-builder' }}" class="button button--secondary tabbed-drawer__promo-cta">
+              {{ block_settings.tabbed_shop_promo_cta | default: 'BUILD YOUR SYSTEM' }}
+            </a>
+          </div>
         </div>
       </div>
 
