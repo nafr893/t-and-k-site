@@ -83,6 +83,10 @@
           </a>
         </div>
 
+        {% if block_settings.tabbed_shop_promo_heading != blank %}
+          <h4 class="tabbed-drawer__promo-heading">{{ block_settings.tabbed_shop_promo_heading }}</h4>
+        {% endif %}
+
         <div class="tabbed-drawer__promo">
           {% if block_settings.tabbed_shop_promo_image %}
             <div class="tabbed-drawer__promo-image">
