@@ -598,7 +598,7 @@
 
     @media screen and (max-width: 749px) {
       --header-template-columns: var(--header-mobile-bookend) var(--header-mobile-bookend) 1fr
-        var(--header-mobile-bookend) var(--header-mobile-bookend);
+        var(--header-mobile-bookend) var(--header-mobile-bookend) var(--header-mobile-bookend);
 
       grid-template-areas: 'leftA leftB leftC center rightA rightB rightC';
       grid-column: span 3;
@@ -608,23 +608,23 @@
       padding-inline: 0 var(--padding-3xs);
 
       .header-logo {
-        grid-area: left;
-      }
-
-      &:not(:has(header-actions)) .search-action {
-        grid-area: leftB;
-      }
-
-      &:not(:has(.account-actions)) .search-action {
-        grid-area: rightA;
+        grid-column: 1 / 4;
       }
 
       .search-action {
-        grid-area: leftB;
+        grid-area: center;
+      }
+
+      .search-action.desktop\:hidden {
+        display: none;
       }
 
       header-actions {
-        grid-area: center;
+        grid-area: rightA;
+      }
+
+      .header__drawer {
+        grid-area: rightB;
       }
     }
   }
