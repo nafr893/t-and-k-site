@@ -20,6 +20,7 @@
     spacing-style
     size-style
     {% if settings.inherit_color_scheme == false %} color-{{ settings.color_scheme }}{% endif %}
+    {% if settings.visibility == 'mobile' %}group-block--mobile-only{% elsif settings.visibility == 'desktop' %}group-block--desktop-only{% endif %}
     {{ class }}
   "
   style="
@@ -70,6 +71,20 @@
 </div>
 
 {% stylesheet %}
+  .group-block--mobile-only {
+    display: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .group-block--mobile-only {
+      display: flex;
+    }
+
+    .group-block--desktop-only {
+      display: none;
+    }
+  }
+
   .group-block__link {
     position: absolute;
     inset: 0;
