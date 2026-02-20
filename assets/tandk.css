@@ -84,6 +84,11 @@ footer#shopify-section-sections--20919892934902__footer_7BdxXe {
 /* Mobile homepage height */
   @media (max-width: 480px) {
 
+/* hide account button mobile */ 
+button.account-button.header-actions__action {
+    display: none; 
+}
+
  /* Mobile Header Placement */ 
 
  a.size-style.spacing-style.header-logo {
