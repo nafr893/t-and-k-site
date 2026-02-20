@@ -422,3 +422,6 @@ span.bndlr-cart-values.bndlr-cross-out.bndlr-cart-orig-price.bndlr-money.convers
     color: #888888;
 }
 
+div.search-drawer__header {
+    padding-bottom: .5rem !important;
+}

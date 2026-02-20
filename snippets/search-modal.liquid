@@ -268,10 +268,13 @@
     padding: var(--padding-sm) var(--padding-xl);
     box-shadow: none;
     transition: none;
+    padding-bottom: var(--padding-md);
 
     @media screen and (min-width: 750px) {
       padding: var(--padding-xs) var(--padding-xl);
       border-bottom: var(--style-border-width) solid var(--color-border);
+          padding-bottom: var(--padding-md);
+
     }
 
     @media screen and (max-width: 749px) {
@@ -515,7 +518,7 @@
     padding-block: var(--padding-sm);
     font-size: var(--font-size--md);
     width: 100%;
-    color: var(--color-foreground);
+    color: #d5d5d5;
     padding-inline: calc(var(--margin-sm) + var(--icon-size-sm)) 0;
     background: transparent;
     text-overflow: ellipsis;
