@@ -5,13 +5,13 @@
   assign product = closest.product
   assign rating = product.metafields.reviews.rating.value.rating
   assign scale_max = product.metafields.reviews.rating.value.scale_max
-  assign rating_count = product.metafields.reviews.rating_count
+  assign rating_count = product.metafields.reviews.rating_count.value
 
   if request.visual_preview_mode and product == blank
     assign product = collections.all.products.first
     assign rating = product.metafields.reviews.rating.value | default: 4
     assign scale_max = product.metafields.reviews.rating.value.scale_max | default: 5
-    assign rating_count = product.metafields.reviews.rating_count | default: 3
+    assign rating_count = product.metafields.reviews.rating_count.value | default: 3
   endif
 -%}
 
