@@ -46,6 +46,7 @@
             "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
+            "visibility": "both",
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
@@ -86,6 +87,7 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
+                "visibility": "both",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -165,6 +167,14 @@
                   },
                   "blocks": {}
                 },
+                "custom_liquid_XACHXB": {
+                  "type": "custom-liquid",
+                  "name": "t:names.custom_liquid",
+                  "settings": {
+                    "custom_liquid": "<i data-govx-id></i>"
+                  },
+                  "blocks": {}
+                },
                 "text_ApBtDq": {
                   "type": "text",
                   "name": "t:names.text",
@@ -199,6 +209,7 @@
                 "text_HBYQ4q",
                 "text_JMMWBK",
                 "button_gKBgJt",
+                "custom_liquid_XACHXB",
                 "text_ApBtDq"
               ]
             },
@@ -237,6 +248,7 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
+                "visibility": "both",
                 "padding-block-start": 40,
                 "padding-block-end": 40,
                 "padding-inline-start": 14,
@@ -372,6 +384,7 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
+                "visibility": "both",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,

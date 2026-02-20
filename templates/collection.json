@@ -242,10 +242,18 @@
               },
               "blocks": {}
             },
+            "custom_liquid_W8wJKy": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": ""
+              },
+              "blocks": {}
+            },
             "stamped_reviews_star_rating_badge_aAMxCa": {
               "type": "shopify://apps/stamped-reviews/blocks/star-rating-badge/a103faaf-2125-4b0e-89fa-de5149736723",
               "settings": {
-                "use_metafields": false,
+                "use_metafields": true,
                 "sku_tagtype": "sku",
                 "is_featured_product": false,
                 "featured_product_handle": ""
@@ -254,7 +262,6 @@
             "review_mHjiza": {
               "type": "review",
               "name": "t:names.product_review_stars",
-              "disabled": true,
               "settings": {
                 "stars_style": "shaded",
                 "show_number": true,
@@ -293,6 +300,7 @@
             "swatches_Xn8XCt",
             "product_title_4nY4eT",
             "text_M3LVrT",
+            "custom_liquid_W8wJKy",
             "stamped_reviews_star_rating_badge_aAMxCa",
             "review_mHjiza",
             "price_EzJzMm"
