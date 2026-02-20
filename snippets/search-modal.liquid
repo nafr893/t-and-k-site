@@ -18,18 +18,12 @@
     ref="dialog"
     on:click="/closeDialogOnClickOutside"
     on:keydown="/closeDialogOnEscapePress"
-    class="search-modal__content dialog-modal"
+    class="search-drawer__dialog dialog-modal dialog-drawer"
     scroll-lock
-    aria-labelledby="search-modal-heading"
+    aria-labelledby="search-drawer-heading"
   >
-    <h2
-      id="search-modal-heading"
-      class="visually-hidden"
-    >
-      {{ 'content.search' | t }}
-    </h2>
     <predictive-search-component
-      class="predictive-search color-{{ settings.popover_color_scheme }}{% if class != blank %} {{ class | strip }}{% endif %}"
+      class="predictive-search color-{{ settings.popover_color_scheme }}"
       style="--product-corner-radius: {{ settings.product_corner_radius | default: 8 | append: 'px' }}; --card-corner-radius: {{ settings.card_corner_radius | default: 8 | append: 'px' }};{% if settings.card_title_case == 'uppercase' %} --title-case: uppercase;{% endif %}"
       data-section-id="predictive-search"
       data-testid="{{ 'search-component--modal' }}"
@@ -40,23 +34,37 @@
         action="{{ routes.search_url }}"
         method="get"
         role="search"
-        class="predictive-search-form"
+        class="predictive-search-form search-drawer__form"
         ref="form"
         on:keydown="/onSearchKeyDown"
       >
-        <div
-          class="predictive-search-form__header"
-        >
+        <div class="search-drawer__header">
+          <h2 class="search-drawer__heading" id="search-drawer-heading">
+            {{ 'content.search' | t }}
+          </h2>
+          <button
+            type="button"
+            class="button-unstyled search-drawer__close-button"
+            aria-label="{{ 'accessibility.close_dialog' | t }}"
+            on:click="dialog-component/closeDialog"
+          >
+            <span class="svg-wrapper">
+              {{ 'icon-close.svg' | inline_asset_content }}
+            </span>
+          </button>
+        </div>
+
+        <div class="predictive-search-form__header search-drawer__search-bar">
           <div class="predictive-search-form__header-inner">
             <label
-              for="{{ 'cmdk-input' | default: 'Search' }}"
+              for="search-drawer-input"
               class="visually-hidden"
             >
               {{- 'content.search_input_label' | t -}}
             </label>
             <input
               class="search-input"
-              id="{{ 'cmdk-input' | default: 'Search' }}"
+              id="search-drawer-input"
               type="search"
               name="q"
               role="combobox"
@@ -89,20 +97,9 @@
               {{ 'actions.clear' | t }}
             </button>
           </div>
-          <button
-            type="button"
-            class="button predictive-search__close-modal-button"
-            aria-label="{{ 'accessibility.close_dialog' | t }}"
-            on:click="dialog-component/closeDialog"
-            ref="closeModalButton"
-          >
-            <span class="svg-wrapper">
-              {{ 'icon-close.svg' | inline_asset_content }}
-            </span>
-          </button>
         </div>
 
-        <div class="predictive-search-form__content-wrapper">
+        <div class="predictive-search-form__content-wrapper search-drawer__content-wrapper">
           <div
             class="predictive-search-form__content"
             tabindex="-1"
@@ -116,7 +113,7 @@
             %}
           </div>
 
-          <div class="predictive-search-form__footer">
+          <div class="predictive-search-form__footer search-drawer__footer">
             <button
               class="button button-primary predictive-search__search-button"
               ref="viewAllButton"
@@ -131,7 +128,9 @@
 </dialog-component>
 
 {% stylesheet %}
-  /* Search modal style */
+  /* ============================================
+     Search Modal Base
+  ============================================ */
   .search-modal {
     --search-border-radius: var(--style-border-radius-popover);
     --search-border-width: var(--style-border-width);
@@ -143,81 +142,222 @@
     justify-content: center;
   }
 
-  .search-modal__content {
-    /* Approx set the top so when the content is at max height, the modal is centered */
-    --modal-top-margin: calc(50dvh - var(--modal-max-height) / 2 - 2rem);
-    --modal-width: 66dvw;
-
+  /* ============================================
+     Search Drawer — Dialog Positioning
+  ============================================ */
+  .search-drawer__dialog {
+    position: fixed;
+    overflow: hidden;
+    border-radius: 0;
+    width: var(--sidebar-width);
+    max-width: 100vw;
+    height: 100%;
+    margin: 0 0 0 auto;
     padding: 0;
-    border: var(--style-border-popover);
+    border: none;
+    border-left: var(--style-border-drawer);
+    box-shadow: var(--shadow-drawer);
+    background-color: var(--color-background);
 
-    @media screen and (min-width: 750px) {
-      width: var(--modal-width);
-      margin-block-start: var(--modal-top-margin);
-      overflow: hidden;
+    @media screen and (max-width: 749px) {
+      width: 100%;
     }
   }
 
-  /* Hide the default dialog backdrop on small screens */
-  @media screen and (max-width: 749px) {
-    .search-modal__content::backdrop {
+  .search-drawer__dialog:modal {
+    max-height: 100dvh;
+    overflow-y: hidden;
+  }
+
+  /* Override dialog-modal open animation — use drawer slide-from-right */
+  .dialog-modal[open].search-drawer__dialog {
+    transform-origin: initial;
+    --start-x: 100%;
+    --end-x: 0px;
+    --start-opacity: 1;
+    animation: move-and-fade var(--animation-speed) var(--animation-easing) forwards;
+  }
+
+  /* Override dialog-modal closing animation */
+  .dialog-modal.search-drawer__dialog.dialog-closing {
+    --start-x: 0px;
+    --end-x: 100%;
+    --start-opacity: 1;
+    --end-opacity: 1;
+    animation: move-and-fade var(--animation-speed) var(--animation-easing) forwards;
+  }
+
+  /* ============================================
+     Search Drawer — Layout (flex column, fills dialog)
+  ============================================ */
+  .search-drawer__dialog predictive-search-component {
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .search-drawer__dialog .search-drawer__form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-self: stretch;
+    width: 100%;
+  }
+
+  /* ============================================
+     Search Drawer — Header (title + close button)
+  ============================================ */
+  .search-drawer__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-xl) var(--padding-2xl);
+    background-color: var(--color-background);
+    flex-shrink: 0;
+
+    @media screen and (max-width: 749px) {
+      padding: var(--padding-lg) var(--padding-xl);
+    }
+  }
+
+  .search-drawer__heading {
+    font-size: var(--font-h4--size);
+    font-weight: var(--font-heading--weight);
+    margin: 0;
+    color: var(--color-foreground);
+  }
+
+  .search-drawer__close-button {
+    --button-color: var(--color-foreground);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--minimum-touch-target);
+    height: var(--minimum-touch-target);
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    color: var(--color-foreground);
+
+    .svg-wrapper,
+    svg {
+      width: var(--icon-size-xs);
+      height: var(--icon-size-xs);
+    }
+
+    &:active {
+      transform: scale(0.8);
+      transition: transform 100ms var(--animation-timing-active);
+    }
+  }
+
+  /* ============================================
+     Search Drawer — Search Bar (static, not sticky)
+     Use .search-drawer__dialog.dialog-modal for [0,3,0] specificity
+     to beat .dialog-modal .predictive-search-form__header [0,2,0]
+  ============================================ */
+  .search-drawer__dialog.dialog-modal .predictive-search-form__header {
+    position: static;
+    flex-shrink: 0;
+    border-radius: 0;
+    border: none;
+    border-bottom: var(--style-border-width) solid var(--color-border);
+    background-color: var(--color-background);
+    padding: var(--padding-sm) var(--padding-xl);
+    box-shadow: none;
+    transition: none;
+
+    @media screen and (min-width: 750px) {
+      padding: var(--padding-xs) var(--padding-xl);
+      border-bottom: var(--style-border-width) solid var(--color-border);
+    }
+
+    @media screen and (max-width: 749px) {
+      transition: none;
+      box-shadow: none;
+    }
+  }
+
+  .search-drawer__dialog.dialog-modal .predictive-search-form__header:has(.predictive-search-form__header-inner:focus-within) {
+    @media screen and (min-width: 750px) {
+      border-bottom-color: var(--color-border);
+    }
+  }
+
+  .search-drawer__dialog.dialog-modal .predictive-search-form__header-inner {
+    border: var(--style-border-width) solid var(--color-border);
+    border-radius: var(--style-border-radius-inputs);
+
+    @media screen and (min-width: 750px) {
+      border: var(--style-border-width) solid var(--color-border);
+    }
+  }
+
+  /* ============================================
+     Search Drawer — Content Wrapper (fills remaining height)
+  ============================================ */
+  .search-drawer__dialog .predictive-search-form__content-wrapper {
+    position: static;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: none;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+    transition: none;
+    will-change: auto;
+    top: auto;
+    left: auto;
+    z-index: auto;
+  }
+
+  /* ============================================
+     Search Drawer — Scrollable Content Area
+  ============================================ */
+  .search-drawer__dialog .predictive-search-form__content {
+    flex: 1;
+    overflow-y: auto;
+    max-height: none;
+    background-color: var(--color-background);
+    scrollbar-width: none;
+    padding-block-end: 0;
+
+    &::-webkit-scrollbar {
       display: none;
     }
   }
 
-  .dialog-modal[open].search-modal__content {
-    transform-origin: bottom center;
-    animation: search-element-slide-in-bottom 300ms var(--ease-out-quad) forwards;
-    border-radius: var(--search-border-radius);
-    box-shadow: var(--shadow-popover);
-
-    @media screen and (max-width: 749px) {
-      border-radius: 0;
-    }
+  /* Remove bottom padding for view-all button since footer is now static */
+  .search-drawer__dialog .predictive-search-form__content-wrapper:has([data-search-results]):not(:has(.predictive-search-results__no-results))
+    > .predictive-search-form__content {
+    padding-block-end: 0;
   }
 
-  .dialog-modal.search-modal__content.dialog-closing {
-    animation: search-element-slide-out-bottom 200ms var(--ease-out-quad) forwards;
+  /* ============================================
+     Search Drawer — Footer (View All Results)
+  ============================================ */
+  .search-drawer__dialog .predictive-search-form__footer {
+    position: static;
+    flex-shrink: 0;
+    padding: var(--padding-lg) var(--padding-2xl);
+    background-color: var(--color-background);
+    background-image: none;
+    border-top: var(--style-border-width) solid var(--color-border);
   }
 
-  .search-modal__content[open] {
-    display: flex;
+  .search-drawer__dialog .predictive-search__search-button {
+    width: 100%;
+    margin: 0;
   }
 
-  .search-modal__content :is(.predictive-search-dropdown, .predictive-search-form__content-wrapper) {
-    position: relative;
-  }
-
-  .dialog-modal
-    .predictive-search-form__header:has(
-      .predictive-search__reset-button:not(.predictive-search__reset-button[hidden])
-    )::before {
-    content: '';
-    position: absolute;
-    right: calc(var(--padding-sm) + var(--minimum-touch-target));
-    top: 0;
-    bottom: 0;
-    width: var(--border-width-sm);
-    background-color: var(--color-border);
-  }
-
-  .dialog-modal
-    .predictive-search-form__header:has(.predictive-search__reset-button:not(.predictive-search__reset-button[hidden]))
-    > .predictive-search__close-modal-button {
-    &::before {
-      content: none;
-    }
-  }
-
-  @media screen and (min-width: 750px) {
-    .dialog-modal
-      .predictive-search-form__header:has(
-        .predictive-search__reset-button:not(.predictive-search__reset-button[hidden])
-      )::before {
-      right: calc(var(--padding-2xl) * 2);
-    }
-  }
-
+  /* ============================================
+     Predictive Search — Shared UI Styles
+     (kept from original search-modal.liquid)
+  ============================================ */
   predictive-search-component {
     --resource-card-corner-radius: var(--product-corner-radius);
 
@@ -299,7 +439,6 @@
     }
   }
 
-  /* Add new rule to apply bottom padding only when search button exists */
   .predictive-search-form__content-wrapper:has([data-search-results]):not(:has(.predictive-search-results__no-results))
     > .predictive-search-form__content {
     padding-block-end: var(--padding-6xl);
@@ -364,6 +503,11 @@
     padding-block: var(--padding-lg);
     container-type: inline-size;
     color: var(--color-foreground);
+  }
+
+  /* Empty state has its own section spacing — remove outer padding */
+  .search-drawer__empty-state.predictive-search-results__inner {
+    padding-block: 0;
   }
 
   .search-input {
@@ -497,33 +641,72 @@
     }
   }
 
-  .predictive-search__close-modal-button {
-    --button-color: var(--color-foreground);
-    --button-background-color: transparent;
+  /* Drawer reset-button text label on all screen sizes */
+  .search-drawer__dialog .predictive-search__reset-button-icon {
+    display: none;
+  }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--minimum-touch-target);
-    height: var(--minimum-touch-target);
-    margin-inline-start: var(--margin-sm);
-    padding: 0;
-    box-shadow: none;
+  .search-drawer__dialog .predictive-search__reset-button-text {
+    display: block;
+  }
 
-    &:active {
-      transform: scale(0.8);
-      transition: transform 100ms var(--animation-timing-active);
+  @keyframes search-element-slide-in-bottom {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
     }
 
-    .svg-wrapper,
-    svg {
-      width: var(--icon-size-xs);
-      height: var(--icon-size-xs);
+    to {
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 
-  .predictive-search__close-modal-button:hover {
-    --button-color: var(--color-foreground);
-    --button-background-color: transparent;
+  @keyframes search-element-slide-out-bottom {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    to {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes search-element-slide-in-top {
+    from {
+      margin-top: calc(var(--modal-top-margin) + var(--padding-sm));
+      opacity: 0;
+    }
+
+    to {
+      margin-top: var(--modal-top-margin);
+      opacity: 1;
+    }
+  }
+
+  @keyframes search-element-slide-out-top {
+    from {
+      margin-top: var(--modal-top-margin);
+      opacity: 1;
+    }
+
+    to {
+      margin-top: calc(var(--modal-top-margin) + var(--padding-sm));
+      opacity: 0;
+    }
+  }
+
+  @keyframes content-slide {
+    from {
+      transform: translateY(var(--slide-from, 0));
+      opacity: var(--slide-opacity-from, 1);
+    }
+
+    to {
+      transform: translateY(var(--slide-to, 0));
+      opacity: var(--slide-opacity-to, 1);
+    }
   }
 {% endstylesheet %}

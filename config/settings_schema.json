@@ -2358,5 +2358,106 @@
         "default": "equal-width-buttons"
       }
     ]
+  },
+  {
+    "name": "Search Drawer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Popular Searches"
+      },
+      {
+        "type": "paragraph",
+        "content": "Add up to 5 popular search terms. If no link is provided, clicking will search for that term."
+      },
+      {
+        "type": "text",
+        "id": "search_popular_1_text",
+        "label": "Popular Search 1"
+      },
+      {
+        "type": "url",
+        "id": "search_popular_1_url",
+        "label": "Popular Search 1 Link"
+      },
+      {
+        "type": "text",
+        "id": "search_popular_2_text",
+        "label": "Popular Search 2"
+      },
+      {
+        "type": "url",
+        "id": "search_popular_2_url",
+        "label": "Popular Search 2 Link"
+      },
+      {
+        "type": "text",
+        "id": "search_popular_3_text",
+        "label": "Popular Search 3"
+      },
+      {
+        "type": "url",
+        "id": "search_popular_3_url",
+        "label": "Popular Search 3 Link"
+      },
+      {
+        "type": "text",
+        "id": "search_popular_4_text",
+        "label": "Popular Search 4"
+      },
+      {
+        "type": "url",
+        "id": "search_popular_4_url",
+        "label": "Popular Search 4 Link"
+      },
+      {
+        "type": "text",
+        "id": "search_popular_5_text",
+        "label": "Popular Search 5"
+      },
+      {
+        "type": "url",
+        "id": "search_popular_5_url",
+        "label": "Popular Search 5 Link"
+      },
+      {
+        "type": "header",
+        "content": "Trending Products"
+      },
+      {
+        "type": "paragraph",
+        "content": "Select up to 6 products to feature in the search drawer (displayed in a 2-column grid)."
+      },
+      {
+        "type": "product",
+        "id": "search_trending_product_1",
+        "label": "Trending Product 1"
+      },
+      {
+        "type": "product",
+        "id": "search_trending_product_2",
+        "label": "Trending Product 2"
+      },
+      {
+        "type": "product",
+        "id": "search_trending_product_3",
+        "label": "Trending Product 3"
+      },
+      {
+        "type": "product",
+        "id": "search_trending_product_4",
+        "label": "Trending Product 4"
+      },
+      {
+        "type": "product",
+        "id": "search_trending_product_5",
+        "label": "Trending Product 5"
+      },
+      {
+        "type": "product",
+        "id": "search_trending_product_6",
+        "label": "Trending Product 6"
+      }
+    ]
   }
 ]

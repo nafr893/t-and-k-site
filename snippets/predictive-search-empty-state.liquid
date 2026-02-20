@@ -1,8 +1,8 @@
 {% doc %}
-  Renders the predictive search empty state
+  Renders the predictive search empty state with popular searches and trending products.
 
   @param {number} shadow_opacity - shadow opacity for the empty state container shadow
-  @param {string} products_test_id - a playwright test id, used to differentiate empty state from 'real' search results
+  @param {string} products_test_id - a playwright test id
   @param {boolean} [load_empty_state] - Load the empty state or not
 
   @example
@@ -17,28 +17,261 @@
   style="--color-shadow: rgb(var(--color-foreground-rgb) / {{ shadow_opacity }});"
 >
   {% if load_empty_state %}
-    <div class="predictive-search-results__inner">
+    <div class="predictive-search-results__inner search-drawer__empty-state">
+
+      {% comment %} Popular Searches {% endcomment %}
       {% liquid
-        assign collection = settings.empty_state_collection | default: collections.all
-        assign default_title = 'content.search_results_resource_products' | t
-        assign title = settings.empty_state_collection.title | default: default_title
+        assign has_popular_searches = false
+        for i in (1..5)
+          case i
+            when 1
+              assign ps_text = settings.search_popular_1_text
+            when 2
+              assign ps_text = settings.search_popular_2_text
+            when 3
+              assign ps_text = settings.search_popular_3_text
+            when 4
+              assign ps_text = settings.search_popular_4_text
+            when 5
+              assign ps_text = settings.search_popular_5_text
+          endcase
+          if ps_text != blank
+            assign has_popular_searches = true
+            break
+          endif
+        endfor
       %}
-      {% paginate collection.products by 4 %}
-        {% assign products = collection.products %}
-        {% comment %} Only show products section if there are products to display {% endcomment %}
-        {% if products.size > 0 %}
-          {% render 'predictive-search-products-list',
-            products_test_id: products_test_id,
-            title: title,
-            products: products,
-            limit: 4
-          %}
-        {% else %}
-          <div class="predictive-search-results__no-results">
-            <p>{{ 'content.no_products_found' | t }}</p>
+
+      {% if has_popular_searches %}
+        <div class="search-drawer__section">
+          <div class="search-drawer__section-header">
+            <span class="search-drawer__section-title">POPULAR SEARCHES</span>
           </div>
-        {% endif %}
-      {% endpaginate %}
+          <ul class="search-drawer__popular-list list-unstyled" role="list">
+            {% for i in (1..5) %}
+              {% liquid
+                case i
+                  when 1
+                    assign ps_text = settings.search_popular_1_text
+                    assign ps_url = settings.search_popular_1_url
+                  when 2
+                    assign ps_text = settings.search_popular_2_text
+                    assign ps_url = settings.search_popular_2_url
+                  when 3
+                    assign ps_text = settings.search_popular_3_text
+                    assign ps_url = settings.search_popular_3_url
+                  when 4
+                    assign ps_text = settings.search_popular_4_text
+                    assign ps_url = settings.search_popular_4_url
+                  when 5
+                    assign ps_text = settings.search_popular_5_text
+                    assign ps_url = settings.search_popular_5_url
+                endcase
+              %}
+              {% if ps_text != blank %}
+                <li class="search-drawer__popular-item">
+                  <a
+                    href="{% if ps_url != blank %}{{ ps_url }}{% else %}{{ routes.search_url }}?q={{ ps_text | url_encode }}{% endif %}"
+                    class="search-drawer__popular-link"
+                  >
+                    {{ ps_text }}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+
+      {% comment %} Trending Products {% endcomment %}
+      {% liquid
+        assign has_trending = false
+        for i in (1..6)
+          case i
+            when 1
+              assign tp = settings.search_trending_product_1
+            when 2
+              assign tp = settings.search_trending_product_2
+            when 3
+              assign tp = settings.search_trending_product_3
+            when 4
+              assign tp = settings.search_trending_product_4
+            when 5
+              assign tp = settings.search_trending_product_5
+            when 6
+              assign tp = settings.search_trending_product_6
+          endcase
+          if tp != blank
+            assign has_trending = true
+            break
+          endif
+        endfor
+      %}
+
+      {% if has_trending %}
+        <div class="search-drawer__section">
+          <div class="search-drawer__section-header">
+            <span class="search-drawer__section-title">TRENDING PRODUCTS</span>
+          </div>
+          <div
+            class="search-drawer__trending-grid"
+            {% if products_test_id %}data-testid="{{ products_test_id }}"{% endif %}
+          >
+            {% for i in (1..6) %}
+              {% liquid
+                case i
+                  when 1
+                    assign tp = settings.search_trending_product_1
+                  when 2
+                    assign tp = settings.search_trending_product_2
+                  when 3
+                    assign tp = settings.search_trending_product_3
+                  when 4
+                    assign tp = settings.search_trending_product_4
+                  when 5
+                    assign tp = settings.search_trending_product_5
+                  when 6
+                    assign tp = settings.search_trending_product_6
+                endcase
+              %}
+              {% if tp != blank %}
+                <a href="{{ tp.url }}" class="search-drawer__product-card">
+                  <div class="search-drawer__product-image-wrap">
+                    {% if tp.featured_image %}
+                      {{
+                        tp.featured_image
+                        | image_url: width: 300
+                        | image_tag:
+                          class: 'search-drawer__product-image',
+                          loading: 'lazy',
+                          alt: tp.title,
+                          widths: '150, 200, 300'
+                      }}
+                    {% else %}
+                      <div class="search-drawer__product-image-placeholder"></div>
+                    {% endif %}
+                  </div>
+                  <p class="search-drawer__product-title">{{ tp.title }}</p>
+                </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
     </div>
   {% endif %}
 </div>
+
+{% stylesheet %}
+  /* ============================================
+     Search Drawer — Empty State: Section Headers
+  ============================================ */
+  .search-drawer__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-drawer__section-header {
+    padding: var(--padding-xs) var(--padding-xl);
+    background-color: rgb(var(--color-foreground-rgb) / 0.06);
+    border-top: var(--style-border-width) solid var(--color-border);
+    border-bottom: var(--style-border-width) solid var(--color-border);
+  }
+
+  .search-drawer__section-title {
+    display: block;
+    font-size: var(--font-size--xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-foreground);
+  }
+
+  /* ============================================
+     Search Drawer — Popular Searches List
+  ============================================ */
+  .search-drawer__popular-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search-drawer__popular-item {
+    border-bottom: var(--style-border-width) solid var(--color-border);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .search-drawer__popular-link {
+    display: block;
+    padding: var(--padding-md) var(--padding-xl);
+    color: var(--color-foreground);
+    text-decoration: none;
+    font-size: var(--font-size--md);
+    transition: background-color var(--animation-speed-medium) var(--animation-timing-hover);
+
+    &:hover {
+      background-color: rgb(var(--color-foreground-rgb) / 0.04);
+      text-decoration: none;
+    }
+  }
+
+  /* ============================================
+     Search Drawer — Trending Products Grid (2×3)
+  ============================================ */
+  .search-drawer__trending-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-md);
+    padding: var(--padding-xl);
+  }
+
+  .search-drawer__product-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+    text-decoration: none;
+    color: var(--color-foreground);
+    transition: opacity var(--animation-speed-medium) var(--animation-timing-hover);
+
+    &:hover {
+      opacity: 0.85;
+      text-decoration: none;
+    }
+
+    &:active {
+      transform: scale(0.97);
+      transition: transform 100ms var(--animation-timing-active);
+    }
+  }
+
+  .search-drawer__product-image-wrap {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: rgb(var(--color-foreground-rgb) / 0.04);
+    border-radius: var(--product-corner-radius, 8px);
+  }
+
+  .search-drawer__product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  .search-drawer__product-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(var(--color-foreground-rgb) / 0.08);
+  }
+
+  .search-drawer__product-title {
+    font-size: var(--font-size--sm);
+    text-align: center;
+    margin: 0;
+    line-height: 1.3;
+    color: var(--color-foreground);
+  }
+{% endstylesheet %}
