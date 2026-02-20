@@ -96,7 +96,7 @@ grid-area: leftA;
  }
  .header__drawer
  {
-    grid-area: rightA; 
+    grid-area: rightC; 
  }
 
  .header__columns.header-actions {
