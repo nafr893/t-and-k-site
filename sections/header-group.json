@@ -109,6 +109,7 @@
             "tabbed_shop_accordion_2_open": false,
             "tabbed_shop_link_text": "SHOP ALL",
             "tabbed_shop_link_url": "shopify://collections/all-products",
+            "tabbed_shop_promo_image": "shopify://shop_images/Harness-Builder-v2.gif",
             "tabbed_shop_promo_title": "Planning a Hunt?",
             "tabbed_shop_promo_cta": "BUILD YOUR SYSTEM",
             "tabbed_shop_promo_url": "shopify://pages/build-your-bino-harness",
