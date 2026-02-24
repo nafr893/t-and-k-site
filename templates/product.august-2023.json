@@ -4612,7 +4612,7 @@
                   "type": "text",
                   "name": "t:names.text",
                   "settings": {
-                    "text": "<p>Yes, 100% built in the USA with premium American-sourced materials.</p>",
+                    "text": "<p>Yes. Each of our products are handcrafted and built in Rapid City, South Dakota and Hahira, Georgia USA.</p>",
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
