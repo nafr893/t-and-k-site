@@ -779,7 +779,7 @@
                   "name": "t:names.button",
                   "settings": {
                     "label": "TRACK MY ORDER",
-                    "link": "shopify://collections/all",
+                    "link": "/account/login?return_url=/account",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
