@@ -945,7 +945,7 @@
                         "text_yLaUt6": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>HUB2K → 8\"</p><p>JAEGER 30 → 8\"</p><p>MK13-SD → 9\"</p><p>RANGER 5 → 5\"</p><p>RANGER 5 RBP 5.53 → 5\"</p><p>RANGER 7 → 6\"</p>",
+                            "text": "<p>HUB2K → 8\"</p><p>JAEGER 30 → 8\"</p><p>MK13-SD → 9\"</p><p>RANGER 5 → 5\"</p><p>RANGER 5 RBP 5.53 → 5\"</p><p>RANGER 7 → 6\"<br/><br/>MK13-SD → 9\"</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
