@@ -1348,9 +1348,9 @@
                       "type": "accordion",
                       "name": "t:names.accordion",
                       "settings": {
-                        "icon": "caret",
+                        "icon": "plus",
                         "dividers": true,
-                        "type_preset": "h6",
+                        "type_preset": "h5",
                         "inherit_color_scheme": true,
                         "color_scheme": "",
                         "border": "none",
@@ -1366,8 +1366,8 @@
                         "accordion_row_ib4zHi": {
                           "type": "_accordion-row",
                           "settings": {
-                            "heading": "Swarovski",
-                            "open_by_default": true,
+                            "heading": "Bushnell",
+                            "open_by_default": false,
                             "icon": "none",
                             "width": 20
                           },
