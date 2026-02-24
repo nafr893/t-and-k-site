@@ -1354,7 +1354,7 @@
                       "type": "_accordion-row",
                       "settings": {
                         "heading": "PRODUCT OVERVIEW",
-                        "open_by_default": true,
+                        "open_by_default": false,
                         "icon": "none",
                         "width": 20
                       },
@@ -1637,7 +1637,7 @@
                       "type": "_accordion-row",
                       "settings": {
                         "heading": "MANUFACTURING",
-                        "open_by_default": true,
+                        "open_by_default": false,
                         "icon": "none",
                         "width": 20
                       },
