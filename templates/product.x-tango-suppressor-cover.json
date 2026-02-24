@@ -515,6 +515,35 @@
               },
               "block_order": []
             },
+            "text_BKNnit": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p><strong>High Demand / Hand Crafted USA Item — Please allow 1–2 weeks for shipment. </strong><em>Expedited shipping speeds apply after the order ships and do not reduce production lead times.</em></p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "border": false,
+                "background_color": "",
+                "border_color": "#000000",
+                "border_weight": 0,
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "group_DqXFKN": {
               "type": "group",
               "name": "t:names.group",
@@ -2179,6 +2208,7 @@
             "group_dNgrTr",
             "divider_VJhene",
             "buy_buttons_eYQEYi",
+            "text_BKNnit",
             "group_DqXFKN",
             "text_aEtTtq",
             "group_jjXAKb"
