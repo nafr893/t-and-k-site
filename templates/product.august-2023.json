@@ -1366,7 +1366,7 @@
                         "accordion_row_ib4zHi": {
                           "type": "_accordion-row",
                           "settings": {
-                            "heading": "Return policy",
+                            "heading": "Swarovski",
                             "open_by_default": true,
                             "icon": "none",
                             "width": 20
@@ -1375,7 +1375,7 @@
                             "text_K4VDTQ": {
                               "type": "text",
                               "settings": {
-                                "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
+                                "text": "<p>NL Pure 8X32 → Medium w/ 1\" Foam Insert</p><p>NL Pure 10X32 → Medium w/ 1\" Foam Insert</p><p>NL Pure 8X42 → Medium w/out 1\" Foam Insert</p><p>NL Pure 10X42 → Medium w/out 1\" Foam Insert</p><p>NL Pure 12X42 → Medium w/out 1\" Foam Insert</p><p>EL 8.5X42 W B → Medium w/out 1\" Foam Insert</p><p>EL 10X42 W B → Medium w/out 1\" Foam Insert</p><p>EL 10X50 W B → Medium w/out 1\" Foam Insert</p><p>EL 12X50 W B → Medium w/out 1\" Foam Insert</p><p>EL Range 8X42 → Medium w/out 1\" Foam Insert</p><p>EL Range 10X42 → Medium w/out 1\" Foam Insert</p><p>12X52 (with or without forehead rest) → Large</p><p>SLC 8X56 / 10X56 / 15X56 W B → XL</p>",
                                 "width": "100%",
                                 "max_width": "normal",
                                 "alignment": "left",
