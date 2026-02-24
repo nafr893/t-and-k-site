@@ -1104,7 +1104,7 @@
                     "accordion_row_URkaPd": {
                       "type": "_accordion-row",
                       "settings": {
-                        "heading": "Sig Sauer",
+                        "heading": "BARRETT",
                         "open_by_default": false,
                         "icon": "none",
                         "width": 20
@@ -1113,7 +1113,7 @@
                         "text_xpR3Vx": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Kilo6K HD 8X32 / 10X32 → Medium w/ 1\" Foam Insert</p><p>Kilo6K HD → Medium w/ 1\" Foam Insert</p><p>Zulu7 10X42 → Medium w/ 1\" Foam Insert</p><p>Zulu9 9X45 → Large</p><p>Zulu9 11X45 → Large</p><p>Zulu9 15X56 → Large</p>",
+                            "text": "<p>AM338 5/8X24 MB → 9\"</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
@@ -1146,7 +1146,7 @@
                     "accordion_row_PHaktb": {
                       "type": "_accordion-row",
                       "settings": {
-                        "heading": "Steiner",
+                        "heading": "B&T",
                         "open_by_default": false,
                         "icon": "none",
                         "width": 20
@@ -1155,7 +1155,7 @@
                         "text_4JERhL": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>HX 10X42 → Medium w/ 1\" Foam Insert</p><p>HX 15X56 → Large</p><p>Predator 8X42 / 10X42 → Medium w/out 1\" Foam Insert</p><p>Predator 10X42 LRF → Large</p>",
+                            "text": "<p>IMPULS IIA 45 → 7\"</p><p>PRINT-X ROTEX 556 COMPACT → 6\"</p><p>PRINT-X ROTEX 556 FULL SIZE → 7\"</p><p>PRINT-X ROTEX 556 MINI-K → 5\"</p><p>PRINT-X ROTEX 556 TI COMPACT → 6\"</p><p>PRINT-X ROTEX 556 TI FULL SIZE → 7\"</p><p>PRINT-X ROTEX 556 TI MINI-K → 5\"</p><p>PRINT-X ROTEX 762 COMPACT → 7\"</p><p>PRINT-X ROTEX 762 FULL SIZE → 8\"</p><p>PRINT-X ROTEX 762 TI COMPACT → 6\"</p><p>PRINT-X ROTEX 762 TI FULL SIZE → 8\"</p><p>PRINT-X SRBS 556 COMPACT → 6\"</p><p>PRINT-X VERS36TI 360 MODULAR LONG → 8\"</p><p>PRINT-X VERS36TI 360 MODULAR SHORT → 6\"</p><p>PRINT-XH RBS 5.56 → 6\"</p><p>PRINT-XH RBS SC 5.56 → 5\"</p><p>RBS NATO 7.62 → 7\"</p><p>SBRS 556 TI FULL SIZE → 7\"</p><p>SRBS 556 TI COMPACT → 6\"</p><p>SRBS 762 TI FULL SIZE → 7\"</p><p>SRBS556-DM INCONEL W/ 1/2X28 DT → 7\"</p><p>SRBS762-DM INCONEL W/ 5/8X24 DT → 7\"</p><p>SRBS762-DM TITANIUM W/ 5/8X24 DT → 7\"</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
@@ -1188,7 +1188,7 @@
                     "accordion_row_AECd6K": {
                       "type": "_accordion-row",
                       "settings": {
-                        "heading": "Swarovski",
+                        "heading": "BOWERS",
                         "open_by_default": false,
                         "icon": "none",
                         "width": 20
@@ -1197,7 +1197,7 @@
                         "text_C4ANdL": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>EL 8.5X42 W B → Medium w/out 1\" Foam Insert</p><p>EL 10X42 W B → Medium w/out 1\" Foam Insert</p><p>EL 10X50 W B → Medium w/out 1\" Foam Insert</p><p>EL 12X50 W B → Medium w/out 1\" Foam Insert</p><p>EL Range 8X42 → Medium w/out 1\" Foam Insert</p><p>EL Range 10X42 → Medium w/out 1\" Foam Insert</p><p>NL Pure 8X32 → Medium w/ 1\" Foam Insert</p><p>NL Pure 10X32 → Medium w/ 1\" Foam Insert</p><p>NL Pure 8X42 → Medium w/out 1\" Foam Insert</p><p>NL Pure 10X42 → Medium w/out 1\" Foam Insert</p><p>NL Pure 12X42 → Medium w/out 1\" Foam Insert</p><p>SLC 8X56 / 10X56 / 15X56 W B → XL</p><p>12X52 (with or without forehead rest) → Large</p>",
+                            "text": "<p>VERS 30 → 9\"</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
@@ -1230,7 +1230,7 @@
                     "accordion_row_Kp7Rxp": {
                       "type": "_accordion-row",
                       "settings": {
-                        "heading": "Vortex",
+                        "heading": "CAT",
                         "open_by_default": false,
                         "icon": "none",
                         "width": 20
@@ -1239,7 +1239,7 @@
                         "text_gGA9KY": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Crossfire HD 8X42 → Medium w/out 1\" Foam Insert</p><p>Crossfire HD 10X42 → Medium w/ 1\" Foam Insert</p><p>Crossfire HD 10X50 → Medium w/out 1\" Foam Insert</p><p>Crossfire HD 12X50 → Medium w/out 1\" Foam Insert</p><p>Diamondback HD 8X42 → Medium w/ 1\" Foam Insert</p><p>Diamondback HD 10X42 → Medium w/ 1\" Foam Insert</p><p>Diamondback HD 10X50 → Medium w/out 1\" Foam Insert</p><p>Diamondback HD 12X50 → Medium w/out 1\" Foam Insert</p><p>Diamondback HD 15X56 → Large</p><p>Fury HD 5000 → Medium w/ 1\" Foam Insert</p><p>Fury HD 5000 AB → Medium w/ 1\" Foam Insert</p><p>Kaibab HD 18X56 → XL</p><p>Razor HD 8X42 → Medium w/ 1\" Foam Insert</p><p>Razor HD 10X42 → Medium w/ 1\" Foam Insert</p><p>Razor HD 10X50 → Medium w/out 1\" Foam Insert</p><p>Razor HD 12X50 → Medium w/out 1\" Foam Insert</p><p>Razor UHD 8X42 → Medium w/out 1\" Foam Insert</p><p>Razor UHD 10X42 → Medium w/out 1\" Foam Insert</p><p>Razor UHD 10X50 → Large</p><p>Razor UHD 12X50 → Large</p><p>Razor UHD 18X56 → XL</p><p>Viper HD 8X42 → Medium w/ 1\" Foam Insert</p><p>Viper HD 10X42 → Medium w/ 1\" Foam Insert</p><p>Viper HD 10X50 → Medium w/out 1\" Foam Insert</p><p>Viper HD 12X50 → Medium w/out 1\" Foam Insert</p>",
+                            "text": "<p>DIRTY DAVE 718 HUB → 5\"</p><p>WB TITANIUM → 5\"</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
@@ -1272,7 +1272,7 @@
                     "accordion_row_R4RKVw": {
                       "type": "_accordion-row",
                       "settings": {
-                        "heading": "Zeiss",
+                        "heading": "CGS",
                         "open_by_default": false,
                         "icon": "none",
                         "width": 20
@@ -1281,7 +1281,7 @@
                         "text_kj89BG": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Conquest 8X56 – 15X56 → XL</p><p>Conquest HD 8X42 / 10X42 → Medium w/ 1\" Foam Insert</p><p>SFL 8X40 / 10X40 → Medium w/ 1\" Foam Insert</p><p>Victory HT 8X54 / 10X54 → Large</p><p>Victory RF 8X42 / 10X42 → Medium w/out 1\" Foam Insert</p><p>Victory RF 8X54 / 10X54 → Large</p><p>Victory SF 8X42 / 10X42 → Medium w/out 1\" Foam Insert</p>",
+                            "text": "<p>HELIOS DT → 6\"</p><p>HELIOS QD → 6\"</p><p>HYDRA → 5\"</p><p>HYPERION → 9\"</p><p>HYPERION K → 6\"</p><p>MOD9 FULL SIZE → 7\"</p><p>NAUTILUS → 8\"</p><p>SCI-SIX → 6\"</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
@@ -1310,6 +1310,1308 @@
                       "block_order": [
                         "text_kj89BG"
                       ]
+                    },
+                    "accordion_row_mi48iL": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "DANIEL DEFENSE",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_bJ4LW9": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>SG-30TIL → 9\"</p><p>SOUNDGUARD SG-30 → 6\"</p><p>SOUNDGUARD SG-30TI → 7\"</p><p>SOUNDGUARD SG-556 → 6\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_bJ4LW9"
+                      ]
+                    },
+                    "accordion_row_gDD6gg": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "DEAD AIR",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_MbBzLE": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>LAZARUS 6 KEYMO → 6\"</p><p>LAZARUS 6 XENO → 5\"</p><p>MOJAVE 9 SHORT → 5\"</p><p>MOJAVE 9 LONG → 7\"</p><p>NOMAD-30 → 6\"</p><p>NOMAD-L → 8\"</p><p>NOMAD TI XC DIRECT THREAD → 6\"</p><p>NOMAD TI XC XENO → 6\"</p><p>NOMAD LTI XC W/ XENO ADAPTER → 8\"</p><p>NOMAD LTI XC W/O XENO ADAPTER → 7\"</p><p>NOMAX 33 WITH ADAPTER → 9\"</p><p>NOMAX 33 WITHOUT ADAPTER → 8\"</p><p>PRIMAL → 7\"</p><p>SANDMAN-K → 5\"</p><p>SANDMAN-S → 6\"</p><p>SANDMAN-X → 6\"</p><p>SANDMAN-L → 8\"</p><p>WOLFMAN LONG CONFIG → 7\"</p><p>WOLVERINE → 7\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_MbBzLE"
+                      ]
+                    },
+                    "accordion_row_EQL9fi": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "DEFCAN",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_baCqLc": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>556 → 7\"</p><p>762 → 8\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_baCqLc"
+                      ]
+                    },
+                    "accordion_row_LkM6Lj": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "ENERGETIC ARMAMENT",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_3gRNtU": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>FEROX → 5\"</p><p>LUX – 6.5MM → 7\"</p><p>LUX – 7.62MM → 7\"</p><p>PEAK 30 → 6\"</p><p>SONUS 9 → 6\"</p><p>VOX S → 5\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_3gRNtU"
+                      ]
+                    },
+                    "accordion_row_L63HFB": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "GEMTECH",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_7t9MQz": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>ABYSS 556 DIRECT THREAD → 5\"</p><p>ABYSS 762 DIRECT THREAD → 6\"</p><p>LUNAR 45 → 8\"</p><p>LUNAR 9 LONG → 6\"</p><p>NEUTRON 762 DIRECT THREAD → 6\"</p><p>TRACKER → 7\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_7t9MQz"
+                      ]
+                    },
+                    "accordion_row_WxVc6V": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "GRIFFIN ARMAMENT",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_Utdq8M": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>DUAL-LOK PSR 5 SILENCER 5.56 → 8\"</p><p>DUAL-LOK PSR 7 SILENCER 7.62 → 8\"</p><p>EXPLORR 224 EU2 UNIVERSAL → 5\"</p><p>M4SD-II → 6\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_Utdq8M"
+                      ]
+                    },
+                    "accordion_row_wpzX6m": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "GUNWERKS",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_xMLc4N": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>6IX TITANIUM → 5\"</p><p>6IX+ → 6\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_xMLc4N"
+                      ]
+                    },
+                    "accordion_row_mTL9E4": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "HUXWRX",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_CmpawV": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>FLOW 556 TI → 6\"</p><p>FLOW 556K → 5\"</p><p>FLOW 6K → 5\"</p><p>FLOW 762 TI → 5\"</p><p>FLOW RANGER 36 TI → 6\"</p><p>VENTUM 556 → 6\"</p><p>VENTUM 762 → 6\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_CmpawV"
+                      ]
+                    },
+                    "accordion_row_aigrcU": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "INFINITY",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_JXQajc": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>7.62 → 6\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_JXQajc"
+                      ]
+                    },
+                    "accordion_row_TqhMkW": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "JK ARMAMENT",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_HERDhY": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>155 GOAT HF → 6\"</p><p>155 RPX 30 → 7\"</p><p>155 RPX 45 → 8\"</p><p>155 RPX 9 → 8\"</p><p>155 SBRX 30 → 6\"</p><p>155 VERSAX 30 → 6\"</p><p>155 VERSAX 45 WITH MOUNT → 7\"</p><p>155 VERSAX 45 WITHOUT MOUNT → 6\"</p><p>15 VERSAX 9 WITH MOUNT → 7\"</p><p>15 VERSAX 9 WITHOUT MOUNT → 6\"</p><p>195 VERSAX 12GA → 7\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_HERDhY"
+                      ]
+                    },
+                    "accordion_row_4kF7CB": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "KAC",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_Lqt4Gg": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>5.56 QDC/CRS-PRT → 5\"</p><p>5.56 QDSS NT4 → 6\"</p><p>QDSS NT-4 PRG → 6\"</p><p>7.62 DTS-1 / DTS-1.1 → 8\"</p><p>7.62 PRS-1 → 7\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_Lqt4Gg"
+                      ]
+                    },
+                    "accordion_row_RVV8rA": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "LONE STAR SILENCER",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_HeGyaE": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>HUNTER 308 → 8\"</p><p>OUTRIDER → 8\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_HeGyaE"
+                      ]
+                    },
+                    "accordion_row_6mdJQM": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "MAXIM DEFENSE",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_yKc9xP": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>DS-K → 5\"</p><p>DS-K QD → 5\"</p><p>DS-K D → 5\"</p><p>DS-D → 7\"</p><p>DS-M → 7\"</p><p>DS-QD → 7\"</p><p>DSK-M → 5\"</p><p>DSX → 7\"</p><p>MS-22 → 5\"</p><p>MS-45 → 8\"</p><p>MS-9 → 5\"</p><p>MS-5.7 → 5\"</p><p>PRS-30 D → 7\"</p><p>PRS-350 → 7\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_yKc9xP"
+                      ]
+                    },
+                    "accordion_row_GTLCgQ": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "NOSLER",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_GaJwKt": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>SR-22 ALTI → 7\"</p><p>SR-22 TI → 7\"</p><p>SR-30K ALTI → 5\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_GaJwKt"
+                      ]
+                    },
+                    "accordion_row_VY6nhw": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "OSS",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_AVxe8t": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>HX-QD MAGNUM TI → 8\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_AVxe8t"
+                      ]
+                    },
+                    "accordion_row_9XNXcn": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "OTTER CREEK LABS",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_GkVhV7": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>OCM5 → 8\"</p><p>POLONIUM → 5\"</p><p>POLONIUM-30 → 5\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_GkVhV7"
+                      ]
+                    },
+                    "accordion_row_UfWF37": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "PRIMARY WEAPONS SYSTEMS",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_8ryVmG": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>BDE 762 LONG → 7\"</p><p>BDE 762 SHORT → 6\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_8ryVmG"
+                      ]
+                    },
+                    "accordion_row_g7Q7T8": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "PTR",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_x7taGg": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>VENT 1 → 8\"</p><p>VENT 2 → 7\"</p><p>VENT 3 → 7\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_x7taGg"
+                      ]
+                    },
+                    "accordion_row_BMhtiz": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "Q",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_aBPhzA": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>PORQ CHOP → 8\"</p><p>SHORT CHOP → 6\"</p><p>SOUTHPAW → 5\"</p><p>THUNDER CHICKEN → 7\"</p><p>TRASH PANDA → 6\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_aBPhzA"
+                      ]
+                    },
+                    "accordion_row_PtWYzq": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "RADICAL DEFENSE",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_g8g9Fy": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>GPS 5.56 → 7\"</p><p>GPS 7.62 → 7\"</p><p>LS-3 → 7\"</p><p>LS-5TI → 7\"</p><p>SASS 7.62 → 7\"</p><p>SASS TI 7.62 → 7\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_g8g9Fy"
+                      ]
+                    },
+                    "accordion_row_Pg3CYq": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "RAMBLIN MAN",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_ida3xN": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>46 TI MODULAR LONG → 7\"</p><p>46 TI MODULAR SHORT → 5\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_ida3xN"
+                      ]
+                    },
+                    "accordion_row_YkBYme": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "RBS",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_YPaPGa": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>MAX 556 TI COMPACT → 6\"</p><p>MAX 556 TI FULL SIZE → 7\"</p><p>MAX 762 TI FULL SIZE → 7\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_YPaPGa"
+                      ]
+                    },
+                    "accordion_row_PnwX33": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "RESILIENT SUPPRESSORS",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_CijCFG": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>JOLENE S → 6\"</p><p>PUTNIK → 5\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_CijCFG"
+                      ]
+                    },
+                    "accordion_row_nhWAa7": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "RUGGED",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_gQjEcq": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>ALASKAN 360 → 7\"</p><p>ALASKAN 360 TI → 6\"</p><p>MICRO30 FULL → 6\"</p><p>RAZOR 556 → 6\"</p><p>RAZOR 7.62 → 6\"</p><p>SURGEX LONG → 7\"</p><p>SURGEX SHORT → 5\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_gQjEcq"
+                      ]
+                    },
+                    "accordion_row_3VFKaJ": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "SD TACTICAL ARMS",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_CwnJEj": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>CARNIVORE → 7\"</p><p>CARNIVORE K → 7\"</p><p>HYENA → 7\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_CwnJEj"
+                      ]
+                    },
+                    "accordion_row_8WPVx4": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "SIG",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_pCai3X": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>NG762-QD → 7\"</p><p>SLX762 DIRECT THREAD → 7\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_pCai3X"
+                      ]
+                    },
+                    "accordion_row_xHNMX8": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "SILENCERCO",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_YVdhYb": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>CHIMERA 300 → 5\"</p><p>HYBRID 46M LONG → 8\"</p><p>HYBRID 46M SHORT → 6\"</p><p>OMEGA 300 → 6\"</p><p>OMEGA 36M LONG → 7\"</p><p>OSPREY 9 2.0 → 6\"</p><p>SCYTHE STM LONG → 6\"</p><p>SCYTHE TI → 5\"</p><p>VELOS LBP → 5\"</p><p>VELOS LBP 762 → 6\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_YVdhYb"
+                      ]
+                    },
+                    "accordion_row_WEknQY": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "SUREFIRE",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_LF3R3F": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>SOCOM556-RC2 → 6\"</p><p>SOCOM556-RC3 → 6\"</p><p>SOCOM556-SB2 → 6\"</p><p>SOCOM762-MINI2 → 6\"</p><p>SOCOM762-RC2 → 8\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_LF3R3F"
+                      ]
+                    },
+                    "accordion_row_8VXxpt": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "TBAC",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_jdih3Q": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>GEN2 ULTRA 9DT → 8\"</p><p>ULTRA 338 → 9\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_jdih3Q"
+                      ]
+                    },
+                    "accordion_row_BjgCqQ": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "THUNDER BEAST",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_jPQKJH": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>FLY 9 LONG → 6\"</p><p>G2 ULTRA 7 DT → 6\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_jPQKJH"
+                      ]
+                    },
+                    "accordion_row_Xz8VPA": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "YHM",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_xqTcPn": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>BAD LARRY → 7\"</p><p>K-RB 5.56MM WITH ADAPTER → 5\"</p><p>R9 9MM WITH DIRECT THREAD → 5\"</p><p>RESONATOR R2 → 6\"</p><p>THE TURBO T3 WITHOUT ADAPTER → 5\"</p><p>THE TURBO T3 WITH ADAPTER → 6\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_xqTcPn"
+                      ]
                     }
                   },
                   "block_order": [
@@ -1321,7 +2623,38 @@
                     "accordion_row_PHaktb",
                     "accordion_row_AECd6K",
                     "accordion_row_Kp7Rxp",
-                    "accordion_row_R4RKVw"
+                    "accordion_row_R4RKVw",
+                    "accordion_row_mi48iL",
+                    "accordion_row_gDD6gg",
+                    "accordion_row_EQL9fi",
+                    "accordion_row_LkM6Lj",
+                    "accordion_row_L63HFB",
+                    "accordion_row_WxVc6V",
+                    "accordion_row_wpzX6m",
+                    "accordion_row_mTL9E4",
+                    "accordion_row_aigrcU",
+                    "accordion_row_TqhMkW",
+                    "accordion_row_4kF7CB",
+                    "accordion_row_RVV8rA",
+                    "accordion_row_6mdJQM",
+                    "accordion_row_GTLCgQ",
+                    "accordion_row_VY6nhw",
+                    "accordion_row_9XNXcn",
+                    "accordion_row_UfWF37",
+                    "accordion_row_g7Q7T8",
+                    "accordion_row_BMhtiz",
+                    "accordion_row_PtWYzq",
+                    "accordion_row_Pg3CYq",
+                    "accordion_row_YkBYme",
+                    "accordion_row_PnwX33",
+                    "accordion_row_nhWAa7",
+                    "accordion_row_3VFKaJ",
+                    "accordion_row_8WPVx4",
+                    "accordion_row_xHNMX8",
+                    "accordion_row_WEknQY",
+                    "accordion_row_8VXxpt",
+                    "accordion_row_BjgCqQ",
+                    "accordion_row_Xz8VPA"
                   ]
                 }
               },
