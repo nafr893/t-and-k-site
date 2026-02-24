@@ -1479,6 +1479,48 @@
                         "text_tcDGn7"
                       ]
                     },
+                    "accordion_row_LRxHjz": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "EVO",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_e66RqR": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>TI 30 AKA EVOLUTION → 8\"</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_e66RqR"
+                      ]
+                    },
                     "accordion_row_RAgjiY": {
                       "type": "_accordion-row",
                       "settings": {
@@ -1617,7 +1659,7 @@
                         "text_rNwYH8": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>FLOW 556 TI → 6\"</p><p>FLOW 556K → 5\"</p><p>FLOW 6K → 5\"</p><p>FLOW 762 TI → 5\"</p><p>FLOW RANGER 36 TI → 6\"</p><p>VENTUM 556 → 6\"</p><p>VENTUM 762 → 6\"</p>",
+                            "text": "<p>FLOW 556 TI → 6\"</p><p>FLOW 556K → 5\"</p><p>FLOW 6K → 5\"</p><p>FLOW 762 TI → 5\"</p><p>FLOW RANGER 36 TI → 6\"</p><p>VENTUM 556 → 6\"</p><p>VENTUM 762 → 6\"<br/><br/>FLOW RANGE 36 → 6\"</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
@@ -2628,6 +2670,7 @@
                     "accordion_row_qtBC6U",
                     "accordion_row_QeRaGb",
                     "accordion_row_WhhWx6",
+                    "accordion_row_LRxHjz",
                     "accordion_row_RAgjiY",
                     "accordion_row_cCRrD4",
                     "accordion_row_MPcBXM",
