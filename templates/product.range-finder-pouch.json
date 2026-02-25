@@ -872,6 +872,434 @@
               },
               "blocks": {}
             },
+            "popup_link_CBzMeq": {
+              "type": "popup-link",
+              "name": "t:names.popup_link",
+              "settings": {
+                "behavior": "default",
+                "heading": "SIZING CHART",
+                "type_preset": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "accordion_C6VRiL": {
+                  "type": "accordion",
+                  "name": "t:names.accordion",
+                  "settings": {
+                    "icon": "caret",
+                    "dividers": true,
+                    "type_preset": "h6",
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "accordion_row_cD6cnq": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "ATHLON",
+                        "open_by_default": true,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_wNywR6": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Midas 1 Mile → Small</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_wNywR6"
+                      ]
+                    },
+                    "accordion_row_kQFdri": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "BUSHNELL",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_4VxnDJ": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Broadhead Laser → Small</p><p>R5 2000 Laser → Small</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_4VxnDJ"
+                      ]
+                    },
+                    "accordion_row_nbHAAn": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "KAHLES",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_Dz3jnP": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Helia RF-M 7X25 → Small</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_Dz3jnP"
+                      ]
+                    },
+                    "accordion_row_MMLCTa": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "LEICA",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_FdyyLf": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Rangemaster 3500.COM → Small</p><p>Rangemaster CRF Max → Small</p><p>Rangemaster CRF Pro → Small</p><p>Rangemaster CRF R → Small</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_FdyyLf"
+                      ]
+                    },
+                    "accordion_row_ywmhVm": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "LEUPOLD",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_HyUiDQ": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>RX FullDraw 5 → Small</p><p>RX-1400I TBR/W → Small</p><p>RX-1500I TBR/W → Small</p><p>RX-1600I TBR/W → Small</p><p>RX-2800 TBR/W → Small</p><p>RX-5000 → Small</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_HyUiDQ"
+                      ]
+                    },
+                    "accordion_row_cRFYXC": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "MAVEN",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_dQhjTU": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>CRF.1 – 6X22 → Small</p><p>RF.1 – 7X25 → Medium</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_dQhjTU"
+                      ]
+                    },
+                    "accordion_row_K39pnW": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "NIKON",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_rMUzVJ": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Laser 30 → Small</p><p>ProStaff 1000 → Small</p><p>ProStaff 1000 i → Small</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_rMUzVJ"
+                      ]
+                    },
+                    "accordion_row_mYbicH": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "SIG SAUER",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_KVUiwi": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>KILO 4K → Small</p><p>KILO3K 6X22 → Small</p><p>KILO5K → Small</p><p>KILO8K-ABS → Small</p><p>KILO Canyon 6X22 → Small</p><p>KILO1000 5X20 → Small</p><p>KILO1000BDX 5X20 → Small</p><p>KILO1600BDX 6X22 → Small</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_KVUiwi"
+                      ]
+                    },
+                    "accordion_row_b7hA63": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "VORTEX",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_Hk4eXD": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Copperhead 1500 → Small</p><p>Crossfire HD 1400 → Small</p><p>Diamondback HD 2000 → Small</p><p>Razor HD 4000 → Small</p><p>Viper HD 3000 → Small</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_Hk4eXD"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "accordion_row_cD6cnq",
+                    "accordion_row_kQFdri",
+                    "accordion_row_nbHAAn",
+                    "accordion_row_MMLCTa",
+                    "accordion_row_ywmhVm",
+                    "accordion_row_cRFYXC",
+                    "accordion_row_K39pnW",
+                    "accordion_row_mYbicH",
+                    "accordion_row_b7hA63"
+                  ]
+                }
+              },
+              "block_order": [
+                "accordion_C6VRiL"
+              ]
+            },
             "group_jjXAKb": {
               "type": "group",
               "name": "t:names.group",
@@ -1967,6 +2395,7 @@
             "buy_buttons_eYQEYi",
             "group_DqXFKN",
             "text_aEtTtq",
+            "popup_link_CBzMeq",
             "group_jjXAKb"
           ]
         }
