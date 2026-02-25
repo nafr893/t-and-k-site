@@ -872,6 +872,434 @@
               },
               "blocks": {}
             },
+            "popup_link_QXbYJb": {
+              "type": "popup-link",
+              "name": "t:names.popup_link",
+              "settings": {
+                "behavior": "drawer",
+                "heading": "Sizing Chart",
+                "type_preset": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "accordion_BPAiG3": {
+                  "type": "accordion",
+                  "name": "t:names.accordion",
+                  "settings": {
+                    "icon": "plus",
+                    "dividers": true,
+                    "type_preset": "h5",
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {
+                    "accordion_row_tzkjwN": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "Bushnell",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_xGR9aL": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Engage X 10X42 → Medium w/ 1\" Foam Insert</p><p>Engage DX 10X42 → Medium w/ 1\" Foam Insert</p><p>Engage EDX 8X42 / 10X42 → Medium w/ 1\" Foam Insert</p><p>Engage DX 12X50 → Medium w/out 1\" Foam Insert</p><p>Engage EDX 10X50 / 12X50 → Medium w/out 1\" Foam Insert</p><p>Forge 8X42 / 10X42 → Medium w/out 1\" Foam Insert</p><p>Forge 15X56 → XL</p><p>Fusion X 10X42 → Medium w/out 1\" Foam Insert</p><p>Legend 8X42 / 10X42 → Medium w/ 1\" Foam Insert</p><p>Legend 10X50 / 12X50 → Medium w/out 1\" Foam Insert</p><p>Nitro 10X42 → Medium w/ 1\" Foam Insert</p><p>Prime 8X42 / 10X42 → Medium w/ 1\" Foam Insert</p><p>Prime 12X50 → Medium w/out 1\" Foam Insert</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_xGR9aL"
+                      ]
+                    },
+                    "accordion_row_MNULeP": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "Leica",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_emVp9y": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Geovid 8X42 / 10X42 R → Large</p><p>Geovid 8X56 R → Large</p><p>Geovid 8X42 / 10X42 HD-R 2700 → Large</p><p>Geovid Pro 8X32 / 10X32 → Medium w/ 1\" Foam Insert</p><p>Geovid 8X56 HD-R 2700 → Large</p><p>Geovid 8X42 / 10X42 3200.COM → Large</p><p>Geovid 8X56 3200.COM → Large</p><p>Geovid R 8X56 / 15X56 → XL</p><p>Noctivid 8X42 / 10X42 → Medium w/ 1\" Foam Insert</p><p>Trinovid 8X40 / 10X40 → Medium w/ 1\" Foam Insert</p><p>Ultravid HD-Plus 7X42 / 8X42 / 10X42 → Medium w/ 1\" Foam Insert</p><p>Ultravid HD-Plus 8X50 / 10X50 / 12X50 → Large</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_emVp9y"
+                      ]
+                    },
+                    "accordion_row_4WweTX": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "Leupold",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_h6qDBE": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>BX-1 McKenzie HD 8X42 → Medium w/ 1\" Foam Insert</p><p>BX-1 McKenzie HD 10X42 → Medium w/ 1\" Foam Insert</p><p>BX-1 McKenzie HD 10X50 → Medium w/out 1\" Foam Insert</p><p>BX-1 McKenzie HD 12X50 → Medium w/out 1\" Foam Insert</p><p>BX-2 Alpine HD 8X42 → Medium w/ 1\" Foam Insert</p><p>BX-2 Alpine HD 10X42 → Medium w/ 1\" Foam Insert</p><p>BX-2 Alpine HD 10X52 → Medium w/out 1\" Foam Insert</p><p>BX-2 Alpine HD 12X52 → Medium w/out 1\" Foam Insert</p><p>BX-4 Pro Guide HD 8X32 → Medium w/ 1\" Foam Insert</p><p>BX-4 Pro Guide HD 10X32 → Medium w/ 1\" Foam Insert</p><p>BX-4 Pro Guide HD 8X42 → Medium w/ 1\" Foam Insert</p><p>BX-4 Pro Guide HD 10X42 → Medium w/ 1\" Foam Insert</p><p>BX-4 Pro Guide HD 10X50 → Medium w/out 1\" Foam Insert</p><p>BX-4 Pro Guide HD 12X50 → Medium w/out 1\" Foam Insert</p><p>BX-5 Santiam HD 8X42 → Medium w/ 1\" Foam Insert</p><p>BX-5 Santiam HD 10X42 → Medium w/ 1\" Foam Insert</p><p>BX-5 Santiam HD 10X50 → Medium w/out 1\" Foam Insert</p><p>BX-5 Santiam HD 12X50 → Medium w/out 1\" Foam Insert</p><p>BX-5 Santiam HD 15X56 → Large</p><p>BX-T HD 10X42 → Medium w/ 1\" Foam Insert</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_h6qDBE"
+                      ]
+                    },
+                    "accordion_row_Q34BXY": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "Maven",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_DqA8GR": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>B1.2 8X42 / 10X42 → Medium w/ 1\" Foam Insert</p><p>B.2 9X45 / 11X45 → Large</p><p>B.5 10X56 – 18X56 → Large</p><p>B.6 10X50 / 12X50 → Medium w/out 1\" Foam Insert</p><p>C.1 8X42 – 12X42 → Medium w/ 1\" Foam Insert</p><p>C.3 10X50 / 12X50 → Medium w/out 1\" Foam Insert</p><p>C.4 15X56 / 18X56 → Large</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_DqA8GR"
+                      ]
+                    },
+                    "accordion_row_GmXqDx": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "Sig Sauer",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_KXJXGf": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Kilo6K HD 8X32 / 10X32 → Medium w/ 1\" Foam Insert</p><p>Kilo6K HD → Medium w/ 1\" Foam Insert</p><p>Zulu7 10X42 → Medium w/ 1\" Foam Insert</p><p>Zulu9 9X45 → Large</p><p>Zulu9 11X45 → Large</p><p>Zulu9 15X56 → Large</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_KXJXGf"
+                      ]
+                    },
+                    "accordion_row_XEKAn8": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "Steiner",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_6PFAfX": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>HX 10X42 → Medium w/ 1\" Foam Insert</p><p>HX 15X56 → Large</p><p>Predator 8X42 / 10X42 → Medium w/out 1\" Foam Insert</p><p>Predator 10X42 LRF → Large</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_6PFAfX"
+                      ]
+                    },
+                    "accordion_row_HHreHt": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "Swarovski",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_66iwfh": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>EL 8.5X42 W B → Medium w/out 1\" Foam Insert</p><p>EL 10X42 W B → Medium w/out 1\" Foam Insert</p><p>EL 10X50 W B → Medium w/out 1\" Foam Insert</p><p>EL 12X50 W B → Medium w/out 1\" Foam Insert</p><p>EL Range 8X42 → Medium w/out 1\" Foam Insert</p><p>EL Range 10X42 → Medium w/out 1\" Foam Insert</p><p>NL Pure 8X32 → Medium w/ 1\" Foam Insert</p><p>NL Pure 10X32 → Medium w/ 1\" Foam Insert</p><p>NL Pure 8X42 → Medium w/out 1\" Foam Insert</p><p>NL Pure 10X42 → Medium w/out 1\" Foam Insert</p><p>NL Pure 12X42 → Medium w/out 1\" Foam Insert</p><p>SLC 8X56 / 10X56 / 15X56 W B → XL</p><p>12X52 (with or without forehead rest) → Large</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_66iwfh"
+                      ]
+                    },
+                    "accordion_row_x7MFfe": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "Vortex",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_ehi7EP": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Crossfire HD 8X42 → Medium w/out 1\" Foam Insert</p><p>Crossfire HD 10X42 → Medium w/ 1\" Foam Insert</p><p>Crossfire HD 10X50 → Medium w/out 1\" Foam Insert</p><p>Crossfire HD 12X50 → Medium w/out 1\" Foam Insert</p><p>Diamondback HD 8X42 → Medium w/ 1\" Foam Insert</p><p>Diamondback HD 10X42 → Medium w/ 1\" Foam Insert</p><p>Diamondback HD 10X50 → Medium w/out 1\" Foam Insert</p><p>Diamondback HD 12X50 → Medium w/out 1\" Foam Insert</p><p>Diamondback HD 15X56 → Large</p><p>Fury HD 5000 → Medium w/ 1\" Foam Insert</p><p>Fury HD 5000 AB → Medium w/ 1\" Foam Insert</p><p>Kaibab HD 18X56 → XL</p><p>Razor HD 8X42 → Medium w/ 1\" Foam Insert</p><p>Razor HD 10X42 → Medium w/ 1\" Foam Insert</p><p>Razor HD 10X50 → Medium w/out 1\" Foam Insert</p><p>Razor HD 12X50 → Medium w/out 1\" Foam Insert</p><p>Razor UHD 8X42 → Medium w/out 1\" Foam Insert</p><p>Razor UHD 10X42 → Medium w/out 1\" Foam Insert</p><p>Razor UHD 10X50 → Large</p><p>Razor UHD 12X50 → Large</p><p>Razor UHD 18X56 → XL</p><p>Viper HD 8X42 → Medium w/ 1\" Foam Insert</p><p>Viper HD 10X42 → Medium w/ 1\" Foam Insert</p><p>Viper HD 10X50 → Medium w/out 1\" Foam Insert</p><p>Viper HD 12X50 → Medium w/out 1\" Foam Insert</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_ehi7EP"
+                      ]
+                    },
+                    "accordion_row_i9wKad": {
+                      "type": "_accordion-row",
+                      "settings": {
+                        "heading": "Zeiss",
+                        "open_by_default": false,
+                        "icon": "none",
+                        "width": 20
+                      },
+                      "blocks": {
+                        "text_CYwrDW": {
+                          "type": "text",
+                          "settings": {
+                            "text": "<p>Conquest 8X56 – 15X56 → XL</p><p>Conquest HD 8X42 / 10X42 → Medium w/ 1\" Foam Insert</p><p>SFL 8X40 / 10X40 → Medium w/ 1\" Foam Insert</p><p>Victory HT 8X54 / 10X54 → Large</p><p>Victory RF 8X42 / 10X42 → Medium w/out 1\" Foam Insert</p><p>Victory RF 8X54 / 10X54 → Large</p><p>Victory SF 8X42 / 10X42 → Medium w/out 1\" Foam Insert</p>",
+                            "width": "100%",
+                            "max_width": "normal",
+                            "alignment": "left",
+                            "type_preset": "rte",
+                            "font": "var(--font-body--family)",
+                            "font_size": "1rem",
+                            "line_height": "normal",
+                            "letter_spacing": "normal",
+                            "case": "none",
+                            "wrap": "pretty",
+                            "color": "var(--color-foreground)",
+                            "background": false,
+                            "border": false,
+                            "background_color": "",
+                            "border_color": "#000000",
+                            "border_weight": 0,
+                            "corner_radius": 0,
+                            "padding-block-start": 0,
+                            "padding-block-end": 0,
+                            "padding-inline-start": 0,
+                            "padding-inline-end": 0
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "text_CYwrDW"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "accordion_row_tzkjwN",
+                    "accordion_row_MNULeP",
+                    "accordion_row_4WweTX",
+                    "accordion_row_Q34BXY",
+                    "accordion_row_GmXqDx",
+                    "accordion_row_XEKAn8",
+                    "accordion_row_HHreHt",
+                    "accordion_row_x7MFfe",
+                    "accordion_row_i9wKad"
+                  ]
+                }
+              },
+              "block_order": [
+                "accordion_BPAiG3"
+              ]
+            },
             "group_jjXAKb": {
               "type": "group",
               "name": "t:names.group",
@@ -1965,6 +2393,7 @@
             "buy_buttons_eYQEYi",
             "group_DqXFKN",
             "text_aEtTtq",
+            "popup_link_QXbYJb",
             "group_jjXAKb"
           ]
         }
