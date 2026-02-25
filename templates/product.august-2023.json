@@ -5070,6 +5070,35 @@
               "block_order": [
                 "text_4rBwG4"
               ]
+            },
+            "accordion_row_9PUpiA": {
+              "type": "_accordion-row",
+              "name": "t:names.accordion_row",
+              "settings": {
+                "heading": "What size do I need for my optics?",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "popup_link_PfPmqP": {
+                  "type": "popup-link",
+                  "name": "t:names.popup_link",
+                  "settings": {
+                    "behavior": "drawer",
+                    "heading": "Sizing Chart",
+                    "type_preset": "",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "popup_link_PfPmqP"
+              ]
             }
           },
           "block_order": [
@@ -5077,7 +5106,8 @@
             "accordion_row_XE9tYL",
             "accordion_row_HdqWcD",
             "accordion_row_74RWF7",
-            "accordion_row_RfdL3X"
+            "accordion_row_RfdL3X",
+            "accordion_row_9PUpiA"
           ]
         }
       },
