@@ -2340,7 +2340,7 @@
                         "text_RFeBbn": {
                           "type": "text",
                           "settings": {
-                            "text": "<p>Specifications:</p><ul><li>Medium: <strong>14.8 oz</strong></li><li>Large: <strong>15.6 oz</strong></li><li>XL: <strong>16.0 oz</strong></li></ul>",
+                            "text": "<p>Specifications:</p><p>Med-8\"x 6”x 3.5” 8oz</p><p>Lg–9\"x 6”x 3.5” 8.6oz</p><p>XL–10” x 6.5”x 3.5” 9oz</p><p>Yoke weight: 5oz</p><p>Foam insert weight: .3oz</p>",
                             "width": "100%",
                             "max_width": "normal",
                             "alignment": "left",
