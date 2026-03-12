@@ -1373,7 +1373,7 @@
                                   "type": "text",
                                   "name": "t:names.text",
                                   "settings": {
-                                    "text": "<p><strong>1000D CORDURA FABRIC</strong></p>",
+                                    "text": "<p><strong>500D CORDURA FABRIC</strong></p>",
                                     "width": "fit-content",
                                     "max_width": "normal",
                                     "alignment": "left",
