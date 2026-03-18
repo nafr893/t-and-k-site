@@ -201,10 +201,24 @@
             "padding_top": 0,
             "padding_bottom": 0
           }
+        },
+        "the_shop_calendar_the_shop_calendar_fhwhy8": {
+          "type": "shopify://apps/the-shop-calendar/blocks/the_shop_calendar/217451ff-da34-48a6-90b4-e904111bb75a",
+          "settings": {
+            "title": "",
+            "calendar_uuid": "",
+            "center_header_text": false,
+            "list_calendar": false,
+            "accordion_calendar": false,
+            "width": 100,
+            "padding_top": 0,
+            "padding_bottom": 0
+          }
         }
       },
       "block_order": [
-        "the_shop_calendar_the_shop_calendar_QBDdJ7"
+        "the_shop_calendar_the_shop_calendar_QBDdJ7",
+        "the_shop_calendar_the_shop_calendar_fhwhy8"
       ],
       "settings": {
         "content_direction": "column",
