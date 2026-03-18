@@ -204,6 +204,7 @@
         },
         "the_shop_calendar_the_shop_calendar_fhwhy8": {
           "type": "shopify://apps/the-shop-calendar/blocks/the_shop_calendar/217451ff-da34-48a6-90b4-e904111bb75a",
+          "disabled": true,
           "settings": {
             "title": "",
             "calendar_uuid": "",
