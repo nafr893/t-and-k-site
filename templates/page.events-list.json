@@ -195,7 +195,7 @@
             "title": "",
             "calendar_uuid": "",
             "center_header_text": false,
-            "list_calendar": false,
+            "list_calendar": true,
             "accordion_calendar": false,
             "width": 100,
             "padding_top": 0,
