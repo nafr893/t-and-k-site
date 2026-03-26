@@ -1,0 +1,379 @@
+{% liquid
+  assign components = product.metafields.custom.bundle_components.value
+%}
+
+<script src="{{ 'bundle-product.js' | asset_url }}" defer></script>
+
+<div
+  class="bundle-product page-width spacing-style"
+  data-bundle-product
+  style="{% render 'spacing-style', settings: section.settings %}"
+>
+
+  {%- comment -%} ── Bundle header ── {%- endcomment -%}
+  <div class="bundle-product__header">
+    <h1 class="bundle-product__title">{{ product.title }}</h1>
+
+    <div class="bundle-product__price">
+      {% if product.compare_at_price > product.price %}
+        <span class="bundle-product__price-sale">{{ product.price | money }}</span>
+        <span class="bundle-product__price-compare">{{ product.compare_at_price | money }}</span>
+      {% else %}
+        <span>{{ product.price | money }}</span>
+      {% endif %}
+    </div>
+
+    {% if product.description != blank %}
+      <div class="bundle-product__description rte">{{ product.description }}</div>
+    {% endif %}
+  </div>
+
+  {%- comment -%} ── No components fallback (shown in theme editor before metafields are set) ── {%- endcomment -%}
+  {% if components == blank %}
+    <div class="bundle-product__empty">
+      <p>No bundle components found. Add products to the <strong>Bundle Components</strong> metafield on this product.</p>
+    </div>
+
+  {% else %}
+
+    {%- comment -%} ── Component cards ── {%- endcomment -%}
+    <div class="bundle-product__components">
+      {% for component in components %}
+        <div
+          class="bundle-product__component"
+          data-bundle-component
+          data-component-index="{{ forloop.index0 }}"
+          data-component-title="{{ component.title | escape }}"
+        >
+
+          {%- comment -%} Component image {%- endcomment -%}
+          <div class="bundle-product__component-media">
+            {% if component.featured_image != blank %}
+              {{
+                component.featured_image
+                | image_url: width: 600
+                | image_tag:
+                  loading: 'lazy',
+                  class: 'bundle-product__component-img',
+                  alt: component.title,
+                  data-component-image: ''
+              }}
+            {% else %}
+              <div class="bundle-product__component-img bundle-product__component-img--placeholder"></div>
+            {% endif %}
+          </div>
+
+          {%- comment -%} Component details {%- endcomment -%}
+          <div class="bundle-product__component-details">
+            <p class="bundle-product__component-title">{{ component.title }}</p>
+
+            {%- comment -%} Variants JSON for JS variant matching {%- endcomment -%}
+            <script type="application/json" data-variants-json>
+              {{ component.variants | json }}
+            </script>
+
+            {%- comment -%} Option selectors {%- endcomment -%}
+            {% for option in component.options_with_values %}
+              {% liquid
+                assign option_name_lower = option.name | downcase
+                assign is_color = false
+                if option_name_lower == 'color' or option_name_lower == 'colour'
+                  assign is_color = true
+                endif
+              %}
+              <div class="bundle-product__option-group" data-option-group="{{ forloop.index0 }}">
+                <p class="bundle-product__option-label">
+                  {{ option.name }}: <span class="bundle-product__option-selected" data-selected-label-{{ forloop.index0 }}></span>
+                </p>
+
+                <div class="bundle-product__option-buttons{% if is_color %} bundle-product__option-buttons--color{% endif %}">
+                  {% for value in option.values %}
+                    <button
+                      class="bundle-product__option-btn{% if is_color %} bundle-product__option-btn--color{% endif %}"
+                      data-option-btn
+                      data-option-index="{{ forloop.parentloop.index0 }}"
+                      data-value="{{ value | escape }}"
+                      {% if is_color %}
+                        style="--swatch-bg: {{ value | downcase | replace: ' ', '' }};"
+                        title="{{ value }}"
+                      {% endif %}
+                      aria-label="{{ option.name }}: {{ value }}"
+                    >
+                      {% unless is_color %}{{ value }}{% endunless %}
+                    </button>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endfor %}
+
+            {%- comment -%} Availability / selected variant status {%- endcomment -%}
+            <p class="bundle-product__component-status" data-component-status></p>
+          </div>
+
+        </div>
+      {% endfor %}
+    </div>
+
+    {%- comment -%} ── Add to cart ── {%- endcomment -%}
+    <div class="bundle-product__actions">
+      <button
+        class="button bundle-product__add-btn"
+        data-bundle-add
+        type="button"
+      >
+        {{ section.settings.add_to_cart_label | default: 'Add Bundle to Cart' }}
+      </button>
+      <p class="bundle-product__error" data-bundle-error style="display: none;"></p>
+    </div>
+
+  {% endif %}
+
+</div>
+
+{% stylesheet %}
+  .bundle-product {
+    padding-block: 40px;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  /* ── Header ── */
+  .bundle-product__header {
+    margin-block-end: 40px;
+  }
+
+  .bundle-product__title {
+    margin-block-end: 8px;
+  }
+
+  .bundle-product__price {
+    font-size: 1.25rem;
+    margin-block-end: 12px;
+  }
+
+  .bundle-product__price-sale {
+    color: rgb(var(--color-sale-price-text-rgb, var(--color-foreground-rgb)));
+    margin-inline-end: 8px;
+  }
+
+  .bundle-product__price-compare {
+    text-decoration: line-through;
+    opacity: 0.6;
+    font-size: 0.9em;
+  }
+
+  .bundle-product__description {
+    max-width: 640px;
+    margin-block-start: 12px;
+  }
+
+  /* ── Empty state ── */
+  .bundle-product__empty {
+    padding: 24px;
+    background: rgb(var(--color-background-rgb));
+    border: 1px dashed rgb(var(--color-border-rgb));
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  /* ── Component grid ── */
+  .bundle-product__components {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-block-end: 40px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .bundle-product__components {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
+
+  /* ── Individual component card ── */
+  .bundle-product__component {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid rgb(var(--color-border-rgb));
+    border-radius: var(--style-border-radius-card, 8px);
+    background: rgb(var(--color-background-rgb));
+  }
+
+  @media screen and (max-width: 479px) {
+    .bundle-product__component {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ── Component image ── */
+  .bundle-product__component-media {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  .bundle-product__component-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 200ms ease;
+  }
+
+  .bundle-product__component-img--placeholder {
+    background: rgb(var(--color-border-rgb) / 0.3);
+  }
+
+  /* ── Component details ── */
+  .bundle-product__component-title {
+    font-weight: bold;
+    margin-block-end: 12px;
+  }
+
+  /* ── Option groups ── */
+  .bundle-product__option-group {
+    margin-block-end: 12px;
+  }
+
+  .bundle-product__option-label {
+    font-size: 0.875rem;
+    margin-block-end: 6px;
+    font-weight: 500;
+  }
+
+  .bundle-product__option-selected {
+    font-weight: normal;
+    opacity: 0.7;
+  }
+
+  .bundle-product__option-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* Size / text option buttons */
+  .bundle-product__option-btn {
+    padding: 6px 12px;
+    border: 1px solid rgb(var(--color-border-rgb));
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: border-color 150ms ease, background 150ms ease;
+    color: rgb(var(--color-foreground-rgb));
+  }
+
+  .bundle-product__option-btn:hover {
+    border-color: rgb(var(--color-foreground-rgb));
+  }
+
+  .bundle-product__option-btn.is-active {
+    border-color: rgb(var(--color-foreground-rgb));
+    background: rgb(var(--color-foreground-rgb));
+    color: rgb(var(--color-background-rgb));
+  }
+
+  .bundle-product__option-btn.is-unavailable {
+    opacity: 0.35;
+    cursor: not-allowed;
+    text-decoration: line-through;
+  }
+
+  /* Color swatch buttons */
+  .bundle-product__option-btn--color {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border-radius: 50%;
+    background: var(--swatch-bg, #ccc);
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 1px rgb(var(--color-border-rgb));
+  }
+
+  .bundle-product__option-btn--color:hover,
+  .bundle-product__option-btn--color.is-active {
+    box-shadow: 0 0 0 2px rgb(var(--color-background-rgb)), 0 0 0 4px rgb(var(--color-foreground-rgb));
+    border-color: transparent;
+    background: var(--swatch-bg, #ccc);
+  }
+
+  /* ── Status line ── */
+  .bundle-product__component-status {
+    font-size: 0.8rem;
+    margin-block-start: 6px;
+    min-height: 1.2em;
+  }
+
+  .bundle-product__component-status[data-state="unavailable"] {
+    color: rgb(var(--color-sale-price-text-rgb, 180 0 0));
+  }
+
+  .bundle-product__component-status[data-state="error"] {
+    color: rgb(var(--color-sale-price-text-rgb, 180 0 0));
+  }
+
+  /* ── Actions ── */
+  .bundle-product__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .bundle-product__add-btn {
+    min-width: 220px;
+  }
+
+  .bundle-product__add-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .bundle-product__error {
+    color: rgb(var(--color-sale-price-text-rgb, 180 0 0));
+    font-size: 0.9rem;
+    margin: 0;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Bundle Product",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "add_to_cart_label",
+      "label": "Add to cart button label",
+      "default": "Add Bundle to Cart"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    }
+  ]
+}
+{% endschema %}

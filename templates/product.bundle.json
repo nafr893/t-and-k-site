@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "bundle-product",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}
