@@ -739,7 +739,7 @@
           "name": "Suppressor Covers",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC05557-2.webp",
+            "image_1": "shopify://shop_images/DSC02827_1.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -846,7 +846,7 @@
                       "type": "custom-label",
                       "name": "Custom label",
                       "settings": {
-                        "text": "X TANGO™",
+                        "text": "SPRING SALE",
                         "link": "shopify://products/x-tango-suppressor-cover",
                         "text_color": "#ffffff",
                         "bg_color": "#bbbbbb",
@@ -862,7 +862,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h2>XTREME TEMP SUPPRESSOR COVERS</h2>",
+                        "text": "<h2>SAVE 20% OFF</h2><h2>STOREWIDE</h2>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
