@@ -25,6 +25,11 @@
           {%- endif -%}
         </div>
       {%- endif -%}
+      {%- if product.metafields.custom.outlet_status.value == true -%}
+        <div class="product-badges__badge product-badges__badge--rectangle color-{{ settings.badge_sale_color_scheme }}">
+          Outlet
+        </div>
+      {%- endif -%}
     </div>
     {%  if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add', product: product, section_id: section.id %}
