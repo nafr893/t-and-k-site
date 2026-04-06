@@ -11,7 +11,7 @@
 
   for product in collection.products
     assign quality_obj = product.metafields.custom.outlet_quality.value
-    assign quality_label = quality_obj.name | strip
+    assign quality_label = quality_obj.product_quality | strip
 
     if quality_label != blank
       # Build product -> filter map entry
@@ -83,7 +83,7 @@
 
 {% schema %}
 {
-  "name": "Quick Filter — Outlet Quality",
+  "name": "Outlet Quality Filter",
   "tag": "div",
   "class": "quick-filter-block",
   "settings": [

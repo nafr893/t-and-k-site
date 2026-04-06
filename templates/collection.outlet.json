@@ -78,12 +78,22 @@
             "button_gap": 6
           },
           "blocks": {}
+        },
+        "quick_filter_outlet_quality": {
+          "type": "quick-filter-outlet",
+          "name": "Outlet Quality Filter",
+          "settings": {
+            "all_button_label": "All",
+            "button_gap": 6
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "text_tqQTNE",
         "text_twGGkJ",
-        "quick_filter_APLbY6"
+        "quick_filter_APLbY6",
+        "quick_filter_outlet_quality"
       ],
       "name": "Collection heading",
       "settings": {
