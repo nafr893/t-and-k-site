@@ -382,18 +382,18 @@
                 "text_QFDbQg"
               ]
             },
-            "group_jtq7DR": {
+            "group_AigFjq": {
               "type": "group",
               "name": "t:names.group",
               "settings": {
-                "content_direction": "row",
+                "content_direction": "column",
                 "vertical_on_mobile": true,
                 "horizontal_alignment": "flex-start",
                 "vertical_alignment": "center",
                 "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
-                "gap": 12,
+                "gap": 5,
                 "width": "fill",
                 "custom_width": 100,
                 "width_mobile": "fill",
@@ -423,42 +423,119 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "custom_label_LzkQnt": {
-                  "type": "custom-label",
-                  "name": "Custom label",
+                "text_66k6G4": {
+                  "type": "text",
+                  "name": "t:names.text",
                   "settings": {
-                    "text": "Outlet",
-                    "link": "",
-                    "text_color": "#ffffff",
-                    "bg_color": "#000000",
-                    "bg_opacity": 100,
-                    "hover_bg_color": "#000000",
-                    "hover_bg_opacity": 100,
+                    "text": "<p>Outlet Quality:</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": false,
+                    "border": false,
+                    "background_color": "",
                     "border_color": "#000000",
-                    "border_opacity": 100
+                    "border_weight": 0,
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
                   },
                   "blocks": {}
                 },
-                "custom_label_brxGyG": {
-                  "type": "custom-label",
-                  "name": "Custom label",
+                "group_EmhjkY": {
+                  "type": "group",
+                  "name": "t:names.group",
                   "settings": {
-                    "text": "{{ closest.product.metafields.custom.outlet_quality.value.product_quality.value }}",
+                    "content_direction": "row",
+                    "vertical_on_mobile": true,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "inherit_color_scheme": true,
+                    "color_scheme": "",
+                    "background_media": "none",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_radius": 0,
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
                     "link": "",
-                    "text_color": "#ffffff",
-                    "bg_color": "#000000",
-                    "bg_opacity": 100,
-                    "hover_bg_color": "#000000",
-                    "hover_bg_opacity": 100,
-                    "border_color": "#000000",
-                    "border_opacity": 100
+                    "open_in_new_tab": false,
+                    "placeholder": "",
+                    "visibility": "both",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
                   },
-                  "blocks": {}
+                  "blocks": {
+                    "custom_label_Nqbt3z": {
+                      "type": "custom-label",
+                      "name": "Custom label",
+                      "disabled": true,
+                      "settings": {
+                        "text": "Outlet",
+                        "link": "",
+                        "text_color": "#ffffff",
+                        "bg_color": "#000000",
+                        "bg_opacity": 100,
+                        "hover_bg_color": "#000000",
+                        "hover_bg_opacity": 100,
+                        "border_color": "#000000",
+                        "border_opacity": 100
+                      },
+                      "blocks": {}
+                    },
+                    "custom_label_a3gGVK": {
+                      "type": "custom-label",
+                      "name": "Custom label",
+                      "settings": {
+                        "text": "{{ closest.product.metafields.custom.outlet_quality.value.product_quality.value }}",
+                        "link": "",
+                        "text_color": "#ffffff",
+                        "bg_color": "#000000",
+                        "bg_opacity": 100,
+                        "hover_bg_color": "#000000",
+                        "hover_bg_opacity": 100,
+                        "border_color": "#000000",
+                        "border_opacity": 100
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "custom_label_Nqbt3z",
+                    "custom_label_a3gGVK"
+                  ]
                 }
               },
               "block_order": [
-                "custom_label_LzkQnt",
-                "custom_label_brxGyG"
+                "text_66k6G4",
+                "group_EmhjkY"
               ]
             },
             "group_dNgrTr": {
@@ -2256,7 +2333,7 @@
           "block_order": [
             "group_R3yjEY",
             "group_icgrde",
-            "group_jtq7DR",
+            "group_AigFjq",
             "group_dNgrTr",
             "divider_VJhene",
             "buy_buttons_eYQEYi",
