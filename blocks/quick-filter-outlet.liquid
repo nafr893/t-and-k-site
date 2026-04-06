@@ -48,32 +48,21 @@
 {% if filter_count > 0 %}
   <script src="{{ 'quick-filter-outlet.js' | asset_url }}" defer></script>
 
-  <div
-    class="quick-filter quick-filter-outlet"
-    {{ block.shopify_attributes }}
-    style="--quick-filter-gap: {{ block.settings.button_gap }}px;"
-  >
-    <div class="quick-filter__buttons" role="tablist" aria-label="Filter by quality">
-      <button
-        type="button"
-        class="quick-filter__button quick-filter__button--active"
-        data-outlet-filter="all"
-        aria-pressed="true"
-      >
-        {{ block.settings.all_button_label | default: 'All' }}
-      </button>
-
+  <div class="outlet-quality-filter" {{ block.shopify_attributes }}>
+    <label class="outlet-quality-filter__label" for="outlet-quality-select">
+      {{ block.settings.label | default: 'Quality Rating' }}
+    </label>
+    <select
+      id="outlet-quality-select"
+      class="outlet-quality-filter__select"
+      data-outlet-filter-select
+      aria-label="Filter by quality rating"
+    >
+      <option value="all">{{ block.settings.all_option_label | default: 'All' }}</option>
       {% for filter in filters_array %}
-        <button
-          type="button"
-          class="quick-filter__button"
-          data-outlet-filter="{{ filter | escape }}"
-          aria-pressed="false"
-        >
-          {{ filter }}
-        </button>
+        <option value="{{ filter | escape }}">{{ filter }}</option>
       {% endfor %}
-    </div>
+    </select>
 
     <script type="application/json" id="quick-filter-outlet-map">
       { {{ product_filter_map }} }
@@ -81,32 +70,66 @@
   </div>
 {% endif %}
 
+{% stylesheet %}
+  .outlet-quality-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .outlet-quality-filter__label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.7;
+  }
+
+  .outlet-quality-filter__select {
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid rgb(var(--color-border-rgb));
+    border-radius: 4px;
+    padding: 8px 36px 8px 12px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: rgb(var(--color-foreground-rgb));
+    cursor: pointer;
+    width: 100%;
+    max-width: 240px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='currentColor' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+  }
+
+  .outlet-quality-filter__select:focus {
+    outline: 2px solid rgb(var(--color-foreground-rgb));
+    outline-offset: 2px;
+  }
+{% endstylesheet %}
+
 {% schema %}
 {
   "name": "Outlet Quality Filter",
   "tag": "div",
-  "class": "quick-filter-block",
+  "class": "outlet-quality-filter-block",
   "settings": [
     {
       "type": "text",
-      "id": "all_button_label",
-      "label": "\"All\" button label",
-      "default": "All"
+      "id": "label",
+      "label": "Label text",
+      "default": "Quality Rating"
     },
     {
-      "type": "range",
-      "id": "button_gap",
-      "label": "Button gap",
-      "min": 0,
-      "max": 32,
-      "step": 2,
-      "unit": "px",
-      "default": 8
+      "type": "text",
+      "id": "all_option_label",
+      "label": "\"All\" option label",
+      "default": "All"
     }
   ],
   "presets": [
     {
-      "name": "Quick Filter — Outlet Quality"
+      "name": "Outlet Quality Filter"
     }
   ]
 }
