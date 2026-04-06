@@ -1,0 +1,113 @@
+{%- doc -%}
+  Quick filter block for the outlet collection page.
+  Filters product grid items based on the custom.outlet_quality metafield (metaobject reference).
+  Hides itself if there are 0 or 1 unique quality values.
+{%- enddoc -%}
+
+{% liquid
+  assign unique_filters = ''
+  assign product_filter_map = ''
+  assign filter_count = 0
+
+  for product in collection.products
+    assign quality_obj = product.metafields.custom.outlet_quality.value
+    assign quality_label = quality_obj.name | strip
+
+    if quality_label != blank
+      # Build product -> filter map entry
+      if product_filter_map != ''
+        assign product_filter_map = product_filter_map | append: ','
+      endif
+      assign map_entry = '"' | append: product.id | append: '":"' | append: quality_label | append: '"'
+      assign product_filter_map = product_filter_map | append: map_entry
+
+      # Track unique filter values
+      assign filter_exists = false
+      assign filters_array = unique_filters | split: '|||'
+
+      for existing_filter in filters_array
+        if existing_filter == quality_label
+          assign filter_exists = true
+          break
+        endif
+      endfor
+
+      unless filter_exists
+        if unique_filters != ''
+          assign unique_filters = unique_filters | append: '|||'
+        endif
+        assign unique_filters = unique_filters | append: quality_label
+        assign filter_count = filter_count | plus: 1
+      endunless
+    endif
+  endfor
+
+  assign filters_array = unique_filters | split: '|||'
+%}
+
+{% if filter_count > 0 %}
+  <script src="{{ 'quick-filter-outlet.js' | asset_url }}" defer></script>
+
+  <div
+    class="quick-filter quick-filter-outlet"
+    {{ block.shopify_attributes }}
+    style="--quick-filter-gap: {{ block.settings.button_gap }}px;"
+  >
+    <div class="quick-filter__buttons" role="tablist" aria-label="Filter by quality">
+      <button
+        type="button"
+        class="quick-filter__button quick-filter__button--active"
+        data-outlet-filter="all"
+        aria-pressed="true"
+      >
+        {{ block.settings.all_button_label | default: 'All' }}
+      </button>
+
+      {% for filter in filters_array %}
+        <button
+          type="button"
+          class="quick-filter__button"
+          data-outlet-filter="{{ filter | escape }}"
+          aria-pressed="false"
+        >
+          {{ filter }}
+        </button>
+      {% endfor %}
+    </div>
+
+    <script type="application/json" id="quick-filter-outlet-map">
+      { {{ product_filter_map }} }
+    </script>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Quick Filter — Outlet Quality",
+  "tag": "div",
+  "class": "quick-filter-block",
+  "settings": [
+    {
+      "type": "text",
+      "id": "all_button_label",
+      "label": "\"All\" button label",
+      "default": "All"
+    },
+    {
+      "type": "range",
+      "id": "button_gap",
+      "label": "Button gap",
+      "min": 0,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quick Filter — Outlet Quality"
+    }
+  ]
+}
+{% endschema %}
