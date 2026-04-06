@@ -1,6 +1,10 @@
 /**
  * Quick Filter — Outlet Quality (dropdown)
  * Filters product grid items based on the custom.outlet_quality metafield.
+ *
+ * Uses its own hidden class (outlet-quality-hidden) so it doesn't conflict
+ * with the category quick-filter which uses quick-filter-hidden.
+ * Items are hidden by CSS if they have EITHER class.
  */
 
 (function () {
@@ -12,9 +16,8 @@
     productItem: '.product-grid__item',
   };
 
-  const CLASSES = {
-    hidden: 'quick-filter-hidden',
-  };
+  // Own class — does not touch quick-filter-hidden
+  const HIDDEN_CLASS = 'outlet-quality-hidden';
 
   function init() {
     const select = document.querySelector(SELECTORS.select);
@@ -39,11 +42,11 @@
         const productQuality = productFilterMap[productId];
 
         if (filterValue === 'all') {
-          item.classList.remove(CLASSES.hidden);
+          item.classList.remove(HIDDEN_CLASS);
         } else if (productQuality === filterValue) {
-          item.classList.remove(CLASSES.hidden);
+          item.classList.remove(HIDDEN_CLASS);
         } else {
-          item.classList.add(CLASSES.hidden);
+          item.classList.add(HIDDEN_CLASS);
         }
       });
     });
