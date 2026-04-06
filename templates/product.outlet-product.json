@@ -528,7 +528,7 @@
                         "hover_bg_color": "#ffffff",
                         "hover_bg_opacity": 100,
                         "border_color": "rgba(0,0,0,0)",
-                        "border_opacity": 100
+                        "border_opacity": 0
                       },
                       "blocks": {}
                     }
