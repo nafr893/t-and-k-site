@@ -516,12 +516,12 @@
                       "settings": {
                         "text": "{{ closest.product.metafields.custom.outlet_quality.value.product_quality.value }}",
                         "link": "",
-                        "text_color": "#ffffff",
-                        "bg_color": "#000000",
+                        "text_color": "#000000",
+                        "bg_color": "#ffffff",
                         "bg_opacity": 100,
-                        "hover_bg_color": "#000000",
+                        "hover_bg_color": "rgba(0,0,0,0)",
                         "hover_bg_opacity": 100,
-                        "border_color": "#000000",
+                        "border_color": "rgba(0,0,0,0)",
                         "border_opacity": 100
                       },
                       "blocks": {}
