@@ -520,7 +520,7 @@
                       "type": "custom-label",
                       "name": "Custom label",
                       "settings": {
-                        "text": "Label",
+                        "text": "{{ closest.product.metafields.custom.outlet_quality.value.product_quality.value }}",
                         "link": "",
                         "text_color": "#000000",
                         "bg_color": "#ffffff",
