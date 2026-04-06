@@ -52,17 +52,22 @@
     <label class="outlet-quality-filter__label" for="outlet-quality-select">
       {{ block.settings.label | default: 'Quality Rating' }}
     </label>
-    <select
-      id="outlet-quality-select"
-      class="outlet-quality-filter__select"
-      data-outlet-filter-select
-      aria-label="Filter by quality rating"
-    >
-      <option value="all">{{ block.settings.all_option_label | default: 'All' }}</option>
-      {% for filter in filters_array %}
-        <option value="{{ filter | escape }}">{{ filter }}</option>
-      {% endfor %}
-    </select>
+    <div class="outlet-quality-filter__select-wrapper">
+      <select
+        id="outlet-quality-select"
+        class="outlet-quality-filter__select"
+        data-outlet-filter-select
+        aria-label="Filter by quality rating"
+      >
+        <option value="all">{{ block.settings.all_option_label | default: 'All' }}</option>
+        {% for filter in filters_array %}
+          <option value="{{ filter | escape }}">{{ filter }}</option>
+        {% endfor %}
+      </select>
+      <svg class="outlet-quality-filter__caret" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" aria-hidden="true" focusable="false">
+        <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
 
     <script type="application/json" id="quick-filter-outlet-map">
       { {{ product_filter_map }} }
@@ -85,6 +90,12 @@
     opacity: 0.7;
   }
 
+  .outlet-quality-filter__select-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 240px;
+  }
+
   .outlet-quality-filter__select {
     appearance: none;
     background-color: transparent;
@@ -93,18 +104,23 @@
     padding: 8px 36px 8px 12px;
     font-family: inherit;
     font-size: 0.9rem;
-    color: rgb(var(--color-foreground-rgb));
+    color: inherit;
     cursor: pointer;
     width: 100%;
-    max-width: 240px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='currentColor' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
   }
 
   .outlet-quality-filter__select:focus {
-    outline: 2px solid rgb(var(--color-foreground-rgb));
+    outline: 2px solid currentColor;
     outline-offset: 2px;
+  }
+
+  .outlet-quality-filter__caret {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: inherit;
   }
 {% endstylesheet %}
 
