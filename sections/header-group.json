@@ -13,6 +13,7 @@
   "sections": {
     "header_announcements_9jGBFp": {
       "type": "header-announcements",
+      "disabled": true,
       "name": "t:names.announcement_bar",
       "settings": {
         "speed": 5,
