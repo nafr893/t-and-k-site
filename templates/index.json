@@ -845,6 +845,7 @@
                     "custom_label_dm4eEz": {
                       "type": "custom-label",
                       "name": "Custom label",
+                      "disabled": true,
                       "settings": {
                         "text": "SPRING SALE",
                         "link": "shopify://products/x-tango-suppressor-cover",
@@ -861,6 +862,7 @@
                     "text_Xdkf4k": {
                       "type": "text",
                       "name": "t:names.heading",
+                      "disabled": true,
                       "settings": {
                         "text": "<h2>SAVE 20% OFF</h2><h2>STOREWIDE</h2>",
                         "width": "fit-content",
