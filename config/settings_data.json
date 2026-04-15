@@ -9,8 +9,8 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/T_K_logoBlack.png",
-    "logo_inverse": "shopify://shop_images/T_K_Logo_2.png",
+    "logo": "shopify://shop_images/T_K_Logo_Black.svg",
+    "logo_inverse": "shopify://shop_images/T_K_Logo_White.svg",
     "logo_height": 36,
     "logo_height_mobile": 28,
     "type_body_font": "roboto_n4",
