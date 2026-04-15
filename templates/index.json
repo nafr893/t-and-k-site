@@ -862,7 +862,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h2>SUPPRESSOR COVERS</h2>",
+                        "text": "<h2>SUPPRESSOR<br/>COVERS</h2>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
