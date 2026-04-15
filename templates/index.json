@@ -17,7 +17,7 @@
           "name": "Suppressor Cover",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC04563.jpg",
+            "image_1": "shopify://shop_images/DSC08045.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -124,7 +124,7 @@
                       "type": "custom-label",
                       "name": "Custom label",
                       "settings": {
-                        "text": "SPRING SALE",
+                        "text": "X TANGO",
                         "link": "shopify://products/x-tango-suppressor-cover",
                         "text_color": "#ffffff",
                         "bg_color": "#bbbbbb",
@@ -140,7 +140,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h2>SAVE 20% OFF<br/>STOREWIDE</h2>",
+                        "text": "<h2>SUPPRESSOR COVERS</h2>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
