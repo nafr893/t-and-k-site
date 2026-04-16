@@ -13,7 +13,25 @@
   "sections": {
     "header_announcements_9jGBFp": {
       "type": "header-announcements",
-      "disabled": true,
+      "blocks": {
+        "announcement_kQptT9": {
+          "type": "_announcement",
+          "name": "t:names.announcement",
+          "settings": {
+            "text": "FREE SHIPPING OVER $200",
+            "link": "",
+            "font": "var(--font-subheading--family)",
+            "font_size": "0.75rem",
+            "weight": "",
+            "letter_spacing": "normal",
+            "case": "none"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "announcement_kQptT9"
+      ],
       "name": "t:names.announcement_bar",
       "settings": {
         "speed": 5,
