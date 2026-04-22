@@ -14,22 +14,23 @@
     "header_announcements_9jGBFp": {
       "type": "header-announcements",
       "blocks": {
-        "announcement_BxgCk9": {
+        "announcement_kQptT9": {
           "type": "_announcement",
+          "name": "t:names.announcement",
           "settings": {
-            "text": "<strong>SPRING SALE - SAVE 20% STOREWIDE</strong>",
+            "text": "<strong>FREE SHIPPING OVER $200</strong>",
             "link": "",
-            "font": "var(--font-body--family)",
-            "font_size": "0.875rem",
+            "font": "var(--font-subheading--family)",
+            "font_size": "0.75rem",
             "weight": "",
             "letter_spacing": "normal",
-            "case": "uppercase"
+            "case": "none"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "announcement_BxgCk9"
+        "announcement_kQptT9"
       ],
       "name": "t:names.announcement_bar",
       "settings": {
@@ -77,9 +78,9 @@
             "mega_menu_card_3_image": "shopify://shop_images/DSC02802.webp",
             "mega_menu_card_3_title": "BINO HARNESS",
             "mega_menu_card_3_url": "shopify://products/binocular-harness",
-            "mega_menu_card_4_image": "shopify://shop_images/DSC02792.webp",
-            "mega_menu_card_4_title": "RIFLE CASE",
-            "mega_menu_card_4_url": "shopify://products/soft-rifle-case",
+            "mega_menu_card_4_image": "shopify://shop_images/DSC02797-2.webp",
+            "mega_menu_card_4_title": "OUTLET",
+            "mega_menu_card_4_url": "shopify://collections/outlet-1",
             "mega_menu_cards_2_menu_title": "PURSUIT",
             "mega_menu_card_2_1_image": "shopify://shop_images/DSC05173.webp",
             "mega_menu_card_2_1_title": "UPLAND GEAR",
