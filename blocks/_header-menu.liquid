@@ -1261,6 +1261,18 @@
     },
     {
       "type": "text",
+      "id": "tabbed_shop_extra_link_text",
+      "label": "Extra Link Text (e.g. Outlet)",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "url",
+      "id": "tabbed_shop_extra_link_url",
+      "label": "Extra Link URL",
+      "visible_if": "{{ block.settings.mobile_drawer_style == 'tabbed' }}"
+    },
+    {
+      "type": "text",
       "id": "tabbed_shop_promo_heading",
       "label": "Promo Section Heading",
       "default": "Planning a Hunt?",

@@ -83,6 +83,14 @@
           </a>
         </div>
 
+        {% if block_settings.tabbed_shop_extra_link_text != blank %}
+          <div class="tabbed-drawer__section">
+            <a href="{{ block_settings.tabbed_shop_extra_link_url | default: '#' }}" class="tabbed-drawer__link-item">
+              {{ block_settings.tabbed_shop_extra_link_text }}
+            </a>
+          </div>
+        {% endif %}
+
         {% if block_settings.tabbed_shop_promo_heading != blank %}
           <h4 class="tabbed-drawer__promo-heading">{{ block_settings.tabbed_shop_promo_heading }}</h4>
         {% endif %}
