@@ -110,6 +110,8 @@
             "tabbed_shop_accordion_2_open": false,
             "tabbed_shop_link_text": "SHOP ALL",
             "tabbed_shop_link_url": "shopify://collections/all-products",
+            "tabbed_shop_extra_link_text": "SHOP OUTLET",
+            "tabbed_shop_extra_link_url": "shopify://collections/outlet-1",
             "tabbed_shop_promo_heading": "Planning a Hunt?",
             "tabbed_shop_promo_image": "shopify://shop_images/Harness-Builder-v2.gif",
             "tabbed_shop_promo_title": "HELLRIDGE™ BINO HARNESS",
