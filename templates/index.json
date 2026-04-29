@@ -1307,9 +1307,8 @@
                     "custom_label_6TUVnX": {
                       "type": "custom-label",
                       "name": "Custom label",
-                      "disabled": true,
                       "settings": {
-                        "text": "THUNDERSTRUTT™",
+                        "text": "OSCAR MIKE™",
                         "link": "shopify://products/binocular-harness",
                         "text_color": "#ffffff",
                         "bg_color": "#bbbbbb",
