@@ -1201,7 +1201,7 @@
           "name": "Hydration Pack",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/DSC04821.webp",
+            "image_1": "shopify://shop_images/DSC04608.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
@@ -1276,7 +1276,7 @@
                     "vertical_alignment_flex_direction_column": "center",
                     "gap": 12,
                     "width": "custom",
-                    "custom_width": 40,
+                    "custom_width": 60,
                     "width_mobile": "fill",
                     "custom_width_mobile": 100,
                     "height": "fit",
