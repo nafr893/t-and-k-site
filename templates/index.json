@@ -1198,7 +1198,7 @@
         },
         "slide_p7DVeM": {
           "type": "_slide",
-          "name": "Bino Harness",
+          "name": "Hydration Pack",
           "settings": {
             "media_type_1": "image",
             "image_1": "shopify://shop_images/DSC04821.webp",
@@ -1325,7 +1325,7 @@
                       "type": "text",
                       "name": "t:names.heading",
                       "settings": {
-                        "text": "<h2>HYDRATION & SCOUT PACK</h2>",
+                        "text": "<h2>SCOUTING BAGS AND PACKS</h2>",
                         "width": "fit-content",
                         "max_width": "normal",
                         "alignment": "left",
@@ -1402,7 +1402,7 @@
                       "name": "t:names.button",
                       "settings": {
                         "label": "Shop now",
-                        "link": "shopify://collections/binocular-harness-and-accessory-pouches",
+                        "link": "shopify://collections/bags-packs",
                         "open_in_new_tab": false,
                         "style_class": "button",
                         "width": "fit-content",
